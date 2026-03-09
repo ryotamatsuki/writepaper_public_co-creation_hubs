@@ -1,0 +1,284 @@
+\section{Proofs for Section 7}
+
+This appendix provides the algebra for the extensions in Section \ref{sec:extensions}.
+
+\subsection{Preliminaries}
+
+Recall the baseline objects
+\[
+P_A=\frac{N_A(N_A-1)}{2},
+\qquad
+Q_{AB}=N_AN_B,
+\qquad
+\Delta m_A:=m_A^1-m_A^0>0,
+\qquad
+\Lambda_A:=(1+\beta)-\beta\delta(m_A^1+m_A^0).
+\]
+
+In the heterogeneous-participant extension, the expected surplus per realized local interaction is
+\begin{equation}
+\bar v_L(\sigma)
+=
+v_L^L(1-\sigma)^2
++
+v_L^H\bigl[1-(1-\sigma)^2\bigr]
+=
+v_L^L+(2\sigma-\sigma^2)(v_L^H-v_L^L),
+\label{eq:app7_vbarL_sigma}
+\end{equation}
+with
+\begin{equation}
+\bar v_L'(\sigma)=2(1-\sigma)(v_L^H-v_L^L)>0.
+\label{eq:app7_vbarL_prime}
+\end{equation}
+Also, since $\bar v_L(\sigma)$ is a convex combination of $v_L^L$ and $v_L^H$,
+\begin{equation}
+\bar v_L(\sigma)>0
+\qquad
+\text{for all }\sigma\in[0,1].
+\label{eq:app7_vbarL_positive}
+\end{equation}
+
+The expected surplus per effective cross-regional link is
+\begin{equation}
+\bar v_X(\sigma)
+=
+v_X^L(1-\sigma)+v_X^H\sigma
+=
+v_X^L+\sigma(v_X^H-v_X^L),
+\label{eq:app7_vbarX_sigma}
+\end{equation}
+with
+\begin{equation}
+\bar v_X'(\sigma)=v_X^H-v_X^L>0
+\label{eq:app7_vbarX_prime}
+\end{equation}
+and
+\begin{equation}
+\bar v_X(\sigma)>0
+\qquad
+\text{for all }\sigma\in[0,1].
+\label{eq:app7_vbarX_positive}
+\end{equation}
+
+In the online-substitution extension, the no-hub matching rate is
+\begin{equation}
+m_A^0(o)=m_A^0+\phi o,
+\qquad
+\phi>0,
+\label{eq:app7_m0o}
+\end{equation}
+with domain
+\begin{equation}
+0\le o<\bar o:=\frac{m_A^1-m_A^0}{\phi},
+\label{eq:app7_o_domain}
+\end{equation}
+so that $0\le m_A^0(o)<m_A^1\le 1$.
+
+\subsection{Proof of Proposition \ref{prop:heterogeneous_participants}}
+
+Using \eqref{eq:vbarL_sigma}, the hub-alone welfare gain is
+\[
+\Delta_H(\sigma)
+=
+\bar v_L(\sigma)P_A\Delta m_A\Lambda_A-F.
+\]
+Differentiating with respect to $\sigma$,
+\begin{align}
+\frac{\partial \Delta_H(\sigma)}{\partial \sigma}
+&=
+\bar v_L'(\sigma)P_A\Delta m_A\Lambda_A.
+\label{eq:app7_dDeltaH_dsigma_raw}
+\end{align}
+If $\Lambda_A>0$, then \eqref{eq:app7_vbarL_prime} implies
+\[
+\frac{\partial \Delta_H(\sigma)}{\partial \sigma}>0
+\qquad
+\text{for }\sigma\in[0,1),
+\]
+which proves \eqref{eq:dDeltaH_dsigma}.
+
+Next, the optimal pipeline policy is
+\[
+b^*(\sigma)
+=
+\frac{\beta\eta \bar v_X(\sigma)Q_{AB}}{\kappa}.
+\]
+Differentiating,
+\begin{align}
+\frac{\partial b^*(\sigma)}{\partial \sigma}
+&=
+\frac{\beta\eta Q_{AB}}{\kappa}\bar v_X'(\sigma).
+\label{eq:app7_dbstar_dsigma_raw}
+\end{align}
+Since all multiplicative terms are positive and $\bar v_X'(\sigma)>0$, we obtain
+\[
+\frac{\partial b^*(\sigma)}{\partial \sigma}>0,
+\]
+which proves \eqref{eq:dbstar_dsigma}.
+
+For the renewal surplus,
+\[
+R_{AB}(N_A,N_B;\sigma)
+=
+\frac{\bigl(\beta\eta \bar v_X(\sigma)Q_{AB}\bigr)^2}{2\kappa}
+=
+\frac{\beta^2\eta^2Q_{AB}^2}{2\kappa}\,\bar v_X(\sigma)^2.
+\]
+Differentiating with respect to $\sigma$,
+\begin{align}
+\frac{\partial R_{AB}(N_A,N_B;\sigma)}{\partial \sigma}
+&=
+\frac{\beta^2\eta^2Q_{AB}^2}{2\kappa}\cdot 2\bar v_X(\sigma)\bar v_X'(\sigma)
+\nonumber\\
+&=
+\frac{\beta^2\eta^2Q_{AB}^2}{\kappa}\,\bar v_X(\sigma)\bar v_X'(\sigma).
+\label{eq:app7_dR_dsigma_raw}
+\end{align}
+By \eqref{eq:app7_vbarX_positive} and \eqref{eq:app7_vbarX_prime}, this derivative is strictly positive, proving \eqref{eq:dR_dsigma}.
+
+Finally, consider the threshold statements. The short-run private-support condition in Section \ref{sec:short_run} becomes
+\[
+F<\bar v_L(\sigma)P_A\Delta m_A.
+\]
+Thus, treating $N_A$ as continuous,
+\begin{equation}
+N_{SR}^*(\sigma)
+=
+\frac{1}{2}
+\left(
+1+\sqrt{1+\frac{8F}{\bar v_L(\sigma)\Delta m_A}}
+\right).
+\label{eq:app7_NSR_sigma}
+\end{equation}
+Differentiating,
+\begin{align}
+\frac{dN_{SR}^*(\sigma)}{d\sigma}
+&=
+-\frac{2F\,\bar v_L'(\sigma)}
+{\Delta m_A\,\bar v_L(\sigma)^2
+\sqrt{1+\frac{8F}{\bar v_L(\sigma)\Delta m_A}}}
+<0.
+\label{eq:app7_dNSR_dsigma}
+\end{align}
+
+Likewise, when $\Lambda_A>0$, the hub-efficiency threshold in Section \ref{sec:hub_efficiency} becomes
+\begin{equation}
+N_H^*(\sigma)
+=
+\frac{1}{2}
+\left(
+1+\sqrt{1+\frac{8F}{\bar v_L(\sigma)\Delta m_A\Lambda_A}}
+\right).
+\label{eq:app7_NH_sigma}
+\end{equation}
+Differentiating,
+\begin{align}
+\frac{dN_H^*(\sigma)}{d\sigma}
+&=
+-\frac{2F\,\bar v_L'(\sigma)}
+{\Delta m_A\Lambda_A\,\bar v_L(\sigma)^2
+\sqrt{1+\frac{8F}{\bar v_L(\sigma)\Delta m_A\Lambda_A}}}
+<0.
+\label{eq:app7_dNH_dsigma}
+\end{align}
+Therefore both thresholds decrease with $\sigma$. This completes the proof of Proposition \ref{prop:heterogeneous_participants}.
+\qed
+
+\subsection{Proof of Proposition \ref{prop:online_substitution}}
+
+In the online-substitution extension,
+\[
+m_A^0(o)=m_A^0+\phi o,
+\qquad
+0\le o<\bar o=\frac{m_A^1-m_A^0}{\phi}.
+\]
+
+The short-run private gain is
+\[
+\Pi_H(o)
+=
+v_LP_A\bigl(m_A^1-m_A^0(o)\bigr)-F
+=
+v_LP_A\bigl(m_A^1-m_A^0-\phi o\bigr)-F.
+\]
+Differentiating with respect to $o$,
+\begin{align}
+\frac{d\Pi_H(o)}{do}
+&=
+-\phi v_LP_A<0,
+\label{eq:app7_dPiH_do_raw}
+\end{align}
+which proves \eqref{eq:dPiH_do}.
+
+Next, the hub-alone welfare gain is
+\[
+\Delta_H(o)
+=
+v_LP_A\bigl[m_A^1-m_A^0(o)\bigr]
+\Bigl[(1+\beta)-\beta\delta\bigl(m_A^1+m_A^0(o)\bigr)\Bigr]-F.
+\]
+For brevity, write $x:=m_A^0(o)$. Then
+\[
+\Delta_H(o)=v_LP_A(m_A^1-x)\Bigl[(1+\beta)-\beta\delta(m_A^1+x)\Bigr]-F.
+\]
+Differentiate first with respect to $x$:
+\begin{align}
+\frac{d}{dx}\Bigl[(m_A^1-x)\bigl((1+\beta)-\beta\delta(m_A^1+x)\bigr)\Bigr]
+&=
+-\Bigl[(1+\beta)-\beta\delta(m_A^1+x)\Bigr]
+-(m_A^1-x)\beta\delta
+\nonumber\\
+&=
+-(1+\beta)+\beta\delta(m_A^1+x)-\beta\delta(m_A^1-x)
+\nonumber\\
+&=
+-(1+\beta)+2\beta\delta x.
+\label{eq:app7_chain_x}
+\end{align}
+Since $dx/do=\phi$, the chain rule gives
+\begin{align}
+\frac{d\Delta_H(o)}{do}
+&=
+\phi v_LP_A\Bigl[-(1+\beta)+2\beta\delta m_A^0(o)\Bigr]
+\nonumber\\
+&=
+-\phi v_LP_A\Bigl[(1+\beta)-2\beta\delta m_A^0(o)\Bigr].
+\label{eq:app7_dDeltaH_do_raw}
+\end{align}
+This is exactly \eqref{eq:dDeltaH_do}.
+
+To verify the sign, note that the domain restriction implies $m_A^0(o)<m_A^1$, and the regularity condition \eqref{eq:regularity} implies $\delta m_A^1<1$. Hence $\delta m_A^0(o)<1$ as well. Therefore
+\[
+2\beta\delta m_A^0(o)<2\beta.
+\]
+Since $\beta\in(0,1]$, we have $1+\beta\ge 2\beta$, with equality only when $\beta=1$. Thus
+\[
+(1+\beta)-2\beta\delta m_A^0(o)>(1+\beta)-2\beta=1-\beta\ge 0,
+\]
+where the strict inequality follows from $\delta m_A^0(o)<1$. Hence
+\[
+\frac{d\Delta_H(o)}{do}<0.
+\]
+
+Finally, conditional on a hub, welfare with pipeline policy is
+\[
+W(1,b)=W(1,0)+\beta\eta v_XQ_{AB}b-\frac{\kappa}{2}b^2.
+\]
+The planner therefore solves
+\[
+\max_{b\ge 0}
+\left\{
+W(1,0)+\beta\eta v_XQ_{AB}b-\frac{\kappa}{2}b^2
+\right\}.
+\]
+The first-order condition is
+\[
+\beta\eta v_XQ_{AB}-\kappa b=0,
+\]
+so
+\[
+b^*(o)=\frac{\beta\eta v_XQ_{AB}}{\kappa}=b^*.
+\]
+Thus the optimal pipeline policy is unchanged by online substitution in this reduced form, which proves \eqref{eq:bstar_online}. This completes the proof of Proposition \ref{prop:online_substitution}.
+\qed

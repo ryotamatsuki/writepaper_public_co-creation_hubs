@@ -1,0 +1,216 @@
+\section{Extensions}
+\label{sec:extensions}
+
+This section develops two extensions that sharpen the interpretation of the baseline model while preserving analytical tractability. The first introduces heterogeneous absorptive capacity among participants in the target region. The second allows digital coordination technologies to substitute for part of the hub's baseline local matching role. In both cases, the central message survives: the welfare value of a public hub depends not only on how much local interaction it generates, but also on whether those interactions remain novel and whether the hub performs a coordination role that cannot be replicated cheaply by other devices.
+
+To streamline notation, define
+\[
+\Delta m_A:=m_A^1-m_A^0>0,
+\qquad
+\Lambda_A:=(1+\beta)-\beta\delta(m_A^1+m_A^0),
+\]
+so that in the baseline model
+\[
+\Delta_H=v_LP_A\Delta m_A\Lambda_A-F,
+\qquad
+b^*=\frac{\beta\eta v_XQ_{AB}}{\kappa}.
+\]
+
+\subsection{Regional Absorptive Capacity and Anchor Actors}
+
+The baseline model treats all local participants symmetrically through the common surplus parameter $v_L$ and the common cross-regional surplus parameter $v_X$. A natural extension allows some local actors in region $A$ to have higher absorptive capacity or stronger boundary-spanning ability. This captures the idea that a region with the same number of participants may nevertheless generate more value if some actors are especially effective at transforming contact into productive collaboration.
+
+Let $\sigma\in[0,1]$ denote the share of \emph{high-absorptive} participants in region $A$. Suppose that a realized local interaction yields surplus $v_L^H$ if at least one of the two participants is high-absorptive and $v_L^L$ otherwise, where
+\[
+v_L^H>v_L^L>0.
+\]
+Then the expected surplus per realized local interaction is
+\begin{equation}
+\bar v_L(\sigma)
+=
+v_L^L(1-\sigma)^2
++
+v_L^H\bigl[1-(1-\sigma)^2\bigr]
+=
+v_L^L+(2\sigma-\sigma^2)(v_L^H-v_L^L).
+\label{eq:vbarL_sigma}
+\end{equation}
+Because
+\begin{equation}
+\bar v_L'(\sigma)=2(1-\sigma)(v_L^H-v_L^L)>0
+\qquad
+\text{for } \sigma\in[0,1),
+\label{eq:vbarL_prime}
+\end{equation}
+a higher share of high-absorptive participants raises the average value of a realized local interaction.
+
+Likewise, suppose that the social surplus from an effective cross-regional link is $v_X^H$ when the region-$A$ participant involved is high-absorptive and $v_X^L$ otherwise, where
+\[
+v_X^H>v_X^L>0.
+\]
+Then the expected surplus per effective cross-regional link is
+\begin{equation}
+\bar v_X(\sigma)
+=
+v_X^L(1-\sigma)+v_X^H\sigma
+=
+v_X^L+\sigma(v_X^H-v_X^L),
+\label{eq:vbarX_sigma}
+\end{equation}
+with
+\begin{equation}
+\bar v_X'(\sigma)=v_X^H-v_X^L>0.
+\label{eq:vbarX_prime}
+\end{equation}
+
+Replacing $v_L$ by $\bar v_L(\sigma)$ and $v_X$ by $\bar v_X(\sigma)$, the hub-alone welfare gain becomes
+\begin{equation}
+\Delta_H(\sigma)
+=
+\bar v_L(\sigma)P_A\Delta m_A\Lambda_A-F,
+\label{eq:DeltaH_sigma}
+\end{equation}
+and the optimal pipeline policy conditional on a hub becomes
+\begin{equation}
+b^*(\sigma)
+=
+\frac{\beta\eta \bar v_X(\sigma)Q_{AB}}{\kappa},
+\label{eq:bstar_sigma}
+\end{equation}
+with corresponding renewal surplus
+\begin{equation}
+R_{AB}(N_A,N_B;\sigma)
+=
+\frac{\bigl(\beta\eta \bar v_X(\sigma)Q_{AB}\bigr)^2}{2\kappa}.
+\label{eq:R_sigma}
+\end{equation}
+
+\begin{proposition}
+\label{prop:heterogeneous_participants}
+Suppose $v_L^H>v_L^L>0$, $v_X^H>v_X^L>0$, and $\Lambda_A>0$. Then:
+
+\begin{enumerate}[leftmargin=2em]
+    \item The hub-alone welfare gain is increasing in the share of high-absorptive participants:
+    \begin{equation}
+    \frac{\partial \Delta_H(\sigma)}{\partial \sigma}
+    =
+    \bar v_L'(\sigma)P_A\Delta m_A\Lambda_A
+    >0.
+    \label{eq:dDeltaH_dsigma}
+    \end{equation}
+
+    \item The optimal pipeline policy is increasing in $\sigma$:
+    \begin{equation}
+    \frac{\partial b^*(\sigma)}{\partial \sigma}
+    =
+    \frac{\beta\eta Q_{AB}}{\kappa}\bar v_X'(\sigma)
+    >0.
+    \label{eq:dbstar_dsigma}
+    \end{equation}
+
+    \item The renewal surplus is increasing in $\sigma$:
+    \begin{equation}
+    \frac{\partial R_{AB}(N_A,N_B;\sigma)}{\partial \sigma}
+    =
+    \frac{\beta^2\eta^2Q_{AB}^2}{\kappa}
+    \bar v_X(\sigma)\bar v_X'(\sigma)
+    >0.
+    \label{eq:dR_dsigma}
+    \end{equation}
+
+    \item The efficiency thresholds from Sections 4--6 all shift in favor of the hub as $\sigma$ rises. In particular, whenever the relevant thresholds are well defined, both $N_H^*(\sigma)$ and $N_{SR}^*(\sigma)$ are decreasing in $\sigma$.
+\end{enumerate}
+\end{proposition}
+
+Proposition \ref{prop:heterogeneous_participants} implies that the effective thickness of a regional ecosystem is not determined by headcount alone. Composition matters. A region with a relatively small number of participants may still support a valuable public hub if enough of those participants have high absorptive capacity or play boundary-spanning roles. Conversely, a larger ecosystem with weak absorptive capacity may fail to justify a hub despite its greater scale.
+
+This extension provides a reduced-form interpretation of anchor firms, strong universities, or capable intermediaries. In the model, such actors raise both the expected value of realized local interaction and the value of cross-regional pipeline formation.
+
+\subsection{Digital Substitution for Baseline Local Matching}
+
+The baseline model assumes that the hub's matching advantage derives from a reduction in local interaction costs that would otherwise prevail in the region. A natural extension is to allow digital coordination technologies to substitute for part of that role.
+
+Let $o\ge 0$ index the strength of digital coordination tools available in region $A$. Assume that digital coordination raises the \emph{no-hub} matching rate but leaves the \emph{hub} matching rate unchanged:
+\begin{equation}
+m_A^0(o)=m_A^0+\phi o,
+\qquad
+\phi>0,
+\label{eq:m0_online}
+\end{equation}
+while $m_A^1$ remains fixed. We restrict attention to the domain
+\begin{equation}
+0\le o<\bar o:=\frac{m_A^1-m_A^0}{\phi},
+\label{eq:o_domain}
+\end{equation}
+so that
+\[
+0\le m_A^0(o)<m_A^1\le 1.
+\]
+In this extension, digital tools improve baseline local coordination even without a hub, but they do not replicate the hub's role in organizing or hosting denser in-person interaction.
+
+The hub-alone welfare gain now becomes
+\begin{equation}
+\Delta_H(o)
+=
+v_LP_A\bigl[m_A^1-m_A^0(o)\bigr]
+\Bigl[(1+\beta)-\beta\delta\bigl(m_A^1+m_A^0(o)\bigr)\Bigr]-F.
+\label{eq:DeltaH_o}
+\end{equation}
+Substituting \eqref{eq:m0_online} yields
+\begin{equation}
+\Delta_H(o)
+=
+v_LP_A\bigl(m_A^1-m_A^0-\phi o\bigr)
+\Bigl[(1+\beta)-\beta\delta\bigl(m_A^1+m_A^0+\phi o\bigr)\Bigr]-F.
+\label{eq:DeltaH_o_expanded}
+\end{equation}
+The private short-run gain becomes
+\begin{equation}
+\Pi_H(o)
+=
+v_LP_A\bigl(m_A^1-m_A^0-\phi o\bigr)-F.
+\label{eq:PiH_o}
+\end{equation}
+
+\begin{proposition}
+\label{prop:online_substitution}
+Suppose the domain restriction \eqref{eq:o_domain} holds and the baseline regularity condition \eqref{eq:regularity} is satisfied. Then:
+
+\begin{enumerate}[leftmargin=2em]
+    \item The short-run gain from the hub is strictly decreasing in digital coordination:
+    \begin{equation}
+    \frac{d\Pi_H(o)}{do}
+    =
+    -\phi v_LP_A
+    <0.
+    \label{eq:dPiH_do}
+    \end{equation}
+
+    \item The hub-alone welfare gain is also strictly decreasing in digital coordination:
+    \begin{equation}
+    \frac{d\Delta_H(o)}{do}
+    =
+    -\phi v_LP_A\Bigl[(1+\beta)-2\beta\delta m_A^0(o)\Bigr]
+    <0.
+    \label{eq:dDeltaH_do}
+    \end{equation}
+
+    \item In this reduced form, the optimal pipeline policy conditional on a hub is unchanged:
+    \begin{equation}
+    b^*(o)=\frac{\beta\eta v_XQ_{AB}}{\kappa}=b^*.
+    \label{eq:bstar_online}
+    \end{equation}
+\end{enumerate}
+\end{proposition}
+
+The intuition is straightforward. Digital coordination tools substitute for the hub's \emph{baseline matching function}: they make it easier for local actors to connect even without a physical hub. As a result, the incremental value of creating the hub falls. However, in this reduced form, digital tools do not alter the hub-side matching intensity $m_A^1$, nor do they create cross-regional renewal. Hence they reduce the case for hub \emph{creation}, but not the need for pipeline policy once a hub exists.
+
+This extension has two implications. First, the case for a public hub is likely to be weaker in regions where digital coordination is already highly effective. Second, digital substitution does not eliminate the core dynamic problem emphasized in Sections 5 and 6: even if digital tools reduce the need for a hub at the margin, they do not by themselves resolve novelty decay inside a hub-based local network.
+
+\subsection{Implications of the Extensions}
+
+Taken together, the two extensions refine the baseline theory in opposite directions.
+
+Regional absorptive capacity makes a hub more valuable by increasing the expected surplus from realized interactions and from outside linkages. Digital substitution makes a hub less valuable by reducing the need for a physical coordination device. Yet both extensions leave the main logic intact. A public hub is most likely to be socially desirable when it can generate high-value interactions that would not otherwise occur, and when the resulting interaction pattern remains dynamically productive rather than collapsing into repetitive local exchange.
+
+For the empirical interpretation of the model, the extensions suggest two observable margins beyond simple participant counts. One is the composition of local actors, especially the presence of anchor or highly absorptive participants. The other is the availability of alternative coordination technologies, especially digital tools that may replicate part of the hub's function without resolving the hub's dynamic novelty problem.

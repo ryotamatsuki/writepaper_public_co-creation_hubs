@@ -1,0 +1,16 @@
+*.aux
+*.bbl
+*.bcf
+*.blg
+*.fdb_latexmk
+*.fls
+*.lof
+*.log
+*.lot
+*.out
+*.run.xml
+*.synctex.gz
+*.toc
+*.zip
+jrs_hub_paper_revised_source_from_attached_folder/jrs_hub_paper/main.pdf
+jrs_hub_paper_revised_source_from_attached_folder/jrs_hub_paper/rendered/

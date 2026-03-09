@@ -1,0 +1,290 @@
+\section{Hub Alone vs. Hub Plus Cross-Regional Pipeline Policy}
+\label{sec:refresh}
+
+Sections 4 and 5 showed that a public hub may fail on dynamic grounds even when it looks attractive in the short run. This section asks whether that weakness can be corrected by a \emph{cross-regional pipeline policy} that brings in outside participants, ideas, or partnerships in period 2.
+
+We now restore the policy variable $b\ge 0$. Throughout, we compare three objects:
+\[
+W(0,0), \qquad W(1,0), \qquad W(1,b).
+\]
+The first is the no-hub benchmark, the second is a hub alone, and the third is a hub combined with cross-regional pipeline policy.
+
+\subsection{Optimal Pipeline Policy Conditional on a Hub}
+
+From \eqref{eq:W1b}, welfare with a hub and pipeline policy can be written as
+\begin{equation}
+W(1,b)
+=
+W(1,0)
++
+\beta \eta v_X Q_{AB}\, b
+-
+\frac{\kappa}{2}b^2.
+\label{eq:W1b_repeat}
+\end{equation}
+Equivalently, using \eqref{eq:DeltaHb},
+\begin{equation}
+\Delta_{H+b}(b)
+:=
+W(1,b)-W(0,0)
+=
+\Delta_H
++
+\beta \eta v_X Q_{AB}\, b
+-
+\frac{\kappa}{2}b^2.
+\label{eq:DeltaHb_repeat}
+\end{equation}
+
+Thus, conditional on $h=1$, the planner solves a strictly concave quadratic problem in $b$.
+
+\begin{proposition}
+\label{prop:optimal_refresh}
+Conditional on establishing a hub, the unique welfare-maximizing pipeline policy is
+\begin{equation}
+b^*
+=
+\frac{\beta \eta v_X Q_{AB}}{\kappa}
+=
+\frac{\beta \eta v_X N_A N_B}{\kappa}
+>0.
+\label{eq:bstar}
+\end{equation}
+The maximized welfare gain of a hub with pipeline policy is
+\begin{equation}
+\Delta_{H+b}^*
+:=
+\max_{b\ge 0}\Delta_{H+b}(b)
+=
+\Delta_H
++
+\frac{\bigl(\beta \eta v_X Q_{AB}\bigr)^2}{2\kappa}.
+\label{eq:DeltaHb_star}
+\end{equation}
+\end{proposition}
+
+Proposition \ref{prop:optimal_refresh} shows that pipeline policy has two properties. First, it is always used when a hub exists, because the marginal benefit of $b$ at $b=0$ is strictly positive. Second, pipeline policy has purely dynamic value in this benchmark model: it does not improve period-1 local coordination, but it raises period-2 cross-regional renewal and therefore directly offsets the mechanism behind dynamic inefficiency in Section 5.
+
+It is convenient to define the \emph{cross-regional renewal surplus}
+\begin{equation}
+R_{AB}(N_A,N_B)
+:=
+\frac{\bigl(\beta \eta v_X Q_{AB}\bigr)^2}{2\kappa}
+=
+\frac{\beta^2\eta^2 v_X^2 N_A^2 N_B^2}{2\kappa}
+>0.
+\label{eq:refresh_surplus}
+\end{equation}
+Then \eqref{eq:DeltaHb_star} becomes
+\begin{equation}
+\Delta_{H+b}^*=\Delta_H+R_{AB}(N_A,N_B).
+\label{eq:DeltaHb_star_compact}
+\end{equation}
+
+\subsection{When Does the Pipeline Rescue the Hub?}
+
+Section 4 showed that the hub alone is efficient if and only if
+\[
+F\le F_H^*(N_A),
+\qquad
+F_H^*(N_A):=v_L P_A \bigl(m_A^1-m_A^0\bigr)\Lambda_A,
+\]
+where
+\[
+\Lambda_A=(1+\beta)-\beta\delta\bigl(m_A^1+m_A^0\bigr).
+\]
+With pipeline policy, Proposition \ref{prop:optimal_refresh} implies that the relevant fixed-cost threshold becomes
+\begin{equation}
+F_{H+b}^*(N_A,N_B)
+:=
+F_H^*(N_A)+R_{AB}(N_A,N_B)
+=
+v_L P_A \bigl(m_A^1-m_A^0\bigr)\Lambda_A
++
+\frac{\bigl(\beta \eta v_X Q_{AB}\bigr)^2}{2\kappa}.
+\label{eq:F_Hb_star}
+\end{equation}
+
+\begin{proposition}
+\label{prop:hub_plus_refresh_efficiency}
+A hub combined with optimally chosen cross-regional pipeline policy is socially efficient if and only if
+\begin{equation}
+F\le F_{H+b}^*(N_A,N_B).
+\label{eq:hub_refresh_efficiency_condition}
+\end{equation}
+Moreover,
+\begin{equation}
+F_{H+b}^*(N_A,N_B)-F_H^*(N_A)=R_{AB}(N_A,N_B)>0,
+\label{eq:threshold_expansion}
+\end{equation}
+so pipeline policy strictly enlarges the set of parameter values under which a public hub is efficient.
+\end{proposition}
+
+The key comparison is therefore not just between $\Delta_H$ and zero, but between $\Delta_H$ and $-R_{AB}(N_A,N_B)$. Even when a hub alone is dynamically inefficient, it may become efficient once paired with sufficiently valuable cross-regional renewal.
+
+\begin{proposition}
+\label{prop:rescue_interval}
+There exists a positive fixed-cost interval for which the hub alone is inefficient but the hub with optimally chosen pipeline policy is efficient if and only if
+\begin{equation}
+F_{H+b}^*(N_A,N_B)>\max\{0,F_H^*(N_A)\}.
+\label{eq:existence_rescue_interval}
+\end{equation}
+Whenever \eqref{eq:existence_rescue_interval} holds, the interval is
+\begin{equation}
+\max\{0,F_H^*(N_A)\}
+<
+F
+\le
+F_{H+b}^*(N_A,N_B).
+\label{eq:rescue_interval}
+\end{equation}
+\end{proposition}
+
+Proposition \ref{prop:rescue_interval} is the central result of this section. It says that the planner may rationally reject a \emph{hub alone} while still approving a \emph{hub plus pipeline policy}. In other words, the relevant policy comparison is not between a hub and no hub in isolation, but between two different institutional designs for the hub.
+
+This logic is especially important when $\Lambda_A$ is small or negative. In that case, local redundancy erodes much of the hub's stand-alone value. Pipeline policy can nevertheless rescue the hub if the cross-regional renewal channel, summarized by $R_{AB}(N_A,N_B)$, is strong enough.
+
+\begin{figure}[htbp]
+\centering
+\begin{tikzpicture}
+\begin{axis}[
+    width=0.82\textwidth,
+    height=0.52\textwidth,
+    xmin=0, xmax=4.0,
+    ymin=0, ymax=16,
+    axis lines=left,
+    xlabel={Outside-pool size $N_B$},
+    ylabel={Hub fixed cost $F$},
+    xtick={0,1,2,3,4},
+    ytick={0,2,4,6,8,10,12,14,16},
+    clip=false,
+    legend style={draw=none, fill=none, font=\small, at={(0.02,0.98)}, anchor=north west},
+    every axis plot/.append style={thick},
+]
+
+\def\NA{6}
+\def\PA{15}
+\def\vL{1}
+\def\mzero{0.15}
+\def\mone{0.55}
+\def\betaPar{0.9}
+\def\deltaPar{1.6}
+\def\etaPar{0.2}
+\def\vX{1}
+\def\kappaPar{1}
+
+\pgfmathsetmacro{\DeltaM}{\mone-\mzero}
+\pgfmathsetmacro{\SigmaM}{\mone+\mzero}
+\pgfmathsetmacro{\FH}{\vL*\PA*\DeltaM*((1+\betaPar)-\betaPar*\deltaPar*\SigmaM)}
+
+\addplot[name path=Fbundle, domain=0:4, samples=200, black]
+    {\FH + ((\betaPar*\etaPar*\vX*\NA*x)^2)/(2*\kappaPar)};
+\addlegendentry{$F_{H+b}^*(N_B)$}
+
+\addplot[name path=Fhub, domain=0:4, samples=2, dashed, black]
+    {\FH};
+\addlegendentry{$F_H^*$ (hub alone)}
+
+\addplot[name path=zerotwo, domain=0:4, samples=2, draw=none] {0};
+
+\addplot[gray!18, draw=none] fill between[of=Fhub and zerotwo];
+\addplot[gray!45, draw=none] fill between[of=Fbundle and Fhub];
+
+\node[font=\small, align=center] at (axis cs:0.8,2.5)
+    {Hub alone\\efficient};
+
+\node[font=\small, align=center] at (axis cs:2.2,7.2)
+    {Hub alone inefficient,\\but hub $+$ pipeline\\efficient};
+
+\node[font=\small, align=center] at (axis cs:2.8,13.2)
+    {No intervention\\efficient};
+
+\end{axis}
+\end{tikzpicture}
+\caption{Illustrative policy regions in $(N_B,F)$ space. The dashed line shows the efficiency threshold for a hub alone, $F_H^*$, while the solid curve shows the threshold for a hub combined with optimally chosen pipeline policy, $F_{H+b}^*(N_B)=F_H^*+(\beta\eta v_XN_AN_B)^2/(2\kappa)$. As the outside pool grows, cross-regional renewal becomes more valuable, enlarging the parameter region in which a hub-plus-pipeline bundle is socially efficient even though a hub alone is not. Parameter values are illustrative: $N_A=6$, $v_L=1$, $m_A^0=0.15$, $m_A^1=0.55$, $\beta=0.9$, $\delta=1.6$, $\eta=0.2$, $v_X=1$, and $\kappa=1$.}
+\label{fig:NB_F_regions}
+\end{figure}
+
+\subsection{Comparative Statics of Pipeline Policy}
+
+The next proposition records how the optimal pipeline policy and its welfare contribution vary with the primitive parameters.
+
+\begin{proposition}
+\label{prop:refresh_comparative_statics}
+The optimal pipeline policy $b^*$ and the cross-regional renewal surplus $R_{AB}(N_A,N_B)$ satisfy
+\begin{align}
+\frac{\partial b^*}{\partial N_A}
+&=
+\frac{\beta\eta v_X N_B}{\kappa}
+>0,
+\label{eq:db_dN}
+\\[0.4em]
+\frac{\partial b^*}{\partial N_B}
+&=
+\frac{\beta\eta v_X N_A}{\kappa}
+>0,
+\label{eq:db_dNB}
+\\[0.4em]
+\frac{\partial b^*}{\partial \eta}
+&=
+\frac{\beta v_X Q_{AB}}{\kappa}
+>0,
+\label{eq:db_deta}
+\\[0.4em]
+\frac{\partial b^*}{\partial \kappa}
+&=
+-\frac{\beta\eta v_X Q_{AB}}{\kappa^2}
+<0,
+\label{eq:db_dkappa}
+\\[0.4em]
+\frac{\partial b^*}{\partial v_X}
+&=
+\frac{\beta\eta Q_{AB}}{\kappa}
+>0,
+\label{eq:db_dvX}
+\end{align}
+and
+\begin{align}
+\frac{\partial R_{AB}(N_A,N_B)}{\partial N_A}
+&=
+\frac{\beta^2\eta^2 v_X^2 N_A N_B^2}{\kappa}
+>0,
+\label{eq:dR_dN}
+\\[0.4em]
+\frac{\partial R_{AB}(N_A,N_B)}{\partial N_B}
+&=
+\frac{\beta^2\eta^2 v_X^2 N_A^2 N_B}{\kappa}
+>0,
+\label{eq:dR_dNB}
+\\[0.4em]
+\frac{\partial R_{AB}(N_A,N_B)}{\partial \eta}
+&=
+\frac{\beta^2\eta v_X^2 Q_{AB}^2}{\kappa}
+>0,
+\label{eq:dR_deta}
+\\[0.4em]
+\frac{\partial R_{AB}(N_A,N_B)}{\partial \kappa}
+&=
+-\frac{\bigl(\beta\eta v_X Q_{AB}\bigr)^2}{2\kappa^2}
+<0,
+\label{eq:dR_dkappa}
+\\[0.4em]
+\frac{\partial R_{AB}(N_A,N_B)}{\partial v_X}
+&=
+\frac{\beta^2\eta^2 v_X Q_{AB}^2}{\kappa}
+>0.
+\label{eq:dR_dvX}
+\end{align}
+\end{proposition}
+
+Proposition \ref{prop:refresh_comparative_statics} shows that cross-regional pipeline policy is more valuable when the target region is larger, when the outside pool is larger, when external linkages generate greater surplus, and when the linkage technology is more effective. It is less valuable when pipeline policy is costly to implement.
+
+Under the minimal benchmark introduced in Section 3, the marginal value of $b$ depends on the size of the cross-regional linkage space $Q_{AB}$ and on the surplus per outside link $v_X$, but not directly on the local hub matching parameter $m_A^1$. That feature is deliberate: the benchmark separates the hub's \emph{local coordination role} from the pipeline policy's \emph{cross-regional renewal role}. A richer extension could allow absorptive capacity or anchor participants to make the optimal pipeline intensity depend on local matching strength as well.
+
+\subsection{Discussion}
+
+The main lesson of this section is not merely that cross-regional pipeline policy is useful. Rather, it is that the socially relevant object is often a \emph{policy bundle}. In the present model, the planner's choice is frequently not between a hub and no hub, but between a hub alone and a hub combined with an outside-linkage mechanism.
+
+This distinction matters because the hub's short-run strength and its long-run weakness are generated by the same source: more intensive local interaction inside region $A$. A successful hub creates more local matching, but precisely for that reason it also raises the danger of redundancy and lock-in. Pipeline policy is valuable because it acts on a different margin, namely the supply of cross-regional renewal from region $B$.
+
+Taken together, Sections 5 and 6 imply that a negative evaluation of a hub-alone policy does not by itself justify abandoning hub policy altogether. It may instead justify redesigning the hub as part of a broader regional strategy that combines local coordination with cross-regional pipeline formation.

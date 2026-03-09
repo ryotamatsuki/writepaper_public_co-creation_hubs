@@ -1,0 +1,227 @@
+\section{Proofs for Section 5}
+
+This appendix provides the proofs omitted from Section \ref{sec:short_run}.
+
+\subsection{Proof of Proposition \ref{prop:short_run_success}}
+
+By definition,
+\[
+\Pi_H
+=
+\bigl[B_1(1)-F\bigr]-B_1(0).
+\]
+Using \eqref{eq:B1},
+\[
+B_1(1)=v_LP_A m_A^1,
+\qquad
+B_1(0)=v_LP_A m_A^0.
+\]
+Hence
+\begin{align}
+\Pi_H
+&=
+v_LP_A m_A^1-F-v_LP_A m_A^0
+\nonumber\\
+&=
+v_LP_A(m_A^1-m_A^0)-F,
+\label{eq:app5_PiH}
+\end{align}
+which is \eqref{eq:DeltaSR}.
+
+Therefore,
+\[
+\Pi_H>0
+\quad\Longleftrightarrow\quad
+F<v_LP_A(m_A^1-m_A^0),
+\]
+which proves \eqref{eq:short_run_condition}.
+
+To derive the threshold in terms of $N_A$, substitute
+\[
+P_A=\frac{N_A(N_A-1)}{2}
+\]
+into \eqref{eq:short_run_condition}:
+\[
+\frac{N_A(N_A-1)}{2}>
+\frac{F}{v_L(m_A^1-m_A^0)}.
+\]
+Equivalently,
+\[
+N_A^2-N_A-\frac{2F}{v_L(m_A^1-m_A^0)}>0.
+\]
+The positive root of the associated quadratic equation is
+\[
+\frac{1}{2}
+\left(
+1+
+\sqrt{1+\frac{8F}{v_L(m_A^1-m_A^0)}}
+\right).
+\]
+Hence, treating $N_A$ as continuous, private support obtains if and only if
+\[
+N_A\ge
+N_{SR}^*
+:=
+\frac{1}{2}
+\left(
+1+
+\sqrt{1+\frac{8F}{v_L(m_A^1-m_A^0)}}
+\right),
+\]
+with the usual ceiling if $N_A$ must be an integer.
+\qed
+
+\subsection{Derivation of the Private--Social Wedge}
+
+Recall the definitions
+\[
+S_A:=v_LP_A(m_A^1-m_A^0),
+\]
+\[
+D_A:=\beta v_LP_A(m_A^1-m_A^0)\bigl[1-\delta(m_A^1+m_A^0)\bigr],
+\]
+and
+\[
+S_{AB}(b):=\beta\eta v_XQ_{AB}b-\frac{\kappa}{2}b^2.
+\]
+
+Since
+\[
+\Pi_H=S_A-F
+\]
+and
+\[
+\Delta_H
+=
+v_LP_A(m_A^1-m_A^0)\Bigl[(1+\beta)-\beta\delta(m_A^1+m_A^0)\Bigr]-F,
+\]
+we obtain
+\begin{align}
+\Delta_H-\Pi_H
+&=
+\beta v_LP_A(m_A^1-m_A^0)\bigl[1-\delta(m_A^1+m_A^0)\bigr]
+\nonumber\\
+&=D_A.
+\label{eq:app5_wedge}
+\end{align}
+Hence
+\[
+\Delta_H=\Pi_H+D_A,
+\]
+which is \eqref{eq:dynamic_wedge}.
+
+Likewise, from Section \ref{sec:refresh},
+\[
+\Delta_{H+b}(b)=\Delta_H+S_{AB}(b),
+\]
+so
+\[
+\Delta_{H+b}(b)=\Pi_H+D_A+S_{AB}(b),
+\]
+which is \eqref{eq:bundle_wedge}.
+
+Finally, using the optimal pipeline policy from Section \ref{sec:refresh},
+\[
+R_{AB}(N_A,N_B)
+=
+\frac{(\beta\eta v_XQ_{AB})^2}{2\kappa},
+\]
+we obtain
+\[
+\Delta_{H+b}^*=\Pi_H+D_A+R_{AB}(N_A,N_B),
+\]
+which is \eqref{eq:bundle_wedge_star}.
+
+\subsection{Proof of Proposition \ref{prop:dynamic_inefficiency}}
+
+Recall
+\[
+\Pi_H=S_A-F,
+\qquad
+\Delta_H=S_A+D_A-F,
+\qquad
+\Delta_{H+b}^*=S_A+D_A+R_{AB}(N_A,N_B)-F.
+\]
+Hence
+\[
+F_H^*(N_A)=S_A+D_A,
+\qquad
+F_{H+b}^*(N_A,N_B)=S_A+D_A+R_{AB}(N_A,N_B).
+\]
+
+\paragraph{Part 1: Private over-support of a hub alone.}
+If
+\[
+\delta(m_A^1+m_A^0)>1,
+\]
+then
+\[
+1-\delta(m_A^1+m_A^0)<0,
+\]
+so by definition,
+\[
+D_A=\beta v_LP_A(m_A^1-m_A^0)\bigl[1-\delta(m_A^1+m_A^0)\bigr]<0.
+\]
+Therefore
+\[
+\Delta_H=\Pi_H+D_A<\Pi_H.
+\]
+
+Next, the hub is privately supported under the short-run rule if and only if
+\[
+\Pi_H>0
+\quad\Longleftrightarrow\quad
+F<S_A.
+\]
+The hub is socially undesirable as a stand-alone policy if and only if
+\[
+\Delta_H<0
+\quad\Longleftrightarrow\quad
+F>F_H^*(N_A).
+\]
+Combining these two conditions gives
+\[
+\max\{0,F_H^*(N_A)\}<F<S_A.
+\]
+It remains to show that this interval is nonempty. Since $D_A<0$,
+\[
+F_H^*(N_A)=S_A+D_A<S_A.
+\]
+Hence
+\[
+\max\{0,F_H^*(N_A)\}<S_A,
+\]
+so the interval is nonempty. This proves \eqref{eq:dynamic_inefficiency_interval}.
+
+\paragraph{Part 2: Private under-support of a hub-plus-pipeline bundle.}
+If
+\[
+D_A+R_{AB}(N_A,N_B)>0,
+\]
+then
+\[
+F_{H+b}^*(N_A,N_B)=S_A+D_A+R_{AB}(N_A,N_B)>S_A.
+\]
+
+The hub is not privately supported under the short-run rule if and only if
+\[
+\Pi_H\le 0
+\quad\Longleftrightarrow\quad
+F\ge S_A.
+\]
+The hub-plus-pipeline bundle is socially desirable if and only if
+\[
+\Delta_{H+b}^*>0
+\quad\Longleftrightarrow\quad
+F<F_{H+b}^*(N_A,N_B).
+\]
+Combining these gives
+\[
+S_A\le F<F_{H+b}^*(N_A,N_B),
+\]
+which is exactly \eqref{eq:under_support_interval}. Because
+\[
+F_{H+b}^*(N_A,N_B)>S_A,
+\]
+this interval is nonempty. This completes the proof.
+\qed

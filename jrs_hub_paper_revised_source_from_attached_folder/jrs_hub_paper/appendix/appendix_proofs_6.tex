@@ -1,0 +1,291 @@
+\section{Proofs for Section 6}
+
+This appendix provides the proofs omitted from Section \ref{sec:refresh}.
+
+\subsection{Proof of Proposition \ref{prop:optimal_refresh}}
+
+Conditional on $h=1$, the planner chooses $b\ge 0$ to maximize
+\[
+\Delta_{H+b}(b)
+=
+\Delta_H+\beta\eta v_XQ_{AB}b-\frac{\kappa}{2}b^2.
+\]
+Differentiating with respect to $b$,
+\begin{equation}
+\frac{d\Delta_{H+b}(b)}{db}
+=
+\beta\eta v_XQ_{AB}-\kappa b.
+\label{eq:app6_dDeltaHb_db}
+\end{equation}
+The second derivative is
+\begin{equation}
+\frac{d^2\Delta_{H+b}(b)}{db^2}
+=
+-\kappa<0,
+\label{eq:app6_d2DeltaHb_db2}
+\end{equation}
+so the problem is strictly concave and the first-order condition is sufficient.
+
+Setting \eqref{eq:app6_dDeltaHb_db} equal to zero gives
+\[
+\beta\eta v_XQ_{AB}-\kappa b=0,
+\]
+hence
+\begin{equation}
+b^*=
+\frac{\beta\eta v_XQ_{AB}}{\kappa}
+=
+\frac{\beta\eta v_XN_AN_B}{\kappa}.
+\label{eq:app6_bstar}
+\end{equation}
+Because $\beta>0$, $\eta>0$, $v_X>0$, $Q_{AB}=N_AN_B>0$, and $\kappa>0$, we have $b^*>0$. Thus the nonnegativity constraint does not bind.
+
+Substituting \eqref{eq:app6_bstar} into $\Delta_{H+b}(b)$,
+\begin{align}
+\Delta_{H+b}^*
+&=
+\Delta_H
++
+\beta\eta v_XQ_{AB}
+\left(
+\frac{\beta\eta v_XQ_{AB}}{\kappa}
+\right)
+-
+\frac{\kappa}{2}
+\left(
+\frac{\beta\eta v_XQ_{AB}}{\kappa}
+\right)^2
+\nonumber\\
+&=
+\Delta_H
++
+\frac{(\beta\eta v_XQ_{AB})^2}{\kappa}
+-
+\frac{1}{2}\frac{(\beta\eta v_XQ_{AB})^2}{\kappa}
+\nonumber\\
+&=
+\Delta_H+\frac{(\beta\eta v_XQ_{AB})^2}{2\kappa},
+\label{eq:app6_DeltaHb_star}
+\end{align}
+which is \eqref{eq:DeltaHb_star}. This proves Proposition \ref{prop:optimal_refresh}.
+\qed
+
+\subsection{Proof of Proposition \ref{prop:hub_plus_refresh_efficiency}}
+
+By Proposition \ref{prop:optimal_refresh},
+\[
+\Delta_{H+b}^*=
+\Delta_H+\frac{(\beta\eta v_XQ_{AB})^2}{2\kappa}.
+\]
+From Section \ref{sec:hub_efficiency},
+\[
+\Delta_H
+=
+v_LP_A(m_A^1-m_A^0)\Lambda_A-F,
+\qquad
+\Lambda_A=(1+\beta)-\beta\delta(m_A^1+m_A^0).
+\]
+Hence
+\begin{align}
+\Delta_{H+b}^*
+&=
+v_LP_A(m_A^1-m_A^0)\Lambda_A
++
+\frac{(\beta\eta v_XQ_{AB})^2}{2\kappa}
+-F
+\nonumber\\
+&=
+F_{H+b}^*(N_A,N_B)-F,
+\label{eq:app6_DeltaHb_star_F}
+\end{align}
+where
+\begin{equation}
+F_{H+b}^*(N_A,N_B)
+:=
+v_LP_A(m_A^1-m_A^0)\Lambda_A
++
+\frac{(\beta\eta v_XQ_{AB})^2}{2\kappa}.
+\label{eq:app6_FHbstar}
+\end{equation}
+Therefore,
+\[
+\Delta_{H+b}^*\ge 0
+\quad\Longleftrightarrow\quad
+F\le F_{H+b}^*(N_A,N_B),
+\]
+which proves \eqref{eq:hub_refresh_efficiency_condition}.
+
+Next,
+\[
+F_H^*(N_A)=v_LP_A(m_A^1-m_A^0)\Lambda_A,
+\]
+so
+\begin{align}
+F_{H+b}^*(N_A,N_B)-F_H^*(N_A)
+&=
+\frac{(\beta\eta v_XQ_{AB})^2}{2\kappa}
+\nonumber\\
+&=:
+R_{AB}(N_A,N_B)
+>0,
+\label{eq:app6_threshold_gap}
+\end{align}
+which is exactly \eqref{eq:threshold_expansion}. Thus pipeline policy strictly enlarges the efficient set. This proves Proposition \ref{prop:hub_plus_refresh_efficiency}.
+\qed
+
+\subsection{Proof of Proposition \ref{prop:rescue_interval}}
+
+A hub alone is inefficient if and only if
+\[
+\Delta_H<0.
+\]
+Since
+\[
+\Delta_H=F_H^*(N_A)-F,
+\]
+this is equivalent to
+\begin{equation}
+F>F_H^*(N_A).
+\label{eq:app6_hub_alone_inefficient}
+\end{equation}
+
+A hub with optimally chosen pipeline policy is efficient if and only if
+\[
+\Delta_{H+b}^*\ge 0,
+\]
+which, by Proposition \ref{prop:hub_plus_refresh_efficiency}, is equivalent to
+\begin{equation}
+F\le F_{H+b}^*(N_A,N_B).
+\label{eq:app6_hub_pipeline_efficient}
+\end{equation}
+
+Because fixed cost is assumed positive, the admissible set is $F>0$. Combining $F>0$, \eqref{eq:app6_hub_alone_inefficient}, and \eqref{eq:app6_hub_pipeline_efficient}, the set of fixed costs for which the hub alone is inefficient but the hub with pipeline policy is efficient is
+\[
+\max\{0,F_H^*(N_A)\}<F\le F_{H+b}^*(N_A,N_B).
+\]
+This set is nonempty if and only if its upper bound exceeds its lower bound, i.e.
+\[
+F_{H+b}^*(N_A,N_B)>\max\{0,F_H^*(N_A)\},
+\]
+which proves \eqref{eq:existence_rescue_interval}. The interval itself is exactly \eqref{eq:rescue_interval}. This proves Proposition \ref{prop:rescue_interval}.
+\qed
+
+\subsection{Proof of Proposition \ref{prop:refresh_comparative_statics}}
+
+Recall
+\[
+b^*=\frac{\beta\eta v_XQ_{AB}}{\kappa},
+\qquad
+Q_{AB}=N_AN_B,
+\qquad
+R_{AB}(N_A,N_B)=\frac{(\beta\eta v_XQ_{AB})^2}{2\kappa}.
+\]
+
+\paragraph{Derivatives of $b^*$.}
+Using $Q_{AB}=N_AN_B$,
+\begin{align}
+\frac{\partial b^*}{\partial N_A}
+&=
+\frac{\beta\eta v_XN_B}{\kappa}
+>0,
+\label{eq:app6_db_dNA}
+\\[0.4em]
+\frac{\partial b^*}{\partial N_B}
+&=
+\frac{\beta\eta v_XN_A}{\kappa}
+>0,
+\label{eq:app6_db_dNB}
+\\[0.4em]
+\frac{\partial b^*}{\partial \eta}
+&=
+\frac{\beta v_XQ_{AB}}{\kappa}
+>0,
+\label{eq:app6_db_deta}
+\\[0.4em]
+\frac{\partial b^*}{\partial \kappa}
+&=
+-\frac{\beta\eta v_XQ_{AB}}{\kappa^2}
+<0,
+\label{eq:app6_db_dkappa}
+\\[0.4em]
+\frac{\partial b^*}{\partial v_X}
+&=
+\frac{\beta\eta Q_{AB}}{\kappa}
+>0,
+\label{eq:app6_db_dvX}
+\end{align}
+which are exactly \eqref{eq:db_dN}--\eqref{eq:db_dvX}.
+
+\paragraph{Derivatives of $R_{AB}(N_A,N_B)$.}
+Write
+\[
+R_{AB}(N_A,N_B)
+=
+\frac{\beta^2\eta^2v_X^2}{2\kappa}Q_{AB}^2
+=
+\frac{\beta^2\eta^2v_X^2}{2\kappa}N_A^2N_B^2.
+\]
+Differentiating with respect to $N_A$,
+\begin{align}
+\frac{\partial R_{AB}(N_A,N_B)}{\partial N_A}
+&=
+\frac{\beta^2\eta^2v_X^2}{2\kappa}\cdot 2N_AN_B^2
+\nonumber\\
+&=
+\frac{\beta^2\eta^2v_X^2N_AN_B^2}{\kappa}
+>0,
+\label{eq:app6_dR_dNA}
+\end{align}
+which is \eqref{eq:dR_dN}.
+
+Differentiating with respect to $N_B$,
+\begin{align}
+\frac{\partial R_{AB}(N_A,N_B)}{\partial N_B}
+&=
+\frac{\beta^2\eta^2v_X^2}{2\kappa}\cdot 2N_A^2N_B
+\nonumber\\
+&=
+\frac{\beta^2\eta^2v_X^2N_A^2N_B}{\kappa}
+>0,
+\label{eq:app6_dR_dNB}
+\end{align}
+which is \eqref{eq:dR_dNB}.
+
+Differentiating with respect to $\eta$,
+\begin{align}
+\frac{\partial R_{AB}(N_A,N_B)}{\partial \eta}
+&=
+\frac{2\beta^2\eta v_X^2Q_{AB}^2}{2\kappa}
+\nonumber\\
+&=
+\frac{\beta^2\eta v_X^2Q_{AB}^2}{\kappa}
+>0,
+\label{eq:app6_dR_deta}
+\end{align}
+which is \eqref{eq:dR_deta}.
+
+Differentiating with respect to $\kappa$,
+\begin{align}
+\frac{\partial R_{AB}(N_A,N_B)}{\partial \kappa}
+&=
+-\frac{(\beta\eta v_XQ_{AB})^2}{2\kappa^2}
+<0,
+\label{eq:app6_dR_dkappa}
+\end{align}
+which is \eqref{eq:dR_dkappa}.
+
+Differentiating with respect to $v_X$,
+\begin{align}
+\frac{\partial R_{AB}(N_A,N_B)}{\partial v_X}
+&=
+\frac{2\beta^2\eta^2v_XQ_{AB}^2}{2\kappa}
+\nonumber\\
+&=
+\frac{\beta^2\eta^2v_XQ_{AB}^2}{\kappa}
+>0,
+\label{eq:app6_dR_dvX}
+\end{align}
+which is \eqref{eq:dR_dvX}.
+
+This proves Proposition \ref{prop:refresh_comparative_statics}.
+\qed
