@@ -1,0 +1,155 @@
+\documentclass[12pt]{article}
+
+% ==================================================
+% Annals working draft main file
+% Blinded submission by default. Set \blindfalse for a personal draft.
+% ==================================================
+\newif\ifblind
+\blindtrue
+% \blindfalse
+
+% ---------- Packages ----------
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\IfFileExists{newtxtext.sty}{
+  \IfFileExists{binhex.tex}{
+    \usepackage{newtxtext,newtxmath}
+  }{
+    \IfFileExists{mathptmx.sty}{
+      \usepackage{mathptmx}
+    }{
+      \IfFileExists{lmodern.sty}{\usepackage{lmodern}}{}
+    }
+  }
+}{
+  \IfFileExists{mathptmx.sty}{
+    \usepackage{mathptmx}
+  }{
+    \IfFileExists{lmodern.sty}{\usepackage{lmodern}}{}
+  }
+}
+\usepackage[authoryear]{natbib}
+\bibpunct{(}{)}{;}{a}{,}{,}
+\usepackage[margin=1in]{geometry}
+\usepackage{setspace}
+\let\openbox\relax
+\usepackage{amsmath,amsthm,mathtools}
+\usepackage{bm}
+\usepackage{booktabs}
+\usepackage{graphicx}
+\usepackage{array}
+\usepackage{enumitem}
+\usepackage{xurl}
+\usepackage{url}
+\usepackage{xcolor}
+\usepackage{tikz}
+\usepackage{pgfplots}
+\usepackage{hyperref}
+\usetikzlibrary{arrows.meta,positioning,calc,patterns}
+\usepgfplotslibrary{fillbetween}
+\pgfplotsset{compat=1.18}
+
+% ---------- Layout ----------
+\onehalfspacing
+\setlength{\parskip}{0.35em}
+\setlength{\parindent}{1.25em}
+\raggedbottom
+\hbadness=10000
+\vbadness=10000
+
+\pagestyle{plain}
+
+% ---------- Theorem environments ----------
+\theoremstyle{plain}
+\newtheorem{assumption}{Assumption}
+\newtheorem{lemma}{Lemma}
+\newtheorem{proposition}{Proposition}
+\newtheorem{corollary}{Corollary}
+\newtheorem{theorem}{Theorem}
+\theoremstyle{remark}
+\newtheorem{remark}{Remark}
+\newtheorem*{definition}{Definition}
+
+% ---------- Metadata ----------
+\newcommand{\papertitle}{Public Co-Creation Hubs, Cross-Regional Pipelines, and Dynamic Efficiency in Thin Regional Ecosystems}
+\newcommand{\articletype}{Original Article}
+\newcommand{\shorttitle}{Public Hubs and Cross-Regional Pipelines}
+\newcommand{\authorname}{Ryota Matsuki}
+\newcommand{\authoraffil}{Independent Researcher, Matsuyama, Ehime, Japan}
+\newcommand{\authoremail}{ryota.matsuki@gmail.com}
+\newcommand{\JELcodes}{H70, O31, O38, R11, R12, R58}
+\newcommand{\keywordslist}{public co-creation hubs; cross-regional pipelines; regional innovation; place-based policy; local buzz; dynamic redundancy; thin regional ecosystems}
+
+\hypersetup{
+  pdftitle={\papertitle},
+  pdfsubject={The Annals of Regional Science working manuscript},
+  pdfauthor={\ifblind Anonymous\else \authorname\fi},
+  pdfkeywords={\keywordslist},
+  colorlinks=true,
+  linkcolor=black,
+  citecolor=black,
+  urlcolor=blue
+}
+
+% ---------- Title ----------
+\title{\papertitle}
+\author{}
+\date{}
+
+\begin{document}
+
+\maketitle
+\thispagestyle{plain}
+
+\ifblind
+\begin{center}
+\normalsize
+\emph{Author information omitted for double-blind review.}
+\end{center}
+\vspace{0.6em}
+\else
+\begin{center}
+\normalsize
+\authorname\\
+\authoraffil\\
+E-mail: \href{mailto:\authoremail}{\authoremail}
+\end{center}
+\vspace{0.6em}
+\fi
+
+\noindent\textbf{Abstract}
+
+\noindent
+Local governments increasingly support co-creation hubs as place-based instruments for strengthening regional innovation. Yet the welfare case for hub policy is unclear in thin regional ecosystems, where the local participant pool is limited and repeated local interaction may quickly become redundant. This paper develops a two-region, two-period framework in which a hub raises local matching in a target region, while pipeline policy creates cross-regional renewal through outside linkages. The model focuses on a wedge that arises when current hub services and directly brokered outside links are contractible, but the future novelty created inside the regional system is not. The framework delivers three conditional implications. First, decentralized support and planner evaluation need not coincide because renewal effort is underprovided and hub support can be either too weak or too strong. Second, a hub is socially efficient as a stand-alone intervention only under limited conditions. Third, pipeline policy has positive stand-alone value, but a hub-plus-pipeline bundle dominates pipeline policy alone only under specific parameter conditions. The framework generates empirically testable predictions on repeated ties, outside collaboration, and absorptive conditions, and it implies that hubs in thin regional ecosystems should be evaluated not only against no-policy baselines, but also against pipeline-only renewal strategies.
+
+\vspace{0.8em}
+\noindent\textbf{Keywords:} \keywordslist
+
+\vspace{0.35em}
+\noindent\textbf{JEL classification:} \JELcodes
+
+\vspace{1.0em}
+
+\input{sections/01_intro}
+\input{sections/02_related_literature}
+\input{sections/03_model}
+\input{sections/04_when_hub_efficient}
+\input{sections/05_short_run_dynamic_ineff}
+\input{sections/06_hub_alone_vs_refresh}
+\input{sections/07_extensions}
+\input{sections/08_policy_implications}
+\input{sections/09_conclusion}
+\input{sections/09a_acknowledgements}
+
+\section*{Data Availability Statement}
+This study develops a theoretical model and does not analyze newly collected empirical data. No dataset accompanies the manuscript.
+
+\input{sections/10_references}
+
+\appendix
+\input{appendix/appendix_proofs_4}
+\input{appendix/appendix_proofs_5}
+\input{appendix/appendix_proofs_6}
+\input{appendix/appendix_proofs_7}
+
+\end{document}

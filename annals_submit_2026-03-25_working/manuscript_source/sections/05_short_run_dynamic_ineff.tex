@@ -1,0 +1,191 @@
+\section{Why Public Intervention? Decentralized Support and Social Evaluation}
+\label{sec:short_run}
+
+Section~\ref{sec:hub_efficiency} characterized when a hub is socially efficient as a stand-alone policy. The next question is why decentralized local support may diverge from that social evaluation. In this framework, the divergence comes from the contractibility structure in Section~\ref{sec:model}: decentralized actors do not fully internalize how current local coordination changes the common stock of future novelty available to the regional system.
+
+\subsection{Decentralized Renewal Choice Versus the Planner}
+
+From \eqref{eq:Pi_compact}, a decentralized local coalition choosing pipeline effort conditional on hub state $h$ solves
+\[
+\max_{b\ge 0}\Pi(h,b)
+=
+\max_{b\ge 0}
+\left\{
+\bar\Pi(h)+\beta A_h^P b-\frac{\kappa}{2}b^2
+\right\}.
+\]
+From \eqref{eq:W_compact}, the planner solves
+\[
+\max_{b\ge 0}W(h,b)
+=
+\max_{b\ge 0}
+\left\{
+\bar W(h)+\beta A_h^W b-\frac{\kappa}{2}b^2
+\right\}.
+\]
+
+\begin{proposition}
+\label{prop:renewal_gap}
+For each $h\in\{0,1\}$, the decentralized support benchmark and the planner choose
+\begin{equation}
+b_P^*(h)=\frac{\beta A_h^P}{\kappa}
+=
+\frac{\beta v_X Q_{AB}\bigl(\eta_0+\eta_1 h\bigr)}{\kappa},
+\label{eq:bPstar}
+\end{equation}
+and
+\begin{equation}
+b_W^*(h)=\frac{\beta A_h^W}{\kappa}
+=
+\frac{\beta\Bigl[\xi v_L P_A m_A(h)+v_X Q_{AB}\bigl(\eta_0+\eta_1 h\bigr)\Bigr]}{\kappa},
+\label{eq:bWstar}
+\end{equation}
+respectively. Hence
+\begin{equation}
+b_W^*(h)-b_P^*(h)
+=
+\frac{\beta\xi v_L P_A m_A(h)}{\kappa}
+>0.
+\label{eq:renewal_gap}
+\end{equation}
+Moreover,
+\begin{equation}
+\bigl[b_W^*(1)-b_P^*(1)\bigr]-\bigl[b_W^*(0)-b_P^*(0)\bigr]
+=
+\frac{\beta\xi v_L P_A\bigl(m_A^1-m_A^0\bigr)}{\kappa}
+>0.
+\label{eq:renewal_gap_hub}
+\end{equation}
+\end{proposition}
+
+Proposition \ref{prop:renewal_gap} is a direct implication of the maintained appropriability structure. Once decentralized actors value only $A_h^P$ while the planner values $A_h^W=A_h^P+\xi v_L P_A m_A(h)$, the planner necessarily chooses more renewal. The gap is larger when a hub exists because denser local interaction raises the social value of replenishing the regional opportunity set.
+
+\subsection{Hub Support Under Decentralized and Social Evaluation}
+
+Substituting \eqref{eq:bPstar} and \eqref{eq:bWstar} back into the two objectives yields
+\begin{equation}
+\Pi^*(h)
+:=
+\Pi\bigl(h,b_P^*(h)\bigr)
+=
+\bar\Pi(h)+R_h^P,
+\qquad
+R_h^P:=\frac{\beta^2(A_h^P)^2}{2\kappa},
+\label{eq:Pi_star_h}
+\end{equation}
+and
+\begin{equation}
+W^*(h)
+:=
+W\bigl(h,b_W^*(h)\bigr)
+=
+\bar W(h)+R_h^W,
+\qquad
+R_h^W:=\frac{\beta^2(A_h^W)^2}{2\kappa}.
+\label{eq:W_star_h}
+\end{equation}
+
+Define the incremental hub-support criteria
+\begin{equation}
+\Delta_P^*
+:=
+\Pi^*(1)-\Pi^*(0),
+\label{eq:DeltaP_star}
+\end{equation}
+and
+\begin{equation}
+\Delta_W^*
+:=
+W^*(1)-W^*(0).
+\label{eq:DeltaW_star}
+\end{equation}
+
+For notational convenience, let
+\begin{equation}
+S_A
+:=
+v_L P_A\bigl(m_A^1-m_A^0\bigr)>0,
+\label{eq:SA}
+\end{equation}
+denote the hub's immediate local coordination gain, and let
+\begin{equation}
+D_A
+:=
+\beta v_L P_A\bigl(m_A^1-m_A^0\bigr)\Bigl[1-\delta\bigl(m_A^1+m_A^0\bigr)\Bigr]
+\label{eq:DA}
+\end{equation}
+denote the dynamic local correction from Section~\ref{sec:hub_efficiency}. Finally, define the incremental renewal wedge
+\begin{equation}
+M_A
+:=
+\bigl(R_1^W-R_0^W\bigr)-\bigl(R_1^P-R_0^P\bigr)
+>0.
+\label{eq:MA}
+\end{equation}
+
+Using \eqref{eq:Pi_star_h}--\eqref{eq:MA}, the decentralized and social support criteria can be written as
+\begin{equation}
+\Delta_P^*
+=
+S_A-F+\bigl(R_1^P-R_0^P\bigr),
+\label{eq:DeltaP_star_expanded}
+\end{equation}
+and
+\begin{equation}
+\Delta_W^*
+=
+\Delta_P^*+D_A+M_A.
+\label{eq:DeltaW_star_wedge}
+\end{equation}
+
+Equation \eqref{eq:DeltaW_star_wedge} decomposes the planner--decentralized wedge into two parts: $D_A$, the dynamic value or cost of denser local coordination, and $M_A$, the added social value created when the planner chooses more renewal than decentralized actors do. This is an accounting decomposition under the benchmark contract structure from Section~\ref{sec:model}.
+
+\begin{proposition}
+\label{prop:dynamic_inefficiency}
+Define
+\begin{equation}
+F_P^*
+:=
+S_A+\bigl(R_1^P-R_0^P\bigr),
+\label{eq:FPstar}
+\end{equation}
+and
+\begin{equation}
+F_W^*
+:=
+F_P^*+D_A+M_A.
+\label{eq:FWstar}
+\end{equation}
+
+\begin{enumerate}[leftmargin=2em]
+    \item If
+    \begin{equation}
+    D_A+M_A>0,
+    \label{eq:under_support_condition}
+    \end{equation}
+    then there exists a nonempty fixed-cost interval
+    \begin{equation}
+    F_P^*<F<F_W^*
+    \label{eq:under_support_interval}
+    \end{equation}
+    such that decentralized actors reject the hub while the planner supports it.
+
+    \item If
+    \begin{equation}
+    D_A+M_A<0,
+    \label{eq:over_support_condition}
+    \end{equation}
+    then there exists a nonempty fixed-cost interval
+    \begin{equation}
+    F_W^*<F<F_P^*
+    \label{eq:dynamic_inefficiency_interval}
+    \end{equation}
+    such that decentralized actors support the hub while the planner rejects it.
+\end{enumerate}
+\end{proposition}
+
+Proposition \ref{prop:dynamic_inefficiency} gives the model's minimal policy implication under the maintained appropriability structure. If $D_A+M_A>0$, decentralized actors under-support the hub because they neglect part of the continuation value created by renewal. If $D_A+M_A<0$, they over-support it because they see current coordination gains without fully pricing the future novelty loss from repeated local interaction. The direction of policy error is therefore parameter-dependent rather than fixed in advance.
+
+\subsection{Interpretation}
+
+Three implications follow. First, the decentralized benchmark is not an ad hoc activity rule: it comes from an appropriability problem in which current coordination and directly brokered outside links are contractible, but the diffuse continuation value of future novelty is not. Section~\ref{sec:extensions} shows that this wedge shrinks under partial internalization and that the associated support-threshold gap converges to zero as internalization approaches one. Second, the principal distortion is dynamic rather than static: decentralized actors do not misread period-1 coordination, but underprice what it does to the future opportunity set. Third, the distortion links local coordination and cross-regional renewal. Because the planner values how outside links replenish novelty, renewal is underprovided precisely where hub-supported coordination is strongest.

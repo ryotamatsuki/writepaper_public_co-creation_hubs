@@ -1,0 +1,297 @@
+\section{Extensions}
+\label{sec:extensions}
+
+This section develops two extensions that sharpen the interpretation of the baseline model while preserving analytical tractability. The first relaxes the baseline polar assumption that decentralized actors internalize none of the continuation value of future local novelty. The second introduces heterogeneous absorptive capacity among participants in the target region. The aim is not to multiply cases, but to show how the paper's main policy comparison changes when the wedge is weakened and when ecosystem composition varies.
+
+To streamline notation, define
+\[
+\Delta m_A:=m_A^1-m_A^0>0,
+\qquad
+\Lambda_A:=(1+\beta)-\beta\delta(m_A^1+m_A^0),
+\]
+so that in the baseline model
+\[
+\Delta_H=v_LP_A\Delta m_A\Lambda_A-F,
+\qquad
+b_W^*(1)=
+\frac{\beta\Bigl[\xi v_LP_A m_A^1+v_XQ_{AB}(\eta_0+\eta_1)\Bigr]}{\kappa}.
+\]
+We also retain the notation $S_A$ and $D_A$ from Section~\ref{sec:short_run}.
+
+\subsection{Partial Internalization of Future Novelty}
+
+The baseline benchmark in Section~\ref{sec:model} takes the polar case in which decentralized actors internalize none of the continuation value generated inside the regional system. A natural robustness check is to allow partial internalization.
+
+Let $\alpha\in[0,1]$ denote the fraction of period-2 local continuation value that decentralized actors internalize. Their objective becomes
+\begin{equation}
+\Pi_{\alpha}(h,b)
+=
+v_LP_Am_A(h)
++
+\alpha\beta v_LP_Am_A(h)\bigl[1-\delta m_A(h)+\xi b\bigr]
++
+\beta v_XQ_{AB}\bigl[q_0+(\eta_0+\eta_1 h)b\bigr]
+-Fh-\frac{\kappa}{2}b^2.
+\label{eq:Pi_alpha}
+\end{equation}
+The baseline model corresponds to $\alpha=0$, while $\alpha=1$ is the full-internalization limit.
+
+Define
+\begin{equation}
+A_{h,\alpha}^P
+:=
+\alpha\xi v_LP_Am_A(h)+v_XQ_{AB}\bigl(\eta_0+\eta_1 h\bigr),
+\label{eq:Ah_alpha}
+\end{equation}
+so that \eqref{eq:Pi_alpha} can be written as
+\begin{equation}
+\Pi_{\alpha}(h,b)
+=
+\bar\Pi_{\alpha}(h)+\beta A_{h,\alpha}^P b-\frac{\kappa}{2}b^2,
+\label{eq:Pi_alpha_compact}
+\end{equation}
+where
+\begin{equation}
+\bar\Pi_{\alpha}(h)
+:=
+v_LP_Am_A(h)
++
+\alpha\beta v_LP_Am_A(h)\bigl[1-\delta m_A(h)\bigr]
++
+\beta v_XQ_{AB}q_0-Fh.
+\label{eq:Pibar_alpha}
+\end{equation}
+
+\begin{proposition}
+\label{prop:partial_internalization}
+For each $h\in\{0,1\}$ and each $\alpha\in[0,1]$, the decentralized benchmark with partial internalization chooses
+\begin{equation}
+b_{P,\alpha}^*(h)
+=
+\frac{\beta A_{h,\alpha}^P}{\kappa}
+=
+\frac{\beta\Bigl[\alpha\xi v_LP_Am_A(h)+v_XQ_{AB}\bigl(\eta_0+\eta_1 h\bigr)\Bigr]}{\kappa}.
+\label{eq:bPalpha}
+\end{equation}
+Hence
+\begin{equation}
+b_W^*(h)-b_{P,\alpha}^*(h)
+=
+\frac{\beta(1-\alpha)\xi v_LP_Am_A(h)}{\kappa}
+\ge 0,
+\label{eq:b_gap_alpha}
+\end{equation}
+with strict inequality for every $\alpha<1$. Moreover,
+\begin{equation}
+\frac{\partial b_{P,\alpha}^*(h)}{\partial \alpha}
+=
+\frac{\beta\xi v_LP_Am_A(h)}{\kappa}
+>0.
+\label{eq:dbdalpha}
+\end{equation}
+\end{proposition}
+
+Proposition \ref{prop:partial_internalization} shows that the baseline wedge is not an all-or-nothing knife edge. As decentralized actors internalize more of the continuation value, they choose more renewal and the planner--decentralized gap shrinks continuously. But for every $\alpha<1$, renewal remains underprovided. The policy comparison in the main text therefore survives when the polar benchmark is weakened.
+
+To connect this extension directly to the main policy comparison, define
+\begin{equation}
+R_{h,\alpha}^P
+:=
+\frac{\beta^2(A_{h,\alpha}^P)^2}{2\kappa},
+\qquad
+h\in\{0,1\},
+\label{eq:Rhalpha}
+\end{equation}
+and let
+\begin{equation}
+F_{P,\alpha}^{\dagger}
+:=
+S_A+\alpha D_A+\bigl(R_{1,\alpha}^P-R_{0,\alpha}^P\bigr)
+\label{eq:FPalpha_dagger}
+\end{equation}
+denote the decentralized support threshold under partial internalization. The planner's corresponding threshold remains
+\begin{equation}
+F_{H+b}^{\dagger}
+=
+S_A+D_A+\bigl(R_1-R_0\bigr),
+\label{eq:FW_dagger_alpha}
+\end{equation}
+which is the bundle threshold from Section~\ref{sec:refresh}.
+
+\begin{proposition}
+\label{prop:alpha_threshold_gap}
+Define
+\begin{equation}
+X_A:=\xi^2 v_L^2 P_A^2\bigl((m_A^1)^2-(m_A^0)^2\bigr)>0
+\label{eq:XA}
+\end{equation}
+and
+\begin{equation}
+Y_A:=2\xi v_LP_A v_XQ_{AB}\Bigl[\eta_0\bigl(m_A^1-m_A^0\bigr)+\eta_1 m_A^1\Bigr]>0.
+\label{eq:YA}
+\end{equation}
+Then the planner--decentralized threshold gap under partial internalization is
+\begin{equation}
+\Omega_{\alpha}
+:=
+F_{H+b}^{\dagger}-F_{P,\alpha}^{\dagger}
+=
+(1-\alpha)
+\left[
+D_A+\frac{\beta^2}{2\kappa}\Bigl((1+\alpha)X_A+Y_A\Bigr)
+\right].
+\label{eq:Omega_alpha}
+\end{equation}
+Hence:
+\begin{enumerate}[leftmargin=2em]
+    \item If $\Omega_{\alpha}>0$, there exists a positive fixed-cost interval
+    \begin{equation}
+    F_{P,\alpha}^{\dagger}<F\le F_{H+b}^{\dagger}
+    \label{eq:alpha_under_support_interval}
+    \end{equation}
+    in which decentralized actors reject hub creation while the planner prefers the bundle.
+
+    \item If $\Omega_{\alpha}<0$, there exists a positive fixed-cost interval
+    \begin{equation}
+    F_{H+b}^{\dagger}<F\le F_{P,\alpha}^{\dagger}
+    \label{eq:alpha_over_support_interval}
+    \end{equation}
+    in which decentralized actors support hub creation while the planner rejects it.
+
+    \item The threshold gap collapses in the full-internalization limit:
+    \begin{equation}
+    \Omega_1=0.
+    \label{eq:Omega_one}
+    \end{equation}
+    Moreover, if $D_A\ge 0$, then $\Omega_{\alpha}$ is strictly decreasing in $\alpha$ on $[0,1)$.
+\end{enumerate}
+\end{proposition}
+
+Proposition \ref{prop:alpha_threshold_gap} strengthens the role of the extension. Partial internalization does not merely shrink the renewal-choice gap in \eqref{eq:b_gap_alpha}; it also narrows the support-threshold gap that underlies Proposition \ref{prop:dynamic_inefficiency} in Section~\ref{sec:short_run} and the bundle comparison in Section~\ref{sec:refresh}. In the full-internalization limit, the decentralized and planner thresholds coincide. Under the empirically relevant case $D_A\ge 0$, that convergence is monotone.
+
+\subsection{Regional Absorptive Capacity and Anchor Actors}
+
+The baseline model treats all local participants symmetrically through the common surplus parameter $v_L$ and the common cross-regional surplus parameter $v_X$. A natural extension allows some local actors in region $A$ to have higher absorptive capacity or stronger boundary-spanning ability. This captures the idea that a region with the same number of participants may nevertheless generate more value if some actors are especially effective at transforming contact into productive collaboration.
+
+Let $\sigma\in[0,1]$ denote the share of \emph{high-absorptive} participants in region $A$. Suppose that a realized local interaction yields surplus $v_L^H$ if at least one of the two participants is high-absorptive and $v_L^L$ otherwise, where
+\[
+v_L^H>v_L^L>0.
+\]
+Then the expected surplus per realized local interaction is
+\begin{equation}
+\bar v_L(\sigma)
+=
+v_L^L(1-\sigma)^2
++
+v_L^H\bigl[1-(1-\sigma)^2\bigr]
+=
+v_L^L+(2\sigma-\sigma^2)(v_L^H-v_L^L).
+\label{eq:vbarL_sigma}
+\end{equation}
+Because
+\begin{equation}
+\bar v_L'(\sigma)=2(1-\sigma)(v_L^H-v_L^L)>0
+\qquad
+\text{for } \sigma\in[0,1),
+\label{eq:vbarL_prime}
+\end{equation}
+a higher share of high-absorptive participants raises the average value of a realized local interaction.
+
+Likewise, suppose that the social surplus from an effective cross-regional link is $v_X^H$ when the region-$A$ participant involved is high-absorptive and $v_X^L$ otherwise, where
+\[
+v_X^H>v_X^L>0.
+\]
+Then the expected surplus per effective cross-regional link is
+\begin{equation}
+\bar v_X(\sigma)
+=
+v_X^L(1-\sigma)+v_X^H\sigma
+=
+v_X^L+\sigma(v_X^H-v_X^L),
+\label{eq:vbarX_sigma}
+\end{equation}
+with
+\begin{equation}
+\bar v_X'(\sigma)=v_X^H-v_X^L>0.
+\label{eq:vbarX_prime}
+\end{equation}
+
+Replacing $v_L$ by $\bar v_L(\sigma)$ and $v_X$ by $\bar v_X(\sigma)$, the hub-alone welfare gain becomes
+\begin{equation}
+\Delta_H(\sigma)
+=
+\bar v_L(\sigma)P_A\Delta m_A\Lambda_A-F,
+\label{eq:DeltaH_sigma}
+\end{equation}
+and the optimal pipeline policy conditional on a hub becomes
+\begin{equation}
+b^*(\sigma)
+=
+\frac{\beta A_1(\sigma)}{\kappa},
+\qquad
+A_1(\sigma):=
+\xi \bar v_L(\sigma)P_A m_A^1
++
+\bar v_X(\sigma)Q_{AB}(\eta_0+\eta_1),
+\label{eq:bstar_sigma}
+\end{equation}
+with corresponding renewal surplus
+\begin{equation}
+R_1(\sigma)
+=
+\frac{\beta^2 A_1(\sigma)^2}{2\kappa}.
+\label{eq:R_sigma}
+\end{equation}
+
+\begin{proposition}
+\label{prop:heterogeneous_participants}
+Suppose $v_L^H>v_L^L>0$, $v_X^H>v_X^L>0$, and $\Lambda_A>0$. Then:
+
+\begin{enumerate}[leftmargin=2em]
+    \item The hub-alone welfare gain is increasing in the share of high-absorptive participants:
+    \begin{equation}
+    \frac{\partial \Delta_H(\sigma)}{\partial \sigma}
+    =
+    \bar v_L'(\sigma)P_A\Delta m_A\Lambda_A
+    >0.
+    \label{eq:dDeltaH_dsigma}
+    \end{equation}
+
+    \item The optimal pipeline policy is increasing in $\sigma$:
+    \begin{equation}
+    \frac{\partial b^*(\sigma)}{\partial \sigma}
+    =
+    \frac{\beta}{\kappa}
+    \left[
+    \xi \bar v_L'(\sigma)P_A m_A^1
+    +
+    \bar v_X'(\sigma)Q_{AB}(\eta_0+\eta_1)
+    \right]
+    >0.
+    \label{eq:dbstar_dsigma}
+    \end{equation}
+
+    \item The renewal surplus is increasing in $\sigma$:
+    \begin{equation}
+    \frac{\partial R_1(\sigma)}{\partial \sigma}
+    =
+    \frac{\beta^2}{\kappa}
+    A_1(\sigma)
+    \left[
+    \xi \bar v_L'(\sigma)P_A m_A^1
+    +
+    \bar v_X'(\sigma)Q_{AB}(\eta_0+\eta_1)
+    \right]
+    >0.
+    \label{eq:dR_dsigma}
+    \end{equation}
+\end{enumerate}
+\end{proposition}
+
+Proposition \ref{prop:heterogeneous_participants} implies that the effective thickness of a regional ecosystem is not determined by headcount alone. Composition matters. A region with a relatively small number of participants may still support a valuable public hub if enough of those participants have high absorptive capacity or play boundary-spanning roles. Conversely, a larger ecosystem with weak absorptive capacity may fail to justify a hub despite its greater scale.
+
+\subsection{Implications of the Extensions}
+
+Taken together, the two extensions refine the baseline theory in complementary ways.
+
+Partial internalization weakens the planner--decentralized wedge and narrows the corresponding support-threshold gap, thereby addressing the concern that the baseline benchmark is too stark. Higher absorptive capacity shifts the policy comparison in favor of both hubs and renewal by raising the value created from local and external interactions. The first extension is therefore a robustness check against the main critique of the benchmark, while the second is a regional-composition extension that helps interpret heterogeneous policy effects across places.

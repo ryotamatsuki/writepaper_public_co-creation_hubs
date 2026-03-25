@@ -1,0 +1,337 @@
+\section{Proofs for Section~\ref{sec:hub_efficiency}}
+
+This appendix collects the algebra omitted from Section~\ref{sec:hub_efficiency}.
+
+\subsection{Preliminaries}
+
+Recall from Section~\ref{sec:model} that
+\[
+P_A=\frac{N_A(N_A-1)}{2},
+\qquad
+Q_{AB}=N_A N_B,
+\qquad
+m_A(h)=m_A^0+\bigl(m_A^1-m_A^0\bigr)h,
+\]
+with
+\[
+0\le m_A^0<m_A^1\le 1.
+\]
+In the benchmark case without pipeline policy ($b=0$), welfare is
+\begin{equation}
+W(0,0)
+=
+v_L P_A m_A^0
++
+\beta\Bigl\{
+v_L P_A m_A^0\bigl(1-\delta m_A^0\bigr)
++
+v_X Q_{AB}q_0
+\Bigr\},
+\label{eq:app4_W00}
+\end{equation}
+and
+\begin{equation}
+W(1,0)
+=
+v_L P_A m_A^1
++
+\beta\Bigl\{
+v_L P_A m_A^1\bigl(1-\delta m_A^1\bigr)
++
+v_X Q_{AB}q_0
+\Bigr\}
+-F.
+\label{eq:app4_W10}
+\end{equation}
+Hence the net welfare gain from a hub alone is
+\begin{align}
+\Delta_H
+&:=W(1,0)-W(0,0)
+\nonumber\\
+&=
+v_L P_A\Bigl[
+m_A^1-m_A^0
++
+\beta\bigl(
+m_A^1(1-\delta m_A^1)-m_A^0(1-\delta m_A^0)
+\bigr)
+\Bigr]-F.
+\label{eq:app4_Delta_start}
+\end{align}
+The cross-regional baseline term cancels exactly:
+\[
+\beta v_XQ_{AB}q_0-\beta v_XQ_{AB}q_0=0.
+\]
+Thus the hub-alone comparison depends only on local primitives.
+
+Now,
+\begin{align}
+m_A^1(1-\delta m_A^1)-m_A^0(1-\delta m_A^0)
+&=
+(m_A^1-m_A^0)-\delta\bigl((m_A^1)^2-(m_A^0)^2\bigr)
+\nonumber\\
+&=
+(m_A^1-m_A^0)\bigl[1-\delta(m_A^1+m_A^0)\bigr].
+\label{eq:app4_local_diff}
+\end{align}
+Substituting \eqref{eq:app4_local_diff} into \eqref{eq:app4_Delta_start} yields
+\begin{align}
+\Delta_H
+&=
+v_L P_A(m_A^1-m_A^0)
+\Bigl[(1+\beta)-\beta\delta(m_A^1+m_A^0)\Bigr]-F.
+\label{eq:app4_Delta_factorized}
+\end{align}
+Define
+\begin{equation}
+\Lambda_A:=(1+\beta)-\beta\delta(m_A^1+m_A^0),
+\label{eq:app4_Lambda}
+\end{equation}
+so that
+\begin{equation}
+\Delta_H=v_L P_A(m_A^1-m_A^0)\Lambda_A-F.
+\label{eq:app4_Delta_Lambda}
+\end{equation}
+
+\subsection{Proof of Proposition \ref{prop:hub_efficiency}}
+
+We prove each part in turn.
+
+\paragraph{Part 1: the case $\Lambda_A\le 0$.}
+Since $v_L>0$, $P_A>0$ for all $N_A\ge 2$, and $m_A^1-m_A^0>0$, the product
+\[
+v_L P_A(m_A^1-m_A^0)\Lambda_A
+\]
+is weakly negative whenever $\Lambda_A\le 0$. Therefore, from \eqref{eq:app4_Delta_Lambda},
+\[
+\Delta_H
+=
+v_L P_A(m_A^1-m_A^0)\Lambda_A-F
+<0
+\]
+for every $F>0$. Hence the hub is never socially efficient.
+
+\paragraph{Part 2: the case $\Lambda_A>0$.}
+Under $\Lambda_A>0$, the condition $\Delta_H\ge 0$ is equivalent to
+\[
+v_L P_A(m_A^1-m_A^0)\Lambda_A\ge F.
+\]
+Since all terms except $P_A$ are strictly positive, this can be rearranged as
+\begin{equation}
+P_A
+\ge
+\frac{F}{v_L(m_A^1-m_A^0)\Lambda_A}.
+\label{eq:app4_pair_threshold}
+\end{equation}
+This proves \eqref{eq:pair_threshold}.
+
+Using $P_A=N_A(N_A-1)/2$, \eqref{eq:app4_pair_threshold} becomes
+\[
+\frac{N_A(N_A-1)}{2}
+\ge
+\frac{F}{v_L(m_A^1-m_A^0)\Lambda_A},
+\]
+or equivalently
+\[
+N_A^2-N_A-\frac{2F}{v_L(m_A^1-m_A^0)\Lambda_A}\ge 0.
+\]
+The positive root of the corresponding quadratic equation is
+\[
+\frac{1}{2}\left(
+1+\sqrt{1+\frac{8F}{v_L(m_A^1-m_A^0)\Lambda_A}}
+\right).
+\]
+Hence, treating $N_A$ as continuous, the hub is efficient if and only if
+\begin{equation}
+N_A\ge
+N_H^*
+:=
+\frac{1}{2}\left(
+1+\sqrt{1+\frac{8F}{v_L(m_A^1-m_A^0)\Lambda_A}}
+\right),
+\label{eq:app4_Nstar}
+\end{equation}
+which is exactly \eqref{eq:Nstar}. For integer $N_A$, replace $N_H^*$ by its ceiling. This completes the proof.
+\qed
+
+\subsection{Derivation of the Equivalent Threshold Characterizations}
+
+Starting from \eqref{eq:app4_Delta_Lambda}, the condition $\Delta_H\ge 0$ is equivalent to
+\[
+F\le v_L P_A(m_A^1-m_A^0)\Lambda_A.
+\]
+Thus the critical fixed cost is
+\begin{equation}
+F_H^*(N_A):=v_L P_A(m_A^1-m_A^0)\Lambda_A,
+\label{eq:app4_Fstar}
+\end{equation}
+which is \eqref{eq:Fstar}.
+
+Next, solve for the critical redundancy rate. Rewrite $\Delta_H\ge 0$ as
+\[
+v_L P_A(m_A^1-m_A^0)\Bigl[(1+\beta)-\beta\delta(m_A^1+m_A^0)\Bigr]\ge F.
+\]
+Dividing by the positive term $v_L P_A(m_A^1-m_A^0)$ gives
+\[
+(1+\beta)-\beta\delta(m_A^1+m_A^0)
+\ge
+\frac{F}{v_L P_A(m_A^1-m_A^0)}.
+\]
+Hence
+\[
+\beta\delta(m_A^1+m_A^0)
+\le
+(1+\beta)-\frac{F}{v_L P_A(m_A^1-m_A^0)},
+\]
+so
+\begin{align}
+\delta
+&\le
+\frac{1+\beta}{\beta(m_A^1+m_A^0)}
+-
+\frac{F}{\beta v_L P_A(m_A^1-m_A^0)(m_A^1+m_A^0)}
+\nonumber\\
+&=:\delta_H^*(N_A),
+\label{eq:app4_deltastar}
+\end{align}
+which is \eqref{eq:deltastar}.
+
+\subsection{Proof of Proposition \ref{prop:comparative_statics_hub}}
+
+Throughout this proof we use
+\[
+\Delta_H=v_L P_A(m_A^1-m_A^0)\Lambda_A-F,
+\qquad
+\Lambda_A=(1+\beta)-\beta\delta(m_A^1+m_A^0).
+\]
+
+\paragraph{Derivative with respect to $N_A$.}
+Treating $N_A$ as continuous,
+\[
+P_A=\frac{N_A(N_A-1)}{2}
+\quad\Rightarrow\quad
+\frac{\partial P_A}{\partial N_A}=\frac{2N_A-1}{2}.
+\]
+Hence
+\begin{align}
+\frac{\partial \Delta_H}{\partial N_A}
+&=
+v_L\frac{\partial P_A}{\partial N_A}(m_A^1-m_A^0)\Lambda_A
+\nonumber\\
+&=
+\frac{v_L}{2}(2N_A-1)(m_A^1-m_A^0)\Lambda_A,
+\label{eq:app4_dDelta_dNA}
+\end{align}
+which is \eqref{eq:dDelta_dN}. If $\Lambda_A>0$, then $\partial\Delta_H/\partial N_A>0$ because $v_L>0$, $2N_A-1>0$, and $m_A^1-m_A^0>0$.
+
+For integer $N_A$, the same monotonicity follows from forward differences:
+\begin{align}
+\Delta_H(N_A+1)-\Delta_H(N_A)
+&=
+v_L\bigl(P_A(N_A+1)-P_A(N_A)\bigr)(m_A^1-m_A^0)\Lambda_A
+\nonumber\\
+&=
+v_LN_A(m_A^1-m_A^0)\Lambda_A
+>0
+\quad\text{if }\Lambda_A>0.
+\label{eq:app4_forward_difference}
+\end{align}
+
+\paragraph{Derivative with respect to $F$.}
+From \eqref{eq:app4_Delta_Lambda},
+\begin{equation}
+\frac{\partial \Delta_H}{\partial F}=-1<0,
+\label{eq:app4_dDelta_dF}
+\end{equation}
+which is \eqref{eq:dDelta_dF}.
+
+\paragraph{Derivative with respect to $\delta$.}
+Differentiating $\Lambda_A=(1+\beta)-\beta\delta(m_A^1+m_A^0)$ gives
+\[
+\frac{\partial \Lambda_A}{\partial \delta}=-\beta(m_A^1+m_A^0).
+\]
+Therefore
+\begin{align}
+\frac{\partial \Delta_H}{\partial \delta}
+&=
+v_L P_A(m_A^1-m_A^0)\frac{\partial \Lambda_A}{\partial \delta}
+\nonumber\\
+&=
+-\beta v_L P_A(m_A^1-m_A^0)(m_A^1+m_A^0)
+<0,
+\label{eq:app4_dDelta_ddelta}
+\end{align}
+which is \eqref{eq:dDelta_ddelta}.
+
+\paragraph{Derivative with respect to $m_A^1$.}
+Starting from
+\[
+\Delta_H=v_L P_A(m_A^1-m_A^0)\Bigl[(1+\beta)-\beta\delta(m_A^1+m_A^0)\Bigr]-F,
+\]
+differentiate with respect to $m_A^1$:
+\begin{align}
+\frac{\partial \Delta_H}{\partial m_A^1}
+&=
+v_L P_A
+\left(
+\Bigl[(1+\beta)-\beta\delta(m_A^1+m_A^0)\Bigr]
++
+(m_A^1-m_A^0)(-\beta\delta)
+\right)
+\nonumber\\
+&=
+v_L P_A\Bigl[(1+\beta)-2\beta\delta m_A^1\Bigr].
+\label{eq:app4_dDelta_dm1_raw}
+\end{align}
+This is exactly \eqref{eq:dDelta_dm1}.
+
+To verify the sign, note that the regularity condition \eqref{eq:regularity} implies
+\[
+1-\delta m_A^1>0
+\quad\Longrightarrow\quad
+\delta m_A^1<1.
+\]
+Hence
+\[
+2\beta\delta m_A^1<2\beta.
+\]
+Since $\beta\in(0,1]$, we have $1+\beta\ge 2\beta$, with equality only when $\beta=1$. Therefore,
+\[
+(1+\beta)-2\beta\delta m_A^1>(1+\beta)-2\beta=1-\beta\ge 0,
+\]
+where the strict inequality follows from $\delta m_A^1<1$. Thus
+\begin{equation}
+\frac{\partial \Delta_H}{\partial m_A^1}>0.
+\label{eq:app4_dDelta_dm1_sign}
+\end{equation}
+
+\paragraph{Derivative with respect to $m_A^0$.}
+Similarly,
+\begin{align}
+\frac{\partial \Delta_H}{\partial m_A^0}
+&=
+v_L P_A
+\left(
+-\Bigl[(1+\beta)-\beta\delta(m_A^1+m_A^0)\Bigr]
++
+(m_A^1-m_A^0)(-\beta\delta)
+\right)
+\nonumber\\
+&=
+-\,v_L P_A\Bigl[(1+\beta)-2\beta\delta m_A^0\Bigr].
+\label{eq:app4_dDelta_dm0_raw}
+\end{align}
+This is exactly \eqref{eq:dDelta_dm0}.
+
+Because $m_A^0<m_A^1$ and $\delta m_A^1<1$, we also have $\delta m_A^0<1$. Repeating the same sign argument as above gives
+\[
+(1+\beta)-2\beta\delta m_A^0>0,
+\]
+so
+\begin{equation}
+\frac{\partial \Delta_H}{\partial m_A^0}<0.
+\label{eq:app4_dDelta_dm0_sign}
+\end{equation}
+
+This proves Proposition \ref{prop:comparative_statics_hub}.
+\qed

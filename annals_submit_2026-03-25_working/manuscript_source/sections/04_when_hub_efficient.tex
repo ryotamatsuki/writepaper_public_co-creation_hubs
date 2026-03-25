@@ -1,0 +1,184 @@
+\section{When Is a Public Hub Efficient?}
+\label{sec:hub_efficiency}
+
+This section isolates when a public hub is socially efficient \emph{as a stand-alone local policy}. Throughout, we set
+\[
+b=0.
+\]
+This makes it possible to evaluate the hub's local coordination value before introducing pipeline policy in Section~\ref{sec:refresh}.
+
+\subsection{A Benchmark Efficiency Criterion}
+
+Using the period-1 and period-2 local surplus expressions from Section~\ref{sec:model}, the net welfare gain from establishing a hub without pipeline policy is
+\begin{equation}
+\Delta_H
+=
+v_L P_A \bigl(m_A^1-m_A^0\bigr)
+\Bigl[(1+\beta)-\beta\delta\bigl(m_A^1+m_A^0\bigr)\Bigr]
+-F.
+\label{eq:DeltaH_repeat}
+\end{equation}
+
+It is useful to define the hub's \emph{dynamic viability factor} as
+\begin{equation}
+\Lambda_A
+:=
+(1+\beta)-\beta\delta\bigl(m_A^1+m_A^0\bigr).
+\label{eq:Lambda_def}
+\end{equation}
+Then \eqref{eq:DeltaH_repeat} becomes
+\begin{equation}
+\Delta_H
+=
+v_L P_A \bigl(m_A^1-m_A^0\bigr)\Lambda_A - F.
+\label{eq:DeltaH_Lambda}
+\end{equation}
+
+The term $m_A^1-m_A^0$ captures the hub's immediate coordination gain, while $\Lambda_A$ summarizes whether that gain survives second-period redundancy. A larger $\delta$ lowers $\Lambda_A$ and therefore weakens the case for a hub.
+
+The hub is socially efficient if and only if
+\[
+\Delta_H \ge 0.
+\]
+
+\begin{proposition}
+\label{prop:hub_efficiency}
+Consider the benchmark case without pipeline policy, $b=0$.
+
+\begin{enumerate}[leftmargin=2em]
+    \item If
+    \[
+    \Lambda_A \le 0,
+    \]
+    then the hub is never socially efficient:
+    \[
+    \Delta_H < 0
+    \qquad
+    \text{for all } N_A \ge 2 \text{ and } F>0.
+    \]
+
+    \item If
+    \[
+    \Lambda_A > 0,
+    \]
+    then the hub is socially efficient if and only if
+    \begin{equation}
+    P_A
+    \ge
+    \frac{F}{v_L\bigl(m_A^1-m_A^0\bigr)\Lambda_A}.
+    \label{eq:pair_threshold}
+    \end{equation}
+    Equivalently, treating $N_A$ as continuous, the hub is efficient if and only if
+    \begin{equation}
+    N_A \ge N_H^*
+    :=
+    \frac{1}{2}
+    \left(
+    1+
+    \sqrt{
+    1+
+    \frac{8F}{v_L\bigl(m_A^1-m_A^0\bigr)\Lambda_A}
+    }
+    \right).
+    \label{eq:Nstar}
+    \end{equation}
+    If $N_A$ is restricted to integers, replace $N_H^*$ by its ceiling.
+\end{enumerate}
+\end{proposition}
+
+Proposition \ref{prop:hub_efficiency} says that a hub creates value only if the gross local coordination benefit,
+\[
+v_L P_A \bigl(m_A^1-m_A^0\bigr),
+\]
+survives the dynamic penalty summarized by $\Lambda_A$ and is large enough to cover $F$. Failure can therefore come either from thin local scale or from strong dynamic redundancy.
+
+An implication of the two-region setup is that the stand-alone criterion in \eqref{eq:DeltaH_Lambda} depends only on \emph{local} primitives. Outside-pool variables affect welfare levels, but they cancel out of the incremental comparison between a hub alone and no hub.
+
+\subsection{Equivalent Threshold Characterizations}
+
+Proposition \ref{prop:hub_efficiency} can be rewritten in two equivalent threshold forms.
+
+First, for given $(N_A,m_A^0,m_A^1,\beta,\delta)$, define the critical fixed cost
+\begin{equation}
+F_H^*(N_A)
+:=
+v_L P_A \bigl(m_A^1-m_A^0\bigr)\Lambda_A.
+\label{eq:Fstar}
+\end{equation}
+Then the hub is efficient if and only if
+\[
+F \le F_H^*(N_A).
+\]
+
+Second, for given $(N_A,m_A^0,m_A^1,\beta,F)$, define the critical redundancy rate
+\begin{equation}
+\delta_H^*(N_A)
+:=
+\frac{1+\beta}{\beta\bigl(m_A^1+m_A^0\bigr)}
+-
+\frac{F}{\beta v_L P_A\bigl(m_A^1-m_A^0\bigr)\bigl(m_A^1+m_A^0\bigr)}.
+\label{eq:deltastar}
+\end{equation}
+Then the hub is efficient if and only if
+\[
+\delta \le \delta_H^*(N_A),
+\]
+provided the right-hand side is positive.
+
+These thresholds show that stand-alone hub efficiency is governed by five local primitives: $N_A$, $m_A^1-m_A^0$, $v_L$, $F$, and $\delta$.
+
+\subsection{Comparative Statics}
+
+The next proposition summarizes the main comparative statics.
+
+\begin{proposition}
+\label{prop:comparative_statics_hub}
+Suppose $\Lambda_A>0$. Then the hub-alone welfare gain $\Delta_H$ satisfies
+\begin{align}
+\frac{\partial \Delta_H}{\partial N_A}
+&=
+\frac{v_L}{2}(2N_A-1)\bigl(m_A^1-m_A^0\bigr)\Lambda_A
+>0,
+\label{eq:dDelta_dN}
+\\[0.4em]
+\frac{\partial \Delta_H}{\partial F}
+&=
+-1
+<0,
+\label{eq:dDelta_dF}
+\\[0.4em]
+\frac{\partial \Delta_H}{\partial \delta}
+&=
+-\beta v_L P_A \bigl(m_A^1-m_A^0\bigr)\bigl(m_A^1+m_A^0\bigr)
+<0.
+\label{eq:dDelta_ddelta}
+\end{align}
+Moreover, under the regularity condition \eqref{eq:regularity},
+\begin{align}
+\frac{\partial \Delta_H}{\partial m_A^1}
+&=
+v_L P_A\Bigl[(1+\beta)-2\beta\delta m_A^1\Bigr]
+>0,
+\label{eq:dDelta_dm1}
+\\[0.4em]
+\frac{\partial \Delta_H}{\partial m_A^0}
+&=
+- v_L P_A\Bigl[(1+\beta)-2\beta\delta m_A^0\Bigr]
+<0.
+\label{eq:dDelta_dm0}
+\end{align}
+\end{proposition}
+
+Proposition \ref{prop:comparative_statics_hub} yields three immediate implications. First, the hub is more likely to be efficient in a thicker target ecosystem. Since
+\[
+P_A=\frac{N_A(N_A-1)}{2},
+\]
+the number of potential local pairs rises more than proportionally with $N_A$. Thin ecosystems are therefore disadvantaged even when the hub raises matching.
+
+Second, faster local redundancy makes the hub less attractive. This is the model's reduced-form representation of dynamic redundancy risk from repeated interaction inside region $A$.
+
+Third, a larger matching effect $m_A^1$ raises the hub's value, while a higher baseline $m_A^0$ lowers its incremental contribution. The hub is therefore most useful where pre-existing coordination is weak but the policy can materially reduce frictions.
+
+\subsection{Discussion}
+
+Two points matter for what follows. Hub efficiency is not determined by local scale alone, because strong redundancy can overturn even sizable short-run coordination gains. And the relevant object is $\Lambda_A$, not just the static increment $m_A^1-m_A^0$. A hub may therefore look successful on visible activity grounds while remaining dynamically weak. The next section compares that stand-alone logic with decentralized support under the model's dynamic coordination externality.

@@ -1,0 +1,120 @@
+\section{Proofs for Section~\ref{sec:refresh}}
+
+This appendix provides the proofs omitted from Section~\ref{sec:refresh}.
+
+\subsection{Proof of Proposition \ref{prop:optimal_refresh}}
+
+Fix $h\in\{0,1\}$. From \eqref{eq:W_compact}, the planner solves
+\[
+\max_{b\ge 0}\left\{\bar W(h)+\beta A_h^W b-\frac{\kappa}{2}b^2\right\}.
+\]
+Differentiating with respect to $b$,
+\[
+\frac{\partial W(h,b)}{\partial b}=\beta A_h^W-\kappa b.
+\]
+The second derivative is
+\[
+\frac{\partial^2 W(h,b)}{\partial b^2}=-\kappa<0,
+\]
+so the problem is strictly concave and the first-order condition is sufficient. Setting the derivative equal to zero gives
+\[
+b^*(h)=\frac{\beta A_h^W}{\kappa},
+\]
+which is \eqref{eq:bstar}.
+
+Substituting this optimizer back into the objective yields
+\begin{align*}
+W^*(h)
+&=
+\bar W(h)
++
+\beta A_h^W
+\left(\frac{\beta A_h^W}{\kappa}\right)
+-
+\frac{\kappa}{2}
+\left(\frac{\beta A_h^W}{\kappa}\right)^2 \\
+&=
+\bar W(h)
++
+\frac{\beta^2(A_h^W)^2}{\kappa}
+-
+\frac{\beta^2(A_h^W)^2}{2\kappa} \\
+&=
+\bar W(h)+\frac{\beta^2(A_h^W)^2}{2\kappa}
+=
+\bar W(h)+R_h,
+\end{align*}
+which proves \eqref{eq:Wstar_h}. This establishes Proposition \ref{prop:optimal_refresh}.
+\qed
+
+\subsection{Proof of Proposition \ref{prop:hub_plus_refresh_efficiency}}
+
+From \eqref{eq:W0star},
+\[
+W^*(0)-W(0,0)=R_0.
+\]
+If $A_0^W>0$, then by definition
+\[
+R_0=\frac{\beta^2(A_0^W)^2}{2\kappa}>0,
+\]
+which proves \eqref{eq:pipeline_alone_positive}.
+
+Next, from \eqref{eq:W1star} and \eqref{eq:W0star},
+\[
+W^*(1)-W^*(0)
+=
+\Delta_H+R_1-R_0.
+\]
+Therefore the bundle is preferred to pipeline alone if and only if
+\[
+\Delta_H+(R_1-R_0)\ge 0,
+\]
+which is \eqref{eq:bundle_vs_pipeline}.
+
+From Section~\ref{sec:hub_efficiency},
+\[
+\Delta_H=F_H^*(N_A)-F.
+\]
+Substituting into the previous condition gives
+\[
+F_H^*(N_A)-F+R_1-R_0\ge 0,
+\]
+or equivalently
+\[
+F\le F_H^*(N_A)+(R_1-R_0)
+=
+F_{H+b}^{\dagger}(N_A,N_B),
+\]
+which is \eqref{eq:Fdagger}.
+
+Finally, since \eqref{eq:R1gtR0} states that $R_1>R_0$, we obtain
+\[
+F_{H+b}^{\dagger}(N_A,N_B)-F_H^*(N_A)=R_1-R_0>0,
+\]
+which is \eqref{eq:threshold_expansion}. This completes the proof of Proposition \ref{prop:hub_plus_refresh_efficiency}.
+\qed
+
+\subsection{Proof of Proposition \ref{prop:rescue_interval}}
+
+A hub alone is inefficient if and only if
+\[
+\Delta_H<0
+\quad\Longleftrightarrow\quad
+F>F_H^*(N_A).
+\]
+The bundle is preferred to pipeline alone if and only if
+\[
+\Delta_H+(R_1-R_0)\ge 0
+\quad\Longleftrightarrow\quad
+F\le F_H^*(N_A)+(R_1-R_0).
+\]
+Combining the two conditions gives
+\[
+F_H^*(N_A)
+<
+F
+\le
+F_H^*(N_A)+(R_1-R_0),
+\]
+which is exactly \eqref{eq:rescue_interval}. Because $R_1>R_0$, the interval has positive length. This proves Proposition \ref{prop:rescue_interval}.
+\qed

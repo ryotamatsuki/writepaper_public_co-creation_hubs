@@ -1,0 +1,149 @@
+\section{Pipeline Alone, Hub Alone, and the Efficient Policy Bundle}
+\label{sec:refresh}
+
+Sections~\ref{sec:hub_efficiency} and~\ref{sec:short_run} established two points: a hub alone may fail because stronger local coordination also raises dynamic redundancy risk, and decentralized actors underprovide renewal because they do not fully internalize its contribution to future novelty. This section therefore compares the relevant policy designs directly: \emph{pipeline alone}, \emph{hub alone}, and the \emph{bundle}.
+
+\subsection{Optimal Pipeline Policy Conditional on Hub State}
+
+From \eqref{eq:W_compact}, conditional on hub state $h$, the planner chooses
+\[
+\max_{b\ge 0}W(h,b)
+=
+\max_{b\ge 0}
+\left\{
+\bar W(h)+\beta A_h^W b-\frac{\kappa}{2}b^2
+\right\}.
+\]
+
+\begin{proposition}
+\label{prop:optimal_refresh}
+For each $h\in\{0,1\}$, the planner's unique welfare-maximizing pipeline policy is
+\begin{equation}
+b^*(h)=b_W^*(h)=\frac{\beta A_h^W}{\kappa}
+=
+\frac{\beta\Bigl[\xi v_L P_A m_A(h)+v_X Q_{AB}\bigl(\eta_0+\eta_1 h\bigr)\Bigr]}{\kappa}.
+\label{eq:bstar}
+\end{equation}
+The associated maximized welfare level is
+\begin{equation}
+W^*(h)
+:=
+W\bigl(h,b^*(h)\bigr)
+=
+\bar W(h)+R_h,
+\qquad
+R_h:=\frac{\beta^2(A_h^W)^2}{2\kappa}.
+\label{eq:Wstar_h}
+\end{equation}
+\end{proposition}
+
+The term $R_h$ is the maximized renewal surplus conditional on hub state $h$. Because
+\[
+A_1^W-A_0^W
+=
+\xi v_L P_A\bigl(m_A^1-m_A^0\bigr)+v_X Q_{AB}\eta_1
+>0,
+\]
+we have
+\begin{equation}
+R_1>R_0.
+\label{eq:R1gtR0}
+\end{equation}
+Thus, pipeline effort is valuable without a hub and more valuable when a hub is present. This inequality is a direct implication of the maintained benchmark and complementarity assumptions. The substantive question is whether the incremental renewal margin is large enough to offset the hub's stand-alone defect.
+
+\subsection{Pipeline Alone Versus the Bundle}
+
+If no policy is used, welfare is
+\begin{equation}
+W(0,0)
+=
+v_L P_A m_A^0
++
+\beta\Bigl\{
+v_L P_A m_A^0\bigl(1-\delta m_A^0\bigr)
++
+v_X Q_{AB}q_0
+\Bigr\}.
+\label{eq:W00}
+\end{equation}
+
+If the planner uses pipeline policy without creating a hub, welfare is
+\begin{equation}
+W^*(0)=W(0,0)+R_0.
+\label{eq:W0star}
+\end{equation}
+
+If the planner creates a hub but sets $b=0$, welfare is
+\begin{equation}
+W(1,0)=W(0,0)+\Delta_H,
+\label{eq:W10}
+\end{equation}
+where $\Delta_H$ is the hub-alone gain from Section~\ref{sec:hub_efficiency}.
+
+If the planner chooses the full bundle, welfare is
+\begin{equation}
+W^*(1)=W(1,0)+R_1=W(0,0)+\Delta_H+R_1.
+\label{eq:W1star}
+\end{equation}
+
+\begin{proposition}
+\label{prop:hub_plus_refresh_efficiency}
+Assume $A_0^W>0$. Then:
+
+\begin{enumerate}[leftmargin=2em]
+    \item \textbf{Pipeline-alone value.}
+    Pipeline policy without a hub is socially valuable relative to no intervention:
+    \begin{equation}
+    W^*(0)-W(0,0)=R_0>0.
+    \label{eq:pipeline_alone_positive}
+    \end{equation}
+
+    \item \textbf{Bundle versus pipeline alone.}
+    The hub-plus-pipeline bundle is socially preferred to pipeline policy alone if and only if
+    \begin{equation}
+    \Delta_H+\bigl(R_1-R_0\bigr)\ge 0.
+    \label{eq:bundle_vs_pipeline}
+    \end{equation}
+    Equivalently, using $F_H^*(N_A)$ from Section~\ref{sec:hub_efficiency}, the bundle is preferred if and only if
+    \begin{equation}
+    F\le F_{H+b}^{\dagger}(N_A,N_B)
+    :=
+    F_H^*(N_A)+\bigl(R_1-R_0\bigr).
+    \label{eq:Fdagger}
+    \end{equation}
+
+    \item \textbf{Threshold expansion relative to hub alone.}
+    Since $R_1-R_0>0$, the bundle enlarges the parameter region in which hub creation is justified:
+    \begin{equation}
+    F_{H+b}^{\dagger}(N_A,N_B)-F_H^*(N_A)=R_1-R_0>0.
+    \label{eq:threshold_expansion}
+    \end{equation}
+\end{enumerate}
+\end{proposition}
+
+Proposition \ref{prop:hub_plus_refresh_efficiency} contains the paper's central bundle comparison. Pipeline policy is already valuable without a hub, so the key condition is \eqref{eq:bundle_vs_pipeline}: the bundle is justified only when the hub's stand-alone contribution is not too negative relative to the incremental renewal margin $R_1-R_0$.
+
+Part (3) is best read as an algebraic restatement of that condition in threshold form. It is useful for visualization, but the substantive comparison is between \emph{pipeline alone} and the \emph{bundle}.
+
+\begin{proposition}
+\label{prop:rescue_interval}
+Suppose $R_1>R_0$. Then there exists a positive fixed-cost interval for which a hub alone is inefficient but the hub-plus-pipeline bundle is preferred to pipeline policy alone. The interval is
+\begin{equation}
+F_H^*(N_A)
+<
+F
+\le
+F_H^*(N_A)+\bigl(R_1-R_0\bigr).
+\label{eq:rescue_interval}
+\end{equation}
+\end{proposition}
+
+Proposition \ref{prop:rescue_interval} sharpens the policy comparison. Once pipeline effort has stand-alone value, the relevant planner choice is often not \emph{hub} versus \emph{no hub}, but \emph{pipeline alone} versus a \emph{hub embedded in a renewal strategy}. The bundle can rescue the hub only when the incremental coordination value of adding the hub is large enough. The result is therefore conditional and partly structure-driven: the benchmark assumptions generate an incremental renewal term, and the question is whether it is quantitatively strong enough to overcome the hub's stand-alone weakness.
+
+\subsection{Comparative Interpretation}
+
+Three comparative-static lessons matter most. The bundle becomes more attractive when outside renewal is more productive, for example because the outside pool is larger, brokerage is more effective, or outside links generate more surplus. It also becomes more attractive when renewal is more tightly connected to local novelty, that is, when $\xi$ is larger. By contrast, a higher $\kappa$ makes the bundle less attractive by lowering both $R_0$ and $R_1$ and compressing the difference between them.
+
+\subsection{Discussion}
+
+The central lesson is that cross-regional pipelines change the relevant baseline for evaluating a hub. Once pipeline policy has positive stand-alone value, the key question is whether adding the hub creates enough extra coordination benefit to justify its fixed cost and dynamic redundancy risk. In thin regional ecosystems, a hub intensifies local matching but may also intensify repetition, while pipeline policy works on the renewal margin. The efficient policy object is therefore often a bundle, but not automatically so. The operative condition is \eqref{eq:bundle_vs_pipeline}; \eqref{eq:Fdagger} is simply its threshold representation. Section~\ref{sec:extensions} shows that this bundle-support gap narrows continuously when decentralized actors internalize more of the continuation value.

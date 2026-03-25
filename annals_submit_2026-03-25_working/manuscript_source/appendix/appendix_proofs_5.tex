@@ -1,0 +1,185 @@
+\section{Proofs for Section~\ref{sec:short_run}}
+
+This appendix provides the algebra omitted from Section~\ref{sec:short_run}.
+
+\subsection{Proof of Proposition \ref{prop:renewal_gap}}
+
+Fix $h\in\{0,1\}$. From \eqref{eq:Pi_compact}, the decentralized benchmark solves
+\[
+\max_{b\ge 0}\left\{\bar\Pi(h)+\beta A_h^P b-\frac{\kappa}{2}b^2\right\}.
+\]
+Differentiating with respect to $b$ gives
+\[
+\frac{\partial \Pi(h,b)}{\partial b}=\beta A_h^P-\kappa b.
+\]
+Since
+\[
+\frac{\partial^2 \Pi(h,b)}{\partial b^2}=-\kappa<0,
+\]
+the problem is strictly concave, and the first-order condition is sufficient. Setting the derivative equal to zero yields
+\[
+b_P^*(h)=\frac{\beta A_h^P}{\kappa}
+=
+\frac{\beta v_XQ_{AB}(\eta_0+\eta_1 h)}{\kappa},
+\]
+which is \eqref{eq:bPstar}.
+
+Likewise, from \eqref{eq:W_compact}, the planner solves
+\[
+\max_{b\ge 0}\left\{\bar W(h)+\beta A_h^W b-\frac{\kappa}{2}b^2\right\}.
+\]
+Differentiating,
+\[
+\frac{\partial W(h,b)}{\partial b}=\beta A_h^W-\kappa b,
+\qquad
+\frac{\partial^2 W(h,b)}{\partial b^2}=-\kappa<0,
+\]
+so the unique optimum is
+\[
+b_W^*(h)=\frac{\beta A_h^W}{\kappa}
+=
+\frac{\beta\Bigl[\xi v_LP_A m_A(h)+v_XQ_{AB}(\eta_0+\eta_1 h)\Bigr]}{\kappa},
+\]
+which is \eqref{eq:bWstar}.
+
+Subtracting the two solutions gives
+\[
+b_W^*(h)-b_P^*(h)
+=
+\frac{\beta\bigl(A_h^W-A_h^P\bigr)}{\kappa}
+=
+\frac{\beta\xi v_LP_A m_A(h)}{\kappa}
+>0,
+\]
+which proves \eqref{eq:renewal_gap}. Using $m_A(1)-m_A(0)=m_A^1-m_A^0>0$, we also obtain
+\[
+\bigl[b_W^*(1)-b_P^*(1)\bigr]-\bigl[b_W^*(0)-b_P^*(0)\bigr]
+=
+\frac{\beta\xi v_LP_A\bigl(m_A^1-m_A^0\bigr)}{\kappa}
+>0,
+\]
+which is \eqref{eq:renewal_gap_hub}. This proves Proposition \ref{prop:renewal_gap}.
+\qed
+
+\subsection{Derivation of the Decentralized--Social Wedge}
+
+Substituting the optimal pipeline choices into \eqref{eq:Pi_compact} and \eqref{eq:W_compact} gives
+\[
+\Pi^*(h)=\bar\Pi(h)+\frac{\beta^2(A_h^P)^2}{2\kappa}
+=
+\bar\Pi(h)+R_h^P,
+\]
+and
+\[
+W^*(h)=\bar W(h)+\frac{\beta^2(A_h^W)^2}{2\kappa}
+=
+\bar W(h)+R_h^W.
+\]
+
+Using \eqref{eq:Wbar} and \eqref{eq:Pi_compact},
+\[
+\bar W(1)-\bar W(0)
+=
+v_LP_A(m_A^1-m_A^0)
++
+\beta v_LP_A\Bigl[m_A^1(1-\delta m_A^1)-m_A^0(1-\delta m_A^0)\Bigr]
+-F.
+\]
+Factoring the second term,
+\[
+\bar W(1)-\bar W(0)=S_A+D_A-F,
+\]
+where $S_A$ and $D_A$ are defined in \eqref{eq:SA} and \eqref{eq:DA}. Also,
+\[
+\bar\Pi(1)-\bar\Pi(0)=S_A-F.
+\]
+Therefore
+\[
+\Delta_P^*=\Pi^*(1)-\Pi^*(0)=S_A-F+(R_1^P-R_0^P),
+\]
+which is \eqref{eq:DeltaP_star_expanded}, and
+\[
+\Delta_W^*=W^*(1)-W^*(0)=S_A+D_A-F+(R_1^W-R_0^W).
+\]
+Subtracting the two expressions gives
+\[
+\Delta_W^*-\Delta_P^*
+=
+D_A+\Bigl[(R_1^W-R_0^W)-(R_1^P-R_0^P)\Bigr]
+=
+D_A+M_A,
+\]
+which is \eqref{eq:DeltaW_star_wedge}.
+
+To verify $M_A>0$, note that
+\[
+A_h^W-A_h^P=\xi v_LP_A m_A(h)>0
+\qquad
+\text{for } h\in\{0,1\},
+\]
+and that both $m_A(h)$ and $A_h^P$ are weakly larger when $h=1$ than when $h=0$. Hence
+\[
+(A_1^W)^2-(A_1^P)^2>(A_0^W)^2-(A_0^P)^2,
+\]
+which implies
+\[
+M_A
+=
+\frac{\beta^2}{2\kappa}
+\left(
+(A_1^W)^2-(A_1^P)^2-(A_0^W)^2+(A_0^P)^2
+\right)
+>0.
+\]
+
+\subsection{Proof of Proposition \ref{prop:dynamic_inefficiency}}
+
+By definition,
+\[
+\Delta_P^*>0
+\quad\Longleftrightarrow\quad
+F<F_P^*,
+\]
+where
+\[
+F_P^*=S_A+(R_1^P-R_0^P).
+\]
+Likewise,
+\[
+\Delta_W^*>0
+\quad\Longleftrightarrow\quad
+F<F_W^*,
+\]
+where
+\[
+F_W^*=F_P^*+D_A+M_A.
+\]
+
+\paragraph{Part 1.}
+If $D_A+M_A>0$, then $F_W^*>F_P^*$. Therefore the interval
+\[
+F_P^*<F<F_W^*
+\]
+is nonempty. On this interval,
+\[
+\Delta_P^*<0
+\qquad\text{and}\qquad
+\Delta_W^*>0.
+\]
+Hence decentralized actors reject the hub while the planner supports it. This proves \eqref{eq:under_support_interval}.
+
+\paragraph{Part 2.}
+If $D_A+M_A<0$, then $F_W^*<F_P^*$. Therefore the interval
+\[
+F_W^*<F<F_P^*
+\]
+is nonempty. On this interval,
+\[
+\Delta_W^*<0
+\qquad\text{and}\qquad
+\Delta_P^*>0.
+\]
+Hence decentralized actors support the hub while the planner rejects it. This proves \eqref{eq:dynamic_inefficiency_interval}.
+
+This completes the proof of Proposition \ref{prop:dynamic_inefficiency}.
+\qed

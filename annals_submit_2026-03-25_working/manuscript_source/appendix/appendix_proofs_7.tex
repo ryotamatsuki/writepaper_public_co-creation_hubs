@@ -1,0 +1,306 @@
+\section{Proofs for Section~\ref{sec:extensions}}
+
+This appendix provides the algebra for the extensions in Section~\ref{sec:extensions}.
+
+\subsection{Preliminaries}
+
+Recall the baseline objects
+\[
+P_A=\frac{N_A(N_A-1)}{2},
+\qquad
+Q_{AB}=N_A N_B,
+\]
+\[
+\Delta m_A:=m_A^1-m_A^0>0,
+\qquad
+\Lambda_A:=(1+\beta)-\beta\delta(m_A^1+m_A^0).
+\]
+
+\subsection{Proof of Proposition \ref{prop:partial_internalization}}
+
+Fix $h\in\{0,1\}$ and $\alpha\in[0,1]$. From \eqref{eq:Pi_alpha_compact}, the decentralized benchmark solves
+\[
+\max_{b\ge 0}
+\left\{
+\bar\Pi_{\alpha}(h)+\beta A_{h,\alpha}^P b-\frac{\kappa}{2}b^2
+\right\}.
+\]
+Differentiating with respect to $b$ gives
+\[
+\frac{\partial \Pi_{\alpha}(h,b)}{\partial b}
+=
+\beta A_{h,\alpha}^P-\kappa b.
+\]
+Because
+\[
+\frac{\partial^2 \Pi_{\alpha}(h,b)}{\partial b^2}=-\kappa<0,
+\]
+the problem is strictly concave and the first-order condition is sufficient. Setting the derivative equal to zero yields
+\[
+b_{P,\alpha}^*(h)=\frac{\beta A_{h,\alpha}^P}{\kappa},
+\]
+which is \eqref{eq:bPalpha}.
+
+Next, compare this with the planner's choice from \eqref{eq:bWstar}:
+\begin{align}
+b_W^*(h)-b_{P,\alpha}^*(h)
+&=
+\frac{\beta}{\kappa}
+\left[
+\xi v_LP_Am_A(h)+v_XQ_{AB}(\eta_0+\eta_1 h)
+\right]
+\nonumber\\
+&\quad
+-\frac{\beta}{\kappa}
+\left[
+\alpha\xi v_LP_Am_A(h)+v_XQ_{AB}(\eta_0+\eta_1 h)
+\right]
+\nonumber\\
+&=
+\frac{\beta(1-\alpha)\xi v_LP_Am_A(h)}{\kappa},
+\label{eq:app7_gap_alpha_raw}
+\end{align}
+which proves \eqref{eq:b_gap_alpha}. The inequality is strict for every $\alpha<1$ because $\beta,\xi,v_L,P_A,$ and $m_A(h)$ are strictly positive.
+
+Finally, differentiating \eqref{eq:bPalpha} with respect to $\alpha$ gives
+\[
+\frac{\partial b_{P,\alpha}^*(h)}{\partial \alpha}
+=
+\frac{\beta\xi v_LP_Am_A(h)}{\kappa}
+>0,
+\]
+which proves \eqref{eq:dbdalpha}. This completes the proof of Proposition \ref{prop:partial_internalization}.
+\qed
+
+\subsection{Proof of Proposition \ref{prop:alpha_threshold_gap}}
+
+Recall from Section~\ref{sec:short_run} that
+\[
+S_A=v_LP_A(m_A^1-m_A^0),
+\qquad
+D_A=\beta v_LP_A(m_A^1-m_A^0)\bigl[1-\delta(m_A^1+m_A^0)\bigr].
+\]
+Under partial internalization, the decentralized support threshold is
+\[
+F_{P,\alpha}^{\dagger}
+=
+S_A+\alpha D_A+\bigl(R_{1,\alpha}^P-R_{0,\alpha}^P\bigr),
+\]
+while the planner's threshold remains
+\[
+F_{H+b}^{\dagger}
+=
+S_A+D_A+\bigl(R_1-R_0\bigr).
+\]
+Subtracting the two thresholds gives
+\begin{align}
+\Omega_{\alpha}
+&=
+F_{H+b}^{\dagger}-F_{P,\alpha}^{\dagger}
+\nonumber\\
+&=
+(1-\alpha)D_A
+\Bigl[(R_1-R_0)-\bigl(R_{1,\alpha}^P-R_{0,\alpha}^P\bigr)\Bigr].
+\label{eq:app7_Omega_start}
+\end{align}
+
+Write
+\[
+a_h:=\xi v_LP_Am_h,
+\qquad
+c_h:=v_XQ_{AB}(\eta_0+\eta_1 h),
+\qquad
+m_h=m_A^0+(m_A^1-m_A^0)h.
+\]
+Then
+\[
+R_h=\frac{\beta^2(a_h+c_h)^2}{2\kappa},
+\qquad
+R_{h,\alpha}^P=\frac{\beta^2(\alpha a_h+c_h)^2}{2\kappa}.
+\]
+Hence
+\begin{align}
+R_h-R_{h,\alpha}^P
+&=
+\frac{\beta^2}{2\kappa}
+\Bigl[(a_h+c_h)^2-(\alpha a_h+c_h)^2\Bigr]
+\nonumber\\
+&=
+\frac{\beta^2}{2\kappa}(1-\alpha)a_h\bigl[(1+\alpha)a_h+2c_h\bigr].
+\label{eq:app7_R_gap_h}
+\end{align}
+Applying \eqref{eq:app7_R_gap_h} at $h=1$ and $h=0$ yields
+\begin{align}
+(R_1-R_0)-\bigl(R_{1,\alpha}^P-R_{0,\alpha}^P\bigr)
+&=
+\frac{\beta^2}{2\kappa}(1-\alpha)
+\left[
+(1+\alpha)(a_1^2-a_0^2)+2(a_1c_1-a_0c_0)
+\right].
+\label{eq:app7_R_gap_difference}
+\end{align}
+Now
+\[
+a_1^2-a_0^2
+=
+\xi^2 v_L^2P_A^2\bigl((m_A^1)^2-(m_A^0)^2\bigr)
+=
+X_A,
+\]
+and
+\[
+2(a_1c_1-a_0c_0)
+=
+2\xi v_LP_A v_XQ_{AB}\Bigl[\eta_0(m_A^1-m_A^0)+\eta_1m_A^1\Bigr]
+=
+Y_A.
+\]
+Substituting these identities into \eqref{eq:app7_Omega_start} and \eqref{eq:app7_R_gap_difference} gives
+\[
+\Omega_{\alpha}
+=
+(1-\alpha)
+\left[
+D_A+\frac{\beta^2}{2\kappa}\Bigl((1+\alpha)X_A+Y_A\Bigr)
+\right],
+\]
+which is \eqref{eq:Omega_alpha}.
+
+If $\Omega_{\alpha}>0$, then
+\[
+F_{P,\alpha}^{\dagger}<F_{H+b}^{\dagger},
+\]
+so every fixed cost in the interval \eqref{eq:alpha_under_support_interval} yields decentralized rejection and planner support. If $\Omega_{\alpha}<0$, the inequality is reversed, giving the interval \eqref{eq:alpha_over_support_interval}. This proves parts (1) and (2).
+
+Part (3) follows immediately from \eqref{eq:Omega_alpha}: setting $\alpha=1$ gives $\Omega_1=0$. Differentiating \eqref{eq:Omega_alpha} with respect to $\alpha$ gives
+\begin{align}
+\frac{\partial \Omega_{\alpha}}{\partial \alpha}
+&=
+-D_A-\frac{\beta^2}{2\kappa}\Bigl(2\alpha X_A+Y_A\Bigr).
+\label{eq:app7_dOmega_dalpha}
+\end{align}
+Because $X_A>0$, $Y_A>0$, and $\alpha\in[0,1)$, the second term on the right-hand side is strictly negative. Therefore, if $D_A\ge 0$, then
+\[
+\frac{\partial \Omega_{\alpha}}{\partial \alpha}<0
+\qquad
+\text{for all }\alpha\in[0,1),
+\]
+so the threshold gap is strictly decreasing in $\alpha$. This completes the proof of Proposition \ref{prop:alpha_threshold_gap}.
+\qed
+
+\subsection{Proof of Proposition \ref{prop:heterogeneous_participants}}
+
+In the heterogeneous-participant extension, the expected surplus per realized local interaction is
+\begin{equation}
+\bar v_L(\sigma)
+=
+v_L^L(1-\sigma)^2
++
+v_L^H\bigl[1-(1-\sigma)^2\bigr]
+=
+v_L^L+(2\sigma-\sigma^2)(v_L^H-v_L^L),
+\label{eq:app7_vbarL_sigma}
+\end{equation}
+with
+\begin{equation}
+\bar v_L'(\sigma)=2(1-\sigma)(v_L^H-v_L^L)>0
+\qquad
+\text{for }\sigma\in[0,1).
+\label{eq:app7_vbarL_prime}
+\end{equation}
+Because $\bar v_L(\sigma)$ is a convex combination of $v_L^L$ and $v_L^H$,
+\begin{equation}
+\bar v_L(\sigma)>0
+\qquad
+\text{for all }\sigma\in[0,1].
+\label{eq:app7_vbarL_positive}
+\end{equation}
+
+Likewise,
+\begin{equation}
+\bar v_X(\sigma)
+=
+v_X^L(1-\sigma)+v_X^H\sigma
+=
+v_X^L+\sigma(v_X^H-v_X^L),
+\label{eq:app7_vbarX_sigma}
+\end{equation}
+with
+\begin{equation}
+\bar v_X'(\sigma)=v_X^H-v_X^L>0
+\label{eq:app7_vbarX_prime}
+\end{equation}
+and
+\begin{equation}
+\bar v_X(\sigma)>0
+\qquad
+\text{for all }\sigma\in[0,1].
+\label{eq:app7_vbarX_positive}
+\end{equation}
+
+Using \eqref{eq:vbarL_sigma}, the hub-alone welfare gain is
+\[
+\Delta_H(\sigma)=\bar v_L(\sigma)P_A\Delta m_A\Lambda_A-F.
+\]
+Differentiating with respect to $\sigma$ gives
+\begin{align}
+\frac{\partial \Delta_H(\sigma)}{\partial \sigma}
+&=
+\bar v_L'(\sigma)P_A\Delta m_A\Lambda_A.
+\label{eq:app7_dDeltaH_dsigma_raw}
+\end{align}
+If $\Lambda_A>0$, then \eqref{eq:app7_vbarL_prime} implies
+\[
+\frac{\partial \Delta_H(\sigma)}{\partial \sigma}>0
+\qquad
+\text{for }\sigma\in[0,1),
+\]
+which proves \eqref{eq:dDeltaH_dsigma}.
+
+Next, from \eqref{eq:bstar_sigma},
+\[
+b^*(\sigma)=\frac{\beta A_1(\sigma)}{\kappa},
+\qquad
+A_1(\sigma)=\xi \bar v_L(\sigma)P_A m_A^1+\bar v_X(\sigma)Q_{AB}(\eta_0+\eta_1).
+\]
+Differentiating,
+\begin{align}
+\frac{\partial b^*(\sigma)}{\partial \sigma}
+&=
+\frac{\beta}{\kappa}
+\left[
+\xi \bar v_L'(\sigma)P_A m_A^1
++
+\bar v_X'(\sigma)Q_{AB}(\eta_0+\eta_1)
+\right].
+\label{eq:app7_dbstar_dsigma_raw}
+\end{align}
+Since all multiplicative terms are positive, \eqref{eq:app7_vbarL_prime} and \eqref{eq:app7_vbarX_prime} imply
+\[
+\frac{\partial b^*(\sigma)}{\partial \sigma}>0,
+\]
+which proves \eqref{eq:dbstar_dsigma}.
+
+For the renewal surplus,
+\[
+R_1(\sigma)=\frac{\beta^2A_1(\sigma)^2}{2\kappa}.
+\]
+Differentiating,
+\begin{align}
+\frac{\partial R_1(\sigma)}{\partial \sigma}
+&=
+\frac{\beta^2}{\kappa}
+A_1(\sigma)
+\left[
+\xi \bar v_L'(\sigma)P_A m_A^1
++
+\bar v_X'(\sigma)Q_{AB}(\eta_0+\eta_1)
+\right].
+\label{eq:app7_dR_dsigma_raw}
+\end{align}
+By \eqref{eq:app7_vbarL_positive}, \eqref{eq:app7_vbarX_positive}, \eqref{eq:app7_vbarL_prime}, and \eqref{eq:app7_vbarX_prime}, every factor on the right-hand side is strictly positive. Hence
+\[
+\frac{\partial R_1(\sigma)}{\partial \sigma}>0,
+\]
+which proves \eqref{eq:dR_dsigma}. This completes the proof of Proposition \ref{prop:heterogeneous_participants}.
+\qed

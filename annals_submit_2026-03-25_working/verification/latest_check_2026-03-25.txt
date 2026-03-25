@@ -1,0 +1,54 @@
+Python / SymPy verification for the Annals working draft
+== Section 03 / model setup ==
+[ok] Pi compact form
+[ok] W compact form
+[ok] dynamic wedge inside A_h
+== Section 04 / hub-alone efficiency ==
+[ok] Delta_H factorization
+[ok] F_H^* representation
+[ok] delta_H^* rearrangement
+[ok] d Delta_H / d N_A
+[ok] d Delta_H / d F
+[ok] d Delta_H / d delta
+[ok] d Delta_H / d m1
+[ok] d Delta_H / d m0
+== Section 05 / decentralized support vs planner ==
+[ok] b_P^*(0) FOC
+[ok] b_P^*(1) FOC
+[ok] b_W^*(0) FOC
+[ok] b_W^*(1) FOC
+[ok] renewal gap h=0
+[ok] renewal gap h=1
+[ok] renewal gap larger with hub
+[ok] Pi^*(0) quadratic value
+[ok] Pi^*(1) quadratic value
+[ok] W^*(0) quadratic value
+[ok] W^*(1) quadratic value
+[ok] Delta_P^*
+[ok] Delta_W^* wedge
+[ok] M_A factorization
+[ok] F_P^* threshold
+[ok] F_W^* threshold
+== Section 06 / pipeline-alone vs bundle ==
+[ok] pipeline-alone value
+[ok] bundle over pipeline-alone
+[ok] F_dagger representation
+[ok] R1 - R0 positive factorization
+[ok] M_A positive on admissible samples
+[ok] R1 - R0 positive on admissible samples
+[ok] R0 positive on admissible samples
+== Section 07 / extensions ==
+[ok] vbarL simplification
+[ok] vbarL derivative
+[ok] vbarX simplification
+[ok] vbarX derivative
+[ok] d Delta_H(sigma) / d sigma
+[ok] d b*(sigma) / d sigma
+[ok] d R1(sigma) / d sigma
+[ok] d N_H^*(sigma) / d sigma
+[ok] d Pi_H(o) / d o
+[ok] d Delta_H(o) / d o
+[ok] b*(o) unchanged conditional on hub
+== Section 08 / parameter-region figure ==
+[ok] Figure formula equals F_dagger
+All symbolic and numeric checks passed.
