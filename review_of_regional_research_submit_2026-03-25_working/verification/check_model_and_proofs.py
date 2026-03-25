@@ -424,7 +424,7 @@ def verify_section_08_figure(context: dict):
 
 
 def main():
-    print("Python / SymPy verification for the Annals working draft")
+    print("Python / SymPy verification for the Review of Regional Research working draft")
     context = verify_sections_03_to_06()
     verify_section_07(context)
     verify_section_08_figure(context)

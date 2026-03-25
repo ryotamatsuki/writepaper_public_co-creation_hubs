@@ -1,4 +1,4 @@
-Python / SymPy verification for the Annals working draft
+Python / SymPy verification for the Review of Regional Research working draft
 == Section 03 / model setup ==
 [ok] Pi compact form
 [ok] W compact form

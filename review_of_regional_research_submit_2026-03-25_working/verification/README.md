@@ -1,7 +1,7 @@
 # Python Verification Notes
 
 - Created on: 2026-03-25
-- Purpose: Reproducible symbolic and numeric verification for the Annals working draft
+- Purpose: Reproducible symbolic and numeric verification for the Review of Regional Research working draft
 
 ## Main script
 
@@ -19,7 +19,7 @@
 ## Command
 
 ```powershell
-& 'C:\Users\Owner\AppData\Local\Programs\Python\Launcher\py.exe' -3 'annals_submit_2026-03-25_working\verification\check_model_and_proofs.py'
+& 'C:\Users\Owner\AppData\Local\Programs\Python\Launcher\py.exe' -3 'review_of_regional_research_submit_2026-03-25_working\verification\check_model_and_proofs.py'
 ```
 
 ## Latest successful run
