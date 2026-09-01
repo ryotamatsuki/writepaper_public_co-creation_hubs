@@ -1,0 +1,23 @@
+# Theory Primitive Map
+
+No formal model is authorized at Stage 0R. These are translation candidates, not assumptions.
+
+| Observed fact | Primitive type | Candidate economic primitive | Choice affected | Possible feedback | H/P effect | Closest theory threat | Kill condition |
+|---|---|---|---|---|---|---|---|
+| P-dominant NEXs architecture exists without a local-H production requirement | regional-value / architecture | separable H and P production technologies | architecture choice | external brokerage can operate over an existing distributed actor base | makes P-only a real regime | standard network/platform brokerage | kill if all P functions are merely relabeled H matching |
+| HP appears in both metropolitan and smaller prefectural systems | regional-value | multidimensional regional state rather than actor-count thinness | relative H/P returns | local actor mass interacts with baseline local/external connectivity | permits different regimes at similar scale | standard regional heterogeneity | kill if only market size matters after measurement |
+| Governance ranges from concession to annual outsourcing, designated management, joint committee and multi-agency operation | decentralized-choice | control rights / delegated architecture allocation | H/P resource allocation and program selection | operator incentives respond to retained revenues, contract horizon, mission constraints | can shift architecture at fixed z | delegation, incomplete contracts, common agency | kill if governance type does not map to any observable decision right or service allocation |
+| OIH added a dedicated GLOBAL BRIDGE module in 2026 | both | modular architecture with separately addable P capacity | transition H/HP intensity | new earmarked program changes P without rebuilding H | supports non-technological complementarity | public program portfolio choice | kill if program is only generic export subsidy unrelated to intermediation |
+| Fukuoka linked to CIC and maintains multiple overseas hub relationships | regional-value / transition | external network access can be purchased/contracted separately | P capacity | external network provider changes feasible partner set | supports P separability | standard internationalization support | kill if not tied to brokerage/matching |
+| IIB explicitly imports Tokyo resources into a local exchange hub | regional-value | outside-resource scarcity / resource-import value | P adoption | outside resources increase available partner/investor pool | candidate P-value primitive | buzz/global-pipeline prior art | kill if novelty would be only local/global knowledge labels |
+| MomoSta is governed by city + local banks + chamber but remains H-heavy in core description | decentralized-choice | local stakeholder representation / geographic mission | architecture composition | beneficiaries/controller set may tilt service portfolio | possible H bias | common agency/political economy | kill if service composition cannot be measured or mechanism reduces to standard welfare weights |
+| STATION Ai concession grants long-horizon operational scope to private SPC | decentralized-choice | residual control / contract horizon | service mix and external-network investment | operator can invest in networks with returns over long horizon | could favor P if P has slower payoff | property-rights/incomplete-contract theory | kill if concession contract fully specifies H/P outputs or no differential investment is observed |
+| Participant geography is directly queryable for NEXs/TIB but not for many conventional hubs | measurement / selection | observability and KPI asymmetry | measured performance and possibly management focus | measurable local counts may differ from harder external project outcomes | candidate decision distortion only if tied to contracts | multitask incentives | kill if KPI/contract linkage is absent |
+
+## Highest-value candidates for later Stage 3R
+
+1. **Architecture choice under multidimensional regional gaps**: H and P should respond to different pre-existing deficits, not to a single market-size parameter.
+2. **Control-rights / contract-horizon architecture bias**: governance is potentially structural because the pilot shows real variation in who controls operations and for how long.
+3. **Modular P acquisition**: external connectivity can be added through separate programs/networks, so H-P complementarity must be an equilibrium result, not technology.
+
+These candidates remain subordinate to measurement. Stage 1R must show reproducible variables and Stage 2R must establish stylized facts before any model is written.
