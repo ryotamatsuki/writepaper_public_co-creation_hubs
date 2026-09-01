@@ -185,3 +185,64 @@ No Stage 4R formal model is authorized.
 
 ## Reopening condition
 The motivation may be revisited only through a distinct evidence-based pivot that identifies one new empirically defensible primitive and then re-runs the relevant literature and mechanism gates. Adding features directly to P1/P2/P3 after this failure is prohibited.
+
+---
+
+# Stage 0R-T — Technology-family literature kill
+
+Base SHA: `9303fab4e750336fc228799abdfe95563ab8a541`
+
+Branch: `research-reboot/technology-family-literature-kill`
+
+## Scope
+This is a distinct technology-foundation reboot, not Stage 3R hardening. It reopens the economic meaning of H and P while leaving decentralized misselection out of scope.
+
+Three families were screened under common kill rules: Search/Matching, Network/Brokerage and Club/Congestion.
+
+## Literature screening
+- Search/Matching: 18 high-relevance items retained in the ledger.
+- Network/Brokerage: 11.
+- Club/Congestion: 10.
+
+## Search result
+Generic intermediary search-cost reduction is killed by Gehrig and the mature middlemen literature. Local/distant innovation search is already explicit in innovation-intermediary work. Domestic versus international search externalities are already formalized by Spray (2021). Mekonnen (2026) is a strong frontier threat because public information segments frictional submarkets and changes directed-search allocation, thickness and congestion. Export-promotion and 2026 trade-fair evidence also show publicly supported external matching and congestion.
+
+The only surviving structural residue is asymmetric:
+- `H`: improve matching productivity inside an incumbent local partner-search market;
+- `P`: reduce the segmentation/access barrier to a distinct extra-regional matching market.
+
+Searchers may reallocate across accessible submarkets, so thickness/congestion may connect the two policy margins without adding a Club primitive.
+
+Search family verdict: **CONDITIONAL GO**. Prior-art survival is at the hard-gate floor, not certified.
+
+## Network result
+Network is killed. Bathelt-Malmberg-Maskell local buzz/global pipelines, Morrison's formal pipeline model and Operti-Kumar internal brokerage versus external boundary-spanning make `H=local links / P=external bridges` structurally absorbed after label stripping.
+
+Network family verdict: **KILL — NETWORK ABSORBED**.
+
+## Club result
+Club is killed as a complete H/P foundation. Buchanan-style club theory naturally microfounds H as a shared congestible local interaction service, and coworking/agglomeration research supports proximity effects. But P does not arise from the family; it has to be appended as external-resource access.
+
+Club family verdict: **KILL — CLUB ABSORBED / P NOT ENDOGENOUS TO FAMILY**.
+
+## Search internal ranking
+1. two-market two-sided matching/matching-function model — conditional top;
+2. directed search — secondary, very high Mekonnen/Yang prior-art risk;
+3. random search — benchmark only;
+4. heterogeneous-quality search — killed as core because it imports an information dimension;
+5. generic search intermediary — killed by prior art.
+
+## Canonical Stage 0R-T verdict
+
+**CONDITIONAL GO — SEARCH FAMILY ONLY.**
+
+No formal model is authorized yet.
+
+## One authorized next action
+Run one exact-prior-art resolution round on the following stripped problem:
+
+`A public actor chooses between raising matching productivity in incumbent submarket A and lowering the access/segmentation barrier to submarket B, with endogenous search allocation/tightness across accessible submarkets.`
+
+If exact or structurally very close formal prior art exists: `NO-GO — SEARCH ABSORBED`.
+
+If it survives: authorize `GO TO TECHNOLOGY MINIMAL MODEL — SEARCH`, limited to the social `0/H/P/HP` architecture problem. Decentralized misselection remains prohibited.
