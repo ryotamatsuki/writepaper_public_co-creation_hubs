@@ -1,0 +1,19 @@
+# Institutional Variation Matrix
+
+| Case | Architecture | Funding / operator structure | Decision-right signature | Access / geography signal | Participant geography observable? | Transition candidate | Theory relevance |
+|---|---|---|---|---|---|---|---|
+| E:N BASE | H (P uncertain) | Prefecture + outsourced JV (ATOMica/NTT West Shikoku); national grant condition in procurement | Prefecture defines mission; JV operates; additional support functions separately procured | Free membership; 561 partner organizations; no direct geography field | Partial; entity enrichment needed | 2026 launch after prior digital co-creation platform | Short-horizon outsourcing / modular contracting |
+| STATION Ai | HP | Aichi PFI: BT + concession; private SPC operated by SoftBank subsidiary through 2034 | Long-horizon private operational discretion under public concession | Membership + local co-creation + explicit international/extra-regional support | Likely, but requires member extraction | 2024 opening; later global-program intensification | Control rights / contract horizon |
+| NEXs Tokyo | P | Tokyo public program | Tokyo fixes JUMP/DIVE architecture; matching concierge executes | Explicit Tokyo vs non-Tokyo and overseas categories | Yes, directly | Cohort/program changes over time | Clean P-only counterexample and geography measurement benchmark |
+| Tokyo Innovation Base | HP | Metropolitan public platform with multiple contracted program operators | Tokyo strategy + partner rules; distributed program delivery | Global pillar; open partner model | Yes: official DB has Tokyo-region vs outside-Tokyo filters | Program additions over time | Platformized public governance; multiple delegated modules |
+| Osaka Innovation Hub | HP | Osaka City program operated by Osaka Business Development Agency | City sets policy/grant; OBDA operates | Global mission plus local community | Partial | 2026 OIH GLOBAL BRIDGE adds dedicated overseas-support module | Strongest within-case P-intensification candidate |
+| Setouchi-i-Base | HP | Prefectural facility under designated management; user fees visible | Prefecture owner; designated manager operation | Explicit objective to attract people/firms from outside prefecture | Weak in current public interface | 2020 facility launch | Designated management and fee model |
+| MomoSta | H | Operating committee: Okayama City + local banks + chamber | Multi-local-stakeholder committee | Events mostly open/free | Weak | Program portfolio changes | Local common governance does not mechanically generate P |
+| K-NIC | H | NEDO + Kawasaki City + Kawasaki Industrial Promotion Foundation | Three-institution collaborative operation | Partner network across finance/VC/university; geographic P not separately documented | Weak | Program cohorts | Multi-level public governance |
+| Ishikawa Innovation Base | HP | Prefectural initiative | Prefecture controls mission; specialist consultation | Explicit import of Tokyo resources / metro collaboration | Partial | FY2025 specialist window + Tokyo-resource use | Small-region HP; resource-import architecture |
+
+## Most important observed institutional variation
+
+The strongest Stage 0R fact is not a funding coefficient. It is the existence of **materially different control structures for organizations performing superficially similar intermediation functions**: long-term concession (STATION Ai), ordinary outsourcing/JV (E:N BASE), designated management (Setouchi-i-Base), local multi-stakeholder committee (MomoSta), multi-agency joint operation (K-NIC), and metropolitan platform with multiple contracted modules (TIB).
+
+This is potentially useful for theory only if Stage 1R shows that these structures map into different H/P resource allocation, eligibility, matching discretion, or architecture transitions. Governance labels alone are not a contribution.
