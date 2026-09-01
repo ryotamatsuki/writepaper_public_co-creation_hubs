@@ -8,98 +8,95 @@ Pivot base SHA: `7d30c2f1ef752ca0cfb998ffcb27323e49cb3892`
 
 Workflow SHA: `07466bcb1a6d3bc654b52945f21b034b38e45281`
 
-Branch: `research-reboot/mixed-stage0-regional-architecture`
-
 ## Prior binding result
 
 Stage 4 M10 ended `NO-GO — RESULT TOO WEAK`. The mathematical bias/participation result remains recorded, but M10 may not be hardened or treated as the new theory primitive.
 
-## Stage 0R question
+## Stage 0R
 
-Can observable regional and institutional variation tell us when `0`, `H`, `P`, or `HP` should be chosen, and reveal a defensible route by which decentralized institutions may choose a different architecture from the social optimum?
+Stage 0R asked whether observable regional and institutional variation could eventually support comparison of `R^SP(z) in {0,H,P,HP}` and `R^D(z,g,f,d,...) in {0,H,P,HP}`. It screened 18 Japanese programs and found real functional and governance variation. Stage 0R returned **GO** to a region-year measurement validation stage.
 
-## Evidence examined
+Binding Stage 0R lessons remain:
 
-- 18 Japanese public/public-private intermediation cases/programs screened from primary sources;
-- 8 cases pilot-coded for architecture, operator/governance, funding form, access and participant observability;
-- official procurement/contracts for E:N BASE, STATION Ai and TIB-related operation;
-- official governance/operation pages for OIH, Setouchi-i-Base, MomoSta, K-NIC and others;
-- public participant/startup databases for NEXs Tokyo and TIB;
-- official dated program changes including OIH GLOBAL BRIDGE and Fukuoka-CIC linkage;
-- standardized regional-data feasibility including Economic Census.
+- P does not technologically require H at the program level (NEXs is P-dominant).
+- one-dimensional `thinness = actor count` is rejected as research design.
+- HP means co-provision, not complementarity.
+- open membership does not prove P.
+- public/multi-funder governance does not mechanically imply P.
+- facility absence cannot define zero.
 
-## Killed or frozen claims
+## Combined Stage 1R–2R execution
 
-- P requires H — **REJECTED by observed P-dominant architecture**.
-- thinness can be represented only by actor count — **REJECTED as research design**.
-- HP means H/P complementarity — **REJECTED; HP is only co-provision**.
-- open membership implies extra-regional connectivity — **REJECTED**.
-- public/multi-funder governance necessarily increases P — **REJECTED**.
-- facility-level absence is a valid `0` regime — **REJECTED**.
+Branch: `research-reboot/mixed-stage1-2-measurement-stylizedfacts`
 
-All previously killed Stage 0–4 novelty claims remain frozen.
+Base SHA: `d80a761c6e8fe965d45b97a11bfdd0a8df1a302a`
 
-## Surviving motivation
+### Diagnostic panel
 
-`R^SP(z) in {0,H,P,HP}` versus `R^D(z,g,f,d,...) in {0,H,P,HP}` remains a viable organizing research question.
+- 15 prefectures
+- 2024–2026
+- 45 prefecture-year observations
+- 42 adjudicated; 3 Kagawa observations remain uncertain on the strict P boundary
+- adjudicated distribution: `HP=28`, `H=14`, `P=0`, `0=0`
+- H=1 for all 42 adjudicated observations
 
-The strongest evidence-grounded direction is to separate:
+### Strongest negative finding
 
-1. regional-value primitives that move H and P returns differently; and
-2. decentralized-choice primitives embodied in real control rights, funding and contract structures.
+The prefecture-year **union** is the wrong architecture-choice unit.
 
-## Strongest observed institutional fact
+It aggregates modules chosen by different public principals, municipalities, operators, universities and support organizations. As a result:
 
-Public intermediation governance is not homogeneous. The pilot contains long-term concession, ordinary outsourced JV operation, designated management, multi-stakeholder committee governance and metropolitan modular contracting.
+1. local H becomes almost automatic;
+2. program-level P-only observations become regional HP;
+3. a credible system-level zero becomes difficult without arbitrary exclusions; and
+4. important modular additions of P are recorded as `HP -> HP` and disappear from the binary outcome.
 
-This fact is not itself a theorem. Its value is that Stage 1R can test whether these control structures correspond to different H/P resource allocation or transitions.
+NEXs Tokyo is the cleanest demonstration: it remains P-dominant as a program, but Tokyo is HP once TIB/local modules are unioned.
 
-## Strongest anti-confirmation case
+### Regional-state measurement result
 
-NEXs Tokyo is a P-dominant public architecture explicitly organized around cross-region JUMP/DIVE matching and overseas expansion. This is direct institutional evidence against the legacy `P only works through H` architecture.
+Standard controls (actor density, industry structure, research capacity, accessibility) are feasible.
 
-## Strongest transition candidate
+The key proposed social-value primitives are not yet independently validated:
 
-OIH's 2026 `GLOBAL BRIDGE` program is a dated intensification of P within an existing innovation-hub system. It is the best current candidate for testing modular P acquisition and pre/post measurement availability.
+- NISTEP same-prefecture university-industry collaboration is a useful local-linkage proxy but not general network fragmentation.
+- the outside-prefecture share mechanically partitions the same total, so it cannot serve as an independent external-connectivity primitive alongside the local share.
+- independent co-patent/project-network measures were not validated within this Stage.
 
-## Candidate social-value primitives
+### Governance result
 
-- local network fragmentation;
-- baseline external connectivity/search friction;
-- private/existing intermediation availability;
-- industrial specialization/related variety;
-- actor density as a state/control rather than the definition of thinness.
+Control/governance form is observable in a useful subset (concession/PFI, outsourcing, designated management, committee governance, modular contracting). Funding shares and H/P earmarks are much less complete. This does not rescue an invalid outcome unit.
 
-## Candidate decentralized-choice primitives
+### Stage 1R verdict
 
-- control rights/delegation;
-- contract horizon/residual discretion;
-- funding earmarks/modular procurement;
-- stakeholder representation / multi-principal governance.
+**STAGE 1R FAIL**
 
-## Closest-theory warning
+Specific diagnosis:
 
-Delegation, incomplete contracts, common agency, multitask incentives, fiscal spillovers and platform/intermediary models all threaten later novelty. Stage 3R must re-kill these literatures after empirical stylized facts are frozen.
+**AGGREGATION-INDUCED ARCHITECTURE SATURATION / WRONG CHOICE UNIT**
 
-## Canonical verdict
+Combined canonical verdict:
 
-**GO**
+**NO-GO — MEASUREMENT FAILURE**
 
-Routing: `GO TO STAGE 1R — PILOT REGIONAL-ARCHITECTURE DATASET AND MEASUREMENT VALIDATION`.
+### Stage 2R status
 
-## Stage 1R contract
+**NOT RUN.**
 
-Stage 1R may change measurement architecture but may not build theory.
+The combined protocol required Stage 1R PASS before Japanese stylized-fact analysis or international portability testing. Proceeding after the failure would promote patterns based on a mis-specified outcome unit.
 
-Exactly required:
+## What survives
 
-- region-year unit;
-- real `0` denominator;
-- double-coded H/P classification;
-- funding/governance/control-right extraction;
-- participant-geography and missingness analysis;
-- pre-treatment regional conditions;
-- within-case transition source panels;
-- reproducible source ledger/data dictionary.
+The overarching policy motivation remains potentially viable. The evidence continues to support functional separability of H/P at the program level, modular acquisition of P, real governance/control variation, and multidimensional regional conditions.
 
-No payoff function, welfare function, social planner model, decentralized equilibrium or architecture theorem may be introduced before Stage 2R evidence is frozen and Stage 3R mechanism search is passed.
+## Required next change
+
+The only authorized next step is a measurement-unit redesign:
+
+- keep `prefecture-year` for regional state `z`;
+- move architecture choice to a **single-principal / governing-coalition public intermediation portfolio, commissioning episode, or program-year** nested inside the region-year;
+- attach funding, control rights and contract horizon to that identifiable choice unit;
+- define zero relative to a comparable portfolio/decision opportunity rather than absence of all intermediation in a regional economy;
+- re-run Stage 1R before any Stage 2R or theory work.
+
+No payoff function, planner objective, decentralized equilibrium, architecture theorem, Japanese stylized-fact freeze, or international portability claim is authorized on the failed region-year outcome.
