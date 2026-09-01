@@ -1,0 +1,9 @@
+case,prefecture,participant_unit,local_count,outside_prefecture_count,overseas_count,unknown_count,geography_observability,source_note
+NEXs Tokyo,Tokyo,registered/member database,NOT_EXTRACTED,NOT_EXTRACTED,NOT_EXTRACTED,NOT_EXTRACTED,HIGH,public member filters cover Japanese macro-regions and overseas
+Tokyo Innovation Base,Tokyo,startup database,NOT_EXTRACTED,NOT_EXTRACTED,NOT_EXTRACTED,NOT_EXTRACTED,HIGH,public database distinguishes Tokyo-region and outside-Tokyo locations
+E:N BASE,Ehime,partner organization list,NOT_EXTRACTED,NOT_EXTRACTED,NOT_EXTRACTED,561_entities_need_enrichment,MEDIUM,partner identities published but location is not a direct field
+STATION Ai,Aichi,members/program participants,NOT_EXTRACTED,NOT_EXTRACTED,NOT_EXTRACTED,NOT_EXTRACTED,LOW_MEDIUM,public aggregate/member information but no harmonized geography field located in Stage 1R
+Osaka Innovation Hub,Osaka,program participants,NOT_EXTRACTED,NOT_EXTRACTED,NOT_EXTRACTED,NOT_EXTRACTED,LOW,program-level geography not consistently published
+Fukuoka Growth Next,Fukuoka,program participants,NOT_EXTRACTED,NOT_EXTRACTED,NOT_EXTRACTED,NOT_EXTRACTED,LOW,international programs visible but harmonized participant geography unavailable
+Setouchi-i-Base,Kagawa,members/program participants,NOT_EXTRACTED,NOT_EXTRACTED,NOT_EXTRACTED,NOT_EXTRACTED,LOW,mission geography is observable but participant micro-geography is not
+Ishikawa Innovation Base,Ishikawa,program participants,NOT_EXTRACTED,NOT_EXTRACTED,NOT_EXTRACTED,NOT_EXTRACTED,LOW,external actors documented selectively rather than complete participant census
