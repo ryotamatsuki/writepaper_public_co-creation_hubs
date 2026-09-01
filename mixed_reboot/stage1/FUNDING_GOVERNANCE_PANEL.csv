@@ -1,0 +1,9 @@
+case,prefecture,public_control_form,operator_form,contract_horizon,annual_funding_amount,funding_shares,H_P_earmark,measurement_status
+Tokyo Innovation Base/NEXs,Tokyo,metropolitan programs,contracted/modular operation,mixed,NOT_PUBLICLY_OBSERVABLE,NOT_PUBLICLY_OBSERVABLE,program-specific modules,PARTIAL
+STATION Ai,Aichi,PFI/BT plus concession,private SPC,long-term through concession period,partly observable in project documents,NOT_FULLY_OBSERVABLE,program portfolio specified,GOOD_FORM_PARTIAL_AMOUNTS
+Osaka Innovation Hub,Osaka,city policy program,public development agency/program operators,annual/multi-program,PARTIAL,NOT_FULLY_OBSERVABLE,GLOBAL BRIDGE separately identifiable,PARTIAL
+E:N BASE,Ehime,prefectural outsourcing,private JV/contractor,contractual,PARTIAL,NOT_FULLY_OBSERVABLE,facility/program specification observable,PARTIAL
+Setouchi-i-Base,Kagawa,designated management,designated manager,multi-year designated period,PARTIAL,NOT_FULLY_OBSERVABLE,not fully separated,PARTIAL
+MomoSta,Okayama,city plus operating committee,multi-stakeholder committee/contractors,recurring,PARTIAL,NOT_FULLY_OBSERVABLE,not separately observable,PARTIAL
+Ishikawa Innovation Base,Ishikawa,prefectural initiative,operator arrangement partially observable,UNCLEAR,PARTIAL,NOT_FULLY_OBSERVABLE,external-resource functions explicit but budget split unclear,PARTIAL
+Fukuoka Growth Next,Fukuoka,public-private facility/city policy,public-private operator network,recurring,PARTIAL,NOT_FULLY_OBSERVABLE,international modules separately visible,PARTIAL
