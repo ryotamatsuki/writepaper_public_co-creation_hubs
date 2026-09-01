@@ -1,0 +1,9 @@
+case,mission,budget,staffing,eligibility,participant_selection,matching_rule,external_partner_recruitment,H_P_portfolio,KPI,evaluation,renewal,diagnosis
+STATION Ai,public,public/shared,operator,shared,operator/shared,operator,operator/shared,shared,public/shared,public,public/contract,long-horizon delegated discretion is observable
+E:N BASE,public,public,operator,shared,operator,operator,operator/shared,public/shared,public,public,public/contract,outsourced operational discretion
+Tokyo Innovation Base/NEXs,public,public,operator/shared,public/shared,operator/shared,program-specific,program-specific,public/program-specific,public,public,public/contract,modular program control
+Osaka Innovation Hub,public,public,operator/shared,shared,operator,operator,operator/program,public/program-specific,public,public,public/program,agency plus modular program structure
+Setouchi-i-Base,public,public,operator,shared,operator,operator,operator,shared,public,public,public/designation,designated-management structure
+MomoSta,public/shared,public/shared,committee/operator,shared,operator,operator,committee/operator,committee/shared,shared,shared,public/committee,multi-stakeholder control
+Ishikawa Innovation Base,public,public,unclear,shared,unclear,unclear,public/operator,public/shared,public,public,public,decision detail partly missing
+Fukuoka Growth Next,public/shared,public/shared,public-private operator,shared,operator,operator,operator/network,shared,shared,shared,public/shared,public-private operation
