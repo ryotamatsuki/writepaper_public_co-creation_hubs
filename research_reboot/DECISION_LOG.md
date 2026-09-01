@@ -225,11 +225,128 @@ Any Stage 3 candidate must generate a new feedback loop or theorem relative to H
 
 ---
 
-## Current project status after Stage 2
+## Stage 3 — Candidate Mechanism Search
 
-- Old manuscript: **not approved for revision/submission**.
-- Legacy theory claims: **killed as contribution claims**.
-- Economic motivation: **survives**.
-- Theory-paper route: **conditionally justified for one Stage 3 mechanism-search round**.
-- Empirical/mixed pivot: remains a valid fallback if Stage 3 fails.
-- Stage 3 model construction: **not performed in Stage 2**.
+### Date / provenance
+
+- Date: 2026-09-01
+- Stage 3 base SHA: `daf7b9e196f5557e08378ea2e5f347acb4b6d589`
+- Workflow SHA: `07466bcb1a6d3bc654b52945f21b034b38e45281`
+- Branch: `research-reboot/stage3-mechanism-search`
+- PR #1 remained open and unmerged during Stage 3.
+
+### Question
+
+Can one primitive strategic interaction make decentralized innovation intermediation generate a composition distortion that is not reducible to standard intermediary search, generic regional spillovers, two-sided-market participation, common agency, multitask incentives, or assumed complementarity?
+
+### Evidence examined
+
+- all Stage 0–2 binding artifacts;
+- 12 competing candidate mechanisms;
+- precommitted 100-point ranking criteria;
+- targeted mini-searches in common agency, two-sided markets, disclosure/matching, strategic innovation networks, biased intermediation, platform bias, and physical innovation-intermediary/platform research;
+- seminal and current comparators including Siqueira & Sandler (2004), Rysman (2009), de Cornière & Taylor (2019), Zennyo (2022), Dasaratha (2023), Kawakami (2024), Reimers & Waldfogel (2023; rev. 2026), and Pinarello et al. (2026).
+
+### Candidates generated
+
+12 total: M1–M12 as documented in `stage3/CANDIDATE_MECHANISM_TABLE.md`.
+
+### Candidates killed
+
+Seven:
+
+- M1 local-funder additive service externality;
+- M2 shared intermediary/common agency;
+- M4 KPI/multitask intermediation;
+- M5 public-private specialization/crowd-out;
+- M6 direct vs intermediated search;
+- M9 endogenous overembeddedness/network state;
+- M11 asymmetric regions/intermediary location.
+
+### Secondary survivors
+
+- M7 scarce boundary-spanning capacity;
+- M12 service-specific capability formation.
+
+Neither is authorized for Stage 4 because closest-paper survival is too weak and/or minimality is poor.
+
+### TOP 3
+
+1. **M10 — Funder-Induced Neutrality Loss / Regional Home-Bias Feedback** — preferred.
+2. **M8 — Disclosure-Mediated External Search** — secondary; strongly threatened by Kawakami (2024) and disclosure theory.
+3. **M3 — Service-Mix-Induced Participant Sorting** — secondary; strongly threatened by canonical two-sided-market theory.
+
+### Preferred mechanism
+
+> A geographically bounded public sponsor has an incentive to favor local matches. Anticipated home bias lowers outside actors' expected matching payoff and participation. A thinner outside pool then reduces the productivity of extra-regional brokerage, reinforcing the realized local orientation of the intermediary.
+
+Strategic loop:
+
+`regional local-priority incentive → intermediary home bias → outsider participation ↓ → external match-pool thickness ↓ → relative return to external brokerage ↓ → stronger realized local orientation`.
+
+### Why M10 survived Stage 3
+
+It has one potentially intermediation-specific productive margin: **neutrality/credible fair access sustains third-party participation in the matching pool**. This can make sponsor bias alter the technology/market thickness of brokerage before surplus is realized.
+
+However, bias itself is not novel and cross-side participation itself is not novel. The mechanism survives only as a testable hypothesis that regional sponsorship may create a distinct bias/participation/welfare proposition.
+
+### Strongest prior-art threat
+
+The combined decisive threat is:
+
+- de Cornière & Taylor (2019): biased intermediation and welfare;
+- Zennyo (2022): biased search changes participation across platform sides;
+- Rysman (2009): canonical cross-side participation;
+- Reimers & Waldfogel: current equilibrium/welfare treatment of platform bias.
+
+### Candidate theorem shapes
+
+Stage 4 may test:
+
+1. `alpha^R > alpha^SP` with lower outsider participation under regional sponsorship, **only if the participation derivative is essential**;
+2. an endogenous participation threshold/tipping point;
+3. a local-welfare reversal where excessive local priority eventually reduces even the sponsor's own payoff by destroying outsider participation;
+4. neutrality commitment only if the basic mechanism survives.
+
+The third result is the highest-value target because it cannot be explained solely by the planner placing more weight on outsiders.
+
+### Decisive blocker / kill test
+
+Strip all institutional labels and compare the solved minimal model directly to de Cornière–Taylor and Zennyo.
+
+If the players, bias instrument, participation response, equilibrium condition and main theorem map one-to-one into a standard biased-intermediary/two-sided-platform model, Stage 4 must return:
+
+`NO-GO — MECHANISM ISOMORPHIC TO PRIOR ART`.
+
+### Canonical verdict
+
+**GO**
+
+Routing: `GO TO MINIMAL MODEL`.
+
+This verdict authorizes exactly one Stage 4 model for M10. It does not certify novelty.
+
+### Next-stage contract
+
+Stage 4 is frozen by `research_reboot/stage3/STAGE4_MODEL_CONTRACT.md`:
+
+- one regional sponsor;
+- one intermediary;
+- local participant side;
+- endogenous outside participation;
+- one home-bias/priority parameter;
+- same matching technology for sponsor and planner;
+- no dynamics, private intermediary, second strategic region, absorptive capacity, KPI, digital substitution, fixed hub cost, legacy pipeline, or feature accumulation;
+- direct model-level comparison with de Cornière & Taylor and Zennyo;
+- kill if participation is not essential or if the model is isomorphic to prior art.
+
+---
+
+## Current project status after Stage 3
+
+- Legacy manuscript: **still frozen; not approved for revision/submission**.
+- Stage 2 research space: narrowed to one testable mechanism.
+- Stage 3: **GO TO MINIMAL MODEL**, but only as an aggressive novelty/isomorphism test.
+- Preferred candidate: **Funder-Induced Neutrality Loss / Regional Home-Bias Feedback**.
+- Theory-paper route: survives for **one Stage 4 minimal-model round only**.
+- If Stage 4 fails: stop this theory branch and consider an empirical/mixed or different-question pivot rather than adding features.
