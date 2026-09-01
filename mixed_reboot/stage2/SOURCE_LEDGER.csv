@@ -1,0 +1,28 @@
+source_id,scope,source_type,title_or_institution,url,claim_supported,evidence_label
+J01,Japan,official program,NEXs Tokyo,https://www.nexstokyo.metro.tokyo.lg.jp/about,P-only cross-regional programme boundary,PRIMARY-OBSERVED
+J02,Japan,official program,OIH GLOBAL BRIDGE,https://www.innovation-osaka.jp/oih-global-bridge/,dedicated global P module,PRIMARY-OBSERVED
+J03,Japan,official annual policy,Saga Prefecture startup support,https://www.pref.saga.lg.jp/kiji003105825/index.html,Connect H / Connect+ P / Promote bounded zero,PRIMARY-OBSERVED
+J04,Japan,official program,Aomori Blue Ocean,https://www.pref.aomori.lg.jp/soshiki/sangyo/innovation/aomori_blueocean2024.html,outside-prefecture company matching P,PRIMARY-OBSERVED
+J05,Japan,official MoU,Fukuoka-CIC linkage,https://www.city.fukuoka.lg.jp/keizai/r-support/business/R7nd/fukuokacity_startup_mou_cic-2.html,external-network expansion,PRIMARY-OBSERVED
+J06,Japan,official procurement,Okayama startup support procurement index,https://www.city.okayama.jp/soshiki/13-2-7-0-0_6.html,separate H and P commissions,PRIMARY-OBSERVED
+J07,Japan,official research report,NISTEP STI Horizon regional university-industry collaboration,https://www.nistep.go.jp/activities/sti-horizon%E8%AA%8C/vol-11no-01/stih00396/,same- versus outside-prefecture science-industry linkage and regional heterogeneity,LITERATURE/INSTITUTIONAL-VERIFIED
+I01,International,official agency,Enterprise Singapore Global Innovation Alliance,https://www.enterprisesg.gov.sg/grow-your-business/innovate-with-us/market-access-and-networks/global-innovation-alliance/overview,government-agency P-specific overseas network portfolio,PRIMARY-OBSERVED
+I02,International,official hub,Seoul Startup Hub,https://hubgongdeok.startup-plus.kr/en/about,incubation + global expansion + open innovation HP,PRIMARY-OBSERVED
+I03,International,official network,Innovate UK Catapult Network,https://catapult.org.uk/,public-agency innovation network HP functions,PRIMARY-OBSERVED
+I04,International,official intermediary,Bayern Innovativ,https://www.bayern-innovativ.de/en/,Bavarian local networks + dedicated Europe/international function,PRIMARY-OBSERVED
+I05,International,official platform,BIND Basque Open Innovation Platform,https://bind.spri.eus/about/,regional-government-funded global startup-to-local client P programme,PRIMARY-OBSERVED
+I06,International,official/community,Maria 01,https://maria.io/,local startup community + international accelerator/investor links HP,PRIMARY-OBSERVED
+I07,International,official nonprofit,MaRS Discovery District,https://www.marsdd.com/,local innovation ecosystem + capital/customer/market connections HP,PRIMARY-OBSERVED
+I08,International,official agency,LaunchVic,https://launchvic.org/about/,state startup agency portfolio from ecosystem support to international scale,PRIMARY-OBSERVED
+T01,Theory,publisher article,Hoppe & Ozdenoren 2005 Intermediation in innovation,https://doi.org/10.1016/j.ijindorg.2005.03.003,formal innovation intermediation/search/sorting,LITERATURE-VERIFIED
+T02,Theory,bibliographic/publisher record,Calcagnini et al / Liberati et al 2019 Technology transfer with search intensity and project advertising,https://doi.org/10.1007/s10961-018-9667-3,endogenous TTO-firm matching and search externalities,LITERATURE-VERIFIED
+T03,Theory,publisher article,Grillitsch & Asheim 2018 Place-based innovation policy for industrial diversification,https://doi.org/10.1080/09654313.2018.1484892,regional differentiation and external knowledge/local intermediary policy,LITERATURE-VERIFIED
+T04,Theory,university/publisher record,Boschma Iammarino Olechnicka 2026 Interregional collaboration and internationalisation,https://doi.org/10.1057/s42214-026-00242-0,place/activity-specific interregional linkages and capabilities,LITERATURE-VERIFIED
+T05,Theory,publisher article,Flanagan Uyarra Laranja 2011 Reconceptualising policy mix,https://doi.org/10.1016/j.respol.2011.02.005,multi-actor multi-instrument policy interactions,LITERATURE-VERIFIED
+T06,Theory,publisher article,Magro & Wilson 2019 Policy-mix evaluation governance challenges,https://doi.org/10.1016/j.respol.2018.06.010,regional policy mix conditioned by governance,LITERATURE-VERIFIED
+T07,Theory,publisher article,Henderson 2023 Boundary work in regional innovation policy mix,https://doi.org/10.1093/scipol/scad006,layering/boundaries of regional policy instruments,LITERATURE-VERIFIED
+T08,Theory,publisher article,Aghion & Tirole 1997 Formal and Real Authority,https://doi.org/10.1086/262063,standard authority/delegation tradeoff,LITERATURE-VERIFIED
+T09,Theory,publisher record,Holmstrom & Milgrom 1991 Multitask Principal-Agent Analyses,https://www.jstor.org/stable/764957,standard multitask incentive/job design threat,LITERATURE-VERIFIED
+T10,Theory,bibliographic record,Siqueira & Sandler 2004 Collective Goods Common Agency and Third-Party Intervention,https://doi.org/10.1111/j.1467-8586.2004.00185.x,multiple principals / multiple public goods common agency,LITERATURE-VERIFIED
+T11,Policy literature,OECD,Proactive portfolio management in mission-oriented innovation policy,https://doi.org/10.1787/1ee956a5-en,portfolio design and adaptive public governance,LITERATURE-VERIFIED
+T12,Policy literature,OECD,Regions and Innovation Policy,https://doi.org/10.1787/9789264097803-en,regional policy mixes and balance of internal/external connections,LITERATURE-VERIFIED

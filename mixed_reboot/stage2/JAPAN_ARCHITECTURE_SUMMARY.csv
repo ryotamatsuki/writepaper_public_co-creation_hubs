@@ -1,0 +1,6 @@
+architecture,n_units,n_principals,n_regions,interpretation
+0,5,5,4,"Bounded decision-opportunity zero only; not a zero region"
+H,15,15,14,"Local intermediation under strict two-function threshold"
+P,7,7,7,"P-only survives across seven distinct principals/regions"
+HP,8,8,8,"Co-provision inside one bounded portfolio; no complementarity claim"
+ALL,35,24,22,"Core Japanese Stage 1R-M sample frozen for Stage 2R"
