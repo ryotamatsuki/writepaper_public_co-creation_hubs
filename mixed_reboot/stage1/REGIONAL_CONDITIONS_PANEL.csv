@@ -1,0 +1,10 @@
+measure_id,concept,candidate_measure,source,status,pre_treatment,comparability,key_limitation
+Z1A,actor_density,establishments/employment by prefecture,Economic Census,AVAILABLE,yes,high,not a thinness construct by itself
+Z1B,research_capacity,universities/researchers/patents,MEXT/NISTEP,AVAILABLE,yes,high,state/control rather than architecture mechanism
+Z2A,local_linkage,share of university-industry collaboration with same-prefecture firms,NISTEP regional STI indicators,PARTIALLY_VALIDATED,yes,medium,"university-industry only; linkage intensity is not general network fragmentation"
+Z2B,local_fragmentation,within-prefecture co-patent or project-network density,J-PlatPat/project microdata,NOT_VALIDATED,potentially,unknown,"reproducible prefecture-year extraction not established in Stage 1R"
+Z3A,external_linkage,share of university-industry collaboration with outside-prefecture firms,NISTEP regional STI indicators,AVAILABLE_BUT_DEPENDENT,yes,medium,"mechanically complementary to Z2A within the same total; cannot identify an independent gap"
+Z3B,external_connectivity,outside-prefecture co-patent/project-network share,J-PlatPat/project microdata,NOT_VALIDATED,potentially,unknown,"reproducible prefecture-year extraction not established"
+Z4,private_intermediation,raw inventory of accelerators/banks/chambers/TTOs,manual primary-source inventory,PARTIAL,mostly,medium,"definition and coverage vary; useful as substitute inventory rather than scalar index"
+Z5,industrial_structure,sector shares/location quotients/related variety,Economic Census,AVAILABLE,yes,high,related-variety construction requires fixed industry aggregation
+Z6,accessibility,rail/air access and density,official transport/geographic data,AVAILABLE,yes,high,cost shifter only; should not mechanically define P value
