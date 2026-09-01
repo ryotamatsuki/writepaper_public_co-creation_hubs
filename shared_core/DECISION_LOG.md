@@ -127,3 +127,119 @@ Stage 7 may:
 5. derive testable predictions where possible.
 
 Stage 7 may not add players, pricing, compatibility, dynamics, local spillovers, a second core, or new network primitives. A substantive theory change requires rollback.
+
+---
+
+## Canonical Stage 7 — Welfare / Generality / Institutional Validation
+
+### Provenance
+
+- Stage 6 head SHA: `34a955faa1814ac8312051b971c1f75d59aad1ee`
+- Stage 7 branch: `shared-core/stage7-welfare-generality-institution`
+- Theory frozen: yes
+- New primitives added: none
+
+### Welfare reconstruction
+
+Aggregate welfare was re-derived from individual utility. There is no separate consumer population, so no separate consumer-surplus object is created.
+
+Verified net welfare:
+
+- `SW00 = 2 C0`
+- `SW10 = 2 C1 + [h^2 + (h-tau)^2]/2 - F`
+- `SW11 = 2 C2 + s^2 - 2F`
+
+Define social gross marginal benefits `G0` and `G1`. The cross-region welfare effects satisfy
+
+`G0 = D0 + X0`
+
+and
+
+`G1 = D1 + X1`.
+
+The second-entry effect on the already-entered region is
+
+`X1 = - beta tau [2 - 2(A_L-A_M) + beta tau] / [2(1-2 beta)^2] < 0`
+
+throughout the canonical interior domain.
+
+### Central welfare identity
+
+Definitions imply
+
+`X1 - X0 = Gamma`,
+
+hence
+
+`G1 - G0 = 2 Gamma`.
+
+Therefore the same `A*` that reverses private bilateral entry interaction also changes social marginal entry benefits from decreasing to increasing.
+
+### Welfare results
+
+1. **Efficient anti-coordination exists on a nonempty open set.** Strict examples exist where the asymmetric one-entry Nash equilibria coincide with `N_SP=1`.
+2. **Coordination can generate socially excessive proliferation.** In every canonical coordination-multiplicity region, `(1,1)` is socially dominated by `(0,0)`.
+3. **No full under-entry coordination failure exists.** There is no region in which no entry is a Nash equilibrium while `N_SP=2`.
+4. **First-entry under-provision can occur.** In the substitutes region, if the first-entry cross-region effect `X0` is positive, there is an interval with no-entry Nash equilibrium but one-entry social optimum.
+
+### Generality
+
+The required residual-core structure was tested across multiple environments.
+
+Strong plausible non-platform mappings were found in:
+
+- peripheral shopping centers versus a common downtown retail agglomeration, where shopper diversion can thin downtown footfall/variety agglomeration;
+- regional airports versus a dominant hub, where hub-bypass traffic can thin a common hub whose connectivity value depends on concentrated traffic and connections.
+
+Labor-market channels are plausible but not exact because multi-channel search is common. Local marketplaces are near-exact but remain within the platform family. Technology-transfer and co-creation intermediaries more naturally exhibit complementarity to national/metropolitan ecosystems.
+
+### Institutional validation of co-creation hubs
+
+- Shared metropolitan/national core: **SUPPORTED**.
+- Core value from information/human-network thickness: **SUPPORTED**.
+- Common core across multiple regions: **SUPPORTED**.
+- Cross-regional local-hub friction: **PLAUSIBLE BUT INDIRECT**.
+- Binary establishment as reduced form: **SUPPORTED**.
+- Regional hub entry materially diverts participation from the shared core: **PLAUSIBLE BUT INDIRECT / WEAK**.
+
+The last item is the binding blocker. Ehime's official 2026 metropolitan co-creation project aims to strengthen E:N BASE members' network with metropolitan firms and create mutual collaboration. Ehime's DX plan treats digital, metropolitan and local hubs as a portfolio. NEXs Tokyo likewise helps regional startups use metropolitan resources. This does not prove zero substitution in participant time or attention, but it prevents treating residual-core depletion as an established institutional fact for co-creation hubs.
+
+### Co-creation-hub application verdict
+
+**WEAK FIT**.
+
+The general theory survives. The original application is not yet strong enough to support a literal institutional interpretation of the theorem.
+
+### Predictions
+
+Externally meaningful predictions survive concerning:
+
+- the sign of neighbor-entry interaction as core attractiveness changes;
+- joint-entry clustering across the threshold;
+- stronger reversal where core value is more installed-base-sensitive;
+- lower strategic threshold when cross-peripheral friction rises;
+- the identical private/social interaction threshold implied by `G1-G0=2 Gamma`.
+
+### Canonical Stage-7 verdict
+
+**CONDITIONAL GO**
+
+Reason code: **CONDITIONAL GO — REGIONAL-TO-CORE DIVERSION EVIDENCE WEAK**.
+
+Welfare gate: PASS.
+
+Generality gate: PASS.
+
+Prediction gate: PASS.
+
+Institutional gate for the motivating application: one unresolved blocker.
+
+### Authorized next action
+
+Resolve exactly one question:
+
+> Does participation in regional co-creation/innovation hubs substitute at a meaningful margin for direct participation in the shared metropolitan/national ecosystem, such that regional establishment can thin the residual core faced by firms in other regions?
+
+No theory modification is authorized.
+
+Do not proceed to Stage 7.5 while co-creation hubs remain the intended headline application and this blocker remains unresolved. If the blocker cannot be supported, formally demote/replace the application before Full-Theory Freeze rather than altering the model.
