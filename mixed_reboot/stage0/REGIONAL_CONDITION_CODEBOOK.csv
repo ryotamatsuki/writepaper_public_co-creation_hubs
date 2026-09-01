@@ -1,0 +1,12 @@
+variable,concept,candidate_measure,source_family,comparability,measurement_risk,expected_H_P_differentiation
+local_actor_density,Z1,"business establishments/employment in relevant sectors; startups; universities/research bodies",Economic Census; MEXT; official startup DBs,high for general establishments; medium for startups,medium,"H may require sufficient potential pair mass; P may remain valuable even when local mass is low"
+local_network_fragmentation,Z2,"cross-sector collaboration; local co-patenting/co-project links; repeat-tie concentration",patents/project lists/official collaboration data,low-medium,high,"candidate H-specific value driver rather than market size"
+baseline_external_connectivity,Z3,"outside-region project links; external co-patents; national/global program participation",project databases/patents/program records,medium,high,"candidate P-specific gap"
+local_matching_friction,Z4,"potential actors relative to realized local collaborations; search/partner survey evidence",constructed/survey,low,very high,"direct H-value primitive if measurable"
+external_search_friction,Z5,"outside partner scarcity; distance to specialized actors; prior external links",project networks/travel accessibility,medium,high,"direct P-value primitive"
+complementary_capacity,Z6,"R&D staff; university/research capacity; skills and technical support",MEXT; prefectural R&D statistics; patents,medium,medium,"may moderate P return; cannot be novelty alone"
+private_intermediation_availability,Z7,"private accelerators; TTOs; VC/CVC; chambers/banks/platforms",official directories/manual coding,medium,high,"key candidate for 0 versus public H/P"
+accessibility,Z8,"rail/air travel time; metropolitan access",official transport schedules/geospatial data,high,medium,"may shift P cost without determining it mechanically"
+industrial_specialization,Z9,"location quotients; related variety; sector employment shares",Economic Census/industrial statistics,high,medium,"specialization may raise external knowledge need while related variety may raise H matching value"
+existing_public_intermediation,Z10,"number/types of existing public support/intermediary organizations",official program inventory,medium,high,"critical for defining true 0 regime and avoiding facility-selection bias"
+startup_ecosystem_status,context,"national startup ecosystem hub designation and consortium participation",Cabinet Office official records,high,low,"proxy for baseline external ecosystem connectivity; not itself a causal primitive"
