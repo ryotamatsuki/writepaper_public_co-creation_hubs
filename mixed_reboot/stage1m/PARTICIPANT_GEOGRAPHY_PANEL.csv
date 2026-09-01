@@ -1,0 +1,11 @@
+unit_id,participant_unit,local_geography,outside_prefecture,overseas,measurement_status,source_note
+U01,registered members / program participants,directly filterable,directly filterable,directly filterable,HIGH,NEXs public member categories distinguish Tokyo / macro-regions / overseas
+U02,startup/member database,directly filterable,directly filterable,program-level global participation,HIGH,TIB public database distinguishes Tokyo-region and outside-Tokyo
+U03,members/program cohorts,extractable,extractable,explicit programs,MEDIUM,operator materials require entity extraction
+U04,program cohorts,partial,partial,explicit global programs,MEDIUM,program-by-program extraction required
+U06,startup cohorts,partial,partial,explicit overseas programs,MEDIUM,FGN program records
+U07,members/partner organizations,entity enrichment required,entity enrichment required,unknown,MEDIUM-LOW,partner list public but geography not a direct field
+U08,program participants,partial,explicit Tokyo-resource participants,not primary,MEDIUM,program records
+U09,membership/program participants,aggregate only,not directly reported,not directly reported,LOW,geography not harmonized
+
+Stage 1R-M treats participant geography as secondary. Its non-random availability is recorded and it is not a GO condition.

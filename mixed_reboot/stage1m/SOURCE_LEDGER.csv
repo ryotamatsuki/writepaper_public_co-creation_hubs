@@ -1,0 +1,37 @@
+source_id,unit_or_role,institution,source_type,url,variable_supported,evidence_label
+S001,U01,NEXs Tokyo,official program page,https://www.nexstokyo.metro.tokyo.lg.jp/about,P-only program boundary; cross-region design,PRIMARY-OBSERVED
+S002,U02,Tokyo Innovation Base,official site,https://tib.metro.tokyo.lg.jp/,H+P platform functions,PRIMARY-OBSERVED
+S003,U03,Aichi Prefecture,official contract/press page,https://www.pref.aichi.jp/soshiki/startup/jigyokeiyaku.html,PFI/concession boundary and governance,PRIMARY-OBSERVED
+S004,U04,Osaka Innovation Hub,official site,https://www.innovation-osaka.jp/ja/,OIH H/P portfolio,PRIMARY-OBSERVED
+S005,U05,OIH GLOBAL BRIDGE,official program page,https://www.innovation-osaka.jp/oih-global-bridge/,2026 dedicated overseas P program,PRIMARY-OBSERVED
+S006,U06,Fukuoka Growth Next,official site,https://growth-next.com/,H/P startup-support portfolio,PRIMARY-OBSERVED
+S007,U07,E:N BASE,official site,https://en-base.pref.ehime.jp/,local co-creation H functions,PRIMARY-OBSERVED
+S008,U08,Ishikawa Prefecture,official page,https://www.pref.ishikawa.lg.jp/syoko/startup/iib.html,IIB local exchange and Tokyo-resource import,PRIMARY-OBSERVED
+S009,U09,Setouchi-i-Base,official facility page,https://setouchiibase.jp/pub/facility,H and outside-prefecture attraction/matching boundary,PRIMARY-OBSERVED
+S010,U10,Okayama City,official page,https://www.city.okayama.jp/jigyosha/0000030583.html,MomoSta H and operating committee,PRIMARY-OBSERVED
+S011,U11,K-NIC,official about page,https://www.k-nic.jp/about/,three-party governance; H and overseas-oriented support evidence,PRIMARY-OBSERVED
+S012,U12,Hiroshima Prefecture,official facility page,https://www.pref.hiroshima.lg.jp/soshiki/247/innovationhubcamps.html,Camps H,PRIMARY-OBSERVED
+S013,U13,Kyoto Prefecture,official startup page,https://www.pref.kyoto.jp/sangyo-sinko/startup/index.html,KOIN H boundary,PRIMARY-OBSERVED
+S014,U14,XOSS POINT,official site,https://xosspoint.jp/,municipal H support,PRIMARY-OBSERVED
+S015,U15,Nagasaki Prefecture,official startup page,https://www.pref.nagasaki.jp/bunrui/shigoto-sangyo/sangyoshien/jigyoshien/shinkigyou/startup/,CO-DEJIMA H,PRIMARY-OBSERVED
+S016,U16,Okinawa City,official page,https://www.city.okinawa.okinawa.jp/k032-001/sangyou/kigyoushien/sogyoushien/34359.html,Lagoon KOZA commissioned H support,PRIMARY-OBSERVED
+S017,U17,Toyama Prefecture,official page,https://www.pref.toyama.jp/100222/kensei/kenseiunei/kensei/soshiki/20/100222.html,SCOP TOYAMA H,PRIMARY-OBSERVED
+S018,U18,Nagano Prefecture,official procurement page,https://www.pref.nagano.lg.jp/keieishien/sangyo/shokogyo/sogyo/sssboshu.html,Shinshu Startup Station commissioned package/governance,PRIMARY-OBSERVED
+S019,U19,Yokohama City,official page,https://www.city.yokohama.lg.jp/business/keizai/sougyo/jisedai/yoxo_box.html,YOXO BOX H,PRIMARY-OBSERVED
+S020,U20-U21+Z05,Saga Prefecture,official annual startup-support page,https://www.pref.saga.lg.jp/kiji003105825/index.html,Connect H; Connect+ P; Promote bounded zero,PRIMARY-OBSERVED
+S021,U22,Aomori Prefecture,official program page,https://www.pref.aomori.lg.jp/soshiki/sangyo/innovation/aomori_blueocean2024.html,Blue Ocean outside-prefecture partner matching P,PRIMARY-OBSERVED
+S022,U23,Akita Prefecture,official page,https://www.pref.akita.lg.jp/pages/archive/83089,AKISTA H,PRIMARY-OBSERVED
+S023,U24,Iwate Prefecture,official platform page,https://www.pref.iwate.jp/sangyoukoyou/sangyoushinkou/shinjigyou/1045518/1069132/index.html,Iwate Startup Platform H,PRIMARY-OBSERVED
+S024,U25,Mie Prefecture,official procurement page,https://www.pref.mie.lg.jp/NYUSATSU/m0368100070.htm,integrated local+outside startup support package HP,PRIMARY-OBSERVED
+S025,U26,Yamanashi Prefecture,official program page,https://www.pref.yamanashi.jp/startup/acceleration2024.html,acceleration mentoring/matching H,PRIMARY-OBSERVED
+S026,U27,Fukuoka City,official MoU page,https://www.city.fukuoka.lg.jp/keizai/r-support/business/R7nd/fukuokacity_startup_mou_cic-2.html,CIC external-network linkage P,PRIMARY-OBSERVED
+S027,U28,Akita Prefecture,official startup category page,https://www.pref.akita.lg.jp/pages/genre/14158,outside-startup demonstration/matching P,PRIMARY-OBSERVED
+S028,U29-U30,Okayama City,official startup-support procurement index,https://www.city.okayama.jp/soshiki/13-2-7-0-0_6.html,separate global-network P and innovation-exchange H commissions,PRIMARY-OBSERVED
+S029,Z01,Tokyo Metropolitan Government,official press page,https://www.metro.tokyo.lg.jp/information/press/2026/06/2026060405,deep-tech expense subsidy bounded zero,PRIMARY-OBSERVED
+S030,Z02,Okayama City,official grant page,https://www.city.okayama.jp/jigyosha/0000058030.html,startup incorporation grant bounded zero,PRIMARY-OBSERVED
+S031,Z03,Tokyo Metropolitan Government,official press page,https://www.metro.tokyo.lg.jp/information/press/2026/02/2026021609,startup expense subsidy bounded zero,PRIMARY-OBSERVED
+S032,Z04,Hiroshima Prefecture,official procurement result page,https://www.pref.hiroshima.lg.jp/site/innovation-archive/innovation-pr-result2026.html,innovation-policy PR-only commission bounded zero,PRIMARY-OBSERVED
+S033,REGIONAL,NISTEP,official research institute report,https://www.nistep.go.jp/activities/sti-horizon%E8%AA%8C/vol-11no-01/stih00396,regional university-industry collaboration data and interpretation,LITERATURE-VERIFIED
+S034,REGIONAL,NISTEP,official regional indicators publication,https://www.nistep.go.jp/wp/wp-content/uploads/NISTEP-RM344-FullJ.pdf,prefecture-level STI indicators; same/other-prefecture collaboration source family,PRIMARY-DERIVED
+S035,ZERO-SENSITIVITY,Ehime Prefecture,official page,https://www.pref.ehime.jp/page/148328.html,co-creation grant shows why a grant tied to E:N BASE should not automatically be coded zero,PRIMARY-OBSERVED
+S036,ZERO-SENSITIVITY,Ehime Prefecture,official page,https://www.pref.ehime.jp/site/madoguchi/146697.html,DX grant used only as rejected/out-of-boundary zero candidate,PRIMARY-OBSERVED

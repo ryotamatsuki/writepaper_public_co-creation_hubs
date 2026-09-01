@@ -1,0 +1,36 @@
+unit_id,principal,governance_contract_type,contract_horizon,residual_discretion,decision_rights_summary,completeness
+U01,Tokyo Metropolitan Government,public program / contracted secretariat,annual/renewable,public principal strong,public design + selection; matching execution delegated,OBSERVED/PARTIAL
+U02,Tokyo Metropolitan Government,public platform / multiple contracted operators,multi-program,shared,public strategy; distributed delivery,OBSERVED/PARTIAL
+U03,Aichi Prefecture,PFI/concession,to 2034,operator substantial,public requirements + residual operational discretion,OBSERVED/GOOD
+U04,Osaka City,city + public development agency,ongoing,shared,city policy; OBDA operation,OBSERVED/GOOD
+U05,Osaka City,city program commission,2026-27,shared,city/OIH program boundary,OBSERVED/GOOD
+U06,Fukuoka City,public-private facility operation,multi-year/ongoing,shared,city + operator,OBSERVED/PARTIAL
+U07,Ehime Prefecture,ordinary outsourcing / JV,commissioned,public principal strong,prefecture mission; JV operation,OBSERVED/GOOD
+U08,Ishikawa Prefecture,prefectural initiative / commissioned support,ongoing,public principal strong,prefecture mission/program,OBSERVED/PARTIAL
+U09,Kagawa Prefecture,designated management,management term,operator moderate,prefecture ownership + manager operation,OBSERVED/GOOD
+U10,Okayama City,multi-stakeholder operating committee,ongoing,committee/shared,city+banks+chamber governance,OBSERVED/GOOD
+U11,NEDO + Kawasaki City + Kawasaki Industrial Promotion Foundation,three-agency coalition,ongoing,shared,NEDO+city+foundation,OBSERVED/GOOD
+U12,Hiroshima Prefecture,prefectural facility operation,ongoing,public principal strong,prefectural policy,OBSERVED/PARTIAL
+U13,Kyoto Prefecture,prefectural program/facility,ongoing,public principal strong,prefectural policy,OBSERVED/PARTIAL
+U14,Kumamoto City,municipal startup facility,ongoing,public principal strong,municipal policy,OBSERVED/PARTIAL
+U15,Nagasaki Prefecture,prefectural startup facility,ongoing,public principal strong,prefectural policy,OBSERVED/PARTIAL
+U16,Okinawa City,municipal outsourcing,contracted,shared,city mission; contracted operation,OBSERVED/GOOD
+U17,Toyama Prefecture,joint management group,management term,shared,prefectural facility + manager,OBSERVED/GOOD
+U18,Nagano Prefecture,public procurement / outsourcing,procurement term,public principal strong,prefecture specifies support package,OBSERVED/GOOD
+U19,Yokohama City,municipal support program,ongoing,public principal strong,city policy,OBSERVED/PARTIAL
+U20,Saga Prefecture,annual outsourced program,annual,public principal strong,prefecture defines program,OBSERVED/GOOD
+U21,Saga Prefecture,annual outsourced program,annual,public principal strong,prefecture defines overseas module,OBSERVED/GOOD
+U22,Aomori Prefecture,annual outsourced open-innovation program,annual,public principal strong,prefecture + contracted platform,OBSERVED/GOOD
+U23,Akita Prefecture,prefectural startup support,annual/ongoing,public principal strong,prefecture,OBSERVED/PARTIAL
+U24,Iwate Prefecture,platform coalition,ongoing,shared,prefecture + support coalition,OBSERVED/PARTIAL
+U25,Mie Prefecture,commissioned integrated package,2026 episode,public principal strong,prefecture specifies local+outside components,OBSERVED/GOOD
+U26,Yamanashi Prefecture,annual acceleration program,annual,public principal strong,prefecture,OBSERVED/GOOD
+U27,Fukuoka City,inter-institutional MoU/partnership,partnership,shared,city + CIC,OBSERVED/GOOD
+U28,Akita Prefecture,annual public program,annual,public principal strong,prefecture,OBSERVED/PARTIAL
+U29,Okayama City,municipal procurement,annual,public principal strong,city specifies global-network function,OBSERVED/GOOD
+U30,Okayama City,municipal procurement,annual,public principal strong,city specifies innovation-exchange function,OBSERVED/GOOD
+Z01,Tokyo Metropolitan Government,direct public subsidy,annual,public principal strong,grant eligibility/award,OBSERVED/GOOD
+Z02,Okayama City,municipal grant,annual,public principal strong,grant eligibility/award,OBSERVED/GOOD
+Z03,Tokyo Metropolitan Government + Tokyo SME Support Center,public subsidy / joint administration,annual,shared,Tokyo + support center,OBSERVED/GOOD
+Z04,Hiroshima Prefecture,prefectural PR procurement,annual,public principal strong,PR scope specified,OBSERVED/GOOD
+Z05,Saga Prefecture,annual outsourced mentoring/promotion,annual,public principal strong,prefecture defines program,OBSERVED/GOOD

@@ -1,0 +1,36 @@
+unit_id,coder_A_H,coder_A_P,coder_B_H,coder_B_P,coder_A_architecture,coder_B_architecture,agreement,disagreement,adjudicated
+U01,0,1,0,1,P,P,YES,,P
+U02,1,1,1,1,HP,HP,YES,,HP
+U03,1,1,1,1,HP,HP,YES,,HP
+U04,1,1,1,1,HP,HP,YES,,HP
+U05,0,1,0,1,P,P,YES,,P
+U06,1,1,1,1,HP,HP,YES,,HP
+U07,1,0,1,0,H,H,YES,,H
+U08,1,1,1,1,HP,HP,YES,,HP
+U09,1,1,1,0,HP,H,NO,P boundary: recurrent extra-regional function threshold,HP
+U10,1,0,1,0,H,H,YES,,H
+U11,1,1,1,0,HP,H,NO,P boundary: recurrent extra-regional function threshold,HP
+U12,1,0,1,0,H,H,YES,,H
+U13,1,0,1,0,H,H,YES,,H
+U14,1,0,1,0,H,H,YES,,H
+U15,1,0,1,0,H,H,YES,,H
+U16,1,0,1,0,H,H,YES,,H
+U17,1,0,1,0,H,H,YES,,H
+U18,1,0,1,0,H,H,YES,,H
+U19,1,0,1,0,H,H,YES,,H
+U20,1,0,1,0,H,H,YES,,H
+U21,0,1,0,1,P,P,YES,,P
+U22,0,1,0,1,P,P,YES,,P
+U23,1,0,1,0,H,H,YES,,H
+U24,1,0,1,0,H,H,YES,,H
+U25,1,1,1,1,HP,HP,YES,,HP
+U26,1,0,1,0,H,H,YES,,H
+U27,0,1,0,1,P,P,YES,,P
+U28,0,1,0,1,P,P,YES,,P
+U29,0,1,0,1,P,P,YES,,P
+U30,1,0,1,0,H,H,YES,,H
+Z01,0,0,0,0,0,0,YES,,0
+Z02,0,0,0,0,0,0,YES,,0
+Z03,0,0,0,0,0,0,YES,,0
+Z04,0,0,0,0,0,0,YES,,0
+Z05,0,0,0,0,0,0,YES,,0
