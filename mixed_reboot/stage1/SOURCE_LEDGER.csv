@@ -1,0 +1,23 @@
+source_id,institution,year_or_period,source_type,url,variable_supported,evidence_label
+S001,NEXs Tokyo,2020-,official program page,https://www.nexstokyo.metro.tokyo.lg.jp/about,program-level P and cross-region design,PRIMARY-OBSERVED
+S002,Tokyo Innovation Base,2023-,official site,https://tib.metro.tokyo.lg.jp/,Tokyo system H and global orientation,PRIMARY-OBSERVED
+S003,Aichi Prefecture,2024,official press release,https://www.pref.aichi.jp/press-release/startup-program2024.html,PRE/STATION Ai support system,PRIMARY-OBSERVED
+S004,Osaka Innovation Hub,current,official program site,https://www.innovation-osaka.jp/,OIH H/P functions,PRIMARY-OBSERVED
+S005,Fukuoka Growth Next,current,official site,https://growth-next.com/,FGN local and external support,PRIMARY-OBSERVED
+S006,Ehime Aile Lab,2021-,official prefectural program material,https://www.pref.ehime.jp/,local community and external-resource coordination,PRIMARY-OBSERVED
+S007,Saga Prefecture,2024,official program page,https://www.pref.saga.lg.jp/kiji003105825/index.html,Gateway/Connect/Connect+ H/P modules,PRIMARY-OBSERVED
+S008,Aomori Prefecture,2024,official program page,https://www.pref.aomori.lg.jp/soshiki/sangyo/innovation/aomori_blueocean2024.html,outside-company open-innovation matching,PRIMARY-OBSERVED
+S009,Aomori Prefecture,current,official support-facility page,https://www.pref.aomori.lg.jp/soshiki/sangyo/richi/sogyo_shien_kyoten.html,local H inventory,PRIMARY-OBSERVED
+S010,Akita Prefecture,2024,official page,https://www.pref.akita.lg.jp/pages/archive/83089,AKISTA local consultation,PRIMARY-OBSERVED
+S011,Akita Prefecture,2026,official category page,https://www.pref.akita.lg.jp/pages/genre/14158,outside-startup demonstration and startup support,PRIMARY-OBSERVED
+S012,Ishikawa Prefecture,current,official page,https://www.pref.ishikawa.lg.jp/syoko/startup/iib.html,IIB local exchange and Tokyo-resource import,PRIMARY-OBSERVED
+S013,Setouchi-i-Base,current,official facility page,https://setouchiibase.jp/pub/facility,H and broad-area mission; P boundary evidence,PRIMARY-OBSERVED
+S014,Hiroshima Camps,current,official prefectural page,https://www.pref.hiroshima.lg.jp/soshiki/247/innovationhubcamps.html,local H,PRIMARY-OBSERVED
+S015,MomoSta,current,official city page,https://www.city.okayama.jp/jigyosha/0000030583.html,local H and 2019 start,PRIMARY-OBSERVED
+S016,Kumamoto XOSS POINT,current,official city site,https://www.city.kumamoto.jp/,local H; outside/global programs,PRIMARY-OBSERVED
+S017,SCOP TOYAMA,current,official prefectural page,https://www.pref.toyama.jp/100222/kensei/kenseiunei/kensei/soshiki/20/100222.html,local H,PRIMARY-OBSERVED
+S018,Shinshu Startup Station,current,official prefectural page,https://www.pref.nagano.lg.jp/keieishien/sangyo/shokogyo/sogyo/sss.html,local H,PRIMARY-OBSERVED
+S019,NISTEP,2022 data/2025 report,official research institute HTML,https://www.nistep.go.jp/activities/sti-horizon%E8%AA%8C/vol-11no-01/stih00396,same-prefecture university-industry collaboration and regional comparison,LITERATURE-VERIFIED
+S020,Iwate Prefecture,2023-,official platform page,https://www.pref.iwate.jp/sangyoukoyou/sangyoushinkou/shinjigyou/1045518/1069132/index.html,zero-candidate rejection/local support network,PRIMARY-OBSERVED
+S021,Mie Prefecture,2026,official page,https://www.pref.mie.lg.jp/TOPICS/m0360800136.htm,one-stop H and outside-startup field matching,PRIMARY-OBSERVED
+S022,Yamanashi Prefecture,2024,official page,https://www.pref.yamanashi.jp/startup/acceleration2024.html,pre-hub mentoring/matching H,PRIMARY-OBSERVED
