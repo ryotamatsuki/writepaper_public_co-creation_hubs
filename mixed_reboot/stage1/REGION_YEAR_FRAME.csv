@@ -1,0 +1,46 @@
+prefecture,year,H,P,architecture,evidence_status,coding_note
+Tokyo,2024,1,1,HP,high,TIB+NEXs; union of local and cross-region modules
+Tokyo,2025,1,1,HP,high,TIB+NEXs; union of local and cross-region modules
+Tokyo,2026,1,1,HP,high,TIB+NEXs; union of local and cross-region modules
+Aichi,2024,1,1,HP,high,PRE/STATION Ai + domestic/global ecosystem links
+Aichi,2025,1,1,HP,high,PRE/STATION Ai + domestic/global ecosystem links
+Aichi,2026,1,1,HP,high,PRE/STATION Ai + domestic/global ecosystem links
+Osaka,2024,1,1,HP,high,OIH local intermediation + global programs; GLOBAL BRIDGE intensifies P in 2026
+Osaka,2025,1,1,HP,high,OIH local intermediation + global programs; GLOBAL BRIDGE intensifies P in 2026
+Osaka,2026,1,1,HP,high,OIH local intermediation + global programs; GLOBAL BRIDGE intensifies P in 2026
+Fukuoka,2024,1,1,HP,high,FGN local support + international startup network
+Fukuoka,2025,1,1,HP,high,FGN local support + international startup network
+Fukuoka,2026,1,1,HP,high,FGN local support + international startup network
+Ehime,2024,1,1,HP,high,Aile Lab local community + DX Commission/external resource import
+Ehime,2025,1,1,HP,high,Aile Lab local community + DX Commission/external resource import
+Ehime,2026,1,1,HP,high,Aile Lab local community + DX Commission/external resource import
+Saga,2024,1,1,HP,high,Gateway/Connect local/business support + Connect+ overseas support from 2024
+Saga,2025,1,1,HP,high,Gateway/Connect local/business support + Connect+ overseas support from 2024
+Saga,2026,1,1,HP,high,Gateway/Connect local/business support + Connect+ overseas support from 2024
+Aomori,2024,1,1,HP,high,local startup support + Blue Ocean external matching
+Aomori,2025,1,1,HP,high,local startup support + recurring outside-facing startup network
+Aomori,2026,1,1,HP,high,local startup support + recurring outside-facing startup network
+Akita,2024,1,0,H,medium,AKISTA local support; strict recurring P not independently verified for this year
+Akita,2025,1,0,H,medium,AKISTA local support; strict recurring P not independently verified for this year
+Akita,2026,1,1,HP,medium,AKISTA local support + explicit outside-startup field/matching support
+Ishikawa,2024,1,1,HP,high,IIB from Oct 2024: local exchange + Tokyo resource import
+Ishikawa,2025,1,1,HP,high,IIB local exchange + Tokyo resource import
+Ishikawa,2026,1,1,HP,high,IIB local exchange + Tokyo resource import
+Kagawa,2024,,,UNCERTAIN,medium,H clear; P boundary ambiguous under strict dedicated-function rule
+Kagawa,2025,,,UNCERTAIN,medium,H clear; P boundary ambiguous under strict dedicated-function rule
+Kagawa,2026,,,UNCERTAIN,medium,H clear; P boundary ambiguous under strict dedicated-function rule
+Hiroshima,2024,1,0,H,high,Camps H; cross-region events not sufficient for strict recurrent P
+Hiroshima,2025,1,0,H,high,Camps H; cross-region events not sufficient for strict recurrent P
+Hiroshima,2026,1,0,H,high,Camps H; cross-region events not sufficient for strict recurrent P
+Okayama,2024,1,0,H,high,MomoSta recurrent local support; no strict dedicated P located
+Okayama,2025,1,0,H,high,MomoSta recurrent local support; no strict dedicated P located
+Okayama,2026,1,0,H,high,MomoSta recurrent local support; no strict dedicated P located
+Kumamoto,2024,1,0,H,medium-high,XOSS H; strict recurring P not independently verified for this year
+Kumamoto,2025,1,1,HP,medium-high,XOSS H + explicit global/outside-facing programs
+Kumamoto,2026,1,1,HP,medium-high,XOSS H + explicit global/outside-facing programs
+Toyama,2024,1,0,H,medium,SCOP H; strict P not independently verified for this year
+Toyama,2025,1,0,H,medium,SCOP H; strict P not independently verified for this year
+Toyama,2026,1,1,HP,medium,SCOP H + explicit HOSTEC/global ecosystem functions
+Nagano,2024,1,0,H,high,Shinshu Startup Station local support; no strict dedicated P located
+Nagano,2025,1,0,H,high,Shinshu Startup Station local support; no strict dedicated P located
+Nagano,2026,1,0,H,high,Shinshu Startup Station local support; no strict dedicated P located
