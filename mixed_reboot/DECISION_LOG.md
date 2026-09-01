@@ -246,3 +246,52 @@ Run one exact-prior-art resolution round on the following stripped problem:
 If exact or structurally very close formal prior art exists: `NO-GO — SEARCH ABSORBED`.
 
 If it survives: authorize `GO TO TECHNOLOGY MINIMAL MODEL — SEARCH`, limited to the social `0/H/P/HP` architecture problem. Decentralized misselection remains prohibited.
+
+---
+
+# Stage 0R-S — Exact prior-art resolution for Search
+
+Base SHA: `6ca385dcbc74c8bee269c6e1a03b6d99727919c0`
+
+Branch: `research-reboot/search-exact-prior-art`
+
+## Search scope
+The audit broadened the Stage 0R-T query beyond regional innovation and intermediary keywords into matching-platform design, visibility/assortment design, public employment services, labor search, trade search, firm-to-firm matching, directed search and market segmentation. The committed search ledger contains 32 high-relevance items.
+
+## Decisive prior art
+Immorlica, Lucier, Manshadi & Wei, `Designing Approximately Optimal Search on Matching Platforms` (Management Science 69(8), DOI 10.1287/mnsc.2022.4601), provide the decisive general-model prior art. Their two-sided dynamic matching platform chooses pair-specific meeting rates across multiple types to maximize equilibrium social welfare. Zero meeting rates exclude effective pair access; positive rates enable meetings; larger positive rates intensify meeting opportunity.
+
+After partitioning types into local and external subsets:
+- Stage 0R-T `H` is an intensive increase in local type-pair meeting rates;
+- `P` is an extensive zero-to-positive activation/increase of external type-pair meeting rates;
+- `0/H/P/HP` is a coarse four-element restriction of the general meeting-rate matrix design space.
+
+Thus the stripped candidate is not an unresolved search technology. It is nested in a more general matching-platform search-design problem that already contains strategic acceptance, congestion/cannibalization and a social-welfare objective.
+
+## Supporting structural threats
+- Teh, Wang & Watanabe (2024): platform meeting technology maps to market accessibility; efficient access can be imperfect.
+- Mekonnen (2026): planner chooses search-market segmentation and allocation/tightness; constrained segmentation anticipates endogenous directed-search responses and congestion.
+- Banerjee et al. (2017): platform controls buyer-seller visibility/segmentation to maximize transactions/welfare.
+- public-employment-agency search models: public matching effectiveness coexists with alternative search channels and can reallocate/crowd out search.
+- Spray (2021): domestic/international firm search and market-specific search externalities are already formalized.
+
+## Public-role test
+At the social-architecture stage, a prefectural government is a welfare-oriented search designer. Replacing `platform` with `public actor` does not introduce a theorem-essential primitive. A substantive public/private wedge would require a new evidence-supported feature and is not authorized as a rescue.
+
+## Label-stripping result
+Removing `Ehime`, `region`, `public`, `innovation`, `hub`, `local`, and `external` leaves:
+
+`A designer chooses whether to intensify meeting opportunities for one subset of cross-side type pairs and enable meeting opportunities for another subset, anticipating equilibrium responses and welfare.`
+
+This lies inside modern matching-platform design.
+
+## Canonical verdict
+
+**NO-GO — SEARCH ABSORBED.**
+
+No `Technology Minimal Model — Search` is authorized.
+
+## Routing
+Stop the formal Search branch. Do not add information asymmetry, network payoffs, club utility, fixed costs, public/private objective differences, delegation or ad hoc complementarity to rescue the candidate.
+
+The policy motivation remains usable for an application/measurement route based on established matching/search theory, or for a genuinely distinct evidence-based theory pivot if a new primitive is discovered. Neither route is an automatic continuation of this branch.
