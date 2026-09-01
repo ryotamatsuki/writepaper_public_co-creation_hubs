@@ -1,0 +1,30 @@
+variable,dimension,definition,raw_coding,preferred_source,measurement_risk,theory_use
+architecture_H,service composition,"dedicated local intermediation function",0/1 based on explicit functions,official program/facility description,medium,"social value of local matching"
+architecture_P,service composition,"dedicated extra-regional connectivity/brokerage function",0/1 only when geography beyond region is explicit,official program/facility description,medium,"social value of external access"
+owner,governance,legal/public owner,text,ordinance/official page,low,control rights
+operator,governance,organization delivering operation,text,contract/procurement/official page,low,delegation
+operator_model,governance,"direct; annual outsourcing; JV outsourcing; designated manager; PFI/concession; joint committee; multi-agency",categorical,contract/procurement,medium,delegation/control-rights primitive
+mission_setter,governance,entity setting formal mission,text,contract/ordinance,medium,principal identity
+budget_authority,governance,entity controlling budget,text,contract/budget,high,architecture-choice rights
+participant_eligibility_authority,governance,entity setting eligibility,text,terms/procurement,medium,selection/control rights
+matching_authority,governance,entity controlling matching/project selection,text,program rules/procurement,high,selection/delegation
+contract_horizon,governance,operator contract duration,months/years,contract,low,investment/reputation horizon
+public_funding_share,funding,share of total operating resources from public entities,raw share,official budget/contracts,high,"funder incentives"
+municipal_share,funding,municipal funding share,raw share,budget,high,geographic incidence
+prefectural_share,funding,prefectural funding share,raw share,budget,high,geographic incidence
+national_share,funding,national funding share,raw share,grant/budget,high,vertical funding
+user_fee_revenue,funding,user fee component,raw amount/share,fee schedule/accounts,high,market discipline
+corporate_sponsorship,funding,private sponsor funding,raw amount/share,annual report,high,multi-principal incentives
+earmark_H,funding,resources restricted to H activities,0/1 + text,grant/contract,medium,service allocation distortion
+earmark_P,funding,resources restricted to P activities,0/1 + text,grant/contract,medium,service allocation distortion
+open_membership,access,open registration available,0/1,terms,low,selection
+geographic_eligibility,access,formal geography restriction,text,terms/program rules,low,local bias/targeting
+sponsor_priority,access,explicit sponsor-linked priority/text rule,0/1 + text,program rules,high,neutrality/control rights
+matching_discretion,access,intermediary discretion over matches,ordinal+notes,program rules/specification,high,delegation
+local_participant_count,participants,participants located in target region,count,official list/database,high,composition
+outside_participant_count,participants,participants outside target region,count,official list/database,high,composition
+participant_geography_source,participants,what geography variable is available,"address; HQ; program category; unknown",database/list,medium,measurement validity
+local_local_matches,outcomes,matches among local parties,count,project list,very high,H outcome
+local_outside_matches,outcomes,matches crossing region boundary,count,project list,very high,P outcome
+repeat_tie_share,outcomes,share of repeated collaborations,share,project history,very high,network concentration
+architecture_transition,time,documented change H/P provision over time,"H->HP etc.",official announcements,medium,within-case identification candidate
