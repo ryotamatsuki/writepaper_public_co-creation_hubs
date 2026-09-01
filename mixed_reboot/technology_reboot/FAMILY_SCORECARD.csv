@@ -1,0 +1,4 @@
+family,fit_ehime_15,natural_H_10,natural_P_10,H_P_distinct_15,natural_0_H_P_HP_10,congestion_thickness_microfoundation_10,realistic_measurement_10,minimal_tractability_10,prior_art_survival_10,total_100,hard_gate,verdict
+Search / Matching,15,10,9,12,8,10,9,8,5,86,PASS AT FLOOR: prior-art=5; H/P distinct=12,CONDITIONAL GO
+Network / Brokerage,14,10,10,13,8,5,6,5,2,73,FAIL: prior-art<5,KILL — ABSORBED
+Club / Congestion,13,10,5,7,5,10,8,9,2,69,FAIL: prior-art<5 and H/P distinct<8,KILL — ABSORBED / P NOT INTERNAL
