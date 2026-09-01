@@ -1,0 +1,16 @@
+prefecture,local_H_modules,extra_regional_P_modules,other_public_or_university_modules,system_diagnosis
+Tokyo,"TIB; other metropolitan startup support","NEXs JUMP/DIVE; TIB global programs","universities; national programs; private ecosystem",union_saturates_to_HP
+Aichi,"PRE-STATION Ai/STATION Ai community and matching","overseas ecosystem links and attraction programs","regional partner bases; universities",union_saturates_to_HP
+Osaka,"OIH community/matching/acceleration","OIH global programs; GLOBAL BRIDGE","universities; OBDA programs; private ecosystem",union_saturates_to_HP
+Fukuoka,"FGN/Startup Cafe local support","international startup network and overseas support","universities; city/national ecosystem programs",union_saturates_to_HP
+Ehime,"Aile Lab/E:N BASE local community and co-creation","DX Commission/external technology and company import","universities; banks; chambers",facility_label_misstates_system_architecture
+Saga,"Startup Gateway/Connect mentoring and matching","Connect+ overseas support; investor/partner introduction","financial and national support",union_saturates_to_HP
+Aomori,"startup support centers and local startup community","Blue Ocean outside-company matching","21 Aomori; municipal support centers",union_saturates_to_HP
+Akita,"AKISTA consultation/community","outside-startup demonstration/matching clear by 2026","A-STA; support organizations",H_to_HP_intensity_not_P_only
+Ishikawa,"IIB local exchange/consultation","explicit Tokyo resource import and metro investors/companies","ISICO/university support",union_saturates_to_HP
+Kagawa,"Setouchi-i-Base consultation/local matching","outside-attraction mission; strict recurrent P remains ambiguous","banks/chambers/universities",P_boundary_ambiguous
+Hiroshima,"Camps community/business creation","cross-region activities exist but no strict recurrent P module coded","support foundations/universities",H_under_strict_rule
+Okayama,"MomoSta local startup support","no strict recurring P module located","local banks/committee/universities",H_under_strict_rule
+Kumamoto,"XOSS POINT local startup/enterprise support","global/outside-facing programs clear from 2025","universities/industry support",H_then_HP
+Toyama,"SCOP TOYAMA local incubation/community","HOSTEC/global ecosystem explicit by 2026","new-century industry organization/universities",H_then_HP
+Nagano,"Shinshu Startup Station consultation/incubation","no strict recurring P module located","regional financial/chamber support",H_under_strict_rule
