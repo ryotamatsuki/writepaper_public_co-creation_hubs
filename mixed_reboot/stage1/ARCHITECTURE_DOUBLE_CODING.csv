@@ -1,0 +1,46 @@
+prefecture,year,coder_A,coder_B,agree,adjudicated,note
+Tokyo,2024,HP,HP,true,HP,same system-level coding
+Tokyo,2025,HP,HP,true,HP,same system-level coding
+Tokyo,2026,HP,HP,true,HP,same system-level coding
+Aichi,2024,HP,HP,true,HP,same system-level coding
+Aichi,2025,HP,HP,true,HP,same system-level coding
+Aichi,2026,HP,HP,true,HP,same system-level coding
+Osaka,2024,HP,HP,true,HP,same system-level coding
+Osaka,2025,HP,HP,true,HP,same system-level coding
+Osaka,2026,HP,HP,true,HP,same system-level coding
+Fukuoka,2024,HP,HP,true,HP,same system-level coding
+Fukuoka,2025,HP,HP,true,HP,same system-level coding
+Fukuoka,2026,HP,HP,true,HP,same system-level coding
+Ehime,2024,HP,HP,true,HP,same system-level coding
+Ehime,2025,HP,HP,true,HP,same system-level coding
+Ehime,2026,HP,HP,true,HP,same system-level coding
+Saga,2024,HP,HP,true,HP,same system-level coding
+Saga,2025,HP,HP,true,HP,same system-level coding
+Saga,2026,HP,HP,true,HP,same system-level coding
+Aomori,2024,HP,HP,true,HP,same system-level coding
+Aomori,2025,HP,HP,true,HP,same system-level coding
+Aomori,2026,HP,HP,true,HP,same system-level coding
+Akita,2024,H,H,true,H,same system-level coding
+Akita,2025,H,H,true,H,same system-level coding
+Akita,2026,HP,HP,true,HP,same system-level coding
+Ishikawa,2024,HP,HP,true,HP,same system-level coding
+Ishikawa,2025,HP,HP,true,HP,same system-level coding
+Ishikawa,2026,HP,HP,true,HP,same system-level coding
+Kagawa,2024,UNCERTAIN,H,false,UNCERTAIN,Coder B assigns H but P boundary remains source-ambiguous
+Kagawa,2025,UNCERTAIN,H,false,UNCERTAIN,Coder B assigns H but P boundary remains source-ambiguous
+Kagawa,2026,UNCERTAIN,H,false,UNCERTAIN,Coder B assigns H but P boundary remains source-ambiguous
+Hiroshima,2024,H,H,true,H,same system-level coding
+Hiroshima,2025,H,H,true,H,same system-level coding
+Hiroshima,2026,H,H,true,H,same system-level coding
+Okayama,2024,H,H,true,H,same system-level coding
+Okayama,2025,H,H,true,H,same system-level coding
+Okayama,2026,H,H,true,H,same system-level coding
+Kumamoto,2024,H,H,true,H,same system-level coding
+Kumamoto,2025,HP,HP,true,HP,same system-level coding
+Kumamoto,2026,HP,HP,true,HP,same system-level coding
+Toyama,2024,H,H,true,H,same system-level coding
+Toyama,2025,H,H,true,H,same system-level coding
+Toyama,2026,HP,HP,true,HP,same system-level coding
+Nagano,2024,H,H,true,H,same system-level coding
+Nagano,2025,H,H,true,H,same system-level coding
+Nagano,2026,H,H,true,H,same system-level coding
