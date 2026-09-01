@@ -129,3 +129,59 @@ Stage 3R may use only `P1`, `P2`, and `P3` as core primitives. It may generate a
 It may not add lobbying, generic fiscal spillovers, dynamics, endogenous network formation, absorptive capacity, multitask incentives, common agency, platform pricing, additional players or additional institutional features to rescue a weak candidate.
 
 The strongest Stage 3R kill question is whether `P1/P2 × P3` produces any distinct strategic mechanism at all, or merely formalizes the already-established place-based innovation policy / policy-mix intuition in new notation.
+
+---
+
+# Stage 3R — Model architecture and mechanism search
+
+Base SHA: `ce93add37800f625deb48970080564f067527924`
+
+Branch: `research-reboot/mixed-stage3r-model-architecture-search`
+
+## Model-architecture search
+Six architectures were evaluated: integrated single-principal, componentwise modular, sequential modular, bounded portfolio/task-specific, hierarchical and multiple bounded principals.
+
+Scores put bounded portfolio/task-specific first (89.25) and componentwise modular second (85.25). The integrated single-principal model is retained only as a benchmark. Sequential choice adds timing not required by evidence; hierarchy collapses toward standard delegation; multiple-principal architecture is unnecessary for the core same-principal variation and risks generic fragmentation/common-agency/public-good theory.
+
+## Mechanism search
+Six P1/P2/P3-only mechanisms were tested. Scope-state mismatch ranked highest conceptually, followed by portfolio-level substitution neglect and sequential scope dependence.
+
+All were killed.
+
+### Binding negative result: primitive insufficiency
+P1/P2 are state variables and P3 is a portfolio/action boundary. Under aligned objectives, common payoff-relevant information and separable H/P returns, splitting component decisions does not itself generate a welfare wedge.
+
+Every route to `R^D != R^SP` requires one of two moves:
+1. mechanically remove an action/state from a bounded unit, making the result a choice-set restriction rather than a derived economic mechanism; or
+2. add another economic primitive such as H/P substitution/complementarity, a shared budget/capacity constraint, heterogeneous objectives, asymmetric information, cross-unit externalities or irreversibility.
+
+Move 2 is not authorized by the Stage 2R primitive freeze. Move 1 fails the non-tautology test.
+
+## Feature stripping
+- removing L/X multidimensionality does not eliminate the imposed action-set distortion;
+- removing bounded scope eliminates the result because scope directly defines the action partition, not because a strategic interaction has been isolated;
+- merging units kills distributed-aggregation candidates, revealing generic coordination as their content;
+- removing sequencing kills no evidence-essential economic margin;
+- replacing H/P with generic tasks A/B leaves the candidate intuitions intact and maps them into policy-integration, delegation, multitask and organizational-design theory.
+
+Therefore multidimensional regional state is not mechanism-essential in any surviving candidate.
+
+## Closest-theory escalation
+Stage 3R added strong organization-design threats to the Stage 2R policy-mix threats:
+- Sah & Stiglitz (1986): organizational architecture changes selection errors;
+- Csaszar (2012, 2013): centralized/decentralized structures and organization design change omission/commission and exploration/exploitation;
+- Besanko, Régibeau & Rockett (2005): organizational form with multiple tasks requires task asymmetries/cross-task interactions/incentive structure;
+- Hegele (2021): portfolio combinations affect interdepartmental coordination;
+- Moschella & Pinto (2022): single versus multiple agency delegation;
+- Sharapov & Dahlander (2025): changing innovation selection regimes and selection errors.
+
+This makes generic `decision architecture causes wrong choices` unavailable as a contribution claim.
+
+## Stage 3R canonical verdict
+
+**NO-GO — THEORY ROUTE EXHAUSTED.**
+
+No Stage 4R formal model is authorized.
+
+## Reopening condition
+The motivation may be revisited only through a distinct evidence-based pivot that identifies one new empirically defensible primitive and then re-runs the relevant literature and mechanism gates. Adding features directly to P1/P2/P3 after this failure is prohibited.
