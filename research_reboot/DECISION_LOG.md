@@ -350,3 +350,105 @@ Stage 4 is frozen by `research_reboot/stage3/STAGE4_MODEL_CONTRACT.md`:
 - Preferred candidate: **Funder-Induced Neutrality Loss / Regional Home-Bias Feedback**.
 - Theory-paper route: survives for **one Stage 4 minimal-model round only**.
 - If Stage 4 fails: stop this theory branch and consider an empirical/mixed or different-question pivot rather than adding features.
+
+---
+
+## Stage 4 — Minimal Model Construction and Isomorphism Kill Test
+
+### Date / provenance
+
+- Date: 2026-09-01
+- Stage 4 base SHA: `a4bff663b34898fd61a7eb67d4ac989515b5aca5`
+- Workflow SHA: `07466bcb1a6d3bc654b52945f21b034b38e45281`
+- Branch: `research-reboot/stage4-minimal-neutrality-model`
+- PR #2 remained open and unmerged.
+
+### Question
+
+Does M10 produce a participation-essential theorem that is also structurally distinct from the biased-intermediary and platform-bias literature?
+
+### Exact minimal model
+
+- outsider costs: `c ~ Uniform[0,1]`;
+- outsider access value: `g(alpha,n)=v(1-alpha)/(1+n)`;
+- participation equilibrium: `n(1+n)=v(1-alpha)`;
+- regional payoff: `U_R=A alpha+B n`;
+- planner welfare: `W=U_R+n^2/2`.
+
+No rescue feature was added.
+
+### Mathematical results
+
+The model is exactly solvable.
+
+- `n(alpha)=[sqrt(1+4v(1-alpha))-1]/2`;
+- `dn/dalpha<0` and `d2n/dalpha2<0`;
+- regional and planner objectives are strictly concave on the target region;
+- a nonempty open region `Omega` supports unique interior solutions;
+- `alpha_SP<alpha_R` and `n_SP>n_R` on `Omega`;
+- the proposed interior participation tipping result does not exist;
+- excessive home bias can lower regional own welfare beyond `alpha_R`.
+
+### Mechanism-essentiality test
+
+With outside participation fixed, regional payoff becomes
+
+`U_R^F=A alpha+B nbar`,
+
+so `dU_R^F/dalpha=A>0` and the regional sponsor chooses maximal bias.
+
+Thus the local-welfare reversal disappears when participation is fixed. P3 is genuinely participation-essential inside the model.
+
+However, the planner/regional composition wedge can still arise with fixed participation through direct outsider welfare accounting. P1 is therefore not a clean distinct contribution.
+
+### Prior-art / label-stripping result
+
+There is no literal one-to-one isomorphism to de Cornière & Taylor (2019) or Zennyo (2022): their strategic structures contain seller-quality responses or vertically integrated platform pricing/search choices absent here.
+
+Nevertheless the stripped Stage 4 mechanism is generic:
+
+`bias benefit -> lower participant entry -> lower value of the participant pool -> self-limiting optimal bias`.
+
+Replacing the regional public sponsor with any private biased principal that values both favoritism and participation leaves the equations, equilibrium and main propositions unchanged.
+
+The public/regional origin of bias is therefore not mathematically essential.
+
+Innovation-intermediary neutrality and impartiality are also established institutional concerns in the intermediary literature; they do not rescue theorem-level novelty.
+
+### Proposition decisions
+
+1. P1 home-bias composition wedge — **TRUE, KILL AS CONTRIBUTION**.
+2. P2 participation tipping — **FALSE IN MINIMAL MODEL / KILL**.
+3. P3 local-welfare reversal — **TRUE AND PARTICIPATION-ESSENTIAL, BUT NOVELTY FAILS**.
+4. P4 neutrality commitment — **NOT PURSUED** because it requires a new commitment/governance mechanism.
+
+### Strongest referee attack
+
+> Replace the regional public sponsor by any private biased principal that benefits from favoritism and also values participation. Nothing in the mathematical model changes. The local-welfare reversal is a standard participation discipline on bias, not a new theory of regional innovation intermediation.
+
+Assessment: **FATAL**.
+
+### Canonical verdict
+
+**NO-GO**
+
+Specific diagnosis:
+
+`NO-GO — RESULT TOO WEAK`.
+
+The model succeeds mathematically but fails as a distinct theorem-level contribution.
+
+### Routing
+
+Terminate this theory branch.
+
+Do not proceed to Stage 5 Mechanism Hardening or Stage 6 Novelty Re-Kill for M10.
+
+### Next route
+
+- do not add governance, a second region, private intermediaries, dynamics, KPI incentives, absorptive capacity or network formation to rescue M10;
+- return to Stage 3 only for a genuinely distinct mechanism with a specific reason to reopen mechanism search;
+- return to Stage 0 for a genuinely distinct research question; or
+- consider an empirical/mixed institutional pivot focused on neutrality, funding structure, local/outside participation composition and intermediary governance.
+
+The legacy manuscript remains frozen and is not approved for revision/submission.
