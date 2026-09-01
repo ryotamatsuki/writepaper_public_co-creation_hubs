@@ -1,0 +1,36 @@
+source_id,case_or_topic,source_type,url,evidence_used,evidence_level
+S01,E:N BASE,official facility,https://en-base.pref.ehime.jp/,membership/free access/co-creation purpose,PRIMARY-OBSERVED
+S02,E:N BASE,official partner list,https://en-base.pref.ehime.jp/co-creation-partner,561 partner organizations and industry list as of 2026-07-15,PRIMARY-OBSERVED
+S03,E:N BASE,procurement result,https://www.pref.ehime.jp/site/nyusatsu/120801.html,operator JV; public procurement; grant condition,PRIMARY-OBSERVED
+S04,E:N BASE,procurement result,https://www.pref.ehime.jp/site/nyusatsu/135524.html,separate consultation/accompaniment contract and contractor,PRIMARY-OBSERVED
+S05,STATION Ai,Aichi contract,https://www.pref.aichi.jp/soshiki/startup/jigyokeiyaku.html,PFI contract; SPC operator; contract horizon,PRIMARY-OBSERVED
+S06,STATION Ai,Aichi annual report,https://www.pref.aichi.jp/uploaded/attachment/606610.pdf,BT+concession; matching/community services,PRIMARY-OBSERVED
+S07,STATION Ai,Aichi project overview,https://www.pref.aichi.jp/uploaded/attachment/609991.pdf,global support functions and overseas network,PRIMARY-OBSERVED
+S08,STATION Ai,Aichi globalization specification,https://www.pref.aichi.jp/uploaded/attachment/599865.pdf,extra-regional/overseas startup intake and global ecosystem objective,PRIMARY-OBSERVED
+S09,Tokyo Innovation Base,official facility,https://tib.metro.tokyo.lg.jp/,Global/Growth/Collaboration/Connect services,PRIMARY-OBSERVED
+S10,Tokyo Innovation Base,Tokyo procurement,https://www.startupandglobalfinancialcity.metro.tokyo.lg.jp/startup/initiatives/tokyo-innovation-base,public ownership and contracted preparation/operation,PRIMARY-OBSERVED
+S11,Tokyo Innovation Base,official database,https://tib.metro.tokyo.lg.jp/explore,participant/startup location filters including outside Tokyo,PRIMARY-OBSERVED
+S12,NEXs Tokyo,official program,https://www.nexstokyo.metro.tokyo.lg.jp/about,JUMP/DIVE cross-region architecture and overseas support,PRIMARY-OBSERVED
+S13,NEXs Tokyo,official member list,https://www.nexstokyo.metro.tokyo.lg.jp/member/startup,regional filters including overseas,PRIMARY-OBSERVED
+S14,NEXs Tokyo,official matching tool,https://www.nexstokyo.metro.tokyo.lg.jp/matter,cross-member collaboration needs and matching,PRIMARY-OBSERVED
+S15,Osaka Innovation Hub,official facility,https://www.innovation-osaka.jp/,local community plus global startup support,PRIMARY-OBSERVED
+S16,Osaka Innovation Hub,Osaka City release,https://www.city.osaka.lg.jp/hodoshiryo/keizaisenryaku/0000676019.html,2013 origin and 2026 renewal; global hub purpose,PRIMARY-OBSERVED
+S17,Osaka Innovation Hub,Osaka City release,https://www.city.osaka.lg.jp/hodoshiryo/keizaisenryaku/0000680666.html,2026 OIH GLOBAL BRIDGE as dedicated overseas program,PRIMARY-OBSERVED
+S18,Osaka Innovation Hub,Osaka City program page,https://www.city.osaka.lg.jp/keizaisenryaku/page/0000597201.html,OBDA operation and grant program,PRIMARY-OBSERVED
+S19,Fukuoka Growth Next,Fukuoka City,https://www.city.fukuoka.lg.jp/business/startup/index.html,official designation as public-private startup facility,PRIMARY-OBSERVED
+S20,Fukuoka Growth Next,official facility,https://growth-next.com/,matching/incubation/overseas support functions,PRIMARY-OBSERVED
+S21,Fukuoka external linkage,Fukuoka City,https://www.city.fukuoka.lg.jp/keizai/r-support/business/R7nd/fukuokacity_startup_mou_cic-2.html,2025 CIC MoU and international support-network expansion,PRIMARY-OBSERVED
+S22,Setouchi-i-Base,official facility,https://setouchiibase.jp/pub/facility,local support plus outside-prefecture attraction and matching,PRIMARY-OBSERVED
+S23,Setouchi-i-Base,Kagawa official,https://www.pref.kagawa.lg.jp/kocho/kagawa_topics/kurashi202012.html,2020 opening; three pillars and fee structure,PRIMARY-OBSERVED
+S24,Setouchi-i-Base,Kagawa designated management,https://www.pref.kagawa.lg.jp/jinji/gyokaku/shitei.html,designated manager for e-topia Kagawa,PRIMARY-OBSERVED
+S25,Ishikawa Innovation Base,Ishikawa official,https://www.pref.ishikawa.lg.jp/syoko/startup/iib.html,local exchange plus explicit Tokyo-resource import,PRIMARY-OBSERVED
+S26,MomoSta,Okayama City,https://www.city.okayama.jp/jigyosha/0000030583.html,operating committee composition and open/free events,PRIMARY-OBSERVED
+S27,K-NIC,official facility,https://www.k-nic.jp/about/,NEDO/Kawasaki/foundation three-party operation and partner matching,PRIMARY-OBSERVED
+S28,Camps Hiroshima,Hiroshima Prefecture,https://www.pref.hiroshima.lg.jp/soshiki/247/innovationhubcamps.html,community/open facility functions,PRIMARY-OBSERVED
+S29,CO-DEJIMA,Nagasaki Prefecture,https://www.pref.nagasaki.jp/bunrui/shigoto-sangyo/sangyoshien/jigyoshien/shinkigyou/startup/,startup exchange facility and programs,PRIMARY-OBSERVED
+S30,Lagoon KOZA,Okinawa City,https://www.city.okinawa.okinawa.jp/k032-001/sangyou/kigyoushien/sogyoushien/34359.html,municipal contracted startup hub,PRIMARY-OBSERVED
+S31,SCOP TOYAMA,Toyama Prefecture,https://www.pref.toyama.jp/100222/kensei/kenseiunei/kensei/soshiki/20/100222.html,prefectural facility and functions,PRIMARY-OBSERVED
+S32,Shinshu Startup Station,Nagano Prefecture,https://www.pref.nagano.lg.jp/keieishien/sangyo/shokogyo/sogyo/sss.html,two prefectural startup support sites,PRIMARY-OBSERVED
+S33,KOIN,Kyoto Prefecture,https://www.pref.kyoto.jp/sangyo-sinko/startup/index.html,open-innovation facility and surrounding external-support programs,PRIMARY-OBSERVED
+S34,XOSS POINT,official facility,https://xosspoint.jp/,municipal startup support mission and services,PRIMARY-OBSERVED
+S35,regional actor density,Statistics Bureau,https://www.stat.go.jp/data/e-census/2021/kekka/pdf/s_outline.pdf,2021 prefecture establishment/employment table as standardized regional proxy,PRIMARY-OBSERVED
