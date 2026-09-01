@@ -1,0 +1,36 @@
+unit_id,funding_form,exact_amount_status,H_P_earmark_status,imputation_rule
+U01,public program; exact flow not extracted,NOT YET EXTRACTED,EXPLICIT P FUNCTION,no imputation
+U02,public program; exact flow not extracted,NOT YET EXTRACTED,NOT SEPARATELY OBSERVABLE,no imputation
+U03,PFI/concession + operator revenue,PUBLIC/EXTRACTABLE SUBSET,NOT SEPARATELY OBSERVABLE,no imputation
+U04,public program; exact flow not extracted,NOT YET EXTRACTED,NOT SEPARATELY OBSERVABLE,no imputation
+U05,public contract/commission,NOT YET EXTRACTED,EXPLICIT FUNCTION-SPECIFIC P,no imputation
+U06,public program; exact flow not extracted,NOT YET EXTRACTED,NOT SEPARATELY OBSERVABLE,no imputation
+U07,public contract/commission,NOT YET EXTRACTED,NOT SEPARATELY OBSERVABLE,no imputation
+U08,public contract/commission,NOT YET EXTRACTED,NOT SEPARATELY OBSERVABLE,no imputation
+U09,designated management + public/user-fee mix,NOT YET EXTRACTED,NOT SEPARATELY OBSERVABLE,no imputation
+U10,multi-party/coalition support,NOT YET EXTRACTED,NOT SEPARATELY OBSERVABLE,no imputation
+U11,multi-party/coalition support,NOT YET EXTRACTED,NOT SEPARATELY OBSERVABLE,no imputation
+U12,public program; exact flow not extracted,NOT YET EXTRACTED,NOT SEPARATELY OBSERVABLE,no imputation
+U13,public program; exact flow not extracted,NOT YET EXTRACTED,NOT SEPARATELY OBSERVABLE,no imputation
+U14,public program; exact flow not extracted,NOT YET EXTRACTED,NOT SEPARATELY OBSERVABLE,no imputation
+U15,public program; exact flow not extracted,NOT YET EXTRACTED,NOT SEPARATELY OBSERVABLE,no imputation
+U16,public contract/commission,NOT YET EXTRACTED,NOT SEPARATELY OBSERVABLE,no imputation
+U17,multi-party/coalition support,NOT YET EXTRACTED,NOT SEPARATELY OBSERVABLE,no imputation
+U18,public contract/commission,PUBLIC/EXTRACTABLE SUBSET,NOT SEPARATELY OBSERVABLE,no imputation
+U19,public program; exact flow not extracted,NOT YET EXTRACTED,NOT SEPARATELY OBSERVABLE,no imputation
+U20,public contract/commission,PUBLIC/EXTRACTABLE SUBSET,EXPLICIT H FUNCTION,no imputation
+U21,public contract/commission,PUBLIC/EXTRACTABLE SUBSET,EXPLICIT P FUNCTION,no imputation
+U22,public contract/commission,PUBLIC/EXTRACTABLE SUBSET,EXPLICIT P FUNCTION,no imputation
+U23,public program; exact flow not extracted,NOT YET EXTRACTED,NOT SEPARATELY OBSERVABLE,no imputation
+U24,multi-party/coalition support,NOT YET EXTRACTED,NOT SEPARATELY OBSERVABLE,no imputation
+U25,public contract/commission,NOT YET EXTRACTED,EXPLICIT H+P PACKAGE,no imputation
+U26,public program; exact flow not extracted,NOT YET EXTRACTED,NOT SEPARATELY OBSERVABLE,no imputation
+U27,multi-party/coalition support,NOT YET EXTRACTED,EXPLICIT P NETWORK LINKAGE,no imputation
+U28,public program; exact flow not extracted,NOT YET EXTRACTED,EXPLICIT P FUNCTION,no imputation
+U29,public contract/commission,PUBLIC/EXTRACTABLE SUBSET,EXPLICIT P FUNCTION,no imputation
+U30,public contract/commission,PUBLIC/EXTRACTABLE SUBSET,EXPLICIT H FUNCTION,no imputation
+Z01,direct public grant/subsidy,PUBLIC/EXTRACTABLE SUBSET,NEITHER H NOR P,no imputation
+Z02,direct public grant/subsidy,PUBLIC/EXTRACTABLE SUBSET,NEITHER H NOR P,no imputation
+Z03,direct public grant/subsidy,PUBLIC/EXTRACTABLE SUBSET,NEITHER H NOR P,no imputation
+Z04,public contract/commission,PUBLIC/EXTRACTABLE SUBSET,NEITHER H NOR P,no imputation
+Z05,public contract/commission,PUBLIC/EXTRACTABLE SUBSET,NEITHER H NOR P,no imputation

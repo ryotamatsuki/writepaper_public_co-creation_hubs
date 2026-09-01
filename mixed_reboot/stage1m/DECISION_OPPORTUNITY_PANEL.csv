@@ -1,0 +1,36 @@
+unit_id,principal,decision_date_or_year,available_policy_scope,H_chosen,P_chosen,architecture,alternative_instruments,zero_possible,evidence
+U01,Tokyo Metropolitan Government,2020,program launch/renewal,0,1,P,financial support; incubation; networking; direct service,NO,https://www.nexstokyo.metro.tokyo.lg.jp/about
+U02,Tokyo Metropolitan Government,2023,platform launch/annual portfolio,1,1,HP,financial support; incubation; networking; direct service,NO,https://tib.metro.tokyo.lg.jp/
+U03,Aichi Prefecture,2024,PFI/concession launch,1,1,HP,financial support; incubation; networking; direct service,NO,https://www.pref.aichi.jp/soshiki/startup/jigyokeiyaku.html
+U04,Osaka City,2013,ongoing city/OBDA portfolio,1,1,HP,financial support; incubation; networking; direct service,NO,https://www.innovation-osaka.jp/ja/
+U05,Osaka City,2026,new program launch,0,1,P,financial support; incubation; networking; direct service,NO,https://www.innovation-osaka.jp/oih-global-bridge/
+U06,Fukuoka City,2017,facility/program operation,1,1,HP,financial support; incubation; networking; direct service,NO,https://growth-next.com/
+U07,Ehime Prefecture,2026,commissioning/launch,1,0,H,financial support; incubation; networking; direct service,NO,https://en-base.pref.ehime.jp/
+U08,Ishikawa Prefecture,2024,program portfolio,1,1,HP,financial support; incubation; networking; direct service,NO,https://www.pref.ishikawa.lg.jp/syoko/startup/iib.html
+U09,Kagawa Prefecture,2020,designated-management portfolio,1,1,HP,financial support; incubation; networking; direct service,NO,https://setouchiibase.jp/pub/facility
+U10,Okayama City,2019,operating-committee portfolio,1,0,H,financial support; incubation; networking; direct service,NO,https://www.city.okayama.jp/jigyosha/0000030583.html
+U11,NEDO + Kawasaki City + Kawasaki Industrial Promotion Foundation,2019,joint-operation program,1,1,HP,financial support; incubation; networking; direct service,NO,https://www.k-nic.jp/about/
+U12,Hiroshima Prefecture,2013,facility/program operation,1,0,H,financial support; incubation; networking; direct service,NO,https://www.pref.hiroshima.lg.jp/soshiki/247/innovationhubcamps.html
+U13,Kyoto Prefecture,2020,program/facility portfolio,1,0,H,financial support; incubation; networking; direct service,NO,https://www.pref.kyoto.jp/sangyo-sinko/startup/index.html
+U14,Kumamoto City,2022,facility/program operation,1,0,H,financial support; incubation; networking; direct service,NO,https://xosspoint.jp/
+U15,Nagasaki Prefecture,2019,program/facility operation,1,0,H,financial support; incubation; networking; direct service,NO,https://www.pref.nagasaki.jp/bunrui/shigoto-sangyo/sangyoshien/jigyoshien/shinkigyou/startup/
+U16,Okinawa City,2021,outsourced operation,1,0,H,financial support; incubation; networking; direct service,NO,https://www.city.okinawa.okinawa.jp/k032-001/sangyou/kigyoushien/sogyoushien/34359.html
+U17,Toyama Prefecture,2022,facility/management portfolio,1,0,H,financial support; incubation; networking; direct service,NO,https://www.pref.toyama.jp/100222/kensei/kenseiunei/kensei/soshiki/20/100222.html
+U18,Nagano Prefecture,2026,annual/multi-year procurement,1,0,H,financial support; incubation; networking; direct service,NO,https://www.pref.nagano.lg.jp/keieishien/sangyo/shokogyo/sogyo/sssboshu.html
+U19,Yokohama City,2019,municipal support portfolio,1,0,H,financial support; incubation; networking; direct service,NO,https://www.city.yokohama.lg.jp/business/keizai/sougyo/jisedai/yoxo_box.html
+U20,Saga Prefecture,2024,program portfolio,1,0,H,financial support; incubation; networking; direct service,NO,https://www.pref.saga.lg.jp/kiji003105825/index.html
+U21,Saga Prefecture,2024,new P module/program,0,1,P,financial support; incubation; networking; direct service,NO,https://www.pref.saga.lg.jp/kiji003105825/index.html
+U22,Aomori Prefecture,2024,annual program,0,1,P,financial support; incubation; networking; direct service,NO,https://www.pref.aomori.lg.jp/soshiki/sangyo/innovation/aomori_blueocean2024.html
+U23,Akita Prefecture,2024,startup-support program,1,0,H,financial support; incubation; networking; direct service,NO,https://www.pref.akita.lg.jp/pages/archive/83089
+U24,Iwate Prefecture,2023,platform launch/operation,1,0,H,financial support; incubation; networking; direct service,NO,https://www.pref.iwate.jp/sangyoukoyou/sangyoushinkou/shinjigyou/1045518/1069132/index.html
+U25,Mie Prefecture,2026,commissioning episode,1,1,HP,financial support; incubation; networking; direct service,NO,https://www.pref.mie.lg.jp/NYUSATSU/m0368100070.htm
+U26,Yamanashi Prefecture,2024,annual acceleration program,1,0,H,financial support; incubation; networking; direct service,NO,https://www.pref.yamanashi.jp/startup/acceleration2024.html
+U27,Fukuoka City,2025,MoU/network expansion,0,1,P,financial support; incubation; networking; direct service,NO,https://www.city.fukuoka.lg.jp/keizai/r-support/business/R7nd/fukuokacity_startup_mou_cic-2.html
+U28,Akita Prefecture,2026,annual program,0,1,P,financial support; incubation; networking; direct service,NO,https://www.pref.akita.lg.jp/pages/genre/14158
+U29,Okayama City,2026,procurement/commission,0,1,P,financial support; incubation; networking; direct service,NO,https://www.city.okayama.jp/soshiki/13-2-7-0-0_6.html
+U30,Okayama City,2026,procurement/commission,1,0,H,financial support; incubation; networking; direct service,NO,https://www.city.okayama.jp/soshiki/13-2-7-0-0_6.html
+Z01,Tokyo Metropolitan Government,2026,subsidy decision,0,0,0,grant-only support within startup/innovation policy menu,YES,https://www.metro.tokyo.lg.jp/information/press/2026/06/2026060405
+Z02,Okayama City,2026,grant program,0,0,0,financial support within same department that separately commissions H/P programs,YES,https://www.city.okayama.jp/jigyosha/0000058030.html
+Z03,Tokyo Metropolitan Government + Tokyo SME Support Center,2026,subsidy program,0,0,0,financial support within broader Tokyo startup-support menu,YES,https://www.metro.tokyo.lg.jp/information/press/2026/02/2026021609
+Z04,Hiroshima Prefecture,2026,PR procurement,0,0,0,communication-only instrument alongside Camps/local intermediation policy,YES,https://www.pref.hiroshima.lg.jp/uploaded/life/1130445_9713871_misc.pdf
+Z05,Saga Prefecture,2024,annual startup-support menu,0,0,0,mentoring + media outreach chosen alongside Connect/Connect+ alternatives,YES,https://www.pref.saga.lg.jp/kiji003105825/index.html
