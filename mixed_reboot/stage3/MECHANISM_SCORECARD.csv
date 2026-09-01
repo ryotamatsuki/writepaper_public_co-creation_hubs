@@ -1,0 +1,7 @@
+mechanism_id,mechanism,requires_P1_P2_and_P3_20,observed_modularity_10,same_principal_variation_10,under_and_over_composition_10,not_tautological_15,distinct_from_generic_coordination_15,tractability_10,prior_art_survival_10,total_100,verdict
+M-A,Scope-constrained composition,10,7,7,6,3,10.5,9.5,3,56.0,KILL
+M-B,Modular duplication / omission,10,10,6,10,9,2.25,7,2,56.25,KILL
+M-C,Sequential scope dependence,12,10,7,7,7.5,8.25,5.5,3.5,60.75,KILL
+M-D,Portfolio-level substitution neglect,14,8,8,8,5.25,9.75,8,3,64.0,KILL
+M-E,Distributed architecture aggregation,8,9,4,10,10.5,1.5,6,1.5,50.5,KILL
+M-F,Scope-state mismatch,20,8.5,10,8,6.75,9.75,8,4,75.0,KILL

@@ -1,0 +1,7 @@
+model_id,model_architecture,evidence_fit_25,preserves_motivation_15,p_only_10,same_principal_variation_10,modular_p_10,minimality_10,tractability_10,distance_from_prior_art_10,total_100,status
+A,Integrated single-principal,13.75,15,10,7,3,10,10,3,71.75,BENCHMARK ONLY
+B,Componentwise modular choice,21.25,15,10,8.5,10,9,9,2.5,85.25,SHORTLIST
+C,Sequential modular architecture,16.25,13.5,10,7.5,10,5.5,6.5,3.5,72.75,KILL
+D,Bounded portfolio / task-specific choice,25,14.25,10,10,10,8,7.5,4.5,89.25,TOP SHORTLIST
+E,Hierarchical architecture,11.25,12,8,5,6,3.5,5.5,2,53.25,KILL
+F,Multiple bounded principals,18.75,15,10,4,8,4.5,5.5,2.5,68.25,KILL
