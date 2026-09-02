@@ -1,101 +1,52 @@
-# Stage 7 — Core Primitive Validation
+# Stage 7 — Core Primitive Validation (Final after I3 Resolution)
 
 ## Executive conclusion
 
-The residual-core mechanism is institutionally defensible as a **general economic structure**, but the original regional co-creation-hub application is materially weaker than the theory.
+The residual-core mechanism remains institutionally defensible as a **general economic structure**, but the original regional co-creation-hub application is too weak to serve as the headline literal application.
 
-The strongest issue is I3: direct evidence that establishing/using a regional co-creation hub thins participation in a shared metropolitan core is absent. Official Ehime and Tokyo materials instead emphasize linkage, mutual collaboration and the use of metropolitan resources by regional actors. Therefore the application must not be written as if core diversion were an established institutional fact.
+The targeted I3 resolution found a genuine generic scarce-participation margin, but no direct E:N BASE-to-Tokyo diversion evidence. The strongest official Ehime evidence instead emphasizes metropolitan-local linkage and network strengthening.
 
 ## Primitive table
 
-| Primitive | Status for co-creation-hub application | Evidence | Limitation |
+| Primitive | Final status for co-creation-hub application | Evidence | Limitation |
 |---|---|---|---|
-| I1 Shared dominant core | SUPPORTED | NEXs Tokyo explicitly connects nationwide startups, firms, local governments and support actors using Tokyo's concentrated information/human-network resources; Cabinet Office Tokyo ecosystem documents a central Tokyo hub-and-spoke architecture | firms may face sector-specific cores rather than one identical core |
-| I2 Core value depends on network thickness | SUPPORTED | NEXs Tokyo's stated member value comes from community, partners, mentors, information, events and matching; central Tokyo is explicitly described as an information/human-network concentration | no direct structural estimate of \(\beta\) and no evidence of linearity |
-| I3 Regional entry diverts participation from core | PLAUSIBLE BUT INDIRECT / WEAK | regional and metropolitan hubs provide overlapping matching, events, workspace and project-support functions, so finite participant attention can substitute at the margin | official Ehime design explicitly aims to strengthen metropolitan-local networks and jointly use metropolitan/local/digital hubs; no direct crowd-out evidence |
-| I4 Both peripheral regions share the same core | SUPPORTED | NEXs Tokyo supports regional startups nationwide and its member architecture spans all Japanese regions | effective network overlap may vary by industry and startup type |
-| I5 Cross-regional peripheral friction \(\tau\) | PLAUSIBLE BUT INDIRECT | E:N BASE and Setouchi-i-Base are physical, locally embedded facilities with resident support and local programmes | both also welcome external participants; \(\tau\) is a reduced form, not a legal barrier |
-| I6 Binary establishment | SUPPORTED AS REDUCED FORM | E:N BASE and Setouchi-i-Base involved discrete facility/program openings and ongoing operating commitments | post-opening quality/capacity are continuous |
+| I1 Shared dominant core | **SUPPORTED** | NEXs Tokyo connects startups, firms, local governments and support actors nationwide using Tokyo's concentrated information/human-network resources | effective cores may vary by sector |
+| I2 Core value depends on network thickness | **SUPPORTED** | community, partner, mentor, information, event and matching value are network-based | no structural estimate of beta; linearity not claimed |
+| I3 Regional entry diverts core participation | **PLAUSIBLE BUT INDIRECT; NOT VERIFIED FOR E:N BASE** | overlapping functions plus strong evidence that accelerator participation consumes scarce time/resources; some programs prohibit concurrent participation | no E:N BASE-specific displacement evidence; Ehime explicitly seeks stronger metropolitan links |
+| I4 Peripheral regions share same core | **SUPPORTED** | NEXs/national networks are open across Japanese regions | network overlap can be industry-specific |
+| I5 Cross-regional peripheral friction tau | **PLAUSIBLE BUT INDIRECT** | physical/local embeddedness, travel, relationships and region-specific programs | not a legal exclusion barrier |
+| I6 Binary establishment | **SUPPORTED AS REDUCED FORM** | dedicated hubs/programs require discrete opening and operating commitments | quality/capacity continuous after opening |
 
-## I1 — Shared core
+## I3 final evidence assessment
 
-A plausible candidate shared core is a Tokyo-based national startup/innovation network rather than a single private company. NEXs Tokyo is particularly useful because its official purpose is to connect startups from all regions with Tokyo startups, corporations, municipalities, support organizations, investors and mentors. Regional startups can use the same Marunouchi community space and matching infrastructure.
+### Evidence for generic partial substitution
 
-The Cabinet Office's startup-ecosystem policy also characterizes the Tokyo ecosystem as a dense central core of startups, VCs, corporations and universities linked to surrounding cities.
+JETRO's 2026 J-StarX materials explicitly state that purposeless participation in multiple accelerator programs has dispersed startups' valuable time and resources, identifying startup time as a critical resource. J-StarX Silicon Valley Extended Program expects at least 50% of one executive's time. Sagamihara's acceleration program has prohibited simultaneous accelerator participation. These are strong institutional facts that support finite participation capacity.
 
-**Assessment: SUPPORTED.**
+Peer-reviewed evidence also rejects universal local/external complementarity: Aarstad, Kvitastein and Jakobsen (2016) find regional and international innovation collaboration to be substitutes for medium-sized firms and subtractive for small firms.
 
-## I2 — Network-dependent value
+### Evidence against a literal E:N BASE depletion interpretation
 
-The central programme's value is explicitly described in network terms: information concentration, human networks, partner/mentor access, community events and matching. This makes an installed-base/network-value reduced form institutionally credible.
+Ehime Prefecture's 2026 metropolitan co-creation procurement explicitly aims to strengthen networks between E:N BASE members and metropolitan firms and create mutual collaboration. NEXs Tokyo's DIVE program likewise helps regional startups use the metropolitan ecosystem for business acceleration. Cross-regional Japanese startup programs audited in Hokkaido, Sendai, Kansai, Hiroshima/J-Startup WEST, Kagawa and Fukuoka predominantly use regional infrastructure as a gateway into metropolitan, national or global networks.
 
-No source establishes a linear function \(A_M+\beta n_M\), but Stage 4 already showed the reversal survives an authorized nearby concave-core formulation. Therefore linearity is classified as tractability, not an institutional requirement.
+Therefore, the E:N BASE-specific counterfactual is not established:
 
-**Assessment: SUPPORTED.**
+> If E:N BASE did not exist, would marginal users participate more directly in a common Tokyo/national core?
 
-## I3 — Core diversion
+Final answer: **UNKNOWN**.
 
-This is the central application risk.
+## Application verdict
 
-Evidence in favor of partial substitution is indirect: E:N BASE and NEXs Tokyo both supply meetings, matching, events, community management and project support, and participants have finite time and attention. It is therefore plausible that local provision can replace some direct metropolitan participation at the margin.
+**WEAK FIT**.
 
-However, the strongest primary evidence runs in the opposite policy direction:
+Co-creation hubs must be demoted from headline/literal application to an illustrative application that is explicitly conditional on partial participation substitution. The manuscript may not claim as an empirical fact that regional hubs thin metropolitan cores.
 
-- Ehime's 2026 metropolitan co-creation project is designed to take E:N BASE themes to the metropolitan area, strengthen networks with metropolitan firms and produce mutual collaboration.
-- Ehime's DX execution plan describes digital, metropolitan and in-prefecture co-creation hubs as three hubs to be used together.
-- NEXs Tokyo's DIVE programme explicitly helps regional startups use the metropolitan ecosystem for acceleration.
+## General theory status
 
-These facts do not logically rule out partial resource/time substitution, but they do rule out presenting regional and metropolitan hubs as institutionally pure substitutes.
+**GENERAL THEORY UNCHANGED.**
 
-**Assessment: PLAUSIBLE BUT INDIRECT / WEAK.**
+The general structure has stronger institutional mappings outside the co-creation-hub context, including residual network-valued retail agglomerations and hub-airport settings. No new primitive is added.
 
-Consequence: co-creation hubs should be demoted from “literal canonical example” to “possible application if partial participation substitution is present.”
+## Routing
 
-## I4 — Shared core across regions
-
-NEXs Tokyo's membership and programme design explicitly span all regions of Japan, including regional startups outside Tokyo. The same central matching/community infrastructure can therefore be used by firms from different peripheral regions.
-
-**Assessment: SUPPORTED.**
-
-## I5 — Peripheral friction
-
-E:N BASE is physically located in Matsuyama and Setouchi-i-Base in Takamatsu. Both are locally embedded facilities with resident coordinators, events and local support. Travel, local relationships, familiarity and region-specific programmes make an additional cost of using another region's hub economically plausible.
-
-The facilities are not closed to outsiders, so \(\tau\) should be interpreted as a friction, not an exclusion rule.
-
-**Assessment: PLAUSIBLE BUT INDIRECT.**
-
-## I6 — Binary entry
-
-The opening of a dedicated physical/institutional hub is a large discrete commitment. E:N BASE opened in May 2026; Setouchi-i-Base opened in November 2020. Binary entry is therefore a defensible first-order approximation to establishment/non-establishment, even though service quality and capacity are continuous after opening.
-
-**Assessment: SUPPORTED AS REDUCED FORM.**
-
-## Co-creation-hub application verdict
-
-\[
-\boxed{\text{WEAK FIT}}
-\]
-
-The application satisfies I1, I2, I4 and I6 reasonably well, and I5 is defensible. But I3—the theorem-essential diversion of participation from the residual core—is not directly supported and is in tension with the explicit institutional goal of linking local and metropolitan ecosystems.
-
-This does **not** invalidate the general theorem. It means the project should not claim that the model describes E:N BASE, Setouchi-i-Base, NEXs Tokyo, or Japanese co-creation hubs as an established empirical fact.
-
-## Stronger institutional environments
-
-Two alternative environments provide substantially stronger validation of the residual-core mechanism:
-
-1. **Retail agglomeration:** peripheral shopping centers can divert shopper traffic from a downtown agglomeration; downtown attractiveness itself rises with retail variety and footfall.
-2. **Hub airports:** regional airport/hub-bypass options can divert traffic from a shared central hub; the hub's connectivity and value arise from concentrated traffic and connection opportunities.
-
-These mappings are not needed to alter the theory. They establish that the theorem's essential causal chain corresponds to known economic structures outside the original application.
-
-## Primary/authoritative sources
-
-- Ehime, metropolitan co-creation event procurement (2026): https://www.pref.ehime.jp/site/nyusatsu/149716.html
-- Ehime DX execution plan: https://www.pref.ehime.jp/page/60521.html
-- Ehime E:N BASE establishment/support: https://www.pref.ehime.jp/site/nyusatsu/135524.html
-- NEXs Tokyo official programme: https://www.nexstokyo.metro.tokyo.lg.jp/about
-- NEXs Tokyo collaborative programme: https://nexstokyo.metro.tokyo.lg.jp/program/collaborative
-- Cabinet Office startup ecosystem programme: https://www8.cao.go.jp/cstp/openinnovation/ecosystem/kyotentoshi.html
-- Setouchi-i-Base: https://setouchiibase.jp/
+Proceed to Stage 7.5 only with co-creation hubs demoted.
