@@ -36,9 +36,12 @@ Walz (1996) and subsequent regional-infrastructure models analyze decentralized 
 
 Threat: the public-government layer plus endogenous user allocation may collapse to standard jurisdictional competition.
 
-Relevant records:
+Relevant record:
 - https://cepr.org/publications/dp1324
-- https://doi.org/10.1016/j.regsciurbeco.2009.02.007
+
+Takahashi (2004) is an especially important H4/public-facility benchmark: governments invest in competing public facilities, users choose between them in a spatial environment, and the model explicitly studies strategic interaction, third-region demand and discrete public investment.
+
+DOI: https://doi.org/10.1016/S0166-0462(03)00070-X
 
 ## Threat 5 — Banal-Estañol, Macho-Stadler & Pérez-Castrillo (2018)
 
@@ -47,6 +50,34 @@ University-industry collaboration is modeled as endogenous matching between hete
 Threat: productive collaboration among complementary economic agents is itself established matching theory.
 
 DOI: https://doi.org/10.1287/mnsc.2016.2680
+
+## Required immediate benchmark sweep
+
+### Rochet & Tirole (2003)
+
+Two-sided platform competition is a generic absorption benchmark for endogenous user allocation, cross-side participation effects and alternative platform governance structures. It does not by itself supply the target region-anchored collaboration incidence or decentralized binary public provision, but it makes any generic platform-choice result non-novel.
+
+DOI: https://doi.org/10.1162/154247603322493212
+
+### Sülzle (2009)
+
+Competing B2B marketplaces already combine matching intermediation, exclusive versus multihoming participation, network effects and different intermediary ownership structures. This is a strong warning against treating coexistence or collaboration between intermediaries as novel per se.
+
+### Gehrig (1993)
+
+Search-market intermediation with heterogeneous agents and intermediary competition establishes that competing intermediaries can endogenously attract clientele and reduce search frictions. Any claim based only on “intermediaries improve matching and compete for users” is absorbed.
+
+DOI: https://doi.org/10.1111/j.1430-9134.1993.00097.x
+
+### Calcagnini, Giombini, Liberati & Travaglini (2019)
+
+Technology transfer is modeled as an endogenous matching process involving technology-transfer offices and innovative firms, with noncooperative search/advertising decisions and possible complementarity/substitutability. This is the closest technology-transfer matching threat to the direct productive-matching primitive.
+
+DOI: https://doi.org/10.1007/s10961-018-9667-3
+
+### Public/regional business-support competition
+
+The general local-policy literature already contains fiscal competition, bidding for firms, public-service spillovers and user sorting, while public-facility competition models show governments can compete for users through discrete facility provision. Therefore the public label and regional competition layer are insufficient on their own. The candidate distinction must depend on allocation of a collaboration link rather than relocation of the beneficiary firm.
 
 ## Additional institutional evidence relevant to architecture
 
