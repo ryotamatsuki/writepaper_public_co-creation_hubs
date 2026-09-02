@@ -26,6 +26,6 @@ Conceptually viable but loses the access-price margin and moves directly into he
 
 Nonminimal. It adds two private controls before the core overlap-additionality lever is verified.
 
-## Fatal-wweakness rule
+## Fatal-weakness rule
 
 The numerical score is secondary. MC-A survives only because it can be stated using common/unique partner opportunity sets. If `x_i` reduces to a scalar facility-quality shifter, MC-A is killed regardless of score.
