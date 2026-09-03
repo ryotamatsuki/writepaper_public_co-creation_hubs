@@ -40,6 +40,8 @@ jobs:
           python analytic_level3/code/verify_witness.py
       - name: Exact canonical G-B3 certificate
         run: python analytic_level3_reopen/code/verify_l31.py
+      - name: Refresh stale title-page manuscript title
+        run: python scripts/refresh_title_page.py
       - name: Stage-14 package and redacted title-page audit
         run: python scripts/stage14_submission_audit.py
       - name: Candidate PDF structural preflight
@@ -72,16 +74,16 @@ jobs:
             generated/stage14/qa_summary.json
             generated/stage14/pdfinfo.txt
             generated/stage14/jpet-source-candidate.tar.gz
-      - name: Refresh repository QA candidate PDF
+      - name: Refresh repository QA candidate artifacts
         if: github.event_name == 'push'
         run: |
           cp paper/main.pdf submission/jpet/qa_candidate_manuscript.pdf
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
-          git add -f submission/jpet/qa_candidate_manuscript.pdf
+          git add -f Title_Page.docx submission/jpet/qa_candidate_manuscript.pdf
           if git diff --cached --quiet; then
-            echo 'Candidate PDF unchanged'
+            echo 'Candidate artifacts unchanged'
           else
-            git commit -m 'Stage 14: refresh JPET QA candidate PDF'
+            git commit -m 'Stage 14: refresh JPET QA candidate artifacts'
             git push origin HEAD:co-creation-theory/stage14r-tp-jpet-submission-qa
           fi
