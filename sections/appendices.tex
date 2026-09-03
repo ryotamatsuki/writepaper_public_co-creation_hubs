@@ -1,5 +1,5 @@
 \appendix
-\section{Derivations and Computational Certificate}\label{app:derivations}
+\section{Derivations and Proofs}\label{app:derivations}
 
 \subsection{Project cutoffs}
 
@@ -15,7 +15,7 @@ Under the central ordering used in the main text, these expressions reduce to th
 
 \subsection{Private-price response}
 
-Differentiating the private first-order condition \eqref{eq:privatefoc} with respect to $x_i$ gives \eqref{eq:px}. When $\beta=0$, private demand is linear. Let $\Delta_i$ denote the corresponding local-private quality difference, define
+Differentiating the private first-order condition \eqref{eq:privatefoc} with respect to $x_i$ gives \eqref{eq:px}. When $\beta=0$, private demand is linear. Let $\Delta_i$ denote the corresponding local-private quality difference and define
 \[
 A=\frac{1}{\Delta_1}+\frac{1}{\Delta_2},
 \qquad
@@ -35,27 +35,94 @@ Then
 \qquad
 A_{x_i}=-\frac{\alpha}{\Delta_i^2}<0,
 \]
-so $p_{T,x_i}^*<0$. This limiting case shows that endogenous private pricing does not require two-sided participation. Two-sidedness is instead essential to the positive B3 cross effect used in Proposition \ref{prop:reversal}.
+so $p_{T,x_i}^*<0$. This limiting case shows that endogenous private pricing does not require two-sided participation. Two-sidedness is instead essential to the positive B3 cross effect used in Theorem \ref{thm:reversal}.
 
-\subsection{Numerical certification}
+\subsection{Proof of the local strategic sign reversal}\label{app:smallbeta}
 
-The production repository solves the participation equations \eqref{eq:Fi}--\eqref{eq:FT}, the private pricing condition \eqref{eq:privatefoc}, and the two public first-order conditions at the benchmark parameter vector. The certificate is accepted only after the following gates hold simultaneously: the participation and decision first-order conditions are satisfied within the documented numerical tolerances; the central allocation cutoffs and project and partner masses are interior; the private and public second-order conditions are negative; the local participation and equilibrium Jacobians are nonsingular; and the B3 and G public cross derivatives, and therefore best-response slopes, have strict opposite signs. Thus the computation verifies the intended local equilibrium rather than only solving an isolated public first-order condition.
+Let $\delta=\alpha\beta$, $T=A_T=v+\alpha\rho_T$, $\Delta_i=A_i-A_T$, and $d=\kappa_L-\kappa_T-p_T$. On a regular interior beta-zero branch, $T>0$, $\Delta_i>0$, and $d>0$. Write $M_{B3}=W_{i,x_ix_j}^{B3}$ and let $M_G$ denote the corresponding reduced full-game cross derivative.
 
-At the reported configuration,
+At $\delta=0$, the B3 participation equations separate across regions once the shared private price is held fixed. Hence
 \[
-\widetilde W_{i,x_ix_i}<0,
-\quad
-W^{B3}_{i,x_ix_j}>0,
-\quad
-\widetilde W^G_{i,x_ix_j}<0.
+M_{B3}(0,x,p)=0
 \]
-Consequently the two best-response slopes have strict opposite signs by \eqref{eq:brslope}. The production verification computes these derivatives from the same equilibrium system used to generate the reported tables. An independent re-run of the frozen verification code during manuscript review reproduced the equilibrium, sign, interiority, second-order, and nonsingularity gates.
+throughout the relevant beta-zero central regime. A first-order expansion of the exact participation system and the regional objective gives
+\[
+\left.\frac{\partial M_{B3}}{\partial\delta}\right|_{\delta=0}
+=
+\frac{\alpha^2d^3}{\Delta_i^3\Delta_j^2}>0.
+\]
+Since $\delta=\alpha\beta$,
+\[
+\left.\frac{\partial M_{B3}}{\partial\beta}\right|_{\beta=0}
+=
+\frac{\alpha^3d^3}{\Delta_i^3\Delta_j^2}>0.
+\]
+Because $M_{B3}(0,x,p)$ is identically zero, differentiating along a continuing B3 equilibrium and matched-price path introduces no additional first-order terms at zero: the chain-rule multipliers on the path derivatives are zero.
 
-The certificate is reproduced by the repository's numerical verification and generated-results pipeline. Floating-point comparisons use explicit tolerances rather than string equality. A deterministic 20-draw perturbation audit moves the primitive vector by up to $\pm0.5$ percent and verifies that all draws retain the headline sign pattern. This audit is computational confirmation of local stability; the formal local-persistence statement rests on strict inequalities and the regular implicit-function system, not on the number of perturbation draws.
+For G, the private price policy remains an active strategic link at $\beta=0$. At a symmetric regular beta-zero state let $\Delta=A_i-A_T>0$. Substituting the exact interior private optimum into the full chain-rule decomposition \eqref{eq:repricingdecomposition} yields
+\[
+M_G(0)
+=
+-\frac{3T\alpha^2\kappa_L^2}
+{16\Delta(\Delta+T)^3}<0.
+\]
+Thus B3 has a zero cross effect with a strictly positive derivative in $\beta$, whereas G has a strictly negative cross effect at the limiting state itself.
 
-\subsection{Local continuity argument}
+By the maintained nonsingularity conditions, the implicit function theorem supplies locally smooth B3 and G equilibrium branches and smooth reduced derivatives. Strict public and private second-order conditions and the central-regime inequalities also persist locally. Therefore there is an $\varepsilon>0$ such that, for every $\beta\in(0,\varepsilon)$ on the continuing branches,
+\[
+M_{B3}(\beta)>0>M_G(\beta).
+\]
+Under the strict public second-order conditions, the best-response slope in \eqref{eq:brslope} has the sign of the relevant public cross derivative. Hence
+\[
+\BR_i^{B3\prime}>0>\BR_i^{G\prime},
+\]
+which proves Theorem \ref{thm:reversal}. The argument is sufficient and local. It does not produce a primitive formula for $\varepsilon$, nor does it establish existence and strict second-order conditions for every primitive vector.
 
-Because the relevant participation equations and first-order conditions are continuously differentiable and their local Jacobians are nonsingular at the certificate, the implicit function theorem yields locally continuous equilibrium policies and derivatives. The strict inequalities defining the interior regime, second-order conditions, and opposite-sign best-response slopes therefore persist on a sufficiently small open neighborhood. The analogous robustness statements for smooth perturbations of the type distribution and network functions are conditional on maintaining positive cutoff densities, the central allocation ordering, and local nonsingularity.
+\section{Exact Canonical Certificate}\label{app:exactcertificate}
+
+The canonical finite-decimal primitives are interpreted as exact rational numbers. The certification proceeds on a symmetry-reduced algebraic representation of the participation and stationary conditions. Rather than solving a high-degree root by radicals, an exact rational Krawczyk operator is applied to the coupled G/B3 system. It proves that there is one and only one solution in the box
+\begin{align*}
+0.5848900730 &< t_G < 0.5848900731,\\
+0.1388515735 &< q_G < 0.1388515736,\\
+0.0227466514 &< p_G < 0.0227466515,\\
+0.6100908625 &< t_B < 0.6100908626,\\
+0.1402669351 &< q_B < 0.1402669352.
+\end{align*}
+Reconstruction gives $x_G\simeq0.684028196361275$ and $x_B\simeq0.656020390747393$. Thus the certificate imposes one common algebraic $p_G$ while correctly allowing the public equilibrium investment to differ across G and the matched-price B3 benchmark.
+
+Exact rational interval implicit differentiation on this isolating box gives
+\begin{align*}
+-0.118357218885676 &< H_{11}^{B3} < -0.118357218885651,\\
+\phantom{-}0.0135431333332136 &< H_{12}^{B3} < \phantom{-}0.0135431333332153,\\
+-0.199391062101166 &< H_{11}^{G} < -0.199391062101008,\\
+-0.00480853615115529 &< H_{12}^{G} < -0.00480853615112228.
+\end{align*}
+The private-price second derivative lies in
+\[
+(-52.1627947003595,-52.1627947003591),
+\]
+and the public-investment response of the private price satisfies
+\[
+p_{T,x_i}^*\in(-0.0165046011641228,-0.0165046011641190).
+\]
+The resulting best-response slopes satisfy
+\[
+\BR_i^{B3\prime}\in(0.114425917242068,0.114425917242105),
+\]
+\[
+\BR_i^{G\prime}\in(-0.024116106812849,-0.024116106812664).
+\]
+The same interval calculation verifies the required local Jacobian nonsingularity conditions. These strict rational intervals establish Proposition \ref{prop:exactcertificate} without finite differences or floating-point sign decisions.
+
+The coupled certification is reproduced by \texttt{analytic\_level3\_reopen/code/verify\_l31.py}. Internally, algebraic elimination identifies a high-degree component before root isolation, but the coefficients of that polynomial are not economically informative and are not reproduced here. The certificate is deliberately a sign-at-algebraic-root result for one exact rational primitive vector. It is not a primitive-parameter cell decomposition or a necessary-and-sufficient global characterization.
+
+\section{Numerical Verification and Local Robustness}\label{app:numerics}
+
+The production numerical pipeline remains useful for magnitudes and independent consistency checks. It solves the participation equations \eqref{eq:Fi}--\eqref{eq:FT}, the private pricing condition \eqref{eq:privatefoc}, and the two public first-order conditions at the benchmark vector. The numerical gate requires the participation and decision first-order conditions to satisfy documented tolerances; the central allocation cutoffs and project and partner masses to be interior; private and public second-order conditions to be negative; local participation and equilibrium Jacobians to be nonsingular; and the B3 and G public cross derivatives to have strict opposite signs.
+
+The production numerical values are close to the exact certified intervals above. Their role is expository rather than foundational: Theorem \ref{thm:reversal} supplies the analytic local mechanism, and Proposition \ref{prop:exactcertificate} supplies the exact canonical sign verification. Floating-point comparisons use explicit tolerances rather than string equality.
+
+A deterministic 20-draw perturbation audit moves the primitive vector by up to $\pm0.5$ percent and verifies that all draws retain the headline sign pattern. This is computational confirmation that the displayed benchmark is not numerically knife-edge; it is not the proof of local persistence. More generally, sufficiently small $C^1$ perturbations of the project-type distribution and network functions preserve the result conditional on positive cutoff densities, the same central allocation ordering, strict curvature, and local nonsingularity. Small asymmetric perturbations of the action state are covered by the same continuity logic.
 
 \section{Additional Tables}\label{app:tables}
 
