@@ -2,12 +2,13 @@
 
 Stage 10 constructs a complete journal-neutral manuscript without reopening the Stage-8 theory freeze.
 
-Authorization condition:
-- clean `make clean && make all` PASS;
-- PR-head GitHub Actions PASS;
-- Stage-10 theory-drift, citation, and overclaim audits PASS.
+Closeout evidence:
+- local manuscript build with bibliography and resolved references: PASS;
+- Stage-10 theory-drift, citation, and overclaim audits: PASS;
+- PR-head GitHub Actions run `33714690313`: PASS;
+- clean-checkout `make clean && make all`: PASS.
 
-If those conditions hold:
+Therefore:
 
 **STAGE 11 — REFEREE / INTERNAL REVIEW GATE AUTHORIZED**
 
