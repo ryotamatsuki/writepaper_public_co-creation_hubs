@@ -1,0 +1,2 @@
+# Strategic Interaction among Public Innovation Hubs under Private Repricing
+Current production stage: Stage 9 reproducibility baseline. Canonical theory authority is `public_two_sided_platform_stage8_theory_freeze/`; substantive theory changes are prohibited. Run `make all` after installing `requirements.txt` and a LaTeX environment with `latexmk`. Generated quantitative objects live in `generated/` and must not be edited directly. Stage 10 section writing is not yet authorized until Stage 9 receives its final verdict. Journal target: NOT SELECTED; deferred to Stage 12.

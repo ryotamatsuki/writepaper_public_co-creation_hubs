@@ -13,3 +13,8 @@
 *.toc
 *.zip
 jrs_hub_paper_revised_source_from_attached_folder/jrs_hub_paper/rendered/
+.venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+paper/*.pdf

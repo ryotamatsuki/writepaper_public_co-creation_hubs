@@ -1,0 +1,76 @@
+\section{Equilibrium and Benchmarks}\label{sec:equilibrium}
+
+This section reduces the participation subgame to a smooth system and defines the two nested environments used to identify the role of private repricing.
+
+\subsection{Participation fixed point}
+
+Let
+\[
+\delta=\alpha\beta,\quad
+A_i=v+\alpha(\rho+x_i),\quad
+A_T=v+\alpha\rho_T,\quad
+d=\kappa_L-\kappa_T-p_T .
+\]
+In the central regime, local project mass is $n_i^F=1-t_i$ and private project mass is
+\[
+n_T^F=t_1+t_2-\frac{2(\kappa_T+p_T)}{q_T}.
+\]
+Using \eqref{eq:partnerlocal}--\eqref{eq:partnerprivate}, the project-quality indices satisfy
+\begin{align}
+q_i &= A_i+\delta(1-t_i), \label{eq:qi}\\
+q_T &= A_T+\delta\left(t_1+t_2-\frac{2(\kappa_T+p_T)}{q_T}\right). \label{eq:qT}
+\end{align}
+Together with the indifference condition $t_i(q_i-q_T)=d$, the participation equilibrium solves
+\begin{align}
+F_i &\equiv t_i\left[A_i+\delta(1-t_i)-q_T\right]-d=0,\qquad i=1,2, \label{eq:Fi}\\
+F_T &\equiv q_T-A_T-\delta\left[t_1+t_2-\frac{2(\kappa_T+p_T)}{q_T}\right]=0. \label{eq:FT}
+\end{align}
+This three-equation system is the smooth object used for implicit differentiation and numerical verification.
+
+\subsection{Private pricing}
+
+Let $D_T\equiv n_T^F$ denote private-route project demand after participation has adjusted. An interior private price satisfies
+\begin{equation}
+D_T+p_TD_{T,p}=0,
+\label{eq:privatefoc}
+\end{equation}
+with second-order condition
+\begin{equation}
+2D_{T,p}+p_TD_{T,pp}<0.
+\label{eq:privatesoc}
+\end{equation}
+Implicit differentiation of \eqref{eq:privatefoc} yields the policy response
+\begin{equation}
+p^*_{T,x_i}
+=
+-\frac{D_{T,x_i}+p_TD_{T,px_i}}
+{2D_{T,p}+p_TD_{T,pp}}.
+\label{eq:px}
+\end{equation}
+At the verified full-game configuration this derivative is negative. Economically, stronger regional facilitation draws projects away from the shared private route; the private intermediary responds by lowering its optimal access price.
+
+The negative price response is not itself a new mechanism. Indeed, when $\beta=0$ the private demand problem becomes linear and the sign of the price response can be established directly. The role of two-sidedness in our main result is different: it creates the positive public--public cross effect in the fixed-price benchmark.
+
+\subsection{Nested benchmarks}
+
+We compare two environments with identical primitives.
+
+\paragraph{Fixed-price benchmark (B3).}
+Both regional public hubs and the shared private hub operate, and participation remains two-sided, but the private access price is fixed at $\bar p_T$. For the headline comparison we set
+\[
+\bar p_T=p_T^G,
+\]
+the equilibrium private price in the full game. This is a matched-price local diagnostic. At the certified comparison, it holds the fee level at the value chosen in G while suppressing the policy response $p_T^*(x_1,x_2)$. The benchmark therefore separates the local strategic contribution of repricing from a mechanical difference in the fee level. It does not assert that the two public investments are complements for every exogenous value of $\bar p_T$, and it is not interpreted as a price-regulation counterfactual.
+
+\paragraph{Full game (G).}
+The private intermediary observes $(x_1,x_2)$ and optimally chooses $p_T$ according to \eqref{eq:privatefoc}. Governments anticipate the reduced price policy $p_T^*(x_1,x_2)$ when choosing facilitation investments.
+
+Let $\widetilde W_i$ denote government $i$'s reduced objective after downstream private pricing and participation have been solved. At an interior local optimum,
+\begin{equation}
+\BR_i'(x_j)
+=
+-\frac{\widetilde W_{i,x_ix_j}}
+{\widetilde W_{i,x_ix_i}}.
+\label{eq:brslope}
+\end{equation}
+Because the own second derivative is negative at the regular interior configurations considered below, the sign of the best-response slope is the sign of the public cross derivative.

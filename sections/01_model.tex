@@ -1,0 +1,61 @@
+\section{Model}\label{sec:model}
+
+We study two regions, indexed by $i\in\{1,2\}$. Each regional government operates a public innovation intermediary $H_i$ and chooses a facilitation investment $x_i\in[0,1]$. The two regions also share access to a private metropolitan innovation intermediary $H_T$. The private intermediary charges a project-side access price $p_T\geq 0$. The institutional language is intended to capture settings in which local public organizations provide matching, coordination, events, and partner recruitment while projects may instead use a dense commercial innovation ecosystem in a major metropolitan area. The economic structure, rather than the institutional labels, is the object of the model.
+
+\subsection{Projects and intermediation routes}
+
+Each region contains a unit mass of projects with types $z\sim U[0,1]$. A focal project selects one primary intermediation route from
+\[
+\{0,H_1,H_2,H_T\},
+\]
+where $0$ is non-participation. This single-homing assumption applies to the primary route of a focal project, not to all activities of the firm that owns the project.
+
+Let $n_h^P$ denote the mass of support-side partners associated with route $h$. Define the project-side quality index
+\[
+q_h \equiv v+\alpha n_h^P,\qquad \alpha>0.
+\]
+A type-$z$ project in region $r$ obtains
+\begin{equation}
+U_{rh}(z)
+=
+zq_h-\kappa_{rh}-\mathbf 1\{h=T\}p_T,
+\label{eq:projectutility}
+\end{equation}
+while $U_{r0}=0$. Local public access has cost $\kappa_{rr}=\kappa_L$, access to the other regional public hub has cost $\kappa_{rj}=\kappa_L+\tau$ for $j\neq r$, and metropolitan private access has baseline cost $\kappa_{rT}=\kappa_T$. The parameter $\tau\geq0$ makes the remote regional public hub weakly less attractive than the local public hub. In the central regime used for the main result, a region's projects sort among non-participation, the shared private route, and their local public route.
+
+\subsection{Support-side participation and public facilitation}
+
+Support-side partners may participate in multiple ecosystems. In the interior participation regime their masses satisfy
+\begin{align}
+n_i^P &= \rho+x_i+\beta n_i^F,\qquad i=1,2, \label{eq:partnerlocal}\\
+n_T^P &= \rho_T+\beta n_T^F, \label{eq:partnerprivate}
+\end{align}
+where $n_h^F$ is the mass of focal projects using route $h$. The constants $\rho$ and $\rho_T$ capture baseline partner attractiveness. The parameter $\beta\geq0$ is the project-to-partner cross-side feedback. Thus an increase in project participation raises support-side participation, which in turn raises project value through $\alpha n_h^P$.
+
+Government $i$ bears the convex facilitation cost
+\begin{equation}
+C_i(x_i)=\frac{\gamma}{2}x_i^2,\qquad \gamma>0.
+\label{eq:publiccost}
+\end{equation}
+The private intermediary has zero real operating cost in the baseline and earns
+\begin{equation}
+\Pi_T=p_T n_T^F.
+\label{eq:privateprofit}
+\end{equation}
+The zero-cost assumption is a normalization for the reduced-form pricing problem, not a claim about the cost structure of actual innovation hubs.
+
+\subsection{Timing and equilibrium}
+
+The game has four steps. First, the two regional governments choose $(x_1,x_2)$. Second, after observing those investments, the private intermediary chooses $p_T$. Third, projects sort across routes and support-side participation satisfies the cross-side fixed point. Fourth, project surplus, partner surplus, regional welfare, and private profit are realized. We study subgame-perfect equilibrium.
+
+The main result is evaluated in a smooth central allocation regime. Write $a=\kappa_T+p_T$. For a resident project of region $i$, the relevant ordering is
+\[
+0\quad\longrightarrow\quad H_T\quad\longrightarrow\quad H_i,
+\]
+with cutoffs
+\begin{equation}
+s=\frac{a}{q_T},\qquad
+t_i=\frac{\kappa_L-a}{q_i-q_T},
+\label{eq:cutoffs}
+\end{equation}
+satisfying $0<s<t_i<1$, $q_i>q_T$, and $a<\kappa_L$. Hence projects with $z<s$ remain outside, projects with $s<z<t_i$ use $H_T$, and projects with $t_i<z<1$ use $H_i$. These inequalities are strict at the numerical configuration used below.
