@@ -1,41 +1,41 @@
-# Stage 11 Consolidated Attack Register — Pre-fix
+# Stage 11 Consolidated Attack Register — Final
 
-| ID | Referee | Attack | Severity | Evidence / current defense | Required fix | Class | Reopens theory? | Pre-fix resolved? |
-|---|---|---|---|---|---|---|---|---|
-| A3 | A | combination novelty | MAJOR BUT FIXABLE | no Distance-0/1 predecessor; components known | sharpen nested qualitative-reversal claim and keep limitation | E | no | no |
-| A7 | A | B3 benchmark manipulation | MAJOR BUT FIXABLE | matched `p_T^G`, but caveat under-emphasized | clarify matched-level local diagnostic; no arbitrary fixed-fee claim | E | no | no |
-| A9 | A/D | contribution magnitude | MAJOR BUT FIXABLE | local computational result, but qualitative game change | keep narrow; route outlet level to Stage 12 | E | no | no |
-| B3 | B | numerical-not-proof | MAJOR BUT FIXABLE | Stage-8 status explicit; certificate text terse | strengthen analytic/computational boundary and certificate checklist | E/V | no | no |
-| B4 | B | parameter exercise | MAJOR BUT FIXABLE | strict/open-set/20-of-20/local C1 evidence | present witness as constructive certificate, not calibration | E | no | no |
-| A1 | A | known follower-price channel | MINOR | conceded; López–Vives absorbs component only | retain concession | E | no | yes |
-| A2 | A | new application only | MINOR | label-stripped mechanism survives | none | E | no | yes |
-| A4 | A | result built into beta and price response | MINOR | phase map contains multiple sign regions | state dominance condition | E | no | yes |
-| A5 | A | demand diversion only | MINOR | object is rival public marginal return / BR slope | terminology precision | E | no | yes |
-| A6 | A | third player redundant | MINOR | separate profit problem and B3 nesting | none | E | no | yes |
-| A8 | A | two-sidedness decorative | MINOR | B3 cross effect collapses at beta=0 | retain nuance | E | no | yes |
-| B1 | B | FOC/SOC/interiority | MINOR | production verifier + independent recheck pass | disclose certificate gates | V/E | no | yes |
-| B2 | B | local uniqueness | MINOR | nonsingular Jacobians; local claim only | local wording | E | no | yes |
-| B5 | B | uniform/linear functional form | MINOR | conditional local C1 robustness | no global language | E | no | yes |
-| B6 | B | symmetry | MINOR | small action-state asymmetry only | retain limitation | E | no | yes |
-| B7 | B | richer contracts/information | MINOR | outside frozen instrument-set claim | state scope | E | no | yes |
-| B8 | B | timing is just Stackelberg | MINOR | sequencing is maintained mechanism; known component conceded | state timing scope | E | no | yes |
-| B9 | B | finite-difference precision | MINOR | signs away from zero; deterministic replication | protocol transparency | V/E | no | yes |
-| C1 | C | welfare is transfer accounting | MINOR | fee cancels; real coordination wedge remains | none | E | no | yes |
-| C2 | C | incomplete planner | MINOR | no planner theorem claimed | keep welfare diagnostic | E | no | yes |
-| C3 | C | local G>B3 welfare weak | MINOR | explicitly local, not policy | none | E | no | yes |
-| C4 | C | coworking/bundle mapping | MINOR | analogue class + bundle price qualification | maintain caveat | E | no | yes |
-| C5 | C | common outside option | MINOR | plausibility/existence class only | avoid universal claim | E | no | yes |
-| C6 | C | single-homing unrealistic | MINOR | focal-project primary route only | none | E | no | yes |
-| C7 | C | partner multihoming unverified | MINOR | non-exclusive support-side abstraction | none | E | no | yes |
-| C8 | C | profit objective literal | MINOR | reduced-form commercial class | none | E | no | yes |
-| C9 | C | ecosystem complementarity | MINOR | focal-route substitution distinguished | none | E | no | yes |
-| C10 | C | no causal repricing evidence | MINOR | prediction only | none | E | no | yes |
-| D3 | D | workflow/meta language | MINOR | two manuscript phrases are internal/editorial | remove | E | no | no |
-| D4 | D | “prior-art audit” phrasing | MINOR | workflow-style phrase in literature section | rewrite | E | no | no |
+| ID | Attack | Severity | Fix / disposition | Reopens theory? | Final status |
+|---|---|---|---|---|---|
+| A3 | combination novelty | MAJOR BUT FIXABLE | nested qualitative reversal foregrounded; known components conceded | no | RESOLVED AS DEFENSIBLE CLAIM; risk survives |
+| A7 | B3 benchmark manipulation | MAJOR BUT FIXABLE | matched-price local diagnostic explicitly defined; no arbitrary-fee/policy claim | no | RESOLVED |
+| A9 | contribution magnitude | MAJOR BUT FIXABLE | contribution narrowed; outlet ambition delegated to Stage 12 | no | BOUNDED |
+| B3 | numerical-not-proof | MAJOR BUT FIXABLE | computational/local label and certificate gates made explicit | no | RESOLVED |
+| B4 | parameter exercise | MAJOR BUT FIXABLE | constructive-certificate/open-set logic separated from 20-draw confirmation | no | RESOLVED |
+| A1 | known follower-price channel | MINOR | directly conceded | no | RESOLVED |
+| A2 | new application only | MINOR | label-stripped mechanism remains | no | RESOLVED |
+| A4 | result built into assumptions | MINOR | dominance requirement emphasized | no | RESOLVED |
+| A5 | demand diversion only | MINOR | BR-slope object explicit | no | RESOLVED |
+| A6 | third player redundant | MINOR | distinct optimizing actor/B3 nesting | no | RESOLVED |
+| A8 | two-sidedness decorative | MINOR | beta=0 qualification retained | no | RESOLVED |
+| B1 | FOC/SOC/interiority | MINOR | frozen verifier + independent recheck; appendix gate disclosure | no | RESOLVED |
+| B2 | local uniqueness | MINOR | nonsingular local systems; no global uniqueness claim | no | RESOLVED |
+| B5 | uniform/linear structure | MINOR | local C1 scope explicit | no | RESOLVED AS LIMITATION |
+| B6 | symmetry | MINOR | small action-state asymmetry only | no | RESOLVED AS LIMITATION |
+| B7 | richer contracts | MINOR | instrument-set scope disclosed | no | RESOLVED AS LIMITATION |
+| B8 | timing | MINOR | maintained research sequence disclosed | no | RESOLVED AS LIMITATION |
+| B9 | precision | MINOR | reproducible signs/tolerances; Class-V recheck | no | RESOLVED |
+| C1 | welfare transfer accounting | MINOR | real wedge separated from fee transfer | no | RESOLVED |
+| C2 | incomplete planner | MINOR | no planner claim; welfare diagnostic | no | RESOLVED AS LIMITATION |
+| C3 | local welfare comparison | MINOR | local/non-policy wording | no | RESOLVED |
+| C4 | coworking/bundle mapping | MINOR | analogue-class and bundle-price language | no | RESOLVED AS LIMITATION |
+| C5 | common outside option | MINOR | existence/plausibility class, not universal | no | RESOLVED |
+| C6 | single-homing | MINOR | focal-project route abstraction | no | RESOLVED AS LIMITATION |
+| C7 | partner multihoming | MINOR | non-exclusive support-side abstraction | no | RESOLVED AS LIMITATION |
+| C8 | profit objective | MINOR | reduced-form commercial class | no | RESOLVED AS LIMITATION |
+| C9 | ecosystem collaboration | MINOR | ecosystem complementarity vs focal-route substitution | no | RESOLVED |
+| C10 | no causal repricing evidence | MINOR | prediction-only wording | no | RESOLVED AS LIMITATION |
+| D3 | workflow/meta language | MINOR | removed | no | RESOLVED |
+| D4 | prior-art-audit phrasing | MINOR | rewritten as ordinary literature positioning | no | RESOLVED |
 
-## Pre-fix counts
-- FATAL: 0
-- MAJOR BUT FIXABLE: 5
-- MINOR: 25
+## Final counts by original severity
+- FATAL: **0**
+- MAJOR BUT FIXABLE: **5**
+- MINOR: **25**
 
-The five major items are bounded and do not require a theory change. Combination novelty remains the dominant publication risk even after exposition fixes.
+No MAJOR issue remains as an unbounded manuscript blocker. Combination novelty and proof ceiling survive as nonfatal journal-fit risks.
