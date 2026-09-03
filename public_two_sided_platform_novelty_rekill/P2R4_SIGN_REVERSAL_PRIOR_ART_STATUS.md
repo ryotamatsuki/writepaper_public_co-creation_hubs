@@ -2,10 +2,23 @@
 
 ## Verdict
 
-**SURVIVES — NARROW FULL-GAME SIGN-REVERSAL RESULT.**
+**D — SURVIVES — NARROW FULL-GAME SIGN-REVERSAL RESULT.**
 
-No inspected theorem states or immediately implies `BR'_B3>0>BR'_G` for the relevant game.
+No inspected theorem states or immediately implies `BR_i^{B3′}>0>BR_i^{G′}` for the relevant game, and no Distance-0/1 mapping was located.
 
-Strongest threat: Farhi & Hagiu (2008), where one platform's prior investment can become strategically soft because two-sided downstream price responses alter rival profits. Mapping to P2-R4 is not direct: it requires adding a second first-stage investor, replacing downstream two-platform simultaneous pricing with a distinct third private price setter, imposing decentralized public objectives, and deriving the public-public cross-partial.
+## Strongest hostile threats after the second pass
 
-Sánchez-Cartas (2026) independently confirms that follower-response internalization can reverse qualitative two-sided pricing rankings, but the reversed object is side-price skewness, not first-stage investment best responses.
+1. **Zogheib & Bourreau (2021)** is the closest mixed-objective architecture threat: a profit-maximizing private firm competes with national/local public firms in prices and infrastructure investment in a network industry. Accessible evidence does not provide a fixed-private-price versus endogenous-private-price reversal of local-public investment best responses, and the model lacks the two-sided participation channel that generates the positive B3 benchmark. Full HAL theorem access was blocked, so this remains an evidentiary limitation rather than an exact-kill claim.
+2. **López & Vives (2019)** is the strongest generic sequential-investment theorem threat: endogenous second-stage price responses can contribute negatively to first-stage investment incentives. This substantially absorbs P2-R3, but reaching P2-R4 requires changing ownership of the price decision to a distinct third actor and newly deriving the public-public cross effect and its fixed-price benchmark.
+3. **Hahn & Kim (2026)** is the strongest current platform-response analogue: two platform investments precede downstream seller pricing, and seller-price adjustment attenuates investment effects. The paper does not establish a complements-to-substitutes switch in investment best responses when the downstream price is endogenized.
+4. **Farhi & Hagiu (2008)** remains the strongest two-sided strategic-investment predecessor, but has one first-stage investor and later platform pricing rather than two decentralized public investments plus a distinct third price setter.
+
+## Result-level survival logic
+
+Every ingredient is prior-art crowded: network-generated investment complementarity, mixed public/private objectives, multiple/local public firms, private fee responses, and negative follower-price strategic effects. The surviving object is therefore only the **dominance theorem**:
+
+`positive cross-side-network cross effect under fixed p_T`  
+`+ negative endogenous-p_T contribution`  
+`= negative reduced public-public cross effect in G`.
+
+Because no inspected predecessor supplies that fixed-to-endogenous-price sign comparison by direct relabeling/restriction, P2-R4 survives Stage 6 narrowly.
