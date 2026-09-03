@@ -1,14 +1,32 @@
 # Closest-Paper Matrix
 
-| Paper | Closest object | P2-R4 equivalent? | Distance | Verdict |
-|---|---|---:|---:|---|
-| Farhi & Hagiu (2008) | two-sided pricing changes strategic effect of prior investment | no | 3 | strongest structural threat |
-| Liu et al. (2026) | public/private two-sided participation and private fee response | no | 3 | strongest B1 threat |
-| Kim (2024) | mixed two-sided duopoly with investment/pricing | no | 3 | B1/architecture threat |
-| Sánchez-Cartas (2026) | follower response reverses two-sided price-skewness ranking | no | 3 | current reversal analogue |
-| Shrivastav (2021) | network R&D complements/substitutes | no | 3–4 | B3/network threat |
-| Buehler & Wey (2014) | public/private strategic investment crowd-out | no | 3–4 | mixed-investment threat |
-| Inoue et al. (2009) | regional public vs private competition | no | 4 | objective overlap |
-| Dadpay & Heywood (2006) | separate-country public-firm strategic interaction | no | 4 | public-public overlap |
-| Dou et al. (2016) | one-side platform investment affects prices | no | 4 | component overlap |
-| Sui et al. (2023) | competing platform VAS investment/pricing/multihoming | no | 3–4 | investment component |
+Distance convention: 0 exact theorem; 1 relabel/restriction; 2 one transparent extension/restriction; 3 requires a new strategic player/objective/cross-effect; 4+ component similarity.
+
+| Paper | Closest object | Exact theorem located? | P2-R4 equivalent? | Corollary distance | Verdict |
+|---|---|---:|---:|---:|---|
+| López & Vives (2019) | first-stage investments followed by endogenous Bertrand prices; explicit price-response strategic term | yes, for negative strategic price channel | no | 2–3 | **strongest generic sequential-investment theorem threat**; absorbs P2-R3, not R4 |
+| Zogheib & Bourreau (2021) | private firm vs national/local public firms; prices + infrastructure investment | partial access | no observed | 2–3 | **strongest mixed-objective architecture threat**; full theorem PDF inaccessible |
+| Hahn & Kim (2026) | two platform investments followed by downstream seller pricing; price adjustment dampens investment effects | yes | no | 2–3 | **strongest current platform-response threat** |
+| Mun (2019) | two regional welfare-maximizing government contributions + charge-setting operator | model located | no | 3 | strongest decentralized-government/third-charge architecture |
+| Farhi & Hagiu (2008) | prior investment changes later two-sided price competition; Prop. 2 strategic softness | yes | no | 3 | strongest two-sided strategic-investment predecessor |
+| Liu et al. (2026) | public/private two-sided participation; private fee responds to public competition | yes | no public-public BR | 3 | strongest B1 threat |
+| Kim (2024) | one public + one private two-sided platform with investment/pricing | model/result located | no | 3 | B1/architecture threat |
+| Sánchez-Cartas (2026) | follower response reverses qualitative two-sided pricing ranking | Prop. 1 | different strategic object | 3 | direct “response causes reversal” analogue |
+| Mun & Nakagawa (2010) | two-country infrastructure pricing/investment under alternative ownership/operation regimes | model/result located | no | 3 | regional sequential/ownership analogue |
+| Hahn & Kim (2026) vs Maruyama–Zennyo (2020) benchmark discussion | endogenous downstream pricing versus prior exogenous-fee investment treatment | discussion + equations | no BR sign reversal | 3 | shows current literature already worries about price-mediated investment effects |
+| Shrivastav (2021) | network R&D investments can be complements/substitutes | yes | no fixed/endogenous third price comparison | 3–4 | absorbs P2-R1 as generic network-investment idea |
+| Sääskilahti (2006) | network R&D before price competition | yes/model | no | 3–4 | network investment-price precursor |
+| Knauff (2021/22) | network effects change R&D complement/substitute region | Props. 4–6 | no | 3–4 | P2-R1/P2-R5 component overlap |
+| Buehler & Wey (2014) | state-owned/private strategic investment crowd-out | yes/model | no | 3–4 | mixed-investment threat |
+| Inoue et al. (2009) | regional/local public objective versus private competition | model/result | no | 4 | public-objective overlap |
+| Dadpay & Heywood (2006) | public firms linked to separate countries | model/result | no | 4 | decentralized-public overlap |
+| Bontems et al. (2025) | sequential multisided pricing | yes | no investment object | 4 | current sequencing component |
+| He et al. (2026) | pricing + service investment with mixed network externalities | yes/model | no | 3–4 | current platform-investment component |
+| Katsamakas & Sánchez-Cartas (2026) | competing platform preference investment + network tipping | yes/model | no price follower | 4 | multiple-investment/network overlap |
+| Armstrong (2006) / Armstrong–Wright (2007) | two-sided competition and homing | yes | no | 4+ | foundational component only |
+
+## Hostile mapping conclusion
+
+The most damaging new evidence is López–Vives: the negative term generated by endogenizing a later price response is not new economics by itself. The most damaging architecture evidence is Zogheib–Bourreau/Mun: mixed public objectives and multiple local governments are also not new. The remaining candidate theorem is therefore only the **sign comparison between the fixed-third-price and optimizing-third-price public-public best responses, where the positive benchmark cross-effect itself comes from cross-side participation feedback**.
+
+No Distance-0/1 theorem was located.

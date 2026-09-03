@@ -1,30 +1,53 @@
-# Source Ledger
+# Source Ledger — Stage 6R-TP
 
-Material sources include:
+## Evidence codes
 
-1. Farhi & Hagiu (2008), *Strategic Interactions in Two-Sided Market Oligopolies*, HBS WP 08-011 / SSRN 1012007. Full PDF inspected; Prop. 2 and timing checked.
-2. Liu, Reshidi & Rivadeneyra (2026), *Public vs. Private Payment Platforms*, BoC SWP 2026-10, DOI 10.34989/swp-2026-10. Full PDF inspected, including model and “More platforms”.
-3. Kim (2024), *Mixed duopoly in two-sided markets*, Manchester School 92(3), DOI 10.1111/manc.12467. Publisher page and available model descriptions inspected.
-4. Sánchez-Cartas (2026), *The Stackelberg–Armstrong model*, Economics Letters 265, DOI 10.1016/j.econlet.2026.113019. Full publisher text inspected.
-5. Armstrong (2006), RAND JE, DOI 10.1111/j.1756-2171.2006.tb00037.x.
-6. Armstrong & Wright (2007), Economic Theory, DOI 10.1007/s00199-006-0114-6.
-7. Caillaud & Jullien (2003), RAND JE, DOI 10.2307/1593720.
-8. Hagiu (2006), RAND JE, DOI 10.1111/j.1756-2171.2006.tb00039.x.
-9. Weyl (2010), AER, DOI 10.1257/aer.100.4.1642.
-10. Belleflamme & Peitz (2019), IJIO 64, DOI 10.1016/j.ijindorg.2018.03.014.
-11. Jeitschko & Tremblay (2020), IER, DOI 10.1111/iere.12457.
-12. Adachi, Sato & Tremblay (2023), JIE, DOI 10.1111/joie.12345.
-13. Tremblay, Adachi & Sato (2023), IJIO 91, Cournot platform competition with mixed-homing.
-14. Ding, Ko & Shen (2022), Economic Modelling 116, partial compatibility in two-sided markets.
-15. Dou, He & Xu (2016), IJPR 54(13), DOI 10.1080/00207543.2016.1148275.
-16. Sui et al. (2023), EJOR 304(3), DOI 10.1016/j.ejor.2022.04.041.
-17. Shrivastav (2021), Mathematical Social Sciences 109, DOI 10.1016/j.mathsocsci.2020.12.003.
-18. Buehler & Wey (2014), JICT 14, DOI 10.1007/s10842-013-0164-y.
-19. Inoue, Kamijo & Tomaru (2009), RSUE 39(2), DOI 10.1016/j.regsciurbeco.2008.10.001.
-20. Dadpay & Heywood (2006), Australian Economic Papers 45(4), DOI 10.1111/j.1467-8454.2006.00292.x.
-21. Lee (2021), *R&D Information sharing in a mixed duopoly*, Bulletin of Economic Research.
-22. Fudenberg & Tirole (1984), AER 74(2), strategic investment typology.
-23. Bulow, Geanakoplos & Klemperer (1985), JPE, strategic substitutes/complements.
-24. Athey & Schmutzler (2001), investment and market dominance.
+- **A**: primary/full text or theorem/model section directly inspected; suitable for theorem-level comparison.
+- **B**: primary publisher/working-paper record with substantial model/result detail; suitable for structural comparison, not an unsupported exact-kill.
+- **C**: index/secondary/abstract-only evidence; never used alone for exact absorption.
 
-Primary theorem claims rely preferentially on publisher/full-paper sources; abstract-only evidence is not used for an exact-absorption verdict.
+“Not verified” means the bibliographic field was not independently re-verified in this run; no value is invented.
+
+## Material source ledger
+
+| # | Source | Status / identifier / URL | Exact material inspected | P2-R threat | Classification | Evidence |
+|---:|---|---|---|---|---|---|
+| 1 | Farhi & Hagiu (2008), *Strategic Interactions in Two-Sided Market Oligopolies* | HBS WP 08-011; SSRN 1012007; https://ssrn.com/abstract=1012007 | Full WP; timing and Prop. 2. One prior investment can be strategically “soft” through subsequent two-sided pricing. | R2/R3/R4 | structurally very close; no R4 | A |
+| 2 | Liu, Reshidi & Rivadeneyra (2026), *Public vs. Private Payment Platforms: Market Impacts and Optimal Policy* | Bank of Canada SWP 2026-10; DOI 10.34989/swp-2026-10; https://doi.org/10.34989/swp-2026-10 | Full WP; Prop. 7 around printed p.19; “More platforms” discussion around p.25. One public + one private platform; private fees respond. | R2/R3/R4; B1 | strongest B1 component | A |
+| 3 | Kim (2024), *Mixed duopoly in two-sided markets* | The Manchester School 92(3); DOI 10.1111/manc.12467; https://doi.org/10.1111/manc.12467 | Publisher/model descriptions: one public and one private two-sided platform, pricing/investment comparisons. | R2/R4; B1 | structurally close B1 | B |
+| 4 | Sánchez-Cartas (2026), *The Stackelberg–Armstrong model* | Economics Letters 265, 113019; DOI 10.1016/j.econlet.2026.113019; https://doi.org/10.1016/j.econlet.2026.113019 | Full publisher text; Prop. 1. Sequential follower response can invert a two-sided price-skewness ranking. Strategic object is pricing, not first-stage public investment. | R3/R4 | reversal analogue, distance ~3 | A |
+| 5 | Hahn & Kim (2026), *Price Parity Clauses and Platform Investments* | Working paper, 26 Feb 2026; no DOI located; https://yeri.yonsei.ac.kr/yeri/publications/report.do?articleNo=464980&attachNo=206190&mode=download | Full WP pp.7–12; eqs. (4)–(13), Props. 1–3. Two platforms choose fees/investment; downstream seller prices after observing them. Seller-price adjustment dampens investment effects. | R3/R4 | strong current platform-response analogue; no R4 | A |
+| 6 | Zogheib & Bourreau (2021), *Public vs. Private Investments In Network Industries* | EconomiX WP 2021-4 / HAL hal-04159754; https://hal.science/hal-04159754 | Primary abstract + thesis/indexed structure. Private firm vs national/local public firms in prices and infrastructure investment. Thesis Ch.2 pp.62–76; Appendix B “private firm leads in investment”, local-public subsection pp.75–76. HAL theorem PDF blocked in current run. | R3/R4; mixed objectives | **strongest mixed-objective architecture threat** | B/C |
+| 7 | Mun (2019), *Joint provision of transportation infrastructure* | Economics of Transportation 19, 100118; DOI 10.1016/j.ecotra.2019.06.001; https://doi.org/10.1016/j.ecotra.2019.06.001 | Publisher/RePEc plus working-paper model: two regional governments choose welfare-maximizing contributions; infrastructure operator sets/collects user charge under pricing rule. | R3/R4; local government | closest 2-government + charge-operator architecture | B |
+| 8 | Mun & Nakagawa (2010), *Pricing and investment of cross-border transport infrastructure* | Regional Science and Urban Economics 40(4), 228–240; DOI 10.1016/j.regsciurbeco.2010.03.008; https://doi.org/10.1016/j.regsciurbeco.2010.03.008 | Publisher abstract/model descriptions; two-country pricing/investment regimes including private involvement. | R3/R4 | structurally close regional pricing-investment prior | B |
+| 9 | López & Vives (2019), *Overlapping Ownership, R&D Spillovers, and Antitrust Policy* | Journal of Political Economy 127(5); DOI 10.1086/701811; https://doi.org/10.1086/701811 | Full primary text. Sec. VI two-stage investment, Sec. VII Bertrand; eqs. (12)–(14) and Bertrand strategic-price term `psi=(n-1) phi_{i,p_j} p^*_{j,x_i}`. A negative downstream-price contribution is derived. | **R3**, R4 | strongest generic sequential-investment theorem threat; no benchmark sign reversal | A |
+| 10 | Shrivastav (2021), *Network compatibility, intensity of competition and process R&D: A generalization* | Mathematical Social Sciences 109, 152–163; DOI 10.1016/j.mathsocsci.2020.12.003; https://doi.org/10.1016/j.mathsocsci.2020.12.003 | Publisher full abstract/introduction/highlights: network R&D investments are complements or substitutes according to compatibility vs product substitutability, regardless of Bertrand/Cournot mode. | R1/R5 | absorbs generic network-complement/substitute idea | B |
+| 11 | Sääskilahti (2006), *Strategic R&D and Network Compatibility* | Economics of Innovation and New Technology 15(8), 711–733; DOI 10.1080/10438590500510657; https://doi.org/10.1080/10438590500510657 | Publisher text/snippets: R&D + second-stage prices with network compatibility; first-stage investments strategic substitutes in analyzed region. | R1/R3/R5 | network-investment precursor | B |
+| 12 | Knauff (2021/2022), *R&D Investments in Markets with Network Effects* | Journal of Industry, Competition and Trade; DOI 10.1007/s10842-021-00357-5; https://doi.org/10.1007/s10842-021-00357-5 | Publisher text; Props. 4–6 and complement/substitute threshold under network effects. | R1/R5 | component overlap | A/B |
+| 13 | Bontems, Hamilton & Lepore (2025; rev. 2026), *Sequential pricing on multisided platforms* | Economics Letters 255, 112543; DOI 10.1016/j.econlet.2025.112543; https://doi.org/10.1016/j.econlet.2025.112543 | Publisher/TSE record. Sequential pricing changes cross-side competitive effects; no investment stage/public players. | R3/R4 | current two-sided sequencing analogue | B |
+| 14 | He, Zhang, Huo, Saldanha-da-Gama & Yue (2026), *Targeting strategy of pricing and service investment in two-sided capacity-sharing platforms under mixed network externalities* | International Journal of Production Economics 300, 110123; DOI 10.1016/j.ijpe.2026.110123; https://doi.org/10.1016/j.ijpe.2026.110123 | Publisher record/model/result: pricing + service investment under mixed network externalities, monopoly/duopoly, homing. No public/third-price architecture. | R1/R2/R4 | current platform investment component | B |
+| 15 | Zhang & Hua (2023), *Performance investment decision and pricing strategy for platforms considering two-sided users’ different preferences* | Managerial and Decision Economics 44(4), 2457–2480; DOI 10.1002/mde.3828; https://doi.org/10.1002/mde.3828 | Publisher model/abstract: platform performance investment and pricing. | R1/R2 | component overlap | B |
+| 16 | Katsamakas & Sánchez-Cartas (2026), *Platform Competition and Market Tipping with Preference Alignment* | Computational Economics; DOI 10.1007/s10614-026-11379-8; https://doi.org/10.1007/s10614-026-11379-8 | Publisher/author text: two platforms strategically invest to shift preferences under network effects/tipping. | R1/R4 | multiple-investment/network component | B |
+| 17 | Buehler & Wey (2014), *When Do State-Owned Firms Crowd Out Private Investment?* | Journal of Industry, Competition and Trade 14, 319–330; DOI 10.1007/s10842-013-0164-y; https://doi.org/10.1007/s10842-013-0164-y | Publisher/RePEc model/result: conditions for state-owned investment to crowd out private investment; strategic substitute premise. | R3/R4 | mixed-investment threat, different interaction | B |
+| 18 | Inoue, Kamijo & Tomaru (2009), mixed interregional public/private oligopoly paper | Regional Science and Urban Economics 39(2); DOI 10.1016/j.regsciurbeco.2008.10.001; https://doi.org/10.1016/j.regsciurbeco.2008.10.001 | Publisher/model descriptions: regional/local public objective versus private firm, interregional incidence. | R4; B2 | objective/player overlap | B |
+| 19 | Dadpay & Heywood (2006), public-firm international/mixed-oligopoly paper | Australian Economic Papers 45(4); DOI 10.1111/j.1467-8454.2006.00292.x; https://doi.org/10.1111/j.1467-8454.2006.00292.x | Publisher/model descriptions: public firms tied to separate countries/constituencies. | R4; B2 | decentralized-public overlap | B |
+| 20 | Lee (2021), *R&D Information sharing in a mixed duopoly* | Bulletin of Economic Research; DOI not re-verified in this run | Abstract/model-level screening of mixed public/private R&D interaction. | R1/R3 | supporting mixed-R&D prior | C |
+| 21 | Armstrong (2006), *Competition in Two-Sided Markets* | RAND Journal of Economics; DOI 10.1111/j.1756-2171.2006.tb00037.x; https://doi.org/10.1111/j.1756-2171.2006.tb00037.x | Canonical two-sided pricing/competition, including multihoming implications. | background/B3 | known foundation | A/B |
+| 22 | Armstrong & Wright (2007), *Two-Sided Markets, Competitive Bottlenecks and Exclusive Contracts* | Economic Theory; DOI 10.1007/s00199-006-0114-6; https://doi.org/10.1007/s00199-006-0114-6 | Canonical competitive-bottleneck/multihoming model. | background | known homing component | A/B |
+| 23 | Caillaud & Jullien (2003), *Chicken & Egg: Competition among Intermediation Service Providers* | RAND Journal of Economics; DOI 10.2307/1593720; https://doi.org/10.2307/1593720 | Canonical intermediation/network competition. | background | known component | A/B |
+| 24 | Hagiu (2006), *Pricing and Commitment by Two-Sided Platforms* | RAND Journal of Economics; DOI 10.1111/j.1756-2171.2006.tb00039.x; https://doi.org/10.1111/j.1756-2171.2006.tb00039.x | Pricing/commitment on two sides. | R2/R3 | component overlap | A/B |
+| 25 | Weyl (2010), *A Price Theory of Multi-Sided Platforms* | American Economic Review 100(4), 1642–1672; DOI 10.1257/aer.100.4.1642; https://doi.org/10.1257/aer.100.4.1642 | General multi-sided pricing/participation framework. | background | foundation, no P2-R4 | A/B |
+| 26 | Belleflamme & Peitz (2019), *Platform competition: Who benefits from multihoming?* | International Journal of Industrial Organization 64; DOI 10.1016/j.ijindorg.2018.03.014; https://doi.org/10.1016/j.ijindorg.2018.03.014 | Homing/platform competition. | background | component overlap | B |
+| 27 | Jeitschko & Tremblay (2020), platform competition with endogenous homing | International Economic Review; DOI 10.1111/iere.12457; https://doi.org/10.1111/iere.12457 | Endogenous homing and platform competition. | background | multiple-platform/homing component | B |
+| 28 | Adachi, Sato & Tremblay (2023), *Platform Oligopoly with Endogenous Homing: Implications for Mergers and Free Entry* | Journal of Industrial Economics 71, 1203–1232; DOI 10.1111/joie.12345; https://doi.org/10.1111/joie.12345 | N-platform/endogenous homing. | background/G | platform-count overlap | B |
+| 29 | Tremblay, Adachi & Sato (2023), *Cournot platform competition with mixed-homing* | International Journal of Industrial Organization 91, 103002; DOI 10.1016/j.ijindorg.2023.103002; https://doi.org/10.1016/j.ijindorg.2023.103002 | Multiple-platform mixed-homing competition. | background/G | platform-count overlap | B |
+| 30 | Ding, Ko & Shen (2022), two-sided partial-compatibility/platform-competition paper | Economic Modelling 116; DOI not re-verified in this run | Publisher/index model screening: compatibility and multiple platforms. | R1/R5 | component overlap | C/B |
+| 31 | Dou, He & Xu (2016), platform service/quality investment and pricing paper | International Journal of Production Research 54(13); DOI 10.1080/00207543.2016.1148275; https://doi.org/10.1080/00207543.2016.1148275 | Platform investment/pricing model screening. | R2/R3 | component overlap | B |
+| 32 | Sui et al. (2023), competing-platform VAS investment/pricing paper | European Journal of Operational Research 304(3); DOI 10.1016/j.ejor.2022.04.041; https://doi.org/10.1016/j.ejor.2022.04.041 | Competing platform service investment/pricing/multihoming. | R1/R2/R3 | structurally related | B |
+| 33 | Fudenberg & Tirole (1984), *The Fat-Cat Effect, the Puppy-Dog Ploy, and the Lean and Hungry Look* | American Economic Review 74(2); stable publisher/JSTOR record | Canonical strategic-investment taxonomy: downstream response can make first-stage investment soft/tough. | R3 | generic mechanism absorbed | A/B |
+| 34 | Bulow, Geanakoplos & Klemperer (1985), *Multimarket Oligopoly: Strategic Substitutes and Complements* | Journal of Political Economy; DOI 10.1086/261297; https://doi.org/10.1086/261297 | Canonical cross-partial/strategic substitute-complement framework. | all sign language | background theorem language | A/B |
+| 35 | Athey & Schmutzler (2001), *Investment and Market Dominance* | RAND Journal of Economics; stable JSTOR 2696395; https://www.jstor.org/stable/2696395 | General investment interaction/dominance conditions with strategic complements/substitutes. | R1/R3/R4 | generic investment structure; no third-price reversal | B |
+
+## Source-use rule
+
+No Stage-6 kill is based on a C-level source. The exact-survival judgment is anchored by A/B model-level evidence and by failed Distance-0/1 mappings. Zogheib–Bourreau is retained as the strongest unresolved *structural* threat because its full HAL theorem text was inaccessible in the current run; the accessible evidence already shows a materially different game and no observed P2-R4 statement, so it is not elevated to a CONDITIONAL-GO blocker.
