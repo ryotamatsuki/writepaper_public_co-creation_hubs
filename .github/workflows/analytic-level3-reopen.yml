@@ -1,0 +1,35 @@
+name: analytic-level3-reopen
+on:
+  push:
+    branches: ['co-creation-theory/level3-analytic-reopen']
+  pull_request:
+    paths:
+      - 'analytic_level3_reopen/**'
+      - '.github/workflows/analytic-level3-reopen.yml'
+permissions:
+  contents: read
+jobs:
+  analytic-reopen:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: {python-version: '3.13'}
+      - run: python -m pip install -r requirements.txt
+      - name: Install TeX toolchain used by canonical reproducibility workflow
+        run: sudo apt-get update && sudo apt-get install -y latexmk texlive-latex-base texlive-latex-recommended texlive-latex-extra
+      - name: Existing repository hard gate
+        run: make clean && make all
+      - name: L3-0 verification unchanged
+        run: |
+          python analytic_level3/code/verify_symbolic_identities.py
+          python analytic_level3/code/verify_threshold.py
+          python analytic_level3/code/verify_witness.py
+      - name: L3-1 symmetric core
+        run: python analytic_level3_reopen/code/derive_symmetric_core.py
+      - name: L3-1 B3 manifold reduction
+        run: python analytic_level3_reopen/code/verify_b3_reduction.py
+      - name: L3-1 canonical exact elimination
+        run: python analytic_level3_reopen/code/canonical_elimination.py
+      - name: L3-1 coupled exact root and sign certificate
+        run: python analytic_level3_reopen/code/verify_l31.py
