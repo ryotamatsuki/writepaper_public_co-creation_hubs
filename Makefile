@@ -1,5 +1,5 @@
 PYTHON ?= python
-.PHONY: help freeze symbolic numerical results tables figures bibliography test manuscript verify report manifest all clean
+.PHONY: help freeze symbolic numerical results tables figures bibliography manuscript-audit test manuscript verify report manifest all clean
 help:
 	@echo 'make verify|tables|figures|test|manuscript|all|clean'
 freeze:
@@ -16,11 +16,14 @@ figures:
 	$(PYTHON) scripts/generate_figures.py
 bibliography:
 	$(PYTHON) scripts/validate_bibliography.py
+manuscript-audit:
+	$(PYTHON) scripts/validate_manuscript.py
 test: results tables
 	$(PYTHON) -m pytest -q tests
-verify: freeze symbolic numerical bibliography
-manuscript: tables figures
+verify: freeze symbolic numerical bibliography manuscript-audit
+manuscript: tables figures manuscript-audit
 	cd paper && latexmk -pdf -interaction=nonstopmode -halt-on-error main.tex
+	$(PYTHON) scripts/validate_build_log.py
 manifest: tables figures
 	$(PYTHON) scripts/generate_manifest.py
 report: verify test manuscript
