@@ -1,3 +1,68 @@
-\section{Welfare}
-% Stage 10 substantive writing only.
-\begin{table}[ht]\centering\caption{Generated welfare witness scaffold}\input{../generated/tables/welfare_comparison}\end{table}
+\section{Welfare and Coordination}\label{sec:welfare}
+
+The sign of a government's best-response slope is not a welfare ranking. Strategic interaction describes how one government's optimal investment responds to the other's choice; welfare depends on project allocation, partner surplus, real facilitation costs, and private profit. We therefore keep the strategic reversal and the welfare analysis separate.
+
+\subsection{Regional and aggregate welfare}
+
+In the central regime, project surplus in region $i$ is
+\begin{equation}
+PS_i
+=
+\int_s^{t_i}(zq_T-\kappa_T-p_T)\,dz
++
+\int_{t_i}^{1}(zq_i-\kappa_L)\,dz .
+\label{eq:PS}
+\end{equation}
+With uniform support-side costs, the total surplus associated with partner participation at route $h$ is $(n_h^P)^2/2$. Under the symmetric regional attribution used in the regional objectives, each region receives one half of that national partner surplus. Regional welfare is therefore
+\begin{equation}
+W_i
+=
+PS_i
++
+\frac{(n_1^P)^2+(n_2^P)^2+(n_T^P)^2}{4}
+-
+\frac{\gamma}{2}x_i^2.
+\label{eq:Wi}
+\end{equation}
+Aggregate welfare is
+\begin{equation}
+W^N=W_1+W_2+\Pi_T.
+\label{eq:WN}
+\end{equation}
+
+A project using $H_T$ pays $p_T$ in regional project surplus, while the same payment appears as private profit. Because private operating cost is normalized to zero, the transfer cancels exactly at the aggregate level:
+\[
+-p_Tn_T^F+\Pi_T=0.
+\]
+Accordingly, a lower private price does not mechanically imply higher aggregate welfare.
+
+\subsection{A cross-regional coordination wedge}
+
+At an interior decentralized full-game equilibrium, government $i$'s own reduced first-order condition is zero. Hence the national marginal effect of a coordinated increase in $x_i$ can be written as
+\begin{equation}
+\frac{dW^N}{dx_i}
+=
+\frac{d\widetilde W_j}{dx_i}
++
+\frac{d\Pi_T}{dx_i},
+\qquad j\neq i.
+\label{eq:wedge}
+\end{equation}
+At the verified configuration the rival-region welfare effect is approximately $0.44471$, while the private-profit effect is approximately $-0.02194$. Their sum is
+\[
+\frac{dW^N}{dx_i}\simeq0.42277>0.
+\]
+Thus a real cross-regional coordination externality remains after the private-fee transfer has been removed. Its sign is not implied by the sign of $\BR_i'$.
+
+\subsection{Controlled B3--G comparison}
+
+Table \ref{tab:welfare} reports the generated local welfare comparison. B3 fixes the private price at the equilibrium fee of G; it is an identification benchmark for price endogeneity, not a literal price-regulation experiment.
+
+\begin{table}[t]
+\centering
+\caption{Welfare at the numerical witness}
+\label{tab:welfare}
+\input{../generated/tables/welfare_comparison.tex}
+\end{table}
+
+At this configuration aggregate welfare is higher in G than in B3, but this is a local numerical comparison, not a theorem of global welfare dominance. In particular, Proposition \ref{prop:reversal} does not imply that strategic substitutability is socially desirable, nor does it establish a reversal in the sign of the welfare externality.

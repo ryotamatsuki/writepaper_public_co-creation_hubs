@@ -1,2 +1,15 @@
-\section{Robustness}
-% Stage 10 substantive writing only.
+\section{Robustness}\label{sec:robustness}
+
+The purpose of the robustness analysis is limited: to determine whether the sign reversal in Proposition \ref{prop:reversal} is a knife-edge feature of a single reported parameter vector, the uniform type distribution, the linear cross-side participation equation, or exact symmetry.
+
+First, all inequalities defining the numerical configuration are strict. The project cutoffs and partner masses are interior, the relevant public and private second-order conditions are negative, and both best-response slopes are bounded away from zero. The participation system and first-order conditions are smooth with nonsingular local Jacobians. These properties imply continuity of the equilibrium and derivative objects in a neighborhood of the reported configuration. A deterministic perturbation exercise that varies the primitive vector by $\pm0.5$ percent in 20 reproducible draws preserves
+\[
+\BR_i^{B3\prime}>0>\BR_i^{G\prime}
+\]
+in all 20 cases.
+
+Second, the uniform project-type distribution is not locally essential. Replacing it by a sufficiently small $C^1$ perturbation with positive density at the relevant cutoffs changes project masses and surplus terms smoothly. Conditional on the same interior ordering and nonsingularity, the strict sign inequalities persist by the implicit function theorem.
+
+Third, the linear partner-participation specification is also locally nonessential. Small $C^1$ perturbations of the network functions that preserve the relevant derivative signs and regularity induce continuous changes in the same equilibrium system. The result therefore survives locally without requiring the exact linear form in \eqref{eq:partnerlocal}--\eqref{eq:partnerprivate}.
+
+Finally, small asymmetric perturbations of the action state around the symmetric numerical configuration preserve the strict sign reversal by continuity. This is not a theorem for arbitrary region-specific primitives. The robustness claims are deliberately local: we do not establish a global parameter region, arbitrary-distribution result, arbitrary nonlinear-network result, or fully heterogeneous-regions theorem.

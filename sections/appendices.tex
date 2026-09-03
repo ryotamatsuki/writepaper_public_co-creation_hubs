@@ -1,2 +1,67 @@
-\section{Appendices}
-% Stage 10 substantive writing only.
+\appendix
+\section{Derivations and Computational Certificate}\label{app:derivations}
+
+\subsection{Project cutoffs}
+
+For route $h$, write $a_{rh}=\kappa_{rh}+\mathbf 1\{h=T\}p_T$. The outside cutoff is
+\[
+z_{h0}^r=\frac{a_{rh}}{q_h},
+\]
+and the pairwise cutoff between routes $h$ and $g$, whenever $q_h\neq q_g$, is
+\[
+z_{hg}^r=\frac{a_{rh}-a_{rg}}{q_h-q_g}.
+\]
+Under the central ordering used in the main text, these expressions reduce to the cutoffs in \eqref{eq:cutoffs}.
+
+\subsection{Private-price response}
+
+Differentiating the private first-order condition \eqref{eq:privatefoc} with respect to $x_i$ gives \eqref{eq:px}. When $\beta=0$, private demand is linear. Let $\Delta_i$ denote the corresponding local-private quality difference, define
+\[
+A=\frac{1}{\Delta_1}+\frac{1}{\Delta_2},
+\qquad
+B=\frac{2}{q_T}.
+\]
+The interior private price is
+\[
+p_T^*
+=
+\frac{(\kappa_L-\kappa_T)A-\kappa_TB}{2(A+B)}.
+\]
+Then
+\[
+\frac{\partial p_T^*}{\partial A}
+=
+\frac{\kappa_LB}{2(A+B)^2}>0,
+\qquad
+A_{x_i}=-\frac{\alpha}{\Delta_i^2}<0,
+\]
+so $p_{T,x_i}^*<0$. This limiting case shows that endogenous private pricing does not require two-sided participation. Two-sidedness is instead essential to the positive B3 cross effect used in Proposition \ref{prop:reversal}.
+
+\subsection{Numerical certification}
+
+The production repository solves the participation equations \eqref{eq:Fi}--\eqref{eq:FT}, the private pricing condition \eqref{eq:privatefoc}, and the two public first-order conditions at the frozen parameter vector. It then computes the relevant own and cross derivatives and checks the second-order conditions, interior cutoffs, and partner masses. At the reported configuration,
+\[
+\widetilde W_{i,x_ix_i}<0,
+\quad
+W^{B3}_{i,x_ix_j}>0,
+\quad
+\widetilde W^G_{i,x_ix_j}<0.
+\]
+Consequently the two best-response slopes have strict opposite signs by \eqref{eq:brslope}.
+
+The certificate is reproduced by the repository's numerical verification and generated-results pipeline. Floating-point comparisons use explicit tolerances rather than string equality. A deterministic 20-draw perturbation audit moves the primitive vector by up to $\pm0.5$ percent and verifies that all draws retain the headline sign pattern.
+
+\subsection{Local continuity argument}
+
+Because the relevant participation equations and first-order conditions are continuously differentiable and their local Jacobians are nonsingular at the certificate, the implicit function theorem yields locally continuous equilibrium policies and derivatives. The strict inequalities defining the interior regime, second-order conditions, and opposite-sign best-response slopes therefore persist on a sufficiently small open neighborhood. The analogous robustness statements for smooth perturbations of the type distribution and network functions are conditional on maintaining positive cutoff densities, the central allocation ordering, and local nonsingularity.
+
+\section{Additional Tables}\label{app:tables}
+
+\begin{table}[h]
+\centering
+\caption{Benchmark parameters}
+\label{tab:parameters}
+\input{../generated/tables/canonical_parameters.tex}
+\end{table}
+
+The parameter table is generated from the same machine-readable result layer as Tables \ref{tab:strategic} and \ref{tab:welfare}.
