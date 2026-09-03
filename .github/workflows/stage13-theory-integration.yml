@@ -1,0 +1,35 @@
+name: stage13-theory-integration
+on:
+  push:
+    branches: ['co-creation-theory/stage13r-tp-level2-integration']
+  pull_request:
+    paths:
+      - 'paper/**'
+      - 'sections/**'
+      - 'scripts/validate_manuscript.py'
+      - 'reviews/STAGE_13R_TP_*.md'
+      - '.github/workflows/stage13-theory-integration.yml'
+permissions:
+  contents: read
+jobs:
+  theory-integration:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: {python-version: '3.13'}
+      - run: python -m pip install -r requirements.txt
+      - name: Install TeX toolchain
+        run: sudo apt-get update && sudo apt-get install -y latexmk texlive-latex-base texlive-latex-recommended texlive-latex-extra
+      - name: Production reproducibility hard gate
+        run: make clean && make all
+      - name: Small-beta analytic identities
+        run: |
+          python analytic_level3/code/derive_small_beta.py
+          python analytic_level3/code/verify_threshold.py
+      - name: L3-0 symbolic and witness checks
+        run: |
+          python analytic_level3/code/verify_symbolic_identities.py
+          python analytic_level3/code/verify_witness.py
+      - name: Exact canonical G-B3 certificate
+        run: python analytic_level3_reopen/code/verify_l31.py
