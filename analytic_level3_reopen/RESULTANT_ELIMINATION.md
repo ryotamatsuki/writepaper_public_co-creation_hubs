@@ -45,7 +45,14 @@ linear in `q_T`, with degrees 8 in `t` and 4 in `p`. Eliminating `q_T` gives a
 boundary factor `(50p+1)^2` under the canonical rationalization and one core
 polynomial of degree 14 in `t` and 7 in `p`.
 
-The next exact coupling step—eliminating the algebraic G price between the
-degree-31 G price component and the B3 core—was attempted directly. SymPy did
-not finish within the 60-second resource limit. This is recorded as a
-method-specific computational obstruction, not mathematical nonexistence.
+Directly eliminating the algebraic G price between the degree-31 G price
+component and the B3 core was attempted. SymPy did not finish within the
+60-second resource limit. That remains a method-specific failure of the direct
+resultant route.
+
+It is not an unresolved L3-1 proof obligation. The canonical matched-price
+coupling was subsequently closed by `code/verify_l31.py`, which uses a
+five-polynomial rational Krawczyk certificate to isolate jointly
+`(t_G,q_G,p_G,t_B,q_B)` with one common `p_G` and distinct G/B3 public roots.
+The remaining unresolved elimination problem is the non-calibrated primitive
+projection, not canonical price matching.
