@@ -1,0 +1,7 @@
+# Closest-Paper Distinction
+
+The closest literature already contains the components that make the mechanism possible. López and Vives (2019) show explicitly that endogenous later-stage price responses enter first-stage investment incentives and that the price-response contribution can be negative; this absorbs any claim that the negative follower-price channel is new. Zogheib and Bourreau (2021) and Mun (2019) substantially narrow claims based on mixed public/private objectives or multiple regional governments, while Hahn and Kim (2026) shows that endogenous downstream pricing can attenuate platform-investment effects. The surviving distinction is therefore narrower: in the same two-public/one-private game, cross-side participation generates a positive public-public strategic relation when the third actor's price is fixed, whereas restoring that actor's optimizing price response can overturn the positive term and make the same public investments strategic substitutes. The Stage-6 audit located no Distance-0/1 theorem or direct relabeling that delivers this nested-benchmark qualitative reversal.
+
+## Editorial verdict
+
+**Distinct enough to support a focused paper, but not enough to support a broad claim of a new price-response theory.**

@@ -1,0 +1,5 @@
+# Notation-Free Mechanism
+
+Regional governments invest in public innovation hubs that attract projects partly by building a thicker ecosystem of partners and support services. Because projects and partners are linked across the competing routes, one region's investment can raise the return to investment in the other region when the common private alternative keeps its price fixed. The strategic relation changes when that private metropolitan hub is allowed to react. Public expansion reduces or reshapes private demand, the private hub reprices, and that price response reallocates projects and network participation across both regions. If this indirect repricing effect is strong enough, it overturns the original positive network linkage: investments that are strategic complements under a fixed private price become strategic substitutes in the full game.
+
+Verdict: **the mechanism is explainable without notation and is economically distinct from the algebra used to certify it.**
