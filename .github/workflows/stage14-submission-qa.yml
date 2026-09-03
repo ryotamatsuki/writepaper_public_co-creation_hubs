@@ -43,7 +43,7 @@ jobs:
       - name: Refresh stale title-page manuscript title
         run: python scripts/refresh_title_page.py
       - name: Stage-14 package and redacted title-page audit
-        run: python scripts/stage14_submission_audit.py
+        run: python scripts/stage14_submission_audit_v2.py
       - name: Candidate PDF structural preflight
         run: |
           pdfinfo paper/main.pdf | tee generated/stage14/pdfinfo.txt
