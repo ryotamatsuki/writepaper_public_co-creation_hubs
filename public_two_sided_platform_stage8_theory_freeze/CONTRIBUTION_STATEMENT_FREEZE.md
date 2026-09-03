@@ -1,0 +1,5 @@
+# Contribution Statement Freeze
+
+We study decentralized regional public innovation hubs that compete for focal projects while sharing a priced private innovation hub as an outside option. Cross-side participation can make the public investments strategic complements when the private access price is held fixed, yet the same investments can become strategic substitutes when the private hub optimally reprices; the contribution is this benchmark-to-full-game qualitative reversal, not the separate network or price-response components. Exact welfare accounting shows that the strategic reversal is distinct from a welfare reversal: under the frozen aggregate accounting the private access payments are transfers, while decentralized public investment creates a real cross-regional coordination externality through allocation and network participation. The sign reversal is locally robust to smooth perturbations of project heterogeneity and network functions, and the underlying institutional class has documented analogues in Japan and abroad.
+
+This is the maximum approved contribution envelope. Any stronger substantive wording requires theory change control.
