@@ -20,23 +20,30 @@ Then
 `theta in Theta_REV  <=>  exists z : Phi(theta,z)`.
 
 This is an exact quantified semialgebraic characterization. By
-Tarski–Seidenberg it has an equivalent quantifier-free primitive form.
+Tarski-Seidenberg it has an equivalent quantifier-free primitive form.
 
-## Why this does not yet count as L3-S
+## Why this does not yet count as Level 3
 
-The stage success standard requires the projected conditions themselves, or an
-algebraic-root characterization with completed unique branch isolation and sign
-queries. L3-1 has not computed the full projection and has not completed the G
-cross/SOC sign query together with matched B3 coupling.
+At the canonical rational calibration, L3-1 does complete unique coupled branch
+isolation and the required sign queries: a five-polynomial rational Krawczyk
+certificate jointly isolates `(t_G,q_G,p_G,t_B,q_B)`, and rational interval
+implicit differentiation certifies the G/B3 SOC and cross signs.
 
-Therefore this file records mathematical existence, not a claimed Level-3
-success.
+The remaining Level-3 requirement is different: the projected conditions must
+hold as an explicitly computed necessary-and-sufficient characterization over a
+declared non-calibrated primitive region. L3-1 has not computed that parametric
+projection or uniform root-selection theorem.
+
+Therefore this file records both mathematical existence and exact canonical
+closure, without claiming a primitive-space Level-3 success.
 
 ## Status
 
-- necessary conditions: identified;
+- exact quantified semialgebraic characterization: **YES**;
+- canonical coupled root/sign decision: **PASS**;
+- necessary primitive conditions: identified as projection obligations;
 - sufficient conditions: existing small-`beta` Level-2 theorem survives;
-- primitive necessary-and-sufficient formula: **exists in principle, not
-  explicitly computed**;
+- primitive necessary-and-sufficient formula: **exists in principle, not explicitly computed**;
 - primitive-only explicit condition set: **NO**;
-- unique threshold: **NO**.
+- uniform primitive branch-selection theorem: **NO**;
+- unique scalar threshold: **NO**.
