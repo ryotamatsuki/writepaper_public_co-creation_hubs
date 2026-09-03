@@ -4,81 +4,47 @@
 
 **NO-GO LEVEL 3 / GO LEVEL 2**
 
-This verdict is materially different from L3-0.
+This verdict no longer rests on unresolved canonical matched-price or G-sign calculations. Those are now closed exactly.
 
-## What L3-0 got wrong
+## What L3-1 changes relative to L3-0
 
-The obstacle is **not mathematical non-characterizability**.
+The obstacle is **not mathematical non-characterizability**. After polynomialization and denominator-sign bookkeeping, the regular-interior reversal set is the projection of a semialgebraic set. Tarski–Seidenberg implies that a primitive necessary-and-sufficient semialgebraic characterization exists in principle.
 
-After polynomialization and denominator-sign bookkeeping, the regular-interior
-reversal set is the projection of a semialgebraic set. Tarski–Seidenberg implies
-that a primitive necessary-and-sufficient semialgebraic characterization exists.
+L3-1 establishes:
 
-Therefore "the condition may not exist" is rejected.
+1. symmetry-first `(t,q_T,p)` coordinates remove `x` exactly;
+2. equilibrium-manifold/cofactor reduction avoids the raw six-digit derivative expansion;
+3. the canonical G stationary projection contains the relevant degree-31 algebraic component;
+4. the matched B3 public equation contributes a degree-14-in-`t_B`, degree-7-in-`p_G` non-boundary factor;
+5. one exact rational Krawczyk system jointly selects `t_G,q_G,p_G,t_B,q_B`, preserving `x_B != x_G` and `bar p=p_G`;
+6. exact rational interval implicit differentiation proves B3 `H11<0<H12`, G `H11<0` and `H12<0`, strict private price SOC, and `p_{x_i}<0`.
 
-## What L3-1 established
+Therefore the canonical headline `BR_i^{B3'}>0>BR_i^{G'}` is now exactly certified.
 
-1. Symmetry-first coordinates `(t,q_T,p)` remove `x` exactly.
-2. The network parameter is invertible on the participation manifold:
-   `delta=q_T(q_T-A_T)/(2(t q_T-a))`.
-3. The generic symmetric private FOC reduces to a degree-7-in-`t`, quartic-in-`p`
-   non-boundary core.
-4. Canonical G public equilibrium elimination factors strongly; the target branch
-   lies on a degree-31 algebraic component.
-5. Canonical G `t` and `p` roots are exactly Sturm-isolated.
-6. A component Gröbner basis makes `p` linear over the degree-31 `t` field.
-7. B3 FOC, own derivative and cross derivative all reduce to polynomial sign
-   blocks linear in `q_T`.
-8. Raw symbolic size falls sharply after equilibrium-ideal reduction.
+## Why this is still not Level 3
 
-## Why Level 3 still fails
+The task's Level-3 success standard requires a necessary-and-sufficient characterization on a declared non-calibrated regular-interior parameter regime. L3-1 does not compute:
 
-A Level-3 success requires the complete B3/G reversal decision, not only exact
-G root geometry.
+- a primitive-only finite inequality system for the reversal region;
+- a CAD/sign-invariant decomposition of primitive space;
+- primitive Sturm/Thom conditions that select the relevant G and B3 branches uniformly over the symmetric regular-interior regime;
+- a unique scalar threshold.
 
-Two obligations remain open:
+Tarski–Seidenberg proves such a semialgebraic projection exists, but existence is not the same as a computed scientifically usable theorem.
 
-- matched-price coupling: the algebraic G price must select the distinct B3
-  public equilibrium root with exact branch isolation;
-- G sign query: the complete reduced G public own and cross derivatives must be
-  sign-determined at the selected algebraic equilibrium.
-
-Direct symbolic G cross construction reaches roughly 390k raw operations and
-more than 425k after common-denominator assembly before final ideal reduction.
-The direct resultant coupling the degree-31 G price component to the B3 core did
-not complete within the 60-second resource cap.
-
-No complete primitive projection, no finite primitive N&S condition set, and no
-completed L3-R root/sign package was obtained.
-
-## Strong Level-2 status
-
-The L3-0 small-`beta` theorem remains valid and is now supported by a clearer
-algebraic architecture. It is still the strongest proved theorem: on continuing
-regular/SOC symmetric branches, sufficiently small positive `beta` implies
-`BR_i^{B3'}>0>BR_i^{G'}`.
-
-## Mathematical obstacle versus expository obstacle
+## Mathematical versus expository obstacle
 
 - mathematical non-characterizability: **NO**;
 - exact decidability in principle: **YES**;
+- canonical coupled algebraic decision: **YES**;
 - exact primitive projection computed: **NO**;
-- current computational obstacle: **YES**;
-- human-readable single threshold: **not found**.
+- current obstacle: parametric projection/branch-selection complexity across all active primitives;
+- human-readable scalar threshold: not found.
+
+## Strong Level-2 status
+
+The L3-0 small-`beta` theorem remains valid and is now supplemented by an exact canonical algebraic certificate. No production theory or manuscript is modified.
 
 ## Exact next step
 
-Do not repeat broad L3-1 exploration. A follow-up should be a narrowly scoped
-**L3-2 component-wise exact sign engine**:
-
-1. keep the degree-31 canonical/general component factored;
-2. compute the G reduced Hessian modulo the augmented equilibrium ideal before
-   common-denominator expansion, preferably with modular/subresultant arithmetic;
-3. derive a linear/rational representation of `p_G` on each admissible component;
-4. couple B3 using component-wise Gröbner/subresultant elimination rather than a
-   monolithic resultant;
-5. implement Thom/Sturm sign queries for `M_G`, `M_B3`, and both SOCs;
-6. only then reopen primitive CAD or parametric `beta` boundary analysis.
-
-A CAS with Singular/Sage/Mathematica/Maple/Redlog capabilities would materially
-improve this next step.
+Do not repeat broad symbolic expansion. A future Level-3 continuation should start from the already reduced symmetric system and use a genuine parametric CAD/regular-chains/subresultant toolchain to project the SOC, branch-selection, and cross-sign inequalities into primitive space. Separately, the immediately useful publication step is a Level-2 integration/referee stage that converts the small-`beta` theorem plus exact canonical certificate into appendix-quality lemmas and reassesses journal positioning.

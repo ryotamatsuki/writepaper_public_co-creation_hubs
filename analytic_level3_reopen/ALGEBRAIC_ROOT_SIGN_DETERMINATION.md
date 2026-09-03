@@ -1,35 +1,18 @@
 # Algebraic-Root Sign Determination
 
-## What succeeded
+L3-1 closes the two canonical sign obligations that remained open in the first PR #40 draft.
 
-The canonical G equilibrium root is exactly isolatable without radicals.
-Sturm root counts identify unique rational intervals for both `t_G` and `p_G`.
-A component Gröbner basis then makes `p_G` a rational function of the isolated
-degree-31 algebraic `t_G`.
+The proof does not solve the degree-31 root by radicals. `code/verify_l31.py` first isolates the coupled G/B3 stationary solution with an exact rational Krawczyk certificate. It then computes reduced Hessians through the participation/private-price implicit systems using exact `Fraction` interval arithmetic and cofactor/determinant inverses.
 
-This is the correct architecture for exact sign determination:
+Certified intervals:
 
-1. isolate the target root by a Thom/Sturm encoding;
-2. reduce the sign polynomial modulo the equilibrium ideal;
-3. evaluate its sign at that encoded root through a Sturm/subresultant query.
+- `H11_B3 in (-0.118357218885676,-0.118357218885651)`;
+- `H12_B3 in (0.0135431333332136,0.0135431333332153)`;
+- `H11_G in (-0.199391062101166,-0.199391062101008)`;
+- `H12_G in (-0.00480853615115529,-0.00480853615112228)`;
+- private price SOC in `(-52.1627947003595,-52.1627947003591)`;
+- `p_{x_i}` in `(-0.0165046011641228,-0.0165046011641190)`.
 
-## B3 cross and SOC blocks
+Hence, under strict SOCs, the BR-slope intervals are approximately B3 `(0.114425917242068,0.114425917242105)` and G `(-0.024116106812849,-0.024116106812664)`.
 
-For fixed matched price, exact B3 cross and own derivative numerators were
-reduced to polynomials linear in `q_T`. Thus their zero boundaries can be
-eliminated jointly with the participation and B3 FOC equations. This is a
-tractable exact sign-query architecture in principle.
-
-## Remaining G obstruction
-
-The exact G reduced Hessian can be written from the augmented follower system,
-but direct symbolic construction of the complete cross derivative produces an
-expression of roughly 390k raw operations before common-denominator processing.
-A `together` form exceeded 425k operations. Attempting full degree extraction /
-expansion hit the imposed 60-second limit.
-
-Therefore this stage did **not** complete the final Sturm/subresultant sign query
-for `M_G` at the algebraic root. The obstacle is computational expression
-management, not inability to define the sign exactly.
-
-No claim of an exact G cross-sign certificate is made here.
+This is an exact sign-at-algebraic-root result for the canonical calibration. What remains missing for Level 3 is the non-calibrated primitive projection/root-selection theorem.

@@ -1,31 +1,25 @@
-# Witness Cell Certificate
+# Canonical Witness Certificate
 
-## Exact achievements
+The canonical finite-decimal primitives are represented exactly as rationals. L3-1 now certifies the **coupled** G/B3 stationary root, not G alone.
 
-The canonical primitives are represented exactly as rationals.
+An exact rational Krawczyk operator proves one and only one solution inside:
 
-For the full-game symmetric equilibrium projection:
+- `t_G in (0.5848900730,0.5848900731)`;
+- `q_G in (0.1388515735,0.1388515736)`;
+- `p_G in (0.0227466514,0.0227466515)`;
+- `t_B in (0.6100908625,0.6100908626)`;
+- `q_B in (0.1402669351,0.1402669352)`.
 
-- the target `t_G` lies on a degree-31 algebraic component;
-- Sturm count is exactly one on `(58489/100000,58490/100000)`;
-- the target `p_G` lies on a degree-31 price component;
-- Sturm count is exactly one on `(22746/1000000,22747/1000000)`;
-- a component Gröbner basis gives a linear relation in `p`, so `p_G` is an
-  exact algebraic function of the isolated `t_G`.
+Reconstruction gives `x_G≈0.684028196361275` and `x_B≈0.656020390747393`, so the matched-price coupling is respected with `x_B != x_G` and common algebraic `p_G`.
 
-The production numerical witness remains a consistent cross-check.
+Exact rational interval implicit differentiation then proves:
 
-## What is not yet certified
+- B3 public SOC `<0` and cross derivative `>0`;
+- G public SOC `<0` and cross derivative `<0`;
+- private price SOC `<0`;
+- `p_{x_i}<0`;
+- follower/public Jacobians nonsingular on the isolating box.
 
-This is **not** yet a complete witness-cell Level-3 certificate because two
-logical links remain incomplete:
+The canonical reversal is therefore an exact computer-assisted algebraic certificate, not a floating-point witness.
 
-1. exact matched-price coupling to the distinct B3 public equilibrium root;
-2. exact algebraic-root sign determination for the complete G reduced cross
-   derivative and public SOC.
-
-Therefore the canonical witness is upgraded from a purely floating-point
-equilibrium object to an exactly isolated G algebraic branch, but the entire
-B3/G reversal cell is not yet characterized.
-
-This file deliberately does not overstate the proof status.
+This is **not** a primitive-parameter witness-cell theorem: a full CAD/sign-invariant primitive cell around the calibration was not computed. That distinction prevents overclaiming Level 3.

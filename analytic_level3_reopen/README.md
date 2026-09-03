@@ -1,41 +1,11 @@
 # Stage L3-1 — Multi-Frontier Analytic Solvability Reopen
 
-This directory is an experimental stacked theory-upgrade track based on PR #39 HEAD
-`c4d7936a98d685a6f1ddc0a24492ab50f129deae`. It does not modify the production
-manuscript, Stage-8 frozen model, or Stage-12 positioning.
+This directory is a stacked experimental theory-upgrade track on PR #39. It does not modify the production manuscript, Stage-8 frozen theory, Stage-9 reproducibility artifacts, or Stage-12 positioning.
 
-## Reopen result in one sentence
+The decisive correction to L3-0 is conceptual: complexity is not impossibility. After polynomialization, the symmetric regular-interior reversal set is semialgebraic in principle by Tarski–Seidenberg. The open question is whether the primitive projection can be computed and compressed into a usable theorem.
 
-L3-0's statement that a primitive necessary-and-sufficient characterization may
-"not exist" is too strong. After denominator clearing the central regime is
-semialgebraic, so its primitive projection exists by Tarski–Seidenberg. The actual
-question is computational and expository: whether that exact projection can be
-computed and compressed into a scientifically usable finite condition set.
+L3-1 improves the exact algebra substantially. Symmetry plus participation reconstruction reduces the full-game stationary core to low-dimensional polynomial systems. At the exact rational canonical calibration, the G projection has a relevant degree-31 factor and the matched B3 equation a degree-14 factor. A fully rational Krawczyk calculation now jointly certifies the distinct G and B3 roots linked by the same algebraic `p_G`, and exact rational interval implicit differentiation certifies `H11_B3<0<H12_B3`, `H11_G<0`, `H12_G<0`, strict private price SOC, and negative `p_x`.
 
-## Strongest new structural finding
+Thus the canonical reversal is exact, not merely numerical. Level 3 nevertheless remains NO-GO because no primitive necessary-and-sufficient projection/root-selection theorem was computed over the non-calibrated symmetric regular-interior parameter region.
 
-On the symmetric regular-interior branch, use `(t,q_T,p)` instead of `(x,t,q_T,p)`.
-The exact identities are
-
-`q_T^2-(A_T+2*delta*t)q_T+2*delta*a=0`,
-
-`x=(q_T+d/t-delta(1-t)-v)/alpha-rho`,
-
-and
-
-`delta=q_T(q_T-A_T)/(2(t q_T-a))`.
-
-The symmetric private FOC, after reduction modulo the participation quadratic,
-is linear in `q_T`; eliminating `q_T` yields boundary factors times one core
-polynomial that is degree 7 in `t` and quartic in `p`. This is materially smaller
-than the raw degree-8/9 systems reported in L3-0.
-
-## Current status
-
-The canonical full-game equilibrium can be projected to exact univariate algebraic
-components; its economically relevant `t` and `p` roots are Sturm-isolatable.
-However, the joint matched-price elimination linking that algebraic G price to
-the distinct B3 public equilibrium remains the main bottleneck, and a full
-primitive necessary-and-sufficient reversal region was not produced in this stage.
-
-See `LEVEL3_REOPEN_VERDICT.md` for the final classification.
+Exact verifier: `code/verify_l31.py`.

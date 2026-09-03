@@ -29,3 +29,5 @@ jobs:
         run: python analytic_level3_reopen/code/verify_b3_reduction.py
       - name: L3-1 canonical exact elimination
         run: python analytic_level3_reopen/code/canonical_elimination.py
+      - name: L3-1 coupled exact root and sign certificate
+        run: python analytic_level3_reopen/code/verify_l31.py
