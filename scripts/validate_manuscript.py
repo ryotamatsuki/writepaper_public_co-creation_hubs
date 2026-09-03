@@ -21,10 +21,22 @@ used = {k.strip() for block in cite_blocks for k in block.split(",") if k.strip(
 missing = used - bib_keys
 assert not missing, f"missing bibliography keys: {sorted(missing)}"
 
-# Headline proposition and proof-ceiling language.
+# Headline theorem and proof-status discipline.
 assert r"\BR_i^{B3\prime}>0>\BR_i^{G\prime}" in text, "headline sign reversal missing"
+assert r"\begin{theorem}[Local strategic sign reversal]" in text, "analytic theorem missing"
+assert r"\begin{proposition}[Exact certification at the canonical parameter vector]" in text, "exact canonical certificate proposition missing"
 assert "global sign theorem" in text, "global-theorem limitation must remain explicit"
-assert "not an empirical calibration" in text, "numerical witness must not be framed as calibration"
+assert "not an empirical calibration" in text, "canonical vector must not be framed as empirical calibration"
+assert "primitive" in text and "necessary-and-sufficient" in text, "primitive-classification limitation must remain explicit"
+
+# Prevent regression to the superseded numerical-only proof ceiling.
+legacy_proof_phrases = [
+    "numerically certified existence result",
+    "numerically certified existence statement",
+    "computationally certified local strategic reversal",
+]
+for phrase in legacy_proof_phrases:
+    assert phrase.lower() not in text.lower(), f"superseded numerical-only proof status found: {phrase}"
 
 # Killed-claim safeguards in manuscript prose.
 dangerous = [
@@ -32,6 +44,7 @@ dangerous = [
     "strategic complements are socially desirable",
     "optimal policy is to fix",
     "we prove that endogenous pricing makes public investments strategic substitutes",
+    "we characterize the complete primitive parameter region",
 ]
 for phrase in dangerous:
     assert phrase.lower() not in text.lower(), f"killed/overclaim language found: {phrase}"
