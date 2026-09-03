@@ -1,0 +1,11 @@
+{
+  "_generated": "DO NOT EDIT — GENERATED FILE",
+  "files": {
+    "generated/figures/README.md": {"bytes": 104, "sha256": "9bead428d6f0fc7f44933224855e166183d6f1183c6954f221e73961eb8bc0a1"},
+    "generated/results/canonical_results.json": {"bytes": 2124, "sha256": "317e3f19e5da702803c3e4e3f99d580e425e3b589c4eeb2cef39196d709020bb"},
+    "generated/tables/canonical_parameters.tex": {"bytes": 248, "sha256": "57aa14e8bc3fd55047c4e31f6f898d87a70aeadfe75572a2f55395ebe30ccb15"},
+    "generated/tables/proof_status.tex": {"bytes": 199, "sha256": "870529f338317c09fb2b84b3e3a41055cce63c818e5bcef9f09b9594c2225c62"},
+    "generated/tables/strategic_results.tex": {"bytes": 181, "sha256": "35d179f4df3e7d898e478f6b21a63a7b0b874e7e9d1ba5c5a9e29e7bea34549a"},
+    "generated/tables/welfare_comparison.tex": {"bytes": 212, "sha256": "48cb7ff9fb1431d6eb8a18c55aea238a4901c088e3b6ae4d68dd4d9e77ad996d"}
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "_generated": "DO NOT EDIT — GENERATED FILE",
+  "computed": {
+    "B3": {"BR_slope": 0.11443599844454423, "cross_second": 0.013543617462098548, "own_second": -0.11835102280915384, "x_stage4_script": 0.6560164129736359},
+    "B3_welfare_script_x": 0.6560203078700242,
+    "G": {"BR_slope": -0.024119527073232862, "cross_second": -0.004809167261951883, "own_second": -0.19938895349606398, "p_T": 0.022746652886822923, "x": 0.6840281531716518},
+    "coordination": {"national_wedge": 0.4227793027603531, "private_profit": -0.02193824868235508, "rival_welfare": 0.44471755144270814},
+    "local_perturbation_successes": 20, "local_perturbation_total": 20, "private_price_response": -0.016471065568401944,
+    "welfare": {"B3": {"Pi_T": 0.013890870120224181, "W_N": 0.4357138375556329, "W_i": 0.21091148371770438, "n_T": 0.6106775585221207, "p_T": 0.022746652347666072, "x": 0.6560203078700242}, "G": {"Pi_T": 0.012603077752157493, "W_N": 0.4586419870125594, "W_i": 0.22301945463020098, "n_T": 0.5540629697736879, "p_T": 0.022746652347666072, "x": 0.6840281695033945}},
+    "welfare_difference": 0.022928149456926505
+  },
+  "frozen_display": {"B3_br": 0.114409, "B3_strategic_x": 0.65602, "B3_welfare_x": 0.656016, "G_br": -0.024118, "G_p": 0.0227467, "G_x": 0.684028, "p_x": -0.016505},
+  "journal_target": "NOT SELECTED",
+  "parameters": {"alpha": 0.5, "beta": 0.05, "gamma": 0.9, "k": 0.27, "kT": 0.02, "rho": 0.15, "rhoT": 0.05, "tau": 0.05, "v": 0.1},
+  "proof_status": {"headline": "NUMERICALLY SUPPORTED ONLY", "robustness": "LOCAL/CONDITIONAL"},
+  "sources": ["public_two_sided_platform_hard_kill/code/numerical_hard_kill.py", "public_two_sided_platform_welfare_generality/scripts/welfare_b3_vs_g.py", "public_two_sided_platform_stage8_theory_freeze/NUMERICAL_WITNESS_REGISTER.md"]
+}
