@@ -39,7 +39,9 @@ so $p_{T,x_i}^*<0$. This limiting case shows that endogenous private pricing doe
 
 \subsection{Numerical certification}
 
-The production repository solves the participation equations \eqref{eq:Fi}--\eqref{eq:FT}, the private pricing condition \eqref{eq:privatefoc}, and the two public first-order conditions at the frozen parameter vector. It then computes the relevant own and cross derivatives and checks the second-order conditions, interior cutoffs, and partner masses. At the reported configuration,
+The production repository solves the participation equations \eqref{eq:Fi}--\eqref{eq:FT}, the private pricing condition \eqref{eq:privatefoc}, and the two public first-order conditions at the benchmark parameter vector. The certificate is accepted only after the following gates hold simultaneously: the participation and decision first-order conditions are satisfied within the documented numerical tolerances; the central allocation cutoffs and project and partner masses are interior; the private and public second-order conditions are negative; the local participation and equilibrium Jacobians are nonsingular; and the B3 and G public cross derivatives, and therefore best-response slopes, have strict opposite signs. Thus the computation verifies the intended local equilibrium rather than only solving an isolated public first-order condition.
+
+At the reported configuration,
 \[
 \widetilde W_{i,x_ix_i}<0,
 \quad
@@ -47,9 +49,9 @@ W^{B3}_{i,x_ix_j}>0,
 \quad
 \widetilde W^G_{i,x_ix_j}<0.
 \]
-Consequently the two best-response slopes have strict opposite signs by \eqref{eq:brslope}.
+Consequently the two best-response slopes have strict opposite signs by \eqref{eq:brslope}. The production verification computes these derivatives from the same equilibrium system used to generate the reported tables. An independent re-run of the frozen verification code during manuscript review reproduced the equilibrium, sign, interiority, second-order, and nonsingularity gates.
 
-The certificate is reproduced by the repository's numerical verification and generated-results pipeline. Floating-point comparisons use explicit tolerances rather than string equality. A deterministic 20-draw perturbation audit moves the primitive vector by up to $\pm0.5$ percent and verifies that all draws retain the headline sign pattern.
+The certificate is reproduced by the repository's numerical verification and generated-results pipeline. Floating-point comparisons use explicit tolerances rather than string equality. A deterministic 20-draw perturbation audit moves the primitive vector by up to $\pm0.5$ percent and verifies that all draws retain the headline sign pattern. This audit is computational confirmation of local stability; the formal local-persistence statement rests on strict inequalities and the regular implicit-function system, not on the number of perturbation draws.
 
 \subsection{Local continuity argument}
 
