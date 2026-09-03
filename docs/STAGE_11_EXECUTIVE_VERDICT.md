@@ -25,10 +25,14 @@
 
 **MAJOR BUT DEFENSIBLE.** Removing repricing leaves known fixed-price network complementarity; removing the two-sided channel leaves a known private price-response force. With both present, the nested comparison changes the qualitative public-public strategic relation, and this whole object was not located as a direct relabeling/restriction of the verified closest literature. The contribution remains narrow and should be positioned accordingly in Stage 12.
 
+## Reproducibility closeout
+
+PR #37 manuscript/referee-content HEAD `9f9e29e18f04009f3a332014f776bd1ac16df7c8` passed GitHub Actions run `33716434399`, job `100526486327`. The clean checkout completed `make clean && make all` successfully, including freeze, symbolic and numerical verification, the 20/20 certificate, bibliography validation, manuscript lint, tests, generated outputs, BibTeX/cross-reference resolution, and PDF build. The revised PDF is 15 pages.
+
 ## Final Stage-11 verdict
 
 **GO TO JOURNAL POSITIONING**
 
 ## Stage-12 authorization
 
-**STAGE 12 — JOURNAL POSITIONING AUTHORIZED**, conditional only on the Stage-11 PR-head clean CI gate remaining green. Journal selection must fit the surviving narrow contribution and may not reshape the theory.
+**STAGE 12 — JOURNAL POSITIONING AUTHORIZED.** Journal selection must fit the surviving narrow contribution and may not reshape the theory.

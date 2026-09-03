@@ -1,7 +1,7 @@
 # Stage 11 → Stage 12 Contract
 
 ## Authorization
-Stage 12 may begin only after the Stage-11 PR-head clean CI gate passes.
+**STAGE 12 — JOURNAL POSITIONING AUTHORIZED.** The Stage-11 manuscript/referee-content clean CI gate passed on run `33716434399` / job `100526486327` with `make clean && make all` successful. The final status-only closeout HEAD must remain green, but no substantive Stage-11 blocker remains.
 
 ## Surviving manuscript object
 - **Working title:** Strategic Interaction among Public Innovation Hubs under Private Repricing
