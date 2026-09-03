@@ -20,7 +20,7 @@ assert jel
 jel_codes = re.findall(r"\b[A-Z][0-9]{2}\b", jel.group(1))
 assert len(jel_codes) >= 2
 assert "Data Availability Statement" in main
-assert "Generative AI tools were used" in main
+assert "OpenAI ChatGPT was used" in main
 
 text = "\n".join([main] + [p.read_text(encoding="utf-8") for p in sorted((ROOT / "sections").glob("*.tex"))])
 for pattern in [r"\bTODO\b", r"\bFIXME\b", r"\bTK\b", r"citation needed", r"\bplaceholder\b", r"\bStage 13\b", r"\bStage 14\b", r"\bL3-1\b", r"\breviewer attack\b"]:
