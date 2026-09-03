@@ -4,7 +4,7 @@
 - Base branch: `co-creation-theory/stage075r-tp-full-theory-freeze-decision`
 - Base SHA: `e254c7e2ee4779f8ef8bd2ad9689218f0919fcb5`
 - Stage 8 branch: `co-creation-theory/stage8r-tp-canonical-theory-freeze`
-- Canonical freeze payload commit SHA: **PENDING COMMIT CREATION**
+- Canonical freeze payload commit SHA: `53405fa904dd31817639a734de2063158ec69321`
 - Workflow: v1.1
 - Workflow release SHA: `488e5ab06c207909296a7564eaf9066f7f94319c`
 - Stage-8 template SHA: `3f14e261fee4791840bd6f869fe5571380c883df`
@@ -19,4 +19,4 @@
 - Journal target: NOT SELECTED; deferred to Stage 12
 - Verdict: **THEORY FROZEN — GO TO REPRODUCIBILITY SETUP**
 
-The payload SHA is filled in by a manifest-finalization commit after the immutable freeze payload commit is created; a Git commit cannot contain its own SHA because the SHA depends on the manifest blob itself.
+`53405fa904dd31817639a734de2063158ec69321` is the immutable Stage-8 freeze payload identifier. This manifest-finalization commit only replaces the placeholder with that already-created payload SHA; it does not alter theory or any other freeze artifact. A Git commit cannot literally embed its own final SHA because that SHA depends on the manifest blob itself.
