@@ -1,0 +1,76 @@
+name: stage14-submission-qa
+on:
+  push:
+    branches: ['co-creation-theory/stage14r-tp-jpet-submission-qa']
+    paths-ignore:
+      - 'submission/jpet/qa_candidate_manuscript.pdf'
+  pull_request:
+    paths:
+      - 'paper/**'
+      - 'sections/**'
+      - 'references/**'
+      - 'scripts/**'
+      - 'tests/**'
+      - 'submission/jpet/**'
+      - 'docs/STAGE_14_JPET_REQUIREMENTS_LEDGER.md'
+      - 'reviews/STAGE_14R_TP_*.md'
+      - 'Title_Page.docx'
+      - '.github/workflows/stage14-submission-qa.yml'
+permissions:
+  contents: read
+jobs:
+  submission-qa:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: {python-version: '3.13'}
+      - run: python -m pip install -r requirements.txt
+      - name: Install TeX and PDF QA toolchain
+        run: sudo apt-get update && sudo apt-get install -y latexmk texlive-latex-base texlive-latex-recommended texlive-latex-extra poppler-utils
+      - name: Clean production reproducibility gate
+        run: make clean && make all
+      - name: Small-beta analytic identities
+        run: |
+          python analytic_level3/code/derive_small_beta.py
+          python analytic_level3/code/verify_threshold.py
+      - name: L3-0 symbolic and witness checks
+        run: |
+          python analytic_level3/code/verify_symbolic_identities.py
+          python analytic_level3/code/verify_witness.py
+      - name: Exact canonical G-B3 certificate
+        run: python analytic_level3_reopen/code/verify_l31.py
+      - name: Refresh stale title-page manuscript title in workspace
+        run: python scripts/refresh_title_page.py
+      - name: Stage-14 package and redacted title-page audit
+        run: python scripts/stage14_submission_audit_v2.py
+      - name: Candidate PDF structural preflight
+        run: |
+          pdfinfo paper/main.pdf | tee generated/stage14/pdfinfo.txt
+          test "$(pdfinfo paper/main.pdf | awk '/^Pages:/ {print $2}')" -gt 0
+          pdftotext paper/main.pdf generated/stage14/manuscript.txt
+          ! grep -E '\?\?|Citation.*undefined|Reference.*undefined' generated/stage14/manuscript.txt
+      - name: Build sanitized source candidate
+        run: |
+          rm -rf /tmp/jpet-source-candidate
+          mkdir -p /tmp/jpet-source-candidate/{paper,sections,references,generated/tables,scripts,tests,analytic_level3/code,analytic_level3_reopen/code,submission/jpet}
+          cp paper/main.tex paper/preamble.tex /tmp/jpet-source-candidate/paper/
+          cp sections/*.tex /tmp/jpet-source-candidate/sections/
+          cp references/references.bib /tmp/jpet-source-candidate/references/
+          cp generated/tables/*.tex /tmp/jpet-source-candidate/generated/tables/
+          cp requirements.txt Makefile Title_Page.docx /tmp/jpet-source-candidate/
+          cp scripts/verify_freeze.py scripts/verify_symbolic.py scripts/verify_numerical.py scripts/generate_results.py scripts/generate_tables.py scripts/generate_figures.py scripts/validate_bibliography.py scripts/validate_manuscript.py scripts/validate_build_log.py /tmp/jpet-source-candidate/scripts/
+          cp -R tests/. /tmp/jpet-source-candidate/tests/
+          cp analytic_level3/code/derive_small_beta.py analytic_level3/code/verify_threshold.py analytic_level3/code/verify_symbolic_identities.py analytic_level3/code/verify_witness.py /tmp/jpet-source-candidate/analytic_level3/code/
+          cp analytic_level3_reopen/code/verify_l31.py /tmp/jpet-source-candidate/analytic_level3_reopen/code/
+          cp submission/jpet/README.md submission/jpet/metadata.md submission/jpet/cover_letter.md submission/jpet/declarations.md submission/jpet/source_inventory.md /tmp/jpet-source-candidate/submission/jpet/
+          tar -C /tmp -czf generated/stage14/jpet-source-candidate.tar.gz jpet-source-candidate
+      - name: Upload Stage-14 QA artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: stage14-jpet-qa-candidate
+          path: |
+            paper/main.pdf
+            generated/stage14/qa_summary.json
+            generated/stage14/pdfinfo.txt
+            generated/stage14/jpet-source-candidate.tar.gz
