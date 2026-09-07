@@ -1,0 +1,32 @@
+name: stage4-v21-global-repair
+
+on:
+  push:
+    branches:
+      - repair/v21-stage4-all-regime-global
+    paths:
+      - 'stage4_v21_global/**'
+      - '.github/workflows/stage4-v21-global-repair.yml'
+  pull_request:
+    paths:
+      - 'stage4_v21_global/**'
+      - '.github/workflows/stage4-v21-global-repair.yml'
+
+permissions:
+  contents: read
+
+jobs:
+  all-regime-global-search:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install dependencies
+        run: python -m pip install --upgrade numpy scipy sympy
+      - name: Run Stage 4 all-regime global search
+        run: python stage4_v21_global/code/all_regime_global_search.py
+      - name: Re-run exact stationary sign certificate
+        run: python analytic_level3_reopen/code/verify_l31.py
