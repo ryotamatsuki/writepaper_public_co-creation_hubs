@@ -13,9 +13,15 @@ public route is inactive.
 from __future__ import annotations
 
 import math
+import sys
+from pathlib import Path
 from dataclasses import dataclass
 import numpy as np
 from scipy.optimize import minimize_scalar
+
+ROOT = Path(__file__).resolve().parents[2]
+if str(ROOT) not in sys.path:
+    sys.path.insert(0, str(ROOT))
 
 from stage4a_v2.code.independent_adversarial_audit import (
     P as BASE, XG, XB, PG, fixed_point, multistart_state, regional_welfare
@@ -61,8 +67,6 @@ def _profit(x1, x2, p, par, rigorous=False):
 
 
 def private_best_response(x1, x2, par, grid_n=41, rigorous=False):
-    # Because b_T<=1, q_T<=v+alpha. If p >= v+alpha-kT, HT cannot
-    # beat the outside option for any z<=1, so positive private profit is impossible.
     upper = par["v"] + par["alpha"] - par["kT"]
     grid = np.linspace(0.0, upper, grid_n)
     vals = []
@@ -95,7 +99,6 @@ def private_best_response(x1, x2, par, grid_n=41, rigorous=False):
     candidates.sort(key=lambda z: z[1], reverse=True)
     best = candidates[0]
     tied = [c for c in candidates if abs(c[1]-best[1]) <= 1e-8]
-    # Multiple numerical records of the same local optimum are not multiplicity.
     distinct = []
     for c in tied:
         if not any(abs(c[0]-d[0]) <= 2e-5 for d in distinct):
@@ -108,8 +111,6 @@ def welfare_G(i, x1, x2, par, price_grid=41, rigorous=False):
     pr = private_best_response(x1, x2, par, price_grid, rigorous)
     if pr.status not in (SOLVED_EQUILIBRIUM, MULTIPLE_EQUILIBRIA) or pr.p is None:
         raise RuntimeError(f"private continuation {pr.status}")
-    # Equal-profit multiple private best replies would make the upstream payoff
-    # correspondence selection-dependent. Fail closed rather than select silently.
     if pr.status == MULTIPLE_EQUILIBRIA:
         raise RuntimeError("MULTIPLE_EQUILIBRIA private continuation")
     return float(regional_welfare(i, x1, x2, pr.p, par)), pr.p
@@ -141,7 +142,6 @@ def _global_public_br(mode, rival_x, candidate_x, par, pbar=None,
         if value >= left and value >= right:
             local_idx.append(j)
     candidates = [(float(xs[j]), float(vals[j])) for j in local_idx]
-    # Refine every detected public local maximum, including neighborhoods of boundaries.
     for j in local_idx:
         lo = xs[max(0, j-1)]
         hi = xs[min(len(xs)-1, j+1)]
@@ -172,7 +172,6 @@ def coarse_tau_screen():
     for tau in (0.05, 0.20, 0.33, 0.35, 0.50):
         par = par_tau(tau)
         g = _global_public_br("G", XG, XG, par, x_grid_n=41, price_grid=25)
-        # Matched price remains the full-game symmetric price; re-solve it all-regime.
         pg = private_best_response(XG, XG, par, grid_n=61, rigorous=True)
         if pg.status != SOLVED_EQUILIBRIUM:
             raise RuntimeError(f"tau={tau}: private candidate status {pg.status}")
@@ -188,9 +187,6 @@ def coarse_tau_screen():
 
 def rigorous_candidate(tau):
     par = par_tau(tau)
-    # Analytic route-dominance check: max q_h <= v+alpha because partner mass<=1.
-    # Remote public access cost is kL+tau. If that is >=v+alpha, H_j is weakly
-    # below outside for every nonresident project at every history.
     rival_globally_dominated = par["kL"] + par["tau"] >= par["v"] + par["alpha"]
     print("RIVAL_GLOBAL_DOMINANCE", rival_globally_dominated,
           "remote_cost", par["kL"]+par["tau"],
@@ -208,8 +204,6 @@ def rigorous_candidate(tau):
     print("DENSE_G", g)
     print("DENSE_B3", b)
 
-    # Re-check the candidate and the strongest detected alternative with the
-    # multi-start continuation solver and denser global private-price scan.
     alt_x = g.x
     p_alt = private_best_response(alt_x, XG, par, grid_n=121, rigorous=True)
     if p_alt.status != SOLVED_EQUILIBRIUM:
@@ -223,9 +217,6 @@ def rigorous_candidate(tau):
     print("MULTISTART_CONFIRM_B3", "candidate", wb_c, "alt_x", b.x,
           "alt", wb_a, "gain", wb_a-wb_c)
 
-    # Construction-stage GO threshold: no detected global gain exceeding 1e-4,
-    # and the maximizer is within numerical refinement tolerance of the certified
-    # stationary candidate. Stage 4A must independently tighten/certify this.
     g_pass = (wg_a-wg_c <= 1e-4 and abs(alt_x-XG) <= 5e-3)
     b_pass = (wb_a-wb_c <= 1e-4 and abs(b.x-XB) <= 5e-3)
     return dict(tau=tau, rival_globally_dominated=rival_globally_dominated,
@@ -235,9 +226,6 @@ def rigorous_candidate(tau):
 
 def main():
     rows = coarse_tau_screen()
-    # Prefer the smallest simple tau in the screen that also has the analytic
-    # global rival-route dominance property. This avoids choosing tau from a
-    # numerical knife-edge threshold.
     candidates = [tau for tau, g, b, pg in rows
                   if tau >= 0.33 and g.gain_over_candidate <= 5e-4
                   and b.gain_over_candidate <= 5e-4]
