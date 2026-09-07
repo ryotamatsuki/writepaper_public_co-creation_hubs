@@ -26,11 +26,5 @@ jobs:
           python-version: '3.12'
       - name: Install dependencies
         run: python -m pip install --upgrade numpy scipy sympy
-      - name: Record tau-only repair diagnostic
-        continue-on-error: true
-        run: python stage4_v21_global/code/all_regime_global_search.py
-      - name: Record gamma-only repair diagnostic
-        continue-on-error: true
-        run: python stage4_v21_global/code/gamma_global_region_search.py
       - name: Search existing rho primitive for global sign-reversal region
         run: python stage4_v21_global/code/rho_global_region_search.py
