@@ -26,5 +26,5 @@ jobs:
           python-version: '3.12'
       - name: Install dependencies
         run: python -m pip install --upgrade numpy scipy sympy
-      - name: Search existing rho primitive for global sign-reversal region
-        run: python stage4_v21_global/code/rho_global_region_search.py
+      - name: Search existing beta-gamma primitives for global sign-reversal region
+        run: python stage4_v21_global/code/beta_gamma_global_region_search.py
