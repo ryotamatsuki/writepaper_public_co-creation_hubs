@@ -1,0 +1,34 @@
+name: stage4a-v21-repaired-global
+
+on:
+  push:
+    branches:
+      - audit/v21-stage4a-repaired-global-certification
+    paths:
+      - 'stage4a_v21_repaired/**'
+      - 'reviews/STAGE_04A_V21_REPAIRED_GLOBAL_CERTIFICATION_2026-09-08.md'
+      - 'theorem_certificates/STAGE4A_V21_*.md'
+      - '.github/workflows/stage4a-v21-repaired-global.yml'
+  pull_request:
+    paths:
+      - 'stage4a_v21_repaired/**'
+      - 'reviews/STAGE_04A_V21_REPAIRED_GLOBAL_CERTIFICATION_2026-09-08.md'
+      - 'theorem_certificates/STAGE4A_V21_*.md'
+      - '.github/workflows/stage4a-v21-repaired-global.yml'
+
+permissions:
+  contents: read
+
+jobs:
+  independent-math-certification:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install clean-room audit dependencies
+        run: python -m pip install --upgrade numpy scipy
+      - name: Run independent repaired-equilibrium audit
+        run: python stage4a_v21_repaired/code/independent_repaired_audit.py
