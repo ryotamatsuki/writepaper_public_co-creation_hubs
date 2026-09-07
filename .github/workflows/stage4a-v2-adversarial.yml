@@ -1,0 +1,37 @@
+name: stage4a-v2-adversarial
+
+on:
+  push:
+    branches:
+      - audit/v2-stage4a-retrospective-certification
+    paths:
+      - 'stage4a_v2/**'
+      - 'theorem_certificates/STAGE4A_V2_*.md'
+      - 'reviews/STAGE_04A_V2_RETROSPECTIVE_MATH_CERTIFICATION_2026-09-07.md'
+      - '.github/workflows/stage4a-v2-adversarial.yml'
+  pull_request:
+    paths:
+      - 'stage4a_v2/**'
+      - 'theorem_certificates/STAGE4A_V2_*.md'
+      - 'reviews/STAGE_04A_V2_RETROSPECTIVE_MATH_CERTIFICATION_2026-09-07.md'
+      - '.github/workflows/stage4a-v2-adversarial.yml'
+
+permissions:
+  contents: read
+
+jobs:
+  adversarial-certification:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install independent audit dependencies
+        run: python -m pip install --upgrade numpy scipy sympy
+      - name: Run clean-room Stage 4A adversarial audit
+        run: python stage4a_v2/code/independent_adversarial_audit.py
+      - name: Enforce recorded v2 verdict
+        run: |
+          grep -q 'NO-GO / REOPEN STAGE 4' reviews/STAGE_04A_V2_RETROSPECTIVE_MATH_CERTIFICATION_2026-09-07.md
+          grep -q 'FAIL — PROFITABLE FINITE OFF-REGIME DEVIATION' theorem_certificates/STAGE4A_V2_CANONICAL_EQUILIBRIUM_SPNE.md
