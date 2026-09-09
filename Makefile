@@ -1,4 +1,9 @@
 PYTHON ?= python
+RESULT_JSON := generated/results/canonical_results.json
+TABLE_STAMP := generated/tables/.stage9.stamp
+FIGURE_REGISTRY := generated/figures/README.md
+MANIFEST := generated/results/manifest.json
+
 .PHONY: help freeze symbolic global results numerical scope tables figures bibliography manuscript-audit test verify manuscript manifest report all clean
 
 help:
@@ -13,25 +18,35 @@ symbolic:
 global:
 	$(PYTHON) stage4a_v21_repaired/code/independent_repaired_audit.py
 
-results:
+results: $(RESULT_JSON)
+
+$(RESULT_JSON): scripts/generate_results.py stage4a_v21_repaired/code/independent_repaired_audit.py
+	@mkdir -p generated/results
 	$(PYTHON) scripts/generate_results.py
 
-numerical: results
+numerical: $(RESULT_JSON)
 	$(PYTHON) scripts/verify_numerical.py
 
-scope: results
+scope: $(RESULT_JSON)
 	$(PYTHON) scripts/stage75a_scope_audit.py
 
-tables: results
-	$(PYTHON) scripts/generate_tables.py
+tables: $(TABLE_STAMP)
 
-figures:
+$(TABLE_STAMP): $(RESULT_JSON) scripts/generate_tables.py
+	@mkdir -p generated/tables
+	$(PYTHON) scripts/generate_tables.py
+	@touch $(TABLE_STAMP)
+
+figures: $(FIGURE_REGISTRY)
+
+$(FIGURE_REGISTRY): scripts/generate_figures.py
+	@mkdir -p generated/figures
 	$(PYTHON) scripts/generate_figures.py
 
 bibliography:
 	$(PYTHON) scripts/validate_bibliography.py
 
-manuscript-audit: results scope
+manuscript-audit: scope
 	$(PYTHON) scripts/validate_manuscript.py
 
 test: freeze symbolic numerical scope tables
@@ -43,7 +58,9 @@ manuscript: tables figures scope bibliography manuscript-audit
 	cd paper && latexmk -pdf -interaction=nonstopmode -halt-on-error main.tex
 	$(PYTHON) scripts/validate_build_log.py
 
-manifest: results tables figures
+manifest: $(MANIFEST)
+
+$(MANIFEST): $(RESULT_JSON) $(TABLE_STAMP) $(FIGURE_REGISTRY) scripts/generate_manifest.py
 	$(PYTHON) scripts/generate_manifest.py
 
 report: verify test manuscript
@@ -52,5 +69,5 @@ report: verify test manuscript
 all: report manifest
 
 clean:
-	-rm -f generated/results/canonical_results.json generated/results/manifest.json generated/results/verification_report.json generated/tables/*.tex generated/figures/README.md
+	-rm -f generated/results/canonical_results.json generated/results/manifest.json generated/results/verification_report.json generated/tables/*.tex generated/tables/.stage9.stamp generated/figures/README.md
 	-cd paper && latexmk -C main.tex >/dev/null 2>&1 || true
