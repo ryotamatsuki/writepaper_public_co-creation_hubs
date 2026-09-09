@@ -1,0 +1,24 @@
+name: stage9-v21-reproducibility
+on:
+  push:
+    branches: ['pipeline/v21-stage9-reproducibility','pipeline/v21-stage10-paper','audit/v21-stage11-referee','position/v21-stage12-journal','integration/v21-stage13','qa/v21-stage14','freeze/v21-stage15']
+  pull_request:
+permissions:
+  contents: read
+jobs:
+  reproducibility:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: python -m pip install -r requirements.txt
+      - run: sudo apt-get update && sudo apt-get install -y latexmk texlive-latex-base texlive-latex-recommended texlive-latex-extra
+      - name: Clean repaired build
+        run: make clean && make all
+      - name: Reproducible generated layer
+        run: |
+          git diff --exit-code -- generated/results/canonical_results.json generated/tables
+      - name: Claim-scope regression
+        run: python scripts/stage75a_scope_audit.py
