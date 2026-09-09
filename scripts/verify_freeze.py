@@ -9,7 +9,7 @@ needles=[
     'tau=.35',
     '0.8371022382025995',
     '0.8258903860237495',
-    'LOCAL SUFFICIENT-CONDITION THEOREM',
+    'local sufficient-condition theorem',
     'all-regime computational global-equilibrium existence witness',
     'old vector `(beta=.05, gamma=.9, tau=.05)` is rejected',
     'reviews/STAGE_075A_V21_GENERALITY_QUANTIFIER_RED_TEAM_2026-09-10.md',
