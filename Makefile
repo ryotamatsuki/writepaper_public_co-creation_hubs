@@ -4,10 +4,10 @@ TABLE_STAMP := generated/tables/.stage9.stamp
 FIGURE_REGISTRY := generated/figures/README.md
 MANIFEST := generated/results/manifest.json
 
-.PHONY: help freeze symbolic global results numerical scope tables figures bibliography manuscript-audit test verify manuscript manifest report all clean
+.PHONY: help freeze symbolic global results numerical scope tables figures bibliography manuscript-audit stage10-architecture test verify manuscript manifest report all clean
 
 help:
-	@echo 'make freeze|symbolic|global|numerical|scope|tables|figures|test|manuscript|all|clean'
+	@echo 'make freeze|symbolic|global|numerical|scope|tables|figures|bibliography|manuscript-audit|stage10-architecture|test|manuscript|all|clean'
 
 freeze:
 	$(PYTHON) scripts/verify_freeze.py
@@ -49,12 +49,15 @@ bibliography:
 manuscript-audit: scope
 	$(PYTHON) scripts/validate_manuscript.py
 
-test: freeze symbolic numerical scope tables
+stage10-architecture:
+	$(PYTHON) scripts/validate_stage10_architecture.py
+
+test: freeze symbolic numerical scope tables stage10-architecture
 	$(PYTHON) -m pytest -q tests
 
-verify: freeze symbolic global numerical scope bibliography manuscript-audit
+verify: freeze symbolic global numerical scope bibliography manuscript-audit stage10-architecture
 
-manuscript: tables figures scope bibliography manuscript-audit
+manuscript: tables figures scope bibliography manuscript-audit stage10-architecture
 	cd paper && latexmk -pdf -interaction=nonstopmode -halt-on-error main.tex
 	$(PYTHON) scripts/validate_build_log.py
 
