@@ -1,14 +1,19 @@
 from pathlib import Path
 ROOT=Path(__file__).resolve().parents[1]
-D=ROOT/'public_two_sided_platform_stage8_theory_freeze'
-checks={
-    'FREEZE_MANIFEST.md':['53405fa904dd31817639a734de2063158ec69321','BR_i^{B3′}>0>BR_i^{G′}','NOT SELECTED'],
-    'PROOF_STATUS_TABLE.md':['NUMERICALLY SUPPORTED ONLY'],
-    'KILLED_CLAIMS_LOCKFILE.md':['P1-R','P3–P5','global G welfare dominance over B3','Status: **LOCKED**'],
-    'JOURNAL_POSITIONING_DEFERRED.md':['NO PRIMARY JOURNAL IS SELECTED AT STAGE 8','Stage 12 — Journal Positioning','submission fee = 0','mandatory publication/APC = 0'],
-}
-for fn,needles in checks.items():
-    text=(D/fn).read_text(encoding='utf-8')
-    for n in needles:
-        assert n in text,(fn,n)
-print('PASS: Stage-8 freeze identifiers, claim ceiling, killed claims, journal deferral')
+F=ROOT/'theory_freeze_v21'/'CANONICAL_THEORY_FREEZE_2026-09-10.md'
+text=F.read_text(encoding='utf-8')
+needles=[
+    'THEORY FROZEN — GO TO REPRODUCIBILITY SETUP',
+    'beta=.01',
+    'gamma=.825',
+    'tau=.35',
+    '0.8371022382025995',
+    '0.8258903860237495',
+    'LOCAL SUFFICIENT-CONDITION THEOREM',
+    'all-regime computational global-equilibrium existence witness',
+    'old vector `(beta=.05, gamma=.9, tau=.05)` is rejected',
+    'reviews/STAGE_075A_V21_GENERALITY_QUANTIFIER_RED_TEAM_2026-09-10.md',
+]
+for n in needles:
+    assert n in text, n
+print('PASS: v2.1 repaired theory freeze identity and claim ceiling')
