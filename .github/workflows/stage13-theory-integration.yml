@@ -13,6 +13,10 @@ permissions:
   contents: read
 jobs:
   theory-integration:
+    if: >-
+      github.event_name == 'push' ||
+      startsWith(github.head_ref, 'co-creation-theory/stage13r-tp-level2-integration') ||
+      startsWith(github.head_ref, 'integration/v21-stage13')
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
