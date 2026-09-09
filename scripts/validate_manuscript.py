@@ -28,10 +28,20 @@ required = [
     "computationally certified all-regime witness",
     "not an exact interval proof of global optimality for all primitives",
     "not a solved first-best or global social-optimum comparison",
-    "not an empirical calibration",
 ]
 for needle in required:
     assert needle in text, f"required final-v2.1 manuscript scope missing: {needle}"
+
+# The repaired vector must remain explicitly constructive/non-calibrated, but do not
+# couple the gate to one exact English phrasing.
+calibration_disclaimers = [
+    "not empirically calibrated",
+    "rather than empirically calibrated",
+    "not an empirical calibration",
+]
+assert any(phrase in text for phrase in calibration_disclaimers), (
+    "required repaired-witness calibration disclaimer missing"
+)
 
 # Permanent rejected-evidence discipline.
 assert "Archived Exact Stationary-Root Diagnostic" in text
