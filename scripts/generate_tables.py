@@ -5,6 +5,7 @@ ROOT = Path(__file__).resolve().parents[1]
 r = json.loads((ROOT / 'generated/results/canonical_results.json').read_text())
 out = ROOT / 'generated/tables'
 out.mkdir(parents=True, exist_ok=True)
+ROW_END = " \\\\"
 
 
 def write(name, body):
@@ -14,7 +15,7 @@ def write(name, body):
 p = r['parameters']
 c = r['computed']
 w = c['welfare']
-rows = '\n'.join([f"{k} & {v:.6g} \\\\" for k, v in p.items()])
+rows = '\n'.join([f"{k} & {v:.6g}{ROW_END}" for k, v in p.items()])
 write(
     'canonical_parameters.tex',
     "\\begin{tabular}{lr}\\toprule Parameter & Value \\\\ \\midrule\n"
@@ -24,23 +25,23 @@ write(
 write(
     'strategic_results.tex',
     f"\\begin{{tabular}}{{lrr}}\\toprule Regime & $x$ & BR slope \\\\ \\midrule\n"
-    f"G & {c['G']['x']:.6f} & {c['G']['BR_slope']:.6f} \\\\\n"
-    f"B3 & {c['B3']['x']:.6f} & {c['B3']['BR_slope']:.6f} \\\\\n"
+    f"G & {c['G']['x']:.6f} & {c['G']['BR_slope']:.6f}{ROW_END}\n"
+    f"B3 & {c['B3']['x']:.6f} & {c['B3']['BR_slope']:.6f}{ROW_END}\n"
     "\\bottomrule\\end{tabular}\n",
 )
 write(
     'welfare_comparison.tex',
     f"\\begin{{tabular}}{{lrrr}}\\toprule Regime & $W_i$ & $\\Pi_T$ & $W^N$ \\\\ \\midrule\n"
-    f"G & {w['G']['W_i']:.6f} & {w['G']['Pi_T']:.6f} & {w['G']['W_N']:.6f} \\\\\n"
-    f"B3 & {w['B3']['W_i']:.6f} & {w['B3']['Pi_T']:.6f} & {w['B3']['W_N']:.6f} \\\\\n"
+    f"G & {w['G']['W_i']:.6f} & {w['G']['Pi_T']:.6f} & {w['G']['W_N']:.6f}{ROW_END}\n"
+    f"B3 & {w['B3']['W_i']:.6f} & {w['B3']['Pi_T']:.6f} & {w['B3']['W_N']:.6f}{ROW_END}\n"
     "\\bottomrule\\end{tabular}\n",
 )
 write(
     'proof_status.tex',
     "\\begin{tabular}{ll}\\toprule Claim & Status \\\\ \\midrule\n"
-    "Analytic reversal & LOCAL SUFFICIENT-CONDITION THEOREM \\\\\n"
-    "Repaired witness & ALL-REGIME COMPUTATIONAL CERTIFICATION \\\\\n"
-    "Broad robustness & NOT CLAIMED \\\\\n"
+    f"Analytic reversal & LOCAL SUFFICIENT-CONDITION THEOREM{ROW_END}\n"
+    f"Repaired witness & ALL-REGIME COMPUTATIONAL CERTIFICATION{ROW_END}\n"
+    f"Broad robustness & NOT CLAIMED{ROW_END}\n"
     "\\bottomrule\\end{tabular}\n",
 )
 print('generated', len(list(out.glob('*.tex'))), 'tables')
