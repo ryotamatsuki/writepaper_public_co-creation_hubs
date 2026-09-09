@@ -18,7 +18,7 @@ Journal target: **NOT SELECTED — deferred to Stage 12**.
 
 ## 1. Stage objective
 
-Reauthorize and complete the existing full manuscript against the final v2.1 theory chain, section by section, without reopening theory. The repository already contains a full journal-neutral manuscript inherited from the earlier production chain; Stage 10 therefore performs a clean reconstruction/audit against the final Stage-8 freeze and Stage-9 generated layer rather than treating the old Stage-10 verdict as authority.
+Reauthorize and complete the existing full manuscript against the final v2.1 theory chain, section by section, without reopening theory. The repository already contained a full journal-neutral manuscript inherited from the earlier production chain; Stage 10 therefore performed a clean reconstruction/audit against the final Stage-8 freeze and Stage-9 generated layer rather than treating the old Stage-10 verdict as authority.
 
 ## 2. Allowed / prohibited delta
 
@@ -58,7 +58,7 @@ Key claims:
 
 - B3 cross effect is zero at beta zero with a strictly positive first derivative in beta;
 - full-game beta-zero cross effect is strictly negative at the stated symmetric regular state;
-- sufficiently small positive beta on continuing regular stationary branches gives `BR_i^{B3 prime} > 0 > BR_i^{G prime}` under strict local SOCs;
+- sufficiently small beta on continuing regular stationary branches gives `BR_i^{B3 prime} > 0 > BR_i^{G prime}` under strict local SOCs;
 - the repaired all-regime result is a one-vector computational global-equilibrium existence witness, not a general theorem.
 
 ### Welfare — PASS
@@ -91,7 +91,7 @@ Institutional examples are used only to establish an analogue class. The negativ
 
 File: `sections/07_related_literature.tex`.
 
-Stage-10 source check found one wording issue: López and Vives (2019) had been described too directly as a follower-response precedent. Publisher text instead supports a simultaneous R&D model with a two-stage strategic-commitment extension in which downstream product-market equilibrium responds to first-stage R&D. The section was corrected accordingly. Public/private fee responses and sequential platform pricing are positioned against Liu et al. (2026), Bontems et al. (2025), and Sánchez-Cartas (2026) without expanding the novelty claim.
+Stage-10 source checking found one wording issue: López and Vives (2019) had been described too directly as a follower-response precedent. The description was corrected to the supported two-stage strategic-commitment interpretation. Public/private fee responses and sequential platform pricing are positioned against Liu et al. (2026), Bontems et al. (2025), and Sánchez-Cartas (2026) without expanding the novelty claim.
 
 Detailed check: `docs/STAGE_10_LITERATURE_CHECK.md`.
 
@@ -142,24 +142,41 @@ Architecture is enforced by `scripts/validate_stage10_architecture.py` and is pa
 - Stage-10 external source spot-check is recorded in `docs/STAGE_10_LITERATURE_CHECK.md`.
 - institutional claims remain sourced to the retained Stage-7 evidence class and keep evidence-level qualifiers.
 
-## 6. Reproducibility / CI
+## 6. Reproducibility / final CI
 
-Stage-9 reproducibility gates remain intact. Stage 10 adds `.github/workflows/stage10-v21-paper-build.yml`, requiring:
+Stage-9 reproducibility gates remain intact. Stage 10 adds `.github/workflows/stage10-v21-paper-build.yml` requiring Stage-9 ancestry, the clean full production gate, explicit exposition-architecture validation, final Stage-7.5A claim-scope regression, and a no-theory-drift diff guard.
 
-1. ancestry from Stage-9 merge `63c5f8c2627e97be6874438ca6af16e1df1c338a`;
-2. clean `make clean && make all`;
-3. explicit exposition-architecture validation;
-4. Stage-7.5A claim-scope regression;
-5. zero diff from the Stage-9 parent in the Stage-8 freeze, repaired Stage-4A certificate/code, analytic theorem code, and Stage-7.5A quantifier ledger.
+Substantive PR-head tested: `840712b2ae329c1102514c46a2a3e518c1880472`.
 
-Current CI status at creation of this record: **PENDING PR-HEAD CI**.
+Dedicated Stage-10 workflow: run `34417804951`, job `102686459768` — **SUCCESS**.
+
+Verified steps:
+
+- Final Stage-9 ancestry gate — PASS;
+- Python / LaTeX environment — PASS;
+- `make clean && make all` — PASS;
+- explicit Stage-10 architecture gate — PASS;
+- final Stage-7.5A claim-scope regression — PASS;
+- Stage-8 freeze / repaired Stage-4A / analytic theorem / Stage-7.5A ledger diff guard — PASS.
+
+Independent Stage-7.5A workflow run `34417804940` also completed **SUCCESS** on the same substantive head.
+
+Stage-13 and Stage-14 legacy workflows correctly skipped on the Stage-10 branch.
 
 ## 7. Remaining issues
 
-No theory, proof-scope, welfare-scope, institutional-mapping, figure/table-architecture, or known citation-description blocker remains.
+Unresolved theory blocker: **NONE**.
 
-Only closeout dependency: PR-head clean CI must pass. Any repository verification failure must be repaired without theory drift; any failure revealing a missing theorem assumption or invalid frozen claim requires reopening the affected earlier stage.
+Unresolved proof-scope blocker: **NONE**.
 
-## Provisional verdict
+Unresolved exposition-architecture blocker: **NONE**.
 
-**CONDITIONAL GO — PR-HEAD CI REQUIRED FOR FINAL `FULL DRAFT READY FOR REFEREE GATE`.**
+Unresolved citation-description blocker identified by Stage 10: **NONE after bounded repair**.
+
+The strongest remaining substantive risk is proposition-level / combination novelty, which belongs to the Stage-11 hostile referee gate rather than Stage-10 construction.
+
+## Final verdict
+
+**FULL DRAFT READY FOR REFEREE GATE**
+
+**STAGE 11 — ROBUSTNESS / REFEREE ATTACK GATE AUTHORIZED.**
