@@ -1,19 +1,24 @@
-\section{Robustness}\label{sec:robustness}
+\section{Robustness and Scope}\label{sec:robustness}
 
-The robustness analysis has an expository role distinct from the proof. Theorem \ref{thm:reversal} already establishes that the sign reversal holds on a nonempty interval of sufficiently small positive network interaction, conditional on regular beta-zero branches and strict second-order conditions. Proposition \ref{prop:exactcertificate} separately establishes the reversal exactly at the canonical interior vector. The computations below ask whether the displayed economic configuration is numerically knife-edge and how far the maintained local interpretation can be extended without changing the model.
+The robustness discussion has an expository role distinct from the proof and the repaired global-equilibrium witness. Theorem \ref{thm:reversal} is a local sufficient-condition theorem on regular stationary branches. The repaired witness is an all-regime computational certification at one baseline parameter vector. Neither object is a general robustness theorem.
 
 \paragraph{Network interaction.}
-The analytic result organizes variation in $\beta$ near zero: B3 starts from a zero cross effect with a strictly positive $\beta$ derivative, while G starts from a strictly negative cross effect. The canonical benchmark uses $\beta=0.05$ and satisfies the reversal by exact certification. Because the theorem leaves $\varepsilon$ implicit, we do not infer that every value between zero and $0.05$ lies on one globally regular branch solely from these two facts. That stronger connected-interval statement would require additional branch tracking and is not needed for the present local theorem.
+The analytic result organizes variation in $\beta$ near zero on continuing regular stationary branches: B3 starts from a zero cross effect with a strictly positive $\beta$ derivative, while G starts from a strictly negative cross effect. The theorem establishes the existence of an implicit $\varepsilon>0$ under its stated regularity and curvature conditions. It does not give a primitive formula for $\varepsilon$, prove global public optimality throughout that interval, or establish that an arbitrary parameter path remains in one allocation regime.
 
-\paragraph{Primitive perturbations.}
-All inequalities defining the canonical configuration are strict. The project cutoffs and partner masses are interior, the relevant public and private second-order conditions are negative, and both best-response slopes are bounded away from zero. The participation system and first-order conditions are smooth with nonsingular local Jacobians. A deterministic perturbation exercise that varies the primitive vector by $\pm0.5$ percent in 20 reproducible draws preserves
+\paragraph{Repaired baseline witness.}
+The repaired vector uses $\beta=0.01$, $\gamma=0.825$, and $\tau=0.35$. Stage 4A independently checks the full public strategy interval, alternative routing regimes, private repricing after deviations, multiple participation starts, and the previously dangerous low-investment region. This establishes a computational global-equilibrium witness under the baseline functional form and documented numerical tolerances. It does not establish a positive-measure parameter region, a uniqueness theorem, or a generic property.
+
+\paragraph{Remote-public access friction.}
+At the repaired witness,
 \[
-\BR_i^{B3\prime}>0>\BR_i^{G\prime}
+\kappa_L+\tau>v+\alpha.
 \]
-in all 20 cases. This exercise is not the source of the theorem; it confirms that the reported benchmark magnitudes are not a tolerance-level accident.
+This sufficient condition makes a nonresident rival public hub dominated by non-participation for every project type and prevents the direct rival-hub free-riding deviation that invalidated the earlier draft vector. The condition is transparent but constructive. We do not claim that its magnitude is empirically calibrated or necessary for the mechanism.
 
-\paragraph{Distribution and network functional form.}
-The uniform project-type distribution is not locally essential. Replacing it by a sufficiently small $C^1$ perturbation with positive density at the relevant cutoffs changes project masses and surplus terms smoothly. Conditional on the same interior ordering and nonsingularity, the strict sign inequalities persist by the implicit function theorem. The linear partner-participation specification is likewise locally nonessential: small $C^1$ perturbations of the network functions that preserve the relevant derivative signs and regularity induce continuous changes in the same equilibrium system.
+\paragraph{Distribution, nonlinear network functions, and asymmetry.}
+The current paper does not contain a certified theorem for arbitrary project-type distributions, arbitrary nonlinear partner-response functions, or heterogeneous regional primitives. Smoothness and strict local signs suggest that some sufficiently small perturbations may preserve the local stationary geometry, but the required function-class restrictions and global-equilibrium separation have not been independently established. We therefore treat these as extension directions rather than robustness results.
 
-\paragraph{Asymmetry and scope.}
-Small asymmetric perturbations of the action state around the symmetric canonical configuration preserve the strict sign reversal by continuity. This is not a theorem for arbitrary region-specific primitives. The robustness claims remain deliberately local: we do not establish a global parameter region, arbitrary-distribution result, arbitrary nonlinear-network result, or fully heterogeneous-regions theorem. Broad parameter-plane classification would add substantial algebra and computation without strengthening the paper's core mechanism proportionately.
+\paragraph{Numerical perturbations.}
+The earlier $\pm0.5$ percent, 20-draw exercise was centered on the draft vector that later failed the all-regime global-equilibrium audit. It is non-authoritative and is not used as robustness evidence for the repaired paper. No replacement parameter-cloud exercise is needed for the current contribution because the analytic theorem and the repaired one-witness global audit have distinct, explicitly limited roles.
+
+The maximum defensible scope is therefore narrow: a local analytic sign-reversal theorem under the stated regularity conditions, plus a repaired computational global-equilibrium existence witness under the baseline functional form. No broader genericity claim is made.
