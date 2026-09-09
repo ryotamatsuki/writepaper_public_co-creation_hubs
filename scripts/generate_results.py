@@ -64,6 +64,12 @@ def build_results() -> dict:
 
     return {
         "_generated": "DO NOT EDIT — GENERATED FILE",
+        "provenance": {
+            "stage8_merge_sha": "ad927ca783a6123ea4fc6f55f65598ebd6ab583b",
+            "stage75a_certified_input_sha": "eeb48a3dd76ab6f43d5de175b12c3f374746db0f",
+            "stage8_freeze": "theory_freeze_v21/CANONICAL_THEORY_FREEZE_2026-09-10.md",
+            "stage75a_scope_ledger": "reviews/STAGE_075A_V21_GENERALITY_QUANTIFIER_RED_TEAM_2026-09-10.md",
+        },
         "sources": [
             "stage4a_v21_repaired/code/independent_repaired_audit.py",
             "reviews/STAGE_04A_V21_REPAIRED_GLOBAL_CERTIFICATION_2026-09-08.md",
@@ -117,7 +123,7 @@ def build_results() -> dict:
             "old_exact_certificate": "LOCAL STATIONARY-ROOT DIAGNOSTIC ONLY — NOT GLOBAL EQUILIBRIUM AUTHORITY",
             "robustness": "NO BROAD FUNCTION-CLASS ROBUSTNESS THEOREM CLAIMED",
         },
-        "journal_target": "JPET — DEFENSIBLE BUT BORDERLINE",
+        "journal_target": "NOT SELECTED — DEFERRED TO STAGE 12",
     }
 
 

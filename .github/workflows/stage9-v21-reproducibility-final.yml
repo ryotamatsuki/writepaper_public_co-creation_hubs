@@ -1,0 +1,53 @@
+name: stage9-v21-reproducibility-final
+
+on:
+  push:
+    branches:
+      - pipeline/v21-stage9-reproducibility-final
+      - pipeline/v21-stage10-paper
+      - audit/v21-stage11-referee
+      - position/v21-stage12-journal
+      - integration/v21-stage13
+      - qa/v21-stage14
+      - freeze/v21-stage15
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  reproducibility:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Final Stage-8 ancestry gate
+        run: git merge-base --is-ancestor ad927ca783a6123ea4fc6f55f65598ebd6ab583b HEAD
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Python environment
+        run: python -m pip install --upgrade pip && python -m pip install -r requirements.txt
+
+      - name: LaTeX environment
+        run: sudo apt-get update && sudo apt-get install -y latexmk texlive-latex-base texlive-latex-recommended texlive-latex-extra
+
+      - name: Clean full reproducibility gate
+        run: make clean && make all
+
+      - name: Snapshot generated manifest
+        run: cp generated/results/manifest.json /tmp/stage9-manifest.json
+
+      - name: Deterministic regeneration gate
+        run: |
+          make clean
+          make results tables figures manifest
+          cmp /tmp/stage9-manifest.json generated/results/manifest.json
+
+      - name: Claim-scope regression after regeneration
+        run: python scripts/stage75a_scope_audit.py
