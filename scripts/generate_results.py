@@ -124,7 +124,10 @@ def build_results() -> dict:
 def main() -> None:
     out = ROOT / "generated/results/canonical_results.json"
     out.parent.mkdir(parents=True, exist_ok=True)
-    out.write_text(json.dumps(build_results(), indent=2, sort_keys=True) + "\n", encoding="utf-8")
+    out.write_text(
+        json.dumps(build_results(), indent=2, sort_keys=True, ensure_ascii=False) + "\n",
+        encoding="utf-8",
+    )
     print(out)
 
 
