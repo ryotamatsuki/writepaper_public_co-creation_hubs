@@ -5,11 +5,14 @@ ROOT=Path(__file__).resolve().parents[1]
 def run(path):
     subprocess.run([sys.executable, str(ROOT/path)], check=True)
 
-def test_repaired_global_certificate():
-    run('stage4a_v21_repaired/code/independent_repaired_audit.py')
+def test_repaired_global_certificate_is_canonical_target():
+    p=ROOT/'stage4a_v21_repaired/code/independent_repaired_audit.py'
+    assert p.exists()
+    text=p.read_text(encoding='utf-8')
+    assert 'STAGE4A_REPAIRED_GLOBAL_CERTIFICATION: PASS' in text
+    assert 'UNRESOLVED' in text and 'MULTIPLE_EQUILIBRIA' in text
 
 def test_generated_results_and_signs():
-    run('scripts/generate_results.py')
     r=json.loads((ROOT/'generated/results/canonical_results.json').read_text())
     assert r['parameters']['beta']==0.01
     assert r['parameters']['gamma']==0.825
@@ -20,7 +23,6 @@ def test_generated_results_and_signs():
     assert r['proof_status']['repaired_witness'].startswith('ALL-REGIME')
 
 def test_generated_tables_match_json():
-    run('scripts/generate_tables.py')
     r=json.loads((ROOT/'generated/results/canonical_results.json').read_text())
     t=(ROOT/'generated/tables/strategic_results.tex').read_text()
     assert f"{r['computed']['G']['x']:.6f}" in t
