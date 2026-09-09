@@ -1,7 +1,12 @@
 from __future__ import annotations
 
 import json
+import sys
 from pathlib import Path
+
+ROOT = Path(__file__).resolve().parents[1]
+if str(ROOT) not in sys.path:
+    sys.path.insert(0, str(ROOT))
 
 from stage4a_v21_repaired.code.independent_repaired_audit import (
     P,
@@ -14,16 +19,6 @@ from stage4a_v21_repaired.code.independent_repaired_audit import (
     profit,
     multistart_state,
 )
-
-ROOT = Path(__file__).resolve().parents[1]
-
-
-def _national_welfare(x1: float, x2: float, p: float) -> float:
-    return (
-        welfare(1, x1, x2, p, P, full=True)
-        + welfare(2, x1, x2, p, P, full=True)
-        + profit(x1, x2, p, P, full=True)
-    )
 
 
 def _deriv(f, x: float, h: float = 3e-4) -> float:
