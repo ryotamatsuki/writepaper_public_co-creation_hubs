@@ -1,6 +1,6 @@
 \section{Welfare and Coordination}\label{sec:welfare}
 
-The sign of a government's best-response slope is not a welfare ranking. Strategic interaction describes how one government's optimal investment responds to the other's choice; welfare depends on project allocation, partner surplus, real facilitation costs, and private profit. We therefore keep the strategic reversal and the welfare analysis separate.
+The sign of a government's best-response slope is not a welfare ranking. Strategic interaction describes how one government's optimal investment responds locally to the other's choice; welfare depends on project allocation, partner surplus, real facilitation costs, and private profit. We therefore keep the strategic reversal and the welfare analysis separate.
 
 \subsection{Regional and aggregate welfare}
 
@@ -36,33 +36,43 @@ A project using $H_T$ pays $p_T$ in regional project surplus, while the same pay
 \]
 Accordingly, a lower private price does not mechanically imply higher aggregate welfare.
 
-\subsection{A cross-regional coordination wedge}
+\subsection{A local cross-regional coordination wedge}
 
-At an interior decentralized full-game equilibrium, government $i$'s own reduced first-order condition is zero. Hence the national marginal effect of a coordinated increase in $x_i$ can be written as
+At the repaired interior decentralized full-game witness, government $i$'s own reduced first-order condition is numerically zero within the documented tolerance. The national marginal effect of increasing $x_i$ can therefore be decomposed as
 \begin{equation}
 \frac{dW^N}{dx_i}
 =
+\frac{d\widetilde W_i}{dx_i}
++
 \frac{d\widetilde W_j}{dx_i}
 +
 \frac{d\Pi_T}{dx_i},
 \qquad j\neq i.
 \label{eq:wedge}
 \end{equation}
-At the verified configuration the rival-region welfare effect is approximately $0.44471$, while the private-profit effect is approximately $-0.02194$. Their sum is
+The Stage-7 audit gives approximately
 \[
-\frac{dW^N}{dx_i}\simeq0.42277>0.
+\frac{d\widetilde W_i}{dx_i}\simeq0,
+\qquad
+\frac{d\widetilde W_j}{dx_i}\simeq0.50053,
+\qquad
+\frac{d\Pi_T}{dx_i}\simeq-0.01008,
 \]
-Thus a real cross-regional coordination externality remains after the private-fee transfer has been removed. Its sign is not implied by the sign of $\BR_i'$.
+so
+\[
+\frac{dW^N}{dx_i}\simeq0.49045>0.
+\]
+Thus the repaired baseline exhibits local under-provision in the coordinated $+x_i$ direction: a marginal increase in one region's investment raises national welfare at that decentralized witness. This is not a solved first-best or global social-optimum comparison, and its sign is not implied by the sign of $\BR_i'$.
 
 \subsection{Controlled B3--G comparison}
 
-Table \ref{tab:welfare} reports the generated local welfare comparison. B3 fixes the private price at the equilibrium fee of G; it is an identification benchmark for price endogeneity, not a literal price-regulation experiment.
+Table \ref{tab:welfare} reports the repaired baseline welfare comparison. B3 fixes the private price at the equilibrium fee of G; it is an identification benchmark for price endogeneity, not a literal price-regulation experiment.
 
 \begin{table}[t]
 \centering
-\caption{Welfare at the numerical witness}
+\caption{Welfare at the repaired baseline witness}
 \label{tab:welfare}
 \input{../generated/tables/welfare_comparison.tex}
 \end{table}
 
-At this configuration aggregate welfare is higher in G than in B3, but this is a local numerical comparison, not a theorem of global welfare dominance. In particular, Theorem \ref{thm:reversal} does not imply that strategic substitutability is socially desirable, nor does it establish a reversal in the sign of the welfare externality.
+At this repaired witness, aggregate welfare is approximately $0.59679$ in G and $0.58593$ in B3, a difference of about $0.01086$ in favor of G. This is a one-witness numerical comparison only. We do not claim that endogenous repricing generally raises welfare, that G welfare-dominates B3 over a parameter region, or that strategic substitutability is socially desirable.
