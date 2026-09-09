@@ -24,23 +24,23 @@ write(
 write(
     'strategic_results.tex',
     f"\\begin{{tabular}}{{lrr}}\\toprule Regime & $x$ & BR slope \\\\ \\midrule\n"
-    f"G & {c['G']['x']:.6f} & {c['G']['BR_slope']:.6f} \\\\ \n"
-    f"B3 & {c['B3']['x']:.6f} & {c['B3']['BR_slope']:.6f} \\\\ \n"
+    f"G & {c['G']['x']:.6f} & {c['G']['BR_slope']:.6f} \\\\\n"
+    f"B3 & {c['B3']['x']:.6f} & {c['B3']['BR_slope']:.6f} \\\\\n"
     "\\bottomrule\\end{tabular}\n",
 )
 write(
     'welfare_comparison.tex',
     f"\\begin{{tabular}}{{lrrr}}\\toprule Regime & $W_i$ & $\\Pi_T$ & $W^N$ \\\\ \\midrule\n"
-    f"G & {w['G']['W_i']:.6f} & {w['G']['Pi_T']:.6f} & {w['G']['W_N']:.6f} \\\\ \n"
-    f"B3 & {w['B3']['W_i']:.6f} & {w['B3']['Pi_T']:.6f} & {w['B3']['W_N']:.6f} \\\\ \n"
+    f"G & {w['G']['W_i']:.6f} & {w['G']['Pi_T']:.6f} & {w['G']['W_N']:.6f} \\\\\n"
+    f"B3 & {w['B3']['W_i']:.6f} & {w['B3']['Pi_T']:.6f} & {w['B3']['W_N']:.6f} \\\\\n"
     "\\bottomrule\\end{tabular}\n",
 )
 write(
     'proof_status.tex',
     "\\begin{tabular}{ll}\\toprule Claim & Status \\\\ \\midrule\n"
-    "Analytic reversal & LOCAL SUFFICIENT-CONDITION THEOREM \\\\ \n"
-    "Repaired witness & ALL-REGIME COMPUTATIONAL CERTIFICATION \\\\ \n"
-    "Broad robustness & NOT CLAIMED \\\\ \n"
+    "Analytic reversal & LOCAL SUFFICIENT-CONDITION THEOREM \\\\\n"
+    "Repaired witness & ALL-REGIME COMPUTATIONAL CERTIFICATION \\\\\n"
+    "Broad robustness & NOT CLAIMED \\\\\n"
     "\\bottomrule\\end{tabular}\n",
 )
 print('generated', len(list(out.glob('*.tex'))), 'tables')
