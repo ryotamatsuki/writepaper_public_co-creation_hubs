@@ -20,6 +20,10 @@ permissions:
   contents: read
 jobs:
   submission-qa:
+    if: >-
+      github.event_name == 'push' ||
+      startsWith(github.head_ref, 'co-creation-theory/stage14r-tp-jpet-submission-qa') ||
+      startsWith(github.head_ref, 'qa/v21-stage14')
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
