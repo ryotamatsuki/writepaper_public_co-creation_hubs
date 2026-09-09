@@ -1,6 +1,6 @@
 \section{Strategic Interaction and Private Repricing}\label{sec:mainresult}
 
-This section separates three objects that play different roles in the argument: the fixed-price network force, the additional repricing force, and the resulting sign comparison between B3 and G. The first two explain the mechanism; the third is the main theorem.
+This section separates three objects that play different roles in the argument: the fixed-price network force, the additional repricing force, and the resulting sign comparison between B3 and G. The first two explain the mechanism; the third is the main analytic result. A separate repaired computational witness establishes that the same qualitative comparison is compatible with global public best responses in the baseline model.
 
 \subsection{Fixed private price: cross-side reinforcement}
 
@@ -8,12 +8,12 @@ Let
 \[
 M_{B3}\equiv W_{i,x_ix_j}^{B3}
 \]
-denote the public cross derivative after participation has been solved while the private access price is held fixed. Under a strict public second-order condition, \eqref{eq:brslope} implies that $M_{B3}$ and the B3 best-response slope have the same sign.
+denote the public cross derivative after participation has been solved while the private access price is held fixed. Under a strict public second-order condition, \eqref{eq:brslope} implies that $M_{B3}$ and the local B3 best-response slope have the same sign.
 
 When $p_T$ is fixed, an increase in $x_j$ raises support-side participation at $H_j$, attracts projects toward the regional public route, and reduces project and partner participation at the shared private route. The weakened shared outside option then raises the marginal value of public facilitation in region $i$. Cross-side participation is the only cross-region link in this benchmark central regime.
 
 \begin{proposition}[First-order benchmark complementarity]\label{prop:b3local}
-Consider a regular interior B3 branch through $\beta=0$ with $d=\kappa_L-\kappa_T-\bar p_T>0$ and beta-zero quality gaps $\Delta_i=A_i-A_T>0$. Then
+Consider a regular interior B3 stationary branch through $\beta=0$ with $d=\kappa_L-\kappa_T-\bar p_T>0$ and beta-zero quality gaps $\Delta_i=A_i-A_T>0$. Then
 \[
 M_{B3}(0)=0
 \]
@@ -24,10 +24,10 @@ and
 \frac{\alpha^3d^3}{\Delta_i^3\Delta_j^2}>0.
 \label{eq:b3betaderivative}
 \end{equation}
-Consequently, if the branch and its strict public second-order condition continue smoothly, public investments are strategic complements for all sufficiently small positive $\beta$.
+Consequently, if the stationary branch and its strict public second-order condition continue smoothly, the local B3 best-response slope is positive for all sufficiently small positive $\beta$ on that branch.
 \end{proposition}
 
-The result identifies exactly what two-sidedness contributes. At $\beta=0$, B3 has no public--public cross effect. A positive network interaction turns that zero cross effect positive to first order. Because $M_{B3}(0,x,p)$ is identically zero within the beta-zero central regime, derivatives of the B3 equilibrium path and of the matched price do not enter the first derivative in \eqref{eq:b3betaderivative}; the positive term is the direct first-order cross-side effect.
+The result identifies exactly what two-sidedness contributes. At $\beta=0$, B3 has no public--public cross effect. A positive network interaction turns that zero cross effect positive to first order. Because $M_{B3}(0,x,p)$ is identically zero within the beta-zero central regime, derivatives of the stationary path and of the matched price do not enter the first derivative in \eqref{eq:b3betaderivative}; the positive term is the direct first-order cross-side effect.
 
 \subsection{Endogenous private price: the repricing channel}
 
@@ -57,10 +57,10 @@ At any regular full-game state with $M_{\mathrm{fixed}}>0$, endogenous repricing
 \[
 -P_{\mathrm{price}}>M_{\mathrm{fixed}}>0.
 \]
-Thus repricing changes strategic complementarity into strategic substitution precisely when the price-policy contribution dominates the positive fixed-price force at that state.
+Thus repricing changes local strategic complementarity into local strategic substitution precisely when the price-policy contribution dominates the positive fixed-price force at that state.
 \end{proposition}
 
-Proposition \ref{prop:pricefeedback} is a mechanism identity rather than a novelty claim about follower pricing. Economically, the chain is
+Proposition \ref{prop:pricefeedback} is an identity-based mechanism statement rather than a novelty claim about follower pricing. Economically, the chain is
 \[
 \begin{aligned}
 x_j\uparrow
@@ -70,18 +70,18 @@ x_j\uparrow
 &\Longrightarrow W_{i,x_i}\text{ changes}.
 \end{aligned}
 \]
-The production model predicts $p_i<0$ at the canonical full-game equilibrium: stronger regional facilitation induces the private intermediary to cut its price. This price cut restores part of the private route's attractiveness and works against the positive fixed-price network force.
+At the repaired baseline witness, the model predicts $p^*_{T,x_i}<0$: stronger regional facilitation induces the private intermediary to cut its price. This price cut restores part of the private route's attractiveness and works against the positive fixed-price network force.
 
-\subsection{Analytic strategic reversal}
+\subsection{Analytic local strategic reversal}
 
 The beta-zero limit makes the contrast between the two forces especially sharp. In B3 the cross effect starts from zero and moves positively with network interaction. In G, private repricing already couples the governments when $\beta=0$.
 
 \begin{theorem}[Local strategic sign reversal]\label{thm:reversal}
-Suppose there exist regular interior B3 and G equilibrium branches at $\beta=0$. Assume the relevant participation and equilibrium Jacobians are nonsingular, the private optimum and both public optima satisfy strict second-order conditions, and the branches continue smoothly for small $\beta$. Let the B3 benchmark use the matched full-game price. Then there exists $\varepsilon>0$ such that, for every $\beta\in(0,\varepsilon)$ on these continuing branches,
+Suppose there exist regular interior B3 and G stationary branches at $\beta=0$. Assume the relevant participation and stationary-condition Jacobians are nonsingular, the private stationary price and both public stationary choices satisfy strict second-order conditions, and the branches continue smoothly for small $\beta$. Let the B3 benchmark use the matched full-game price. Then there exists $\varepsilon>0$ such that, for every $\beta\in(0,\varepsilon)$ on these continuing stationary branches,
 \[
 \BR_i^{B3\prime}>0>\BR_i^{G\prime}.
 \]
-More specifically, B3 satisfies \eqref{eq:b3betaderivative}, while at a symmetric regular beta-zero full-game state, with $T=A_T=v+\alpha\rho_T>0$ and $\Delta=A_i-A_T>0$,
+More specifically, B3 satisfies \eqref{eq:b3betaderivative}, while at a symmetric regular beta-zero full-game stationary state, with $T=A_T=v+\alpha\rho_T>0$ and $\Delta=A_i-A_T>0$,
 \begin{equation}
 M_G(0)
 =
@@ -91,39 +91,49 @@ M_G(0)
 \end{equation}
 \end{theorem}
 
-The proof is in Appendix \ref{app:smallbeta}. The substantive point is the asymmetric beta-zero limit. B3 requires cross-side interaction to create a positive link, whereas G has a strictly negative public cross effect even before that link is activated. Strict signs, strict second-order conditions, and regularity then preserve the ordering for sufficiently small positive $\beta$. The theorem is sufficient and local. It does not provide a primitive formula for $\varepsilon$ or a necessary-and-sufficient characterization of the entire parameter space.
+The proof is in Appendix \ref{app:smallbeta}. The theorem is a sufficient local result about continuing interior stationary branches. It does not by itself prove global public optimality along those branches, provide a primitive formula for $\varepsilon$, establish uniqueness, or characterize the entire parameter space.
 
-\begin{corollary}[Strategic effect of commercial adaptation]\label{cor:interpretation}
-Holding the private alternative fixed can give the wrong qualitative description of decentralized public competition. Activating the private intermediary's optimizing price policy can change not only the magnitude but also the sign of the public--public strategic relationship.
+\begin{corollary}[Local strategic effect of commercial adaptation]\label{cor:interpretation}
+On the regular branches covered by Theorem \ref{thm:reversal}, holding the private alternative's price fixed can give the wrong qualitative description of the local public strategic relationship. Activating the private intermediary's optimizing price policy can change not only the magnitude but also the sign of the local public--public best-response slope.
 \end{corollary}
 
-\subsection{Exact certification at the canonical equilibrium}
+\subsection{Repaired all-regime computational witness}
 
-The analytic theorem establishes a nonempty local mechanism class subject to regular beta-zero branches. A separate computer-assisted result verifies that the economically relevant canonical comparison used in the paper satisfies the full equilibrium, matching, curvature, and sign conditions exactly rather than only to floating-point tolerance.
-
-\begin{proposition}[Exact certification at the canonical parameter vector]\label{prop:exactcertificate}
-For the canonical finite-decimal primitive vector, interpreted as exact rational numbers, there is a unique coupled G/B3 stationary solution inside the rational isolating box reported in Appendix \ref{app:exactcertificate}. The B3 and G public equilibria are distinct and share the same algebraic full-game price in the matched benchmark. Exact rational interval implicit differentiation certifies
+The analytic theorem is not used as a global-equilibrium proof. Global best-response status is checked separately at a repaired baseline vector that keeps the model architecture unchanged. The repaired witness uses
 \[
-H_{11}^{B3}<0<H_{12}^{B3},
+\beta=0.01,\qquad \gamma=0.825,\qquad \tau=0.35,
+\]
+with the remaining primitives as reported in Appendix \ref{app:tables}. At this vector, an implementation-independent evaluator reconstructs all four project routes from the utility upper envelope, solves support-side participation from multiple starts, reoptimizes the private price after public deviations, searches the full public strategy interval $[0,1]$, and intensively rechecks boundaries and the low-investment region that invalidated the earlier draft witness.
+
+The audit finds symmetric public best responses near
+\[
+x_G\simeq0.837102,\qquad x_{B3}\simeq0.825890,
+\]
+with a matched private price
+\[
+p_G\simeq0.018404.
+\]
+The best detected deviation gain is below the documented numerical certification tolerance in both environments. Local derivative checks at the same repaired witness give approximately
+\[
+\BR_i^{G\prime}\simeq-0.0199,
 \qquad
-H_{11}^{G}<0,\quad H_{12}^{G}<0,
+\BR_i^{B3\prime}\simeq+0.0040.
 \]
-as well as a strict private price second-order condition, $p^*_{T,x_i}<0$, and the relevant nonsingularity conditions. Hence
+Thus the baseline model contains a computationally certified all-regime witness with the same qualitative sign reversal. This is an existence witness under the baseline functional form and documented numerical protocol. It is not an exact interval proof of global optimality for all primitives, a uniqueness theorem over parameter values, or a general robustness theorem.
+
+The remote-public access condition at the repaired witness is intentionally transparent:
 \[
-\BR_i^{B3\prime}>0>\BR_i^{G\prime}
+\kappa_L+\tau>v+\alpha.
 \]
-holds at that algebraic equilibrium pair.
-\end{proposition}
+It makes a nonresident rival public hub dominated by non-participation for every project type and removes the direct free-riding route that destroyed the earlier draft witness. The value of $\tau$ is constructive rather than empirically calibrated. Consequently, the repaired global witness should not be interpreted as evidence of direct user poaching between the two public hubs; the certified public--public strategic interaction operates through the shared private route and cross-side participation.
 
-Proposition \ref{prop:exactcertificate} is an exact sign-at-algebraic-root statement, not a general primitive theorem. Its purpose is to rule out solver error, finite-difference error, tolerance dependence, and inconsistent root selection. The high-degree elimination objects needed internally for root isolation are not part of the economic contribution and are left in the machine-readable repository artifacts.
-
-Table \ref{tab:strategic} reports the corresponding magnitudes from the generated production pipeline. The parameter vector is a constructive benchmark, not an empirical calibration.
+Table \ref{tab:strategic} reports the repaired witness magnitudes from the v2.1 result pipeline.
 
 \begin{table}[t]
 \centering
-\caption{Strategic interaction under fixed and endogenous private pricing}
+\caption{Strategic interaction at the repaired baseline witness}
 \label{tab:strategic}
 \input{../generated/tables/strategic_results.tex}
 \end{table}
 
-The fixed-price best-response slope is approximately $0.1144$, while the full-game slope is approximately $-0.0241$. The matched private fee is the same object in the two comparisons, but the public equilibrium investments are correctly re-solved and differ across B3 and G. The private-price response is approximately $-0.0165$. These magnitudes illustrate the mechanism; Theorem \ref{thm:reversal} supplies the analytic local result and Proposition \ref{prop:exactcertificate} supplies the exact canonical verification.
+An earlier exact rational Krawczyk calculation remains archived in the repository as a local stationary-root diagnostic for the rejected draft vector. Because that draft vector admits profitable finite deviations once omitted routing regimes are restored, the exact stationary-root calculation is not used as global-equilibrium evidence in this paper.
