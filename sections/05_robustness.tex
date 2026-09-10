@@ -1,15 +1,17 @@
 \section{Robustness and Scope}\label{sec:robustness}
 
-The robustness discussion has an expository role distinct from the proof and the repaired global-equilibrium witness. Theorem \ref{thm:reversal} is a local sufficient-condition theorem on regular stationary branches, with its G branch anchored at a symmetric regular beta-zero full-game stationary state. The repaired witness is an all-regime computational certification at one baseline parameter vector. Neither object is a general robustness theorem.
+The robustness discussion has an expository role distinct from the proof and the repaired numerical search. Theorem \ref{thm:reversal} is a local sufficient-condition theorem on regular stationary branches, with its G branch anchored at a symmetric regular beta-zero central-interior full-game stationary state and with support-side interiority, strict routing inequalities, nonsingular local systems, and strict second-order conditions maintained locally. The repaired baseline exercise is an all-regime computational search at one parameter vector. Neither object is a general robustness theorem.
 
 \paragraph{Network interaction.}
-The analytic result organizes variation in $\beta$ near zero on continuing regular stationary branches: B3 starts from a zero cross effect with a strictly positive $\beta$ derivative, while the G branch starts from the strictly negative cross effect proved at its symmetric beta-zero anchor. The theorem establishes the existence of an implicit $\varepsilon>0$ under its stated regularity and curvature conditions. It does not give a primitive formula for $\varepsilon$, prove global public optimality throughout that interval, or establish that an arbitrary parameter path remains in one allocation regime.
+The analytic result organizes variation in $\beta$ near zero on continuing regular stationary branches: B3 starts from a zero cross effect with a strictly positive $\beta$ derivative, while the G branch starts from the strictly negative cross effect proved at its symmetric beta-zero anchor. The theorem establishes the existence of an implicit $\varepsilon>0$ by intersecting the neighborhoods on which branch continuation, support-side interiority, the strict routing inequalities, the matched-price path, the strict second-order conditions, and the two sign restrictions persist. It does not give a primitive formula for $\varepsilon$, prove global public optimality throughout that interval, or establish that an arbitrary parameter path remains in one allocation regime.
 
-\paragraph{Repaired baseline witness.}
-The repaired vector uses $\beta=0.01$, $\gamma=0.825$, and $\tau=0.35$. Stage 4A independently checks the full public strategy interval, alternative routing regimes, private repricing after deviations, multiple participation starts, and the previously dangerous low-investment region. This establishes a computational global-equilibrium witness under the baseline functional form and documented numerical tolerances. It does not establish a positive-measure parameter region, a uniqueness theorem, or a generic property.
+\paragraph{Repaired baseline numerical search.}
+The repaired vector uses $\beta=0.01$, $\gamma=0.825$, and $\tau=0.35$. Stage 11R corrects the support-side welfare evaluator outside the interior region and re-runs a search over the public strategy interval, alternative routing regimes, G deviations with private repricing, B3 deviations at the fixed matched fee, multiple participation starts, the previously dangerous low-investment region, boundaries, and support-saturation neighborhoods. No profitable deviation is detected under the documented finite grid and local-refinement protocol.
+
+This is \emph{search evidence}, not a certified global-equilibrium result. The implementation provides neither a rigorous upper bound on regret between searched points nor a proof that all possible participation or private-price continuation roots have been enumerated. It therefore does not establish a globally optimal public best response, equilibrium existence, uniqueness, a positive-measure parameter region, or a generic property.
 
 \paragraph{Remote-public access friction.}
-At the repaired witness,
+At the repaired vector,
 \[
 \kappa_L+\tau>v+\alpha.
 \]
@@ -19,6 +21,6 @@ This sufficient condition makes a nonresident rival public hub dominated by non-
 The current paper does not contain a certified theorem for arbitrary project-type distributions, arbitrary nonlinear partner-response functions, or heterogeneous regional primitives. Smoothness and strict local signs suggest that some sufficiently small perturbations may preserve the local stationary geometry, but the required function-class restrictions and global-equilibrium separation have not been independently established. We therefore treat these as extension directions rather than robustness results.
 
 \paragraph{Numerical perturbations.}
-The earlier $\pm0.5$ percent, 20-draw exercise was centered on the draft vector that later failed the all-regime global-equilibrium audit. It is non-authoritative and is not used as robustness evidence for the repaired paper. No replacement parameter-cloud exercise is needed for the current contribution because the analytic theorem and the repaired one-witness global audit have distinct, explicitly limited roles.
+The earlier $\pm0.5$ percent, 20-draw exercise was centered on the draft vector that later failed the all-regime deviation audit. It is non-authoritative and is not used as robustness evidence for the repaired paper. No replacement parameter-cloud exercise is needed for the current contribution because the analytic theorem and the one-vector numerical search have distinct, explicitly limited roles.
 
-The maximum defensible scope is therefore narrow: a local analytic sign-reversal theorem under the stated regularity conditions and symmetric beta-zero G anchor, plus a repaired computational global-equilibrium existence witness under the baseline functional form. No broader genericity claim is made.
+The maximum defensible scope is therefore narrow: a local analytic sign-reversal theorem under the stated regularity conditions and symmetric beta-zero G anchor, plus corrected all-regime search evidence at one baseline vector. No broader genericity, equilibrium-existence, or numerical-certification claim is made.
