@@ -16,11 +16,42 @@
       "x": 0.8371022382025995
     },
     "coordination": {
-      "national_wedge": 0.49044674754794976,
-      "private_profit": -0.01007960958876048,
-      "rival_welfare": 0.5005263571367102
+      "decomposition_error": 2.2093438190040615e-14,
+      "national_direct": 0.49044663355368723,
+      "own_welfare": -3.98290844749738e-08,
+      "private_profit": -0.010079626207382033,
+      "rival_welfare": 0.5005262995901316,
+      "step": 0.001,
+      "sum_components": 0.49044663355366513
     },
-    "private_price_response": -0.012036930601879114,
+    "global_search": {
+      "B3_best_detected_gain": -3.3306690738754696e-16,
+      "B3_best_detected_x": 0.8258903840607942,
+      "B3_fixed_matched_price": true,
+      "B3_public_grid_points": 61,
+      "G_best_detected_gain": 9.192091532383984e-12,
+      "G_best_detected_x": 0.837108340194529,
+      "G_deviation_private_reoptimization": true,
+      "G_public_grid_points": 51,
+      "certified_regret_upper_bound": null,
+      "evidence_level": "SEARCH EVIDENCE",
+      "public_interval": [
+        0.0,
+        1.0
+      ],
+      "public_local_refinement": true
+    },
+    "private_price_response": -0.012036614303798793,
+    "stationarity": {
+      "B3_public_own_foc": -3.683791367186424e-08,
+      "G_public_own_foc": 1.5510687972104213e-08,
+      "participation_residual_inf_B3": 4.153899446635023e-13,
+      "participation_residual_inf_G": 3.949063298591682e-13,
+      "private_price_foc": 1.258538672582743e-07,
+      "private_price_soc": -41.98259561348505,
+      "private_step": 5e-05,
+      "public_step": 0.0007
+    },
     "welfare": {
       "B3": {
         "Pi_T": 0.007259853849105787,
@@ -28,6 +59,16 @@
         "W_i": 0.28933428404738504,
         "n_T": 0.3944783870389846,
         "p_T": 0.018403679612460814,
+        "support_gross": [
+          0.9808934248080055,
+          0.9808934248080055,
+          0.05394478387038985
+        ],
+        "support_mass": [
+          0.9808934248080055,
+          0.9808934248080055,
+          0.05394478387038985
+        ],
         "x": 0.8258903860237495
       },
       "G": {
@@ -36,12 +77,22 @@
         "W_i": 0.2948786590034636,
         "n_T": 0.38204369125500504,
         "p_T": 0.018403679612460814,
+        "support_gross": [
+          0.9921659687254024,
+          0.9921659687254024,
+          0.053820436912550056
+        ],
+        "support_mass": [
+          0.9921659687254024,
+          0.9921659687254024,
+          0.053820436912550056
+        ],
         "x": 0.8371022382025995
       }
     },
     "welfare_difference": 0.010859905754870391
   },
-  "journal_target": "NOT SELECTED — DEFERRED TO STAGE 12",
+  "journal_target": "NOT SELECTED — STAGE 12 BLOCKED PENDING ASTRA RECHECK",
   "parameters": {
     "alpha": 0.5,
     "beta": 0.01,
@@ -56,10 +107,12 @@
   "proof_status": {
     "analytic_headline": "LOCAL SUFFICIENT-CONDITION THEOREM ON REGULAR STATIONARY BRANCHES",
     "old_exact_certificate": "LOCAL STATIONARY-ROOT DIAGNOSTIC ONLY — NOT GLOBAL EQUILIBRIUM AUTHORITY",
-    "repaired_witness": "ALL-REGIME COMPUTATIONAL GLOBAL-EQUILIBRIUM CERTIFICATION",
-    "robustness": "NO BROAD FUNCTION-CLASS ROBUSTNESS THEOREM CLAIMED"
+    "repaired_witness": "ALL-REGIME COMPUTATIONAL SEARCH EVIDENCE — NO CERTIFIED GLOBAL REGRET BOUND",
+    "robustness": "NO BROAD FUNCTION-CLASS ROBUSTNESS THEOREM CLAIMED",
+    "welfare_numerics": "LOCAL/ONE-STATE NUMERICAL RESULTS AT REPORTED STATIONARY SEARCH CANDIDATES"
   },
   "provenance": {
+    "stage11r_repair": "reviews/STAGE_11R_ASTRA_REPAIR_REPORT.md",
     "stage75a_certified_input_sha": "eeb48a3dd76ab6f43d5de175b12c3f374746db0f",
     "stage75a_scope_ledger": "reviews/STAGE_075A_V21_GENERALITY_QUANTIFIER_RED_TEAM_2026-09-10.md",
     "stage8_freeze": "theory_freeze_v21/CANONICAL_THEORY_FREEZE_2026-09-10.md",
@@ -67,7 +120,7 @@
   },
   "sources": [
     "stage4a_v21_repaired/code/independent_repaired_audit.py",
-    "reviews/STAGE_04A_V21_REPAIRED_GLOBAL_CERTIFICATION_2026-09-08.md",
-    "reviews/STAGE_07_V21_WELFARE_GENERALITY_2026-09-09.md"
+    "public_two_sided_platform_welfare_generality/PARTNER_SURPLUS_DERIVATION.md",
+    "reviews/STAGE_11R_ASTRA_REPAIR_REPORT.md"
   ]
 }
