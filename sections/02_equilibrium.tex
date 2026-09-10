@@ -25,7 +25,7 @@ Together with the indifference condition $t_i(q_i-q_T)=d$, the participation equ
 F_i &\equiv t_i\left[A_i+\delta(1-t_i)-q_T\right]-d=0,\qquad i=1,2, \label{eq:Fi}\\
 F_T &\equiv q_T-A_T-\delta\left[t_1+t_2-\frac{2(\kappa_T+p_T)}{q_T}\right]=0. \label{eq:FT}
 \end{align}
-This three-equation system is the smooth object used for implicit differentiation and numerical verification.
+This three-equation system is the smooth object used for implicit differentiation and numerical verification within the central interior regime.
 
 \subsection{Private pricing}
 
@@ -47,7 +47,7 @@ p^*_{T,x_i}
 {2D_{T,p}+p_TD_{T,pp}}.
 \label{eq:px}
 \end{equation}
-At the verified full-game configuration this derivative is negative. Economically, stronger regional facilitation draws projects away from the shared private route; the private intermediary responds by lowering its optimal access price.
+At the reported full-game stationary candidate this derivative is negative. Economically, stronger regional facilitation draws projects away from the shared private route; the private intermediary responds by lowering its optimal access price.
 
 The negative price response is not itself a new mechanism. Indeed, when $\beta=0$ the private demand problem becomes linear and the sign of the price response can be established directly. The role of two-sidedness in our main result is different: it creates the positive public--public cross effect in the fixed-price benchmark.
 
@@ -56,11 +56,17 @@ The negative price response is not itself a new mechanism. Indeed, when $\beta=0
 We compare two environments with identical primitives.
 
 \paragraph{Fixed-price benchmark (B3).}
-Both regional public hubs and the shared private hub operate, and participation remains two-sided, but the private access price is fixed at $\bar p_T$. For the headline comparison we set
-\[
-\bar p_T=p_T^G,
-\]
-the equilibrium private price in the full game. This is a matched-price local diagnostic. At the certified comparison, it holds the fee level at the value chosen in G while suppressing the policy response $p_T^*(x_1,x_2)$. The benchmark therefore separates the local strategic contribution of repricing from a mechanical difference in the fee level. It does not assert that the two public investments are complements for every exogenous value of $\bar p_T$, and it is not interpreted as a price-regulation counterfactual.
+Both regional public hubs and the shared private hub operate, and participation remains two-sided, but the private access price is held fixed while a public deviation is evaluated. Along the G stationary branch used by the local theorem, define the matched scalar fee
+\begin{equation}
+\bar p_T(\beta)
+= p_T^*\!\left(x_1^G(\beta),x_2^G(\beta);\beta\right).
+\label{eq:matchedpricepath}
+\end{equation}
+For each fixed $\beta$, every B3 public deviation is evaluated holding this scalar $\bar p_T(\beta)$ fixed. The public choices and resulting allocation are otherwise allowed to readjust within B3. Hence B3 and G use the same matched scalar fee for the comparison, but their stationary public investments generally differ: $x_i^{B3}(\beta)$ need not equal $x_i^G(\beta)$.
+
+This distinction also separates two derivative objects. The chain-rule decomposition of the full-game objective can switch the price-policy derivative off locally at a given G state. The headline B3--G comparison instead compares the local strategic slopes at the respective B3 and G stationary states associated with the same matched fee path. Those are not the same-state allocation.
+
+B3 is therefore an identification benchmark for the private repricing margin. It suppresses the policy response $p_T^*(x_1,x_2)$ while avoiding a mechanical difference in the matched fee level. It is not a planner problem, a literal price-regulation counterfactual, or a claim that public investments are complements for every exogenous value of $\bar p_T$.
 
 \paragraph{Full game (G).}
 The private intermediary observes $(x_1,x_2)$ and optimally chooses $p_T$ according to \eqref{eq:privatefoc}. Governments anticipate the reduced price policy $p_T^*(x_1,x_2)$ when choosing facilitation investments.
