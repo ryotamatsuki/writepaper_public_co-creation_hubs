@@ -46,9 +46,22 @@ def main() -> None:
         "-0.0241",
         "prop:exactcertificate",
         "exact canonical certificate",
-        "20-draw perturbation",
     ]:
         forbid(joined, token, "active manuscript")
+
+    # The archived 20-draw exercise may be named only as negative provenance.
+    # Its historical existence is not itself a scope violation; using it as positive
+    # robustness/equilibrium evidence is.  Keep one explicit non-authority statement
+    # in the appendix so that the evidentiary exclusion is reader-auditable.
+    for token in [
+        "20-draw robustness evidence",
+        "20-draw perturbation supports",
+        "20-draw perturbation establishes",
+        "20-draw perturbation confirms",
+        "20-draw perturbation validates",
+        "20-draw robustness check confirms",
+    ]:
+        forbid(joined.lower(), token.lower(), "active manuscript")
 
     # Astra Stage-11R numerical-evidence repair: active prose must not retain the old
     # computational global-equilibrium qualification.
@@ -102,6 +115,11 @@ def main() -> None:
     require(appendix, "\\varepsilon", "sections/appendices.tex")
     require(appendix, "search evidence only", "sections/appendices.tex")
     require(appendix, "It is not evidence that the old root is a global public Nash equilibrium or subgame-perfect equilibrium", "sections/appendices.tex")
+    require(
+        appendix,
+        "The earlier 20-draw perturbation exercise around the rejected vector is non-authoritative and has been removed from the paper's evidentiary chain.",
+        "sections/appendices.tex",
+    )
 
     # Controlling amendment chain.
     t3_reopen = text(ROOT / "reviews/STAGE_075A_V21_T3_SYMMETRY_LIMITED_REOPEN_2026-09-10.md")
