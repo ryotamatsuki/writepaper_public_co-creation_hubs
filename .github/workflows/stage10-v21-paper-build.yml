@@ -45,10 +45,12 @@ jobs:
       - name: Final claim-scope regression
         run: python scripts/stage75a_scope_audit.py
 
-      - name: Manuscript source must preserve theory freeze
+      - name: Preserve historical frozen sources; allow explicit T3 amendment
         run: |
           git diff --exit-code 63c5f8c2627e97be6874438ca6af16e1df1c338a -- \
-            theory_freeze_v21 \
+            theory_freeze_v21/CANONICAL_THEORY_FREEZE_2026-09-10.md \
             stage4a_v21_repaired \
             analytic_level3 \
             reviews/STAGE_075A_V21_GENERALITY_QUANTIFIER_RED_TEAM_2026-09-10.md
+          test -f theory_freeze_v21/STAGE_08_V21_T3_SYMMETRY_AMENDMENT_2026-09-10.md
+          test -f reviews/STAGE_075A_V21_T3_SYMMETRY_LIMITED_REOPEN_2026-09-10.md
