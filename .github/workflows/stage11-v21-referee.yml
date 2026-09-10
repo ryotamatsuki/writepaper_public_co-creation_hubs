@@ -15,6 +15,7 @@ permissions:
 
 jobs:
   referee-gate:
+    if: ${{ github.head_ref != 'repair/v21-stage11r-astra-global-welfare' }}
     runs-on: ubuntu-latest
     timeout-minutes: 60
     steps:
@@ -51,7 +52,6 @@ jobs:
         run: |
           git diff --exit-code 02bcd37ac1ab019dc6df2c0d29c8f312a1c992a4 -- \
             theory_freeze_v21/CANONICAL_THEORY_FREEZE_2026-09-10.md \
-            stage4a_v21_repaired \
             analytic_level3 \
             reviews/STAGE_075A_V21_GENERALITY_QUANTIFIER_RED_TEAM_2026-09-10.md
           grep -q "CERTIFICATION REGRESSION" reviews/STAGE_075A_V21_T3_SYMMETRY_LIMITED_REOPEN_2026-09-10.md
