@@ -2,8 +2,8 @@
 
 Authority hierarchy:
 
-1. `theory_freeze_v21/CANONICAL_THEORY_FREEZE_2026-09-10.md` at final Stage-8 merge `ad927ca783a6123ea4fc6f55f65598ebd6ab583b`;
-2. `reviews/STAGE_075A_V21_GENERALITY_QUANTIFIER_RED_TEAM_2026-09-10.md`;
+1. `theory_freeze_v21/CANONICAL_THEORY_FREEZE_2026-09-10.md` at final Stage-8 merge `ad927ca783a6123ea4fc6f55f65598ebd6ab583b`, together with `theory_freeze_v21/STAGE_08_V21_T3_SYMMETRY_AMENDMENT_2026-09-10.md` for T3 only;
+2. `reviews/STAGE_075A_V21_GENERALITY_QUANTIFIER_RED_TEAM_2026-09-10.md`, together with `reviews/STAGE_075A_V21_T3_SYMMETRY_LIMITED_REOPEN_2026-09-10.md` for T3 only;
 3. Stage-9 verified/generated result layer and theorem/counterexample certificates;
 4. retained verified literature and institutional evidence.
 
@@ -11,7 +11,7 @@ Stage 10 may edit exposition, organization, notation presentation, citations, an
 
 Mandatory claim discipline:
 
-- T1/T2/T3 are analytic **local sufficient-condition results on regular stationary branches**. Do not call them global-equilibrium, uniqueness, or primitive-space characterization theorems.
+- T1/T2/T3 are analytic **local sufficient-condition results on regular stationary branches**. T3 additionally requires the G branch to pass through the **symmetric regular beta-zero full-game stationary state covered by T2**. Do not call these global-equilibrium, uniqueness, asymmetric-G, or primitive-space characterization theorems.
 - T4 is a **repaired all-regime computational global-equilibrium existence witness at one primitive vector**. Do not upgrade it to a general theorem or uniqueness claim.
 - B3 is the **matched-price fixed-price identification benchmark**, fixing the private scalar fee at the G on-path price while governments reoptimize. Do not describe it as a planner problem or price-regulation policy.
 - W1 is an exact transfer-cancellation accounting identity.
@@ -25,4 +25,6 @@ Mandatory claim discipline:
 
 Every quantitative value included in prose or tables must be sourced from `generated/results/canonical_results.json` or generated LaTeX tables. Any new numerical object requires a reproducible generator and test before inclusion.
 
-Before Stage 10 closeout, run `make clean && make all` and `python scripts/stage75a_scope_audit.py`. Any substantive theory change invalidates this contract and must be routed back under the Stage-8 change-control rules.
+The Stage-11 certification regression does not authorize new theory: it narrows T3 to the beta-zero G state for which T2 is actually proved. All downstream manuscripts and audits must enforce that amended scope.
+
+Before downstream closeout, run `make clean && make all` and `python scripts/stage75a_scope_audit.py`. Any further substantive theory change invalidates this contract and must be routed back under the Stage-8 change-control rules.
