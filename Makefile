@@ -4,10 +4,10 @@ TABLE_STAMP := generated/tables/.stage9.stamp
 FIGURE_REGISTRY := generated/figures/README.md
 MANIFEST := generated/results/manifest.json
 
-.PHONY: help freeze symbolic global results numerical scope tables figures bibliography manuscript-audit stage10-architecture test verify manuscript manifest report all clean
+.PHONY: help freeze symbolic global results numerical scope tables figures bibliography manuscript-audit stage10-architecture test verify manuscript manifest manifest-verify report all clean
 
 help:
-	@echo 'make freeze|symbolic|global|numerical|scope|tables|figures|bibliography|manuscript-audit|stage10-architecture|test|manuscript|all|clean'
+	@echo 'make freeze|symbolic|global|numerical|scope|tables|figures|bibliography|manuscript-audit|stage10-architecture|test|manuscript|manifest|manifest-verify|all|clean'
 
 freeze:
 	$(PYTHON) scripts/verify_freeze.py
@@ -66,10 +66,13 @@ manifest: $(MANIFEST)
 $(MANIFEST): $(RESULT_JSON) $(TABLE_STAMP) $(FIGURE_REGISTRY) scripts/generate_manifest.py
 	$(PYTHON) scripts/generate_manifest.py
 
+manifest-verify: manifest
+	$(PYTHON) scripts/verify_manifest.py
+
 report: verify test manuscript
 	$(PYTHON) scripts/generate_verification_report.py
 
-all: report manifest
+all: report manifest-verify
 
 clean:
 	-rm -f generated/results/canonical_results.json generated/results/manifest.json generated/results/verification_report.json generated/tables/*.tex generated/tables/.stage9.stamp generated/figures/README.md
