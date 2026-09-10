@@ -1,6 +1,6 @@
 \section{Strategic Interaction and Private Repricing}\label{sec:mainresult}
 
-This section separates three objects that play different roles in the argument: the fixed-price network force, the additional repricing force, and the resulting sign comparison between B3 and G. The first two explain the mechanism; the third is the main analytic result. A separate repaired computational witness establishes that the same qualitative comparison is compatible with global public best responses in the baseline model.
+This section separates three objects that play different roles in the argument: the fixed-price network force, the additional repricing force, and the resulting sign comparison between B3 and G. The first two explain the mechanism; the third is the main analytic result. A separate repaired all-regime numerical search checks whether the same qualitative comparison appears at one baseline vector; it is not used as a proof of global equilibrium.
 
 \subsection{Fixed private price: cross-side reinforcement}
 
@@ -24,10 +24,10 @@ and
 \frac{\alpha^3d^3}{\Delta_i^3\Delta_j^2}>0.
 \label{eq:b3betaderivative}
 \end{equation}
-Consequently, if the stationary branch and its strict public second-order condition continue smoothly, the local B3 best-response slope is positive for all sufficiently small positive $\beta$ on that branch.
+Consequently, if the stationary branch, support-side interiority, the strict routing inequalities defining the local regime, and the strict public second-order condition continue smoothly, the local B3 best-response slope is positive for all sufficiently small positive $\beta$ on that branch.
 \end{proposition}
 
-The result identifies exactly what two-sidedness contributes. At $\beta=0$, B3 has no public--public cross effect. A positive network interaction turns that zero cross effect positive to first order. Because $M_{B3}(0,x,p)$ is identically zero within the beta-zero central regime, derivatives of the stationary path and of the matched price do not enter the first derivative in \eqref{eq:b3betaderivative}; the positive term is the direct first-order cross-side effect.
+The result identifies exactly what two-sidedness contributes. At $\beta=0$, B3 has no public--public cross effect. A positive network interaction turns that zero cross effect positive to first order. Because $M_{B3}(0,x,p)$ is identically zero within the beta-zero central regime with support-side interiority, derivatives of the stationary path and of the matched-price path do not enter the first derivative in \eqref{eq:b3betaderivative}; the chain-rule multipliers on those path derivatives are zero.
 
 \subsection{Endogenous private price: the repricing channel}
 
@@ -70,14 +70,14 @@ x_j\uparrow
 &\Longrightarrow W_{i,x_i}\text{ changes}.
 \end{aligned}
 \]
-At the repaired baseline witness, the model predicts $p^*_{T,x_i}<0$: stronger regional facilitation induces the private intermediary to cut its price. This price cut restores part of the private route's attractiveness and works against the positive fixed-price network force.
+At the repaired baseline stationary candidate, the model predicts $p^*_{T,x_i}<0$: stronger regional facilitation induces the private intermediary to cut its price. This price cut restores part of the private route's attractiveness and works against the positive fixed-price network force.
 
 \subsection{Analytic local strategic reversal}
 
 The beta-zero limit makes the contrast between the two forces especially sharp. In B3 the cross effect starts from zero and moves positively with network interaction. In G, private repricing already couples the governments when $\beta=0$.
 
 \begin{theorem}[Local strategic sign reversal]\label{thm:reversal}
-Suppose there exist a regular interior B3 stationary branch through $\beta=0$ and a regular interior G stationary branch through a \emph{symmetric} beta-zero full-game stationary state. Assume the relevant participation and stationary-condition Jacobians are nonsingular, the private stationary price and both public stationary choices satisfy strict second-order conditions, and the branches continue smoothly for small $\beta$. Let the B3 benchmark use the matched full-game price along the corresponding G branch. Then there exists $\varepsilon>0$ such that, for every $\beta\in(0,\varepsilon)$ on these continuing stationary branches,
+Suppose there exist a regular interior B3 stationary branch through $\beta=0$ and a regular interior G stationary branch through a \emph{symmetric regular beta-zero central-interior full-game stationary state}. Assume at the anchor states that support-side participation is strictly interior, the strict project-routing inequalities defining the central regime hold, the relevant participation and stationary-condition Jacobians are nonsingular, and the private stationary price and both public stationary choices satisfy strict second-order conditions. Assume these objects continue smoothly for sufficiently small $\beta$. Define the matched B3 price path by \eqref{eq:matchedpricepath}, and for each fixed $\beta$ hold that scalar price fixed throughout B3 deviations. Then there exists $\varepsilon>0$ such that, for every $\beta\in(0,\varepsilon)$ in the common continuation neighborhood,
 \[
 \BR_i^{B3\prime}>0>\BR_i^{G\prime}.
 \]
@@ -91,47 +91,48 @@ M_G(0)
 \end{equation}
 \end{theorem}
 
-The proof is in Appendix \ref{app:smallbeta}. The theorem is a sufficient local result about continuing interior stationary branches, with the G branch anchored at the stated symmetric beta-zero state. It does not by itself prove global public optimality along those branches, provide a primitive formula for $\varepsilon$, establish uniqueness, or characterize the entire parameter space.
+The proof is in Appendix \ref{app:smallbeta}. The common $\varepsilon$ is obtained by intersecting the local neighborhoods in which the B3 and G branches exist smoothly, support-side interiority and strict routing inequalities persist, the relevant SOCs remain strict, the matched-price path is well defined, and the two cross-effect signs are preserved. The theorem is therefore a sufficient local result about continuing interior stationary branches, with the G branch anchored at the stated symmetric beta-zero state. It does not by itself prove global public optimality along those branches, provide a primitive formula for $\varepsilon$, establish uniqueness, or characterize the entire parameter space.
 
 \begin{corollary}[Local strategic effect of commercial adaptation]\label{cor:interpretation}
 On the regular branches covered by Theorem \ref{thm:reversal}, holding the private alternative's price fixed can give the wrong qualitative description of the local public strategic relationship. Activating the private intermediary's optimizing price policy can change not only the magnitude but also the sign of the local public--public best-response slope.
 \end{corollary}
 
-\subsection{Repaired all-regime computational witness}
+\subsection{Repaired all-regime computational search}\label{sec:searchwitness}
 
-The analytic theorem is not used as a global-equilibrium proof. Global best-response status is checked separately at a repaired baseline vector that keeps the model architecture unchanged. The repaired witness uses
+The analytic theorem is not used as a global-equilibrium proof. The existing baseline vector is re-examined after correcting support-side welfare accounting outside the interior region. It uses
 \[
 \beta=0.01,\qquad \gamma=0.825,\qquad \tau=0.35,
 \]
-with the remaining primitives as reported in Appendix \ref{app:tables}. At this vector, an implementation-independent evaluator reconstructs all four project routes from the utility upper envelope, solves support-side participation from multiple starts, reoptimizes the private price after public deviations, searches the full public strategy interval $[0,1]$, and intensively rechecks boundaries and the low-investment region that invalidated the earlier draft witness.
+with the remaining primitives as reported in Appendix \ref{app:tables}. The evaluator reconstructs all four project routes from the utility upper envelope, distinguishes gross support participation benefits from clipped support masses, uses the primitive partner-surplus integral in saturation regions, reoptimizes the private price after G deviations, holds the matched scalar price fixed during B3 deviations, searches the public strategy interval $[0,1]$, and intensively rechecks boundaries, low-investment histories, and support-saturation neighborhoods from multiple participation starts.
 
-The audit finds symmetric public best responses near
+The original reported candidates remain locally stationary because their support-side participation is interior, where the corrected welfare formula coincides with the old interior shortcut. The numerical search returns values near
 \[
 x_G\simeq0.837102,\qquad x_{B3}\simeq0.825890,
 \]
-with a matched private price
+with a matched private price near
 \[
 p_G\simeq0.018404.
 \]
-The best detected deviation gain is below the documented numerical certification tolerance in both environments. Local derivative checks at the same repaired witness give approximately
+No profitable public deviation is detected under the documented grid, local-refinement, private-reoptimization, and multistart search protocol. Local derivative checks at the same reported states give approximately
 \[
 \BR_i^{G\prime}\simeq-0.0199,
 \qquad
 \BR_i^{B3\prime}\simeq+0.0040.
 \]
-Thus the baseline model contains a computationally certified all-regime witness with the same qualitative sign reversal. This is an existence witness under the baseline functional form and documented numerical protocol. It is not an exact interval proof of global optimality for all primitives, a uniqueness theorem over parameter values, or a general robustness theorem.
 
-The remote-public access condition at the repaired witness is intentionally transparent:
+This numerical result is \emph{search evidence}, not a certified global-equilibrium result. The procedure does not supply a rigorous upper bound on regret over all unsearched public-investment and private-price points, nor does multistart convergence prove that every possible participation root has been enumerated. Consequently, the reported states are not used as an exact or certified proof of global public best responses, equilibrium uniqueness, or equilibrium existence at the full numerical game. Their role is narrower: they show that the corrected all-regime search detects no profitable deviation and reproduces the local sign comparison at the existing vector.
+
+The remote-public access condition at the repaired vector remains
 \[
 \kappa_L+\tau>v+\alpha.
 \]
-It makes a nonresident rival public hub dominated by non-participation for every project type and removes the direct free-riding route that destroyed the earlier draft witness. The value of $\tau$ is constructive rather than empirically calibrated. Consequently, the repaired global witness should not be interpreted as evidence of direct user poaching between the two public hubs; the certified public--public strategic interaction operates through the shared private route and cross-side participation.
+It makes a nonresident rival public hub dominated by non-participation for every project type and removes the direct free-riding route that destroyed the earlier draft witness. The value of $\tau$ is constructive rather than empirically calibrated. Consequently, this numerical exercise should not be interpreted as evidence of direct user poaching between the two public hubs; the reported public--public interaction operates through the shared private route and cross-side participation.
 
-Table \ref{tab:strategic} reports the repaired witness magnitudes from the v2.1 result pipeline.
+Table \ref{tab:strategic} reports the numerical magnitudes from the repaired v2.1 result pipeline.
 
 \begin{table}[t]
 \centering
-\caption{Strategic interaction at the repaired baseline witness}
+\caption{Strategic interaction at the repaired reported stationary candidates}
 \label{tab:strategic}
 \input{../generated/tables/strategic_results.tex}
 \end{table}
