@@ -1,0 +1,45 @@
+name: stage11r-generated-sync
+
+on:
+  push:
+    branches:
+      - repair/v21-stage11r-astra-global-welfare
+    paths:
+      - '.github/workflows/stage11r-generated-sync.yml'
+      - 'scripts/generate_results.py'
+      - 'scripts/generate_tables.py'
+      - 'scripts/generate_figures.py'
+      - 'scripts/generate_manifest.py'
+      - 'scripts/verify_manifest.py'
+      - 'stage4a_v21_repaired/**'
+      - 'generated/**'
+
+permissions:
+  contents: read
+
+jobs:
+  generated-sync:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Python environment
+        run: python -m pip install --upgrade pip && python -m pip install -r requirements.txt
+      - name: Regenerate numerical layer
+        run: |
+          rm -f generated/results/canonical_results.json generated/results/manifest.json generated/tables/*.tex generated/tables/.stage9.stamp generated/figures/README.md
+          make results tables figures manifest
+          python scripts/verify_manifest.py
+      - name: Emit generated files for synchronization
+        run: |
+          echo '--- GENERATED CANONICAL RESULTS ---'
+          cat generated/results/canonical_results.json
+          echo '--- GENERATED MANIFEST ---'
+          cat generated/results/manifest.json
+          echo '--- GENERATED TABLES ---'
+          for f in generated/tables/*.tex; do echo "### $f"; cat "$f"; done
+          echo '--- GENERATED FIGURE REGISTRY ---'
+          cat generated/figures/README.md
