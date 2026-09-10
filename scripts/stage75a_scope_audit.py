@@ -51,7 +51,7 @@ def main() -> None:
 
     # The archived 20-draw exercise may be named only as negative provenance.
     # Its historical existence is not itself a scope violation; using it as positive
-    # robustness/equilibrium evidence is.  Keep one explicit non-authority statement
+    # robustness/equilibrium evidence is. Keep one explicit non-authority statement
     # in the appendix so that the evidentiary exclusion is reader-auditable.
     for token in [
         "20-draw robustness evidence",
@@ -98,7 +98,7 @@ def main() -> None:
     require(welfare, "one-state-pair numerical comparison only", "sections/04_welfare.tex")
 
     robust = active["sections/05_robustness.tex"]
-    require(robust, "search evidence, not a certified global-equilibrium result", "sections/05_robustness.tex")
+    require(robust, "This is \\emph{search evidence}, not a certified global-equilibrium result", "sections/05_robustness.tex")
     require(robust, "No broader genericity, equilibrium-existence, or numerical-certification claim is made", "sections/05_robustness.tex")
 
     discussion = active["sections/09_discussion.tex"]
