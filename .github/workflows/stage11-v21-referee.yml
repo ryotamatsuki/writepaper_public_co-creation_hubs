@@ -1,0 +1,66 @@
+name: stage11-v21-referee
+
+on:
+  push:
+    branches:
+      - audit/v21-stage11-referee
+      - position/v21-stage12-journal
+      - integration/v21-stage13
+      - qa/v21-stage14
+      - freeze/v21-stage15
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  referee-gate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Final Stage-10 ancestry gate
+        run: git merge-base --is-ancestor 02bcd37ac1ab019dc6df2c0d29c8f312a1c992a4 HEAD
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Python environment
+        run: python -m pip install --upgrade pip && python -m pip install -r requirements.txt
+
+      - name: LaTeX environment
+        run: sudo apt-get update && sudo apt-get install -y latexmk texlive-latex-base texlive-latex-recommended texlive-latex-extra
+
+      - name: Clean downstream regression gate
+        run: make clean && make all
+
+      - name: Independent Stage-11 theorem and equilibrium regression
+        run: python stage11_v21_independent/code/independent_stage11_regression.py
+
+      - name: Amended Stage-7.5A quantifier regression
+        run: python scripts/stage75a_scope_audit.py
+
+      - name: Stage-10 exposition architecture regression
+        run: python scripts/validate_stage10_architecture.py
+
+      - name: Historical frozen-source immutability and explicit amendment gate
+        run: |
+          git diff --exit-code 02bcd37ac1ab019dc6df2c0d29c8f312a1c992a4 -- \
+            theory_freeze_v21/CANONICAL_THEORY_FREEZE_2026-09-10.md \
+            stage4a_v21_repaired \
+            analytic_level3 \
+            reviews/STAGE_075A_V21_GENERALITY_QUANTIFIER_RED_TEAM_2026-09-10.md
+          grep -q "CERTIFICATION REGRESSION" reviews/STAGE_075A_V21_T3_SYMMETRY_LIMITED_REOPEN_2026-09-10.md
+          grep -q "symmetric regular beta-zero full-game stationary state" theory_freeze_v21/STAGE_08_V21_T3_SYMMETRY_AMENDMENT_2026-09-10.md
+
+      - name: Stage-11 literature repair gate
+        run: |
+          grep -q "Kim2024MixedDuopoly" references/references.bib
+          grep -q "Kim2024MixedDuopoly" sections/07_related_literature.tex
+
+      - name: Stage-11 report exists
+        run: test -f reviews/STAGE_11_V21_REFEREE_GATE_2026-09-10.md

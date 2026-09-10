@@ -18,12 +18,13 @@ used = {k.strip() for block in cite_blocks for k in block.split(",") if k.strip(
 missing = used - bib_keys
 assert not missing, f"missing bibliography keys: {sorted(missing)}"
 
-# Final v2.1 theorem / witness hierarchy must be visible.
+# Final v2.1 theorem / witness hierarchy must be visible, including the Stage-11
+# certification-regression narrowing of T3 to a symmetric beta-zero G anchor.
 required = [
     r"\begin{proposition}[First-order benchmark complementarity]",
     r"\begin{theorem}[Local strategic sign reversal]",
     r"\BR_i^{B3\prime}>0>\BR_i^{G\prime}",
-    "regular interior stationary branches",
+    "symmetric beta-zero full-game stationary state",
     "Repaired all-regime computational witness",
     "computationally certified all-regime witness",
     "not an exact interval proof of global optimality for all primitives",
