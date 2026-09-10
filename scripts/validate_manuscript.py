@@ -26,12 +26,20 @@ required = [
     "symmetric regular beta-zero central-interior full-game stationary state",
     "Repaired all-regime computational search",
     "search evidence",
-    "no rigorous upper bound on regret",
     "Support-side surplus with participation caps",
     "one-state-pair numerical comparison only",
 ]
 for needle in required:
     assert needle in text, f"required Stage-11R manuscript scope missing: {needle}"
+
+# Accept equivalent reader-facing negations of a certified regret bound.
+regret_bound_disclaimers = [
+    "no rigorous upper bound on regret",
+    "neither a rigorous upper bound on regret",
+]
+assert any(phrase in text for phrase in regret_bound_disclaimers), (
+    "required Stage-11R regret-bound disclaimer missing"
+)
 
 # The active manuscript may discuss historical certificates negatively, but it must not
 # positively describe the current repaired vector as a certified global equilibrium.
