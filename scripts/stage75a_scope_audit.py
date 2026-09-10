@@ -49,12 +49,16 @@ def main() -> None:
         forbid(joined, token, "active manuscript")
 
     abstract = active["paper/main.tex"]
-    require(abstract, "regular interior stationary branches", "paper/main.tex")
+    require(abstract, "symmetric beta-zero full-game stationary state", "paper/main.tex")
     require(abstract, "all-regime computational audit", "paper/main.tex")
     require(abstract, "repaired global-equilibrium result is a computational witness rather than a general theorem", "paper/main.tex")
 
     main_results = active["sections/03_main_results.tex"]
-    require(main_results, "Suppose there exist regular interior B3 and G stationary branches", "sections/03_main_results.tex")
+    require(
+        main_results,
+        "a regular interior G stationary branch through a \\emph{symmetric} beta-zero full-game stationary state",
+        "sections/03_main_results.tex",
+    )
     require(main_results, "does not by itself prove global public optimality", "sections/03_main_results.tex")
     require(main_results, "Repaired all-regime computational witness", "sections/03_main_results.tex")
     require(main_results, "not an exact interval proof of global optimality for all primitives", "sections/03_main_results.tex")
@@ -64,16 +68,19 @@ def main() -> None:
     require(welfare, "one-witness numerical comparison only", "sections/04_welfare.tex")
 
     robust = active["sections/05_robustness.tex"]
+    require(robust, "symmetric regular beta-zero full-game stationary state", "sections/05_robustness.tex")
     require(robust, "does not contain a certified theorem for arbitrary project-type distributions", "sections/05_robustness.tex")
     require(robust, "non-authoritative", "sections/05_robustness.tex")
     require(robust, "No broader genericity claim is made", "sections/05_robustness.tex")
 
     discussion = active["sections/09_discussion.tex"]
+    require(discussion, "symmetric beta-zero full-game stationary state", "sections/09_discussion.tex")
     require(discussion, "not global-equilibrium authority", "sections/09_discussion.tex")
     require(discussion, "not evidence of direct user poaching between public hubs", "sections/09_discussion.tex")
     require(discussion, "not a solved first-best problem", "sections/09_discussion.tex")
 
     conclusion = active["sections/10_conclusion.tex"]
+    require(conclusion, "symmetric regular beta-zero full-game stationary state", "sections/10_conclusion.tex")
     require(conclusion, "does not itself establish global public optimality", "sections/10_conclusion.tex")
     require(conclusion, "not a general theorem", "sections/10_conclusion.tex")
 
@@ -81,6 +88,13 @@ def main() -> None:
     require(appendix, "Archived Exact Stationary-Root Diagnostic", "sections/appendices.tex")
     require(appendix, "It is not evidence that the old root is a global public Nash equilibrium or subgame-perfect equilibrium", "sections/appendices.tex")
     require(appendix, "The earlier 20-draw perturbation exercise around the rejected vector is non-authoritative", "sections/appendices.tex")
+
+    # Certification-regression addenda are now part of the controlling T3 authority.
+    t3_reopen = text(ROOT / "reviews/STAGE_075A_V21_T3_SYMMETRY_LIMITED_REOPEN_2026-09-10.md")
+    t3_amend = text(ROOT / "theory_freeze_v21/STAGE_08_V21_T3_SYMMETRY_AMENDMENT_2026-09-10.md")
+    require(t3_reopen, "CERTIFICATION REGRESSION", "Stage-7.5A T3 limited reopen")
+    require(t3_reopen, "symmetric regular beta-zero full-game stationary state", "Stage-7.5A T3 limited reopen")
+    require(t3_amend, "symmetric regular beta-zero full-game stationary state", "Stage-8 T3 amendment")
 
     # The active result layer must be routed to the repaired v2.1 witness.
     results = json.loads(text(ROOT / "generated/results/canonical_results.json"))
