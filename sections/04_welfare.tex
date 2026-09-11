@@ -13,23 +13,39 @@ PS_i
 \int_{t_i}^{1}(zq_i-\kappa_L)\,dz .
 \label{eq:PS}
 \end{equation}
-With uniform support-side costs, the total surplus associated with partner participation at route $h$ is $(n_h^P)^2/2$. Under the symmetric regional attribution used in the regional objectives, each region receives one half of that national partner surplus. Regional welfare is therefore
+
+For support-side route $h$, let $r_h$ denote the gross participation benefit before applying the support-cap constraint and let
+\[
+m_h=\min\{1,\max\{0,r_h\}\}
+\]
+denote the resulting participation mass. With support cost $c\sim U[0,1]$, national partner surplus at route $h$ is
+\begin{equation}
+S_h^P
+=\int_0^{m_h}(r_h-c)\,dc
+=r_hm_h-\frac{m_h^2}{2}.
+\label{eq:partnersurplusgeneral}
+\end{equation}
+Thus $S_h^P=0$ for $r_h\leq0$, $S_h^P=r_h^2/2$ for $0<r_h<1$, and $S_h^P=r_h-1/2$ for $r_h\geq1$. Under the symmetric regional attribution used in the regional objectives, each region receives one half of national partner surplus. Regional welfare is therefore, in general,
 \begin{equation}
 W_i
 =
 PS_i
-+
-\frac{(n_1^P)^2+(n_2^P)^2+(n_T^P)^2}{4}
--
-\frac{\gamma}{2}x_i^2.
++\frac12\sum_h\left(r_hm_h-\frac{m_h^2}{2}\right)
+-\frac{\gamma}{2}x_i^2.
 \label{eq:Wi}
 \end{equation}
+When support participation is interior on every route, $m_h=r_h$ and \eqref{eq:Wi} reduces to the convenient local expression
+\[
+W_i
+=PS_i+\frac{(m_1)^2+(m_2)^2+(m_T)^2}{4}-\frac{\gamma}{2}x_i^2.
+\]
+The local analytic derivations use this interior specialization. The all-regime numerical evaluator instead uses \eqref{eq:partnersurplusgeneral}, including at support-saturation histories.
+
 Aggregate welfare is
 \begin{equation}
 W^N=W_1+W_2+\Pi_T.
 \label{eq:WN}
 \end{equation}
-
 A project using $H_T$ pays $p_T$ in regional project surplus, while the same payment appears as private profit. Because private operating cost is normalized to zero, the transfer cancels exactly at the aggregate level:
 \[
 -p_Tn_T^F+\Pi_T=0.
@@ -38,7 +54,7 @@ Accordingly, a lower private price does not mechanically imply higher aggregate 
 
 \subsection{A local cross-regional coordination wedge}
 
-At the repaired interior decentralized full-game witness, government $i$'s own reduced first-order condition is numerically zero within the documented tolerance. The national marginal effect of increasing $x_i$ can therefore be decomposed as
+At the repaired reported G stationary candidate, government $i$'s own reduced first-order condition is numerically close to zero under the documented finite-difference check. Holding the rival public investment fixed while allowing downstream participation and private pricing to readjust, the national directional derivative decomposes as
 \begin{equation}
 \frac{dW^N}{dx_i}
 =
@@ -50,7 +66,7 @@ At the repaired interior decentralized full-game witness, government $i$'s own r
 \qquad j\neq i.
 \label{eq:wedge}
 \end{equation}
-The Stage-7 audit gives approximately
+The reproducible result pipeline computes all three components and also differentiates $W^N$ directly. At the reported state it gives approximately
 \[
 \frac{d\widetilde W_i}{dx_i}\simeq0,
 \qquad
@@ -58,21 +74,21 @@ The Stage-7 audit gives approximately
 \qquad
 \frac{d\Pi_T}{dx_i}\simeq-0.01008,
 \]
-so
+with the direct national derivative
 \[
 \frac{dW^N}{dx_i}\simeq0.49045>0.
 \]
-Thus the repaired baseline exhibits local under-provision in the coordinated $+x_i$ direction: a marginal increase in one region's investment raises national welfare at that decentralized witness. This is not a solved first-best or global social-optimum comparison, and its sign is not implied by the sign of $\BR_i'$.
+The direct derivative agrees numerically with the sum in \eqref{eq:wedge}. Thus the reported G stationary candidate exhibits a positive local coordination wedge in the coordinated $+x_i$ direction. This is not a solved first-best or global social-optimum comparison, and its sign is not implied by the sign of $\BR_i'$.
 
 \subsection{Controlled B3--G comparison}
 
-Table \ref{tab:welfare} reports the repaired baseline welfare comparison. B3 fixes the private price at the equilibrium fee of G; it is an identification benchmark for price endogeneity, not a literal price-regulation experiment.
+Table \ref{tab:welfare} reports the repaired baseline numerical comparison. B3 fixes the private price at the on-path G fee; it is an identification benchmark for price endogeneity, not a literal price-regulation experiment.
 
 \begin{table}[t]
 \centering
-\caption{Welfare at the repaired baseline witness}
+\caption{Welfare at the repaired reported states}
 \label{tab:welfare}
 \input{../generated/tables/welfare_comparison.tex}
 \end{table}
 
-At this repaired witness, aggregate welfare is approximately $0.59679$ in G and $0.58593$ in B3, a difference of about $0.01086$ in favor of G. This is a one-witness numerical comparison only. We do not claim that endogenous repricing generally raises welfare, that G welfare-dominates B3 over a parameter region, or that strategic substitutability is socially desirable.
+At these reported stationary/search candidates, aggregate welfare is approximately $0.59679$ in G and $0.58593$ in B3, a difference of about $0.01086$ in favor of G. This is a one-state-pair numerical comparison only. We do not claim that endogenous repricing generally raises welfare, that G welfare-dominates B3 over a parameter region, or that strategic substitutability is socially desirable. Because the Stage-11R numerical audit supplies search evidence rather than a certified global-regret bound, this welfare comparison is not described as a ranking of uniquely or globally certified equilibria.

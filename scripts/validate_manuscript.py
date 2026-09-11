@@ -18,30 +18,53 @@ used = {k.strip() for block in cite_blocks for k in block.split(",") if k.strip(
 missing = used - bib_keys
 assert not missing, f"missing bibliography keys: {sorted(missing)}"
 
-# Final v2.1 theorem / witness hierarchy must be visible, including the Stage-11
-# certification-regression narrowing of T3 to a symmetric beta-zero G anchor.
+# Final Stage-11R theorem / numerical-evidence hierarchy.
 required = [
     r"\begin{proposition}[First-order benchmark complementarity]",
     r"\begin{theorem}[Local strategic sign reversal]",
     r"\BR_i^{B3\prime}>0>\BR_i^{G\prime}",
-    "symmetric beta-zero full-game stationary state",
-    "Repaired all-regime computational witness",
-    "computationally certified all-regime witness",
-    "not an exact interval proof of global optimality for all primitives",
-    "not a solved first-best or global social-optimum comparison",
+    "symmetric regular beta-zero central-interior full-game stationary state",
+    "Repaired all-regime computational search",
+    "search evidence",
+    "Support-side surplus with participation caps",
+    "one-state-pair numerical comparison only",
 ]
 for needle in required:
-    assert needle in text, f"required final-v2.1 manuscript scope missing: {needle}"
+    assert needle in text, f"required Stage-11R manuscript scope missing: {needle}"
 
-# The repaired vector must remain explicitly constructive/non-calibrated, but do not
-# couple the gate to one exact English phrasing.
+# Accept equivalent reader-facing negations of a certified regret bound.
+regret_bound_disclaimers = [
+    "no rigorous upper bound on regret",
+    "neither a rigorous upper bound on regret",
+]
+assert any(phrase in text for phrase in regret_bound_disclaimers), (
+    "required Stage-11R regret-bound disclaimer missing"
+)
+
+# The active manuscript may discuss historical certificates negatively, but it must not
+# positively describe the current repaired vector as a certified global equilibrium.
+positive_overclaims = [
+    "computationally certified all-regime witness",
+    "computational global-equilibrium existence witness",
+    "all-regime computational certification at one baseline parameter vector",
+    "This repaired computation is an existence witness",
+    "Global best-response status is addressed separately",
+]
+for phrase in positive_overclaims:
+    assert phrase not in text, f"stale positive global-certification wording found: {phrase}"
+
+# Correct support-side primitive accounting must be reader-visible.
+assert "r_hm_h-\\frac{m_h^2}{2}" in text
+assert "m_h=\\min\\{1,\\max\\{0,r_h\\}\\}" in text
+
+# The repaired vector remains constructive/non-calibrated.
 calibration_disclaimers = [
     "not empirically calibrated",
     "rather than empirically calibrated",
     "not an empirical calibration",
 ]
 assert any(phrase in text for phrase in calibration_disclaimers), (
-    "required repaired-witness calibration disclaimer missing"
+    "required repaired-vector calibration disclaimer missing"
 )
 
 # Permanent rejected-evidence discipline.
@@ -49,7 +72,6 @@ assert "Archived Exact Stationary-Root Diagnostic" in text
 assert "not evidence that the old root is a global public Nash equilibrium or subgame-perfect equilibrium" in text
 assert "earlier 20-draw perturbation exercise around the rejected vector is non-authoritative" in text
 
-# Prevent unambiguously positive regressions to claims killed by the freeze.
 for phrase in [
     "we characterize the complete primitive parameter region",
     "we prove global strategic sign reversal",
@@ -57,4 +79,4 @@ for phrase in [
 ]:
     assert phrase.lower() not in text.lower(), f"killed/overclaim language found: {phrase}"
 
-print(f"PASS: final-v2.1 manuscript audit ({len(used)} citation keys, {len(TEX_FILES)} tex files)")
+print(f"PASS: Stage-11R manuscript audit ({len(used)} citation keys, {len(TEX_FILES)} tex files)")

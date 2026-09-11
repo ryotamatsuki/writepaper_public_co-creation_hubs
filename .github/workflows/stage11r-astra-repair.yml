@@ -1,0 +1,90 @@
+name: stage11r-astra-repair
+
+on:
+  push:
+    branches:
+      - repair/v21-stage11r-astra-global-welfare
+  pull_request:
+    branches:
+      - decision/v21-stage75-full-theory-freeze
+
+permissions:
+  contents: read
+
+jobs:
+  repair-gate:
+    if: ${{ github.head_ref == 'repair/v21-stage11r-astra-global-welfare' || github.ref_name == 'repair/v21-stage11r-astra-global-welfare' }}
+    runs-on: ubuntu-latest
+    timeout-minutes: 75
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Stage-11 canonical ancestry
+        run: |
+          git merge-base --is-ancestor 02bcd37ac1ab019dc6df2c0d29c8f312a1c992a4 HEAD
+          git merge-base --is-ancestor 7fdb1020fe398e5bd6833f9faa5da56812ad345e HEAD
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Python environment
+        run: python -m pip install --upgrade pip && python -m pip install -r requirements.txt
+
+      - name: LaTeX environment
+        run: sudo apt-get update && sudo apt-get install -y latexmk texlive-latex-base texlive-latex-recommended texlive-latex-extra
+
+      - name: Clean full repair build
+        run: make clean && make all
+
+      - name: Required Stage-7.5A scope regression
+        run: python scripts/stage75a_scope_audit.py
+
+      - name: Independent Stage-11R regression
+        run: python stage11_v21_independent/code/independent_stage11_regression.py
+
+      - name: Manifest integrity
+        run: python scripts/verify_manifest.py
+
+      - name: Deterministic regeneration
+        run: |
+          cp generated/results/manifest.json /tmp/manifest.first.json
+          make clean
+          make results tables figures manifest
+          python scripts/verify_manifest.py
+          cmp /tmp/manifest.first.json generated/results/manifest.json
+
+      - name: Generated files committed and current
+        run: |
+          git diff --exit-code -- \
+            generated/results/canonical_results.json \
+            generated/results/manifest.json \
+            generated/tables/canonical_parameters.tex \
+            generated/tables/proof_status.tex \
+            generated/tables/strategic_results.tex \
+            generated/tables/welfare_comparison.tex \
+            generated/figures/README.md || {
+              echo '--- GENERATED CANONICAL RESULTS ---'
+              cat generated/results/canonical_results.json
+              echo '--- GENERATED MANIFEST ---'
+              cat generated/results/manifest.json
+              echo '--- GENERATED TABLES ---'
+              for f in generated/tables/*.tex; do echo "### $f"; cat "$f"; done
+              exit 1
+            }
+
+      - name: Claim-scope downgrade gate
+        run: |
+          grep -q "SEARCH EVIDENCE" theory_freeze_v21/STAGE_08_V21_ASTRA_WELFARE_EVIDENCE_AMENDMENT_2026-09-10.md
+          grep -q "NO CERTIFIED GLOBAL REGRET BOUND" paper/main.tex
+          ! grep -q "computationally certified all-regime witness" sections/03_main_results.tex
+          ! grep -q "global-equilibrium result is a computational witness" paper/main.tex
+
+      - name: Repair records exist
+        run: |
+          test -f reviews/STAGE_04A_V21_ASTRA_GLOBAL_EVIDENCE_REPAIR_2026-09-10.md
+          test -f reviews/STAGE_07_V21_SATURATED_PARTNER_SURPLUS_CORRECTION_2026-09-10.md
+          test -f reviews/STAGE_11R_LIMITED_PRIOR_ART_CLOSURE_2026-09-10.md
+          test -f reviews/STAGE_11R_ASTRA_REPAIR_REPORT.md

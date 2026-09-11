@@ -22,50 +22,72 @@ B=\frac{2}{q_T}.
 The interior private price is
 \[
 p_T^*
-=
-\frac{(\kappa_L-\kappa_T)A-\kappa_TB}{2(A+B)}.
+=\frac{(\kappa_L-\kappa_T)A-\kappa_TB}{2(A+B)}.
 \]
 Then
 \[
 \frac{\partial p_T^*}{\partial A}
-=
-\frac{\kappa_LB}{2(A+B)^2}>0,
+=\frac{\kappa_LB}{2(A+B)^2}>0,
 \qquad
 A_{x_i}=-\frac{\alpha}{\Delta_i^2}<0,
 \]
 so $p_{T,x_i}^*<0$. This limiting case shows that endogenous private pricing does not require two-sided participation. Two-sidedness is instead essential to the positive B3 cross effect used in Theorem \ref{thm:reversal}.
 
-\subsection{Proof of the local strategic sign reversal}\label{app:smallbeta}
-Let $\delta=\alpha\beta$, $T=A_T=v+\alpha\rho_T$, $\Delta_i=A_i-A_T$, and $d=\kappa_L-\kappa_T-p_T$. On a regular interior beta-zero stationary branch, $T>0$, $\Delta_i>0$, and $d>0$. Write $M_{B3}=W_{i,x_ix_j}^{B3}$ and let $M_G$ denote the corresponding reduced full-game cross derivative.
+\subsection{Support-side surplus with participation caps}\label{app:partnersurplus}
+For support route $h$, let $r_h$ be gross participation benefit and let $m_h=\min\{1,\max\{0,r_h\}\}$ be support participation mass. Because $c\sim U[0,1]$, national support surplus is
+\[
+S_h^P=\int_0^{m_h}(r_h-c)\,dc=r_hm_h-\frac{m_h^2}{2}.
+\]
+Hence
+\[
+S_h^P=
+\begin{cases}
+0, & r_h\leq0,\\
+r_h^2/2, & 0<r_h<1,\\
+r_h-1/2, & r_h\geq1.
+\end{cases}
+\]
+The formula is continuous at $r_h=0$ and $r_h=1$. Each regional government receives one half of this national support surplus. Thus the shortcut $(m_h)^2/4$ in a regional objective is valid only when $0<r_h<1$. The all-regime numerical code uses the primitive integral above whenever a deviation reaches a saturation region. The local theorem below maintains support-side interiority, so its existing interior algebra is unchanged by this accounting repair.
 
-At $\delta=0$, the B3 participation equations separate across regions once the shared private price is held fixed. Hence
+\subsection{Proof of the local strategic sign reversal}\label{app:smallbeta}
+Let $\delta=\alpha\beta$, $T=A_T=v+\alpha\rho_T$, $\Delta_i=A_i-A_T$, and $d=\kappa_L-\kappa_T-p_T$. Consider the B3 branch and the G branch specified in Theorem \ref{thm:reversal}. At $\beta=0$, support-side participation is strictly interior and the strict central-routing inequalities hold. For the G branch, the anchor is specifically the symmetric regular beta-zero central-interior full-game stationary state used in the negative-cross-effect calculation.
+
+Write $M_{B3}=W_{i,x_ix_j}^{B3}$ and let $M_G$ denote the corresponding reduced full-game cross derivative. At $\delta=0$, the B3 participation equations separate across regions once the shared private price is held fixed. Hence
 \[
 M_{B3}(0,x,p)=0
 \]
-throughout the relevant beta-zero central regime. A first-order expansion of the exact participation system and the regional objective gives
+throughout the relevant beta-zero central regime with support-side interiority. A first-order expansion of the exact participation system and the regional objective gives
 \[
 \left.\frac{\partial M_{B3}}{\partial\delta}\right|_{\delta=0}
-=
-\frac{\alpha^2d^3}{\Delta_i^3\Delta_j^2}>0.
+=\frac{\alpha^2d^3}{\Delta_i^3\Delta_j^2}>0.
 \]
 Since $\delta=\alpha\beta$,
 \[
 \left.\frac{\partial M_{B3}}{\partial\beta}\right|_{\beta=0}
-=
-\frac{\alpha^3d^3}{\Delta_i^3\Delta_j^2}>0.
+=\frac{\alpha^3d^3}{\Delta_i^3\Delta_j^2}>0.
 \]
-Because $M_{B3}(0,x,p)$ is identically zero, differentiating along a continuing B3 stationary path and matched-price path introduces no additional first-order terms at zero: the chain-rule multipliers on the path derivatives are zero.
+Because $M_{B3}(0,x,p)$ is identically zero on this beta-zero interior regime, its derivatives with respect to the stationary-state coordinates and the scalar matched price are also zero there. Consequently, differentiating along the continuing B3 stationary path and the matched-price path introduces no additional first-order terms at zero.
 
-For G, the private price policy remains an active strategic link at $\beta=0$. At a symmetric regular beta-zero stationary state let $\Delta=A_i-A_T>0$. Substituting the exact interior private optimum into the full chain-rule decomposition \eqref{eq:repricingdecomposition} yields
+For G, the private price policy remains an active strategic link at $\beta=0$. At the symmetric regular beta-zero central-interior stationary state let $\Delta=A_i-A_T>0$. Substituting the exact interior private optimum into the full chain-rule decomposition \eqref{eq:repricingdecomposition} yields
 \[
 M_G(0)
-=
--\frac{3T\alpha^2\kappa_L^2}
-{16\Delta(\Delta+T)^3}<0.
+=-\frac{3T\alpha^2\kappa_L^2}{16\Delta(\Delta+T)^3}<0.
 \]
-Thus B3 has a zero cross effect with a strictly positive derivative in $\beta$, whereas G has a strictly negative cross effect at the limiting state itself.
+Thus B3 has a zero cross effect with a strictly positive derivative in $\beta$, whereas G has a strictly negative cross effect at its limiting anchor state.
 
-By the maintained nonsingularity conditions, the implicit function theorem supplies locally smooth B3 and G stationary branches and smooth reduced derivatives. Strict local second-order conditions and the central-regime inequalities also persist locally. Therefore there is an $\varepsilon>0$ such that, for every $\beta\in(0,\varepsilon)$ on the continuing stationary branches,
+Let the continuing G stationary path be $x^G(\beta)$ and define the matched scalar B3 price exactly as in \eqref{eq:matchedpricepath},
+\[
+\bar p_T(\beta)=p_T^*\!\left(x_1^G(\beta),x_2^G(\beta);\beta\right).
+\]
+For each fixed $\beta$, B3 deviations hold this scalar fee fixed even though B3 public choices and allocations are allowed to differ from those in G.
+
+By the maintained nonsingularity conditions, the implicit function theorem supplies locally smooth B3 and G stationary branches and a smooth matched-price path. Strict support-side interiority, the strict central-routing inequalities, the private and public strict second-order conditions, and the cross-effect signs each persist on some open neighborhood of zero. Let the corresponding positive radii be $\varepsilon_{B3}$, $\varepsilon_G$, $\varepsilon_{S}$, $\varepsilon_R$, $\varepsilon_{SOC}$, $\varepsilon_p$, and $\varepsilon_M$. Then choose
+\[
+\varepsilon
+=\min\{\varepsilon_{B3},\varepsilon_G,\varepsilon_S,\varepsilon_R,
+\varepsilon_{SOC},\varepsilon_p,\varepsilon_M\}>0.
+\]
+For every $\beta\in(0,\varepsilon)$ on the two continuing stationary branches,
 \[
 M_{B3}(\beta)>0>M_G(\beta).
 \]
@@ -73,15 +95,15 @@ Under the strict local public second-order conditions, the slope expression in \
 \[
 \BR_i^{B3\prime}>0>\BR_i^{G\prime}.
 \]
-This proves Theorem \ref{thm:reversal} at its stated local stationary-branch scope. The argument does not produce a primitive formula for $\varepsilon$, prove global public optimality on those branches, or establish a necessary-and-sufficient primitive characterization.
+This proves Theorem \ref{thm:reversal} at its stated local stationary-branch scope. The argument does not produce a primitive formula for $\varepsilon$, prove global public optimality on those branches, establish an asymmetric beta-zero G theorem, or give a necessary-and-sufficient primitive characterization.
 
 \section{Archived Exact Stationary-Root Diagnostic}\label{app:archivedexact}
 An earlier draft used the primitive vector $\beta=0.05$, $\gamma=0.9$, and $\tau=0.05$. An exact rational Krawczyk calculation isolates a coupled G/B3 stationary root at that vector and certifies strict local derivative signs. Stage 4A subsequently showed that the same vector admits profitable finite public deviations once all project-routing regimes are restored. The exact calculation therefore remains mathematically valid only as a local stationary-root diagnostic. It is not evidence that the old root is a global public Nash equilibrium or subgame-perfect equilibrium, and it is not used as authority for any headline claim in the revised paper. The detailed exact intervals and verifier are retained in the repository for regression and methodological transparency.
 
-\section{Repaired All-Regime Computational Verification}\label{app:numerics}
-The repaired baseline uses $\beta=0.01$, $\gamma=0.825$, and $\tau=0.35$, with all other primitives unchanged. The independent Stage-4A evaluator reconstructs route choice from the full utility upper envelope, solves support-side participation from multiple starts, reoptimizes private pricing after public deviations, and searches the full public strategy interval $[0,1]$. It also intensively rechecks boundaries, the old low-investment failure region, and the detected maxima using additional participation starts.
+\section{Repaired All-Regime Computational Search}\label{app:numerics}
+The repaired baseline uses $\beta=0.01$, $\gamma=0.825$, and $\tau=0.35$, with all other primitives unchanged. Stage 11R corrects the off-path welfare evaluator so that gross support benefit and clipped support mass are distinct and the partner-surplus integral in Appendix \ref{app:partnersurplus} is used whenever participation saturates.
 
-The resulting symmetric witness is approximately
+The numerical evaluator reconstructs route choice from the full utility upper envelope, solves support-side participation from multiple starts, reoptimizes private pricing after G deviations, holds the matched fee fixed during B3 deviations, searches the public strategy interval $[0,1]$, and rechecks boundaries, the old low-investment failure region, and support-saturation neighborhoods. The reported stationary candidates remain approximately
 \[
 x_G=0.83710224,
 \qquad
@@ -89,7 +111,9 @@ x_{B3}=0.82589039,
 \qquad
 p_G=0.01840368.
 \]
-The best detected deviation gain is below the documented certification tolerance in each environment. Local finite-difference derivative checks at multiple step sizes give a negative G best-response slope and a positive B3 slope. The representative generated values are reported in Table \ref{tab:strategic}.
+At these on-path points support participation is interior, so the corrected welfare formula coincides with the former interior shortcut. Numerical FOC/SOC and participation-residual checks continue to support local stationarity, and local finite-difference checks at multiple step sizes retain a negative G best-response slope and a positive B3 slope.
+
+After the accounting correction, no profitable public deviation is detected under the documented finite grid, local-refinement, private-reoptimization, and multistart search. In particular, the saturation-region payoffs are recomputed rather than evaluated with the interior shortcut. This is \emph{search evidence only}. The implementation does not provide a rigorous regret upper bound covering all unsearched public-investment and private-price points, and convergence from multiple initial conditions is not a proof that every possible participation root has been enumerated. The numerical exercise is therefore not labeled a certified global equilibrium, an exact equilibrium-existence proof, or a uniqueness certificate.
 
 The repaired condition
 \[
@@ -97,7 +121,7 @@ The repaired condition
 \]
 analytically eliminates nonresident rival-public usage for every project type. This prevents the direct free-riding route that invalidated the old witness. The condition is sufficient for that route-dominance statement only; it is not claimed to be necessary for the sign-reversal mechanism.
 
-No broad robustness theorem follows from this one repaired witness. In particular, the paper does not claim arbitrary-distribution robustness, arbitrary nonlinear-network robustness, generic heterogeneous-region robustness, or a positive-measure primitive region of global-equilibrium sign reversal. The earlier 20-draw perturbation exercise around the rejected vector is non-authoritative and has been removed from the paper's evidentiary chain.
+No broad robustness theorem follows from this one-vector search. In particular, the paper does not claim arbitrary-distribution robustness, arbitrary nonlinear-network robustness, generic heterogeneous-region robustness, or a positive-measure primitive region of global-equilibrium sign reversal. The earlier 20-draw perturbation exercise around the rejected vector is non-authoritative and has been removed from the paper's evidentiary chain.
 
 \section{Additional Tables}\label{app:tables}
 \begin{table}[h]
