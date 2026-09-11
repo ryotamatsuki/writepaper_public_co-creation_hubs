@@ -52,7 +52,7 @@ manuscript-audit: scope
 stage10-architecture:
 	$(PYTHON) scripts/validate_stage10_architecture.py
 
-test: freeze symbolic numerical scope tables stage10-architecture
+test: freeze symbolic numerical scope tables stage10-architecture manifest-verify
 	$(PYTHON) -m pytest -q tests
 
 verify: freeze symbolic global numerical scope bibliography manuscript-audit stage10-architecture

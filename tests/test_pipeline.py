@@ -59,7 +59,7 @@ def test_welfare_derivative_generation_is_direct():
     assert "rival_welfare" in r
     assert "private_profit" in r
     assert "national_direct" in r
-    assert "decomposition_sum" in r
+    assert "sum_components" in r
     assert "decomposition_error" in r
     assert abs(r["decomposition_error"]) < 1e-5
     assert abs(r["own_welfare"]) < 1e-3
