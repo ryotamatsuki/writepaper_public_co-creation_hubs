@@ -1,16 +1,21 @@
 name: analytic-level3-reopen
 on:
-  push:
-    branches: ['co-creation-theory/level3-analytic-reopen']
   pull_request:
     paths:
       - 'analytic_level3_reopen/**'
       - '.github/workflows/analytic-level3-reopen.yml'
+  workflow_dispatch:
+
+concurrency:
+  group: writepaper_public_co-creation_hubs-${{ github.event.pull_request.number || github.ref }}
+  cancel-in-progress: true
+
 permissions:
   contents: read
 jobs:
   analytic-reopen:
     runs-on: ubuntu-latest
+    timeout-minutes: 30
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
