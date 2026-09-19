@@ -1,13 +1,17 @@
 name: reproducibility
 on:
   pull_request:
-  push:
-    branches: ['co-creation-theory/**']
-permissions:
   contents: read
+  workflow_dispatch:
+
+concurrency:
+  group: writepaper_public_co-creation_hubs-${{ github.event.pull_request.number || github.ref }}
+  cancel-in-progress: true
+
 jobs:
   verify:
     runs-on: ubuntu-latest
+    timeout-minutes: 30
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
