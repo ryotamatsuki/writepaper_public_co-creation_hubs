@@ -41,34 +41,42 @@ Under mean-field sampling, innovator K_i is approximated by Binomial(k_i,q_j) (i
 This matching technology is BOTH supply constrained and sensitive to absolute partner market thickness; holding participant shares fixed while M,R ->0 makes matching rare.
 Participation and matching must be jointly solved; q_j is NEVER an exogenous fitted "success probability".
 
-## Ex post project bargaining and innovation effort
-For a project with realized K>=1 complementary partners and sunk innovator effort e, transferable gross project revenue is Y(K,e)=A*K^rho*e, A>0, 0<rho<=1. The entire project requires agreement by all named partners; coalition breakdown yields zero within-project revenues. It is an assumption that creates zero disagreement surplus, not a fact about ordinary matching contracts.
-Generalized multilateral Nash bargaining: innovator weight beta in (0,1), EACH partner weight 1-beta; transferable utility and zero coalition disagreement. Innovator revenue share
- theta_K=beta/[beta+K*(1-beta)].
-Each partner takes (1-theta_K)/K of Y. Effort cost is borne solely by innovator. This bargaining protocol is not Matsushima-Shinohara's independent *bilateral* Nash-in-Nash; that alternative MUST be examined in a robustness/absorption stage.
-Effort is selected before the Nash split, so
- e*(K)=theta_K*A*K^rho/c (K>=1); e*(0)=0.
-Innovator project net monetary return:
- pi_i_proj(K)=[theta_K^2*A^2*K^(2rho)]/(2c).
-Total realized project social value after effort cost:
- V_proj(K)=[A^2*K^(2rho)/c]*(theta_K-theta_K^2/2).
-Total partner remuneration per project:
- (1-theta_K)*A*K^rho*e*(K).
-These satisfy exact revenue accounting; Nash transfers cancel from W.
+## Ex post bilateral Nash-in-Nash bargaining and innovation effort (PRIMARY specification)
+For a project with realized K=m in {1,2} matched partners and sunk innovator effort e, transferable total project value is V(m,e)=A*m^rho*e, A>0, 0<rho<=1, with V(0,e)=0. The investor incurs a resource effort cost C_m(e)=c*d_m*e^2/2, c>0, d_1=1, d_2 in [1,2]; d_2 is an effort-cost scope factor, preserving the possibility of shared or partner-specific quality investment.
 
-Diagnostic when beta=1/2:
- theta_1=1/2, theta_2=1/3.
- e*(1)=A/(2c), e*(2)=A*2^rho/(3c).
-Thus e*(2)<e*(1) iff rho<log_2(3/2)=0.5849625.
-Social project surplus:
- V_proj(1)=3 A^2/(8c);
- V_proj(2)=5 A^2*2^(2rho)/(18c).
-Thus V_proj(2)>V_proj(1) iff rho>log_2(1.35)/2=0.2164797.
-For 0.21648<rho<0.58496, completed projects with 2 rather than 1 complementary partners have LOWER private innovator effort but HIGHER net social project output. These are direct algebraic consequences of assumed bargaining structure; NOT a novel theorem and NOT yet an equilibrium result for endogenous k or n.
+Once effort is sunk, the innovator separately and simultaneously negotiates with EACH matched partner using bilateral Nash bargaining, with innovator bargaining weight beta in (0,1) and partner weight (1-beta). If one relation breaks, the remaining m-1 connections deliver value V(m-1,e) and existing transfers to other partners are maintained (specified no-renegotiation disagreement convention). Therefore each partner's marginal bilateral surplus is
+   DeltaV_m(e)=V(m,e)-V(m-1,e)=A*[m^rho-(m-1)^rho]*e.
+The Nash-in-Nash payment to EACH matched partner is
+   T_m(e)=(1-beta)*DeltaV_m(e).
+The innovator keeps the residual before paying investment cost:
+   R_m(e)=V(m,e)-m*T_m(e)=r_m*e,
+   r_m=A*[m^rho-m*(1-beta)*(m^rho-(m-1)^rho)].
+The total partner transfers plus innovator pre-cost rents add EXACTLY to gross project value.
+
+The innovator anticipates these separate ex post bargains when it makes its sunk investment. Interior effort:
+   e*_m=r_m/(c*d_m), e*_0=0,
+assuming r_m>0, checked over the admissible parameters.
+Innovator private NET income:
+   pi_i_proj(m)=r_m^2/(2*c*d_m).
+Each successful partner's Nash transfer:
+   T_m(e*_m)=(1-beta)*A*[m^rho-(m-1)^rho]*e*_m.
+Real social project value net of investment (bargaining transfers cancel):
+   V_social(m)=A*m^rho*e*_m -c*d_m*(e*_m)^2/2
+              =[A*m^rho*r_m-r_m^2/2]/(c*d_m).
+
+The key comparison is endogenous, not imposed:
+  e*_2 < e*_1 IFF r_2/d_2 < r_1,
+  e*_2 > e*_1 IFF r_2/d_2 > r_1.
+With A=c=1, beta=.9, rho=.3, d_2=1.8:
+ r_1=.9, r_2≈1.18491553, e*_1=.9, e*_2≈.65828641, so broader scope lowers effort.
+With beta=.5, rho=.5, d_2=1.8: r_1=.5, r_2=1, e*_1=.5, e*_2≈.55555556, so broader scope raises effort.
+Thus the sign is NOT hard-coded. More partners may raise or reduce investment, which is exactly a question to investigate after equilibrium membership and scope are solved. These are comparative statics at FIXED REALIZED K, not endogenously selected scopes.
+
+The SOURCE 2014 Matsushima–Shinohara paper uses simultaneous separate Nash bargaining, whereas the earlier trial multilateral grand-coalition Nash split gives theta_m=beta/[beta+m*(1-beta)]. This alternative MAY be used in sensitivity analyses, but it is NOT the primary specification. The source's precise variable-production-cost technology and outside-option rules should still be audited against this stylized Nash-in-Nash formula.
 
 ## Endogenous platform usage
 For each i at hub j, expected project net return:
- Uproj_j(k)=sum_{K=1}^k Binom(k,K)*q_j^K*(1-q_j)^(k-K)*theta_K^2*A^2*K^(2rho)/(2c).
+ Uproj_j(k)=sum_{K=1}^k Binom(k,K)*q_j^K*(1-q_j)^(k-K)*r_K^2/(2*c*d_K).
 Set Uproj_j(0)=0.
 
 Let total reusable knowledge production
@@ -83,7 +91,7 @@ Innovator expected utility:
 An innovator selects (j,k) or no participation 0.
 
 Let aggregate partner bargaining receipts in hub j be:
- B_j=integral_{i joins j} E[(1-theta_{K_i})*A*K_i^rho*e*(K_i)] dmu_I(i).
+ B_j=integral_{i joins j} E[K_i*T_{K_i}(e*_{K_i})] dmu_I(i).
 If partner assignments are symmetric, average partner revenue is B_j/N_j^R (take 0 at zero partners). Partner expected utility:
  U^R_j(y)=v_R-p_j^R-t_R*(y-l_j)^2+B_j/N_j^R.
 Each partner chooses (j or no participation 0).
@@ -97,7 +105,7 @@ Public hub total social welfare objective:
  W =
    integral_{active innovators}[v_I-t_I*(x_i-l_j)^2-kappa*k_i + delta_j] dmu_I
  + integral_{active partners}[v_R-t_R*(y_r-l_j)^2] dmu_R
- + integral_{active innovators} E[V_proj(K_i)] dmu_I
+ + integral_{active innovators} E[V_social(K_i)] dmu_I
  + xi*sum_j Z_j
  -sum_{active j}[f_j(n_j)+c_m*L_j]
  -g*F_G -1{P enters}*F_P.
@@ -121,7 +129,7 @@ Kim (2024) already studies public/private competition in two-sided Hotelling pla
 It is NECESSARY to run stripped-label ablations and a direct policy alternative test before claiming a new mechanism for why public physical ownership is necessary.
 
 ## Stage status
-SETUP COMPLETE, EQUILIBRIUM UNSOLVED. This full two-sided model is not nested mechanically by the older single-sided numerical results: the equilibrium objects and matching/bargaining timing have been changed and must be solved afresh.
+PROPOSED SETUP COMPLETE, EQUILIBRIUM UNSOLVED. This full two-sided model is not nested mechanically by the older single-sided numerical results: the equilibrium objects and matching/bargaining timing have been changed and must be solved afresh.
 
 Primary sources:
 Matsushima & Shinohara (2014): https://doi.org/10.1016/j.jebo.2014.07.014
