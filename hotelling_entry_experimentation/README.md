@@ -16,6 +16,7 @@ It is **not** a revision of the canonical public two-sided-platform model. The e
 - STAGE_5_PRICE_SUBGAME_AUDIT.md: formally established off-path price-equilibrium multiplicity, a profitable high-price deviation under one continuation, and limitations of prior SPNE/entry claims.
 - STAGE_6_CONSTRUCTIVE_SPNE.md: global location best-reply proof and an SPNE construction under an explicitly selected low-price continuation, with v >= 4t and a restricted spillover domain.
 - STAGE_7_BACKWARD_INDUCTION_AUDIT.md: market-structure-by-market-structure backward induction, profits, prices, welfare, entry thresholds, realized location corrections, exact rational verification.
+- STAGE_8_FULL_MODEL_SETUP_DRAFT.md: full two-sided platform / feasible matching / bilateral Nash-in-Nash / sunk innovation investment / private entry / public establishment setup (PROPOSAL ONLY; not an equilibrium or theory freeze).
 - code/stage4_interior_location.py: executable Stage 4 conditional entry-policy diagnostics.
 - code/stage5_price_subgame_audit.py: executable Stage 5 price-subgame counterexample and low-price selection checks.
 - code/stage6_constructive_spne.py: executable Stage 6 continuation and policy diagnostics.
