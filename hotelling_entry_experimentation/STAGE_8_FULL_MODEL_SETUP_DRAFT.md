@@ -124,12 +124,12 @@ Alternative subsidies, procurement and purely digital networks are POLICY COUNTE
 At EVERY step verify optimizer feasibility, corners, global profitable deviations, and conservation of transfers / actual resource costs.
 
 ## Key scientific distinctions
-The 2014 Matsushima–Shinohara paper chooses 1 or 2 buyers and then uses separate bilateral simultaneous Nash bargaining; the present multilateral alternative is tractable but must not be conflated with the original.
+The 2014 Matsushima–Shinohara paper chooses 1 or 2 buyers and then uses separate bilateral simultaneous Nash bargaining. The PRIMARY specification in this draft is a stylized Nash-in-Nash version with explicit no-renegotiation disagreement payoffs; it is not a replication of the original paper's exact production-cost and bargaining primitives. A multilateral grand-coalition Nash split is only an alternative robustness specification.
 Kim (2024) already studies public/private competition in two-sided Hotelling platforms with investment, and Zhang–Li (2013) already study endogenous R&D/location in a mixed oligopoly. Entry and private-v-social disparity are also known.
 It is NECESSARY to run stripped-label ablations and a direct policy alternative test before claiming a new mechanism for why public physical ownership is necessary.
 
 ## Stage status
-PROPOSED SETUP COMPLETE, EQUILIBRIUM UNSOLVED. This full two-sided model is not nested mechanically by the older single-sided numerical results: the equilibrium objects and matching/bargaining timing have been changed and must be solved afresh.
+PROPOSED SETUP COMPLETE; SEE STAGE_9_FULL_MODEL_BACKWARD_INDUCTION_OBSTRUCTION.md. BARGAINING/INVESTMENT/CONTACT CHOICE CONDITIONAL SOLUTIONS, MULTIPLE PARTICIPATION EQUILIBRIA; FULL SPNE NOT SOLVED. This full two-sided model is not nested mechanically by the older single-sided numerical results: the equilibrium objects and matching/bargaining timing have been changed and must be solved afresh.
 
 Primary sources:
 Matsushima & Shinohara (2014): https://doi.org/10.1016/j.jebo.2014.07.014
