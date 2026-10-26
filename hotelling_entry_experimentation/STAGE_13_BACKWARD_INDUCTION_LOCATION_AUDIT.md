@@ -56,7 +56,7 @@ For any public fee q in {0,1}, consider on BOTH sides:
   p_P^I=p_P^R=q+Delta.
 Then private hub serves EVERY user in both sides; there is no nonparticipation because v=4.
 This is an exact Nash price equilibrium, not just a candidate:
-- SOCIAL optimality of all-P for public: For any possible allocations X,Y of the two sides, write s=(X+Y)/2,h=(X-Y)/2. Holding a,b fixed, social W is a quadratic with s² coefficient +4*(2r-d0)*t [positive since d0<r<2r], and h² coefficient negative. Hence global planner-optimal allocation is either all-P or all-G; private b_dev closer to 1/2 than a, so all-P strictly maximizes W. G's q is a best response because all-P obtains globally maximum W.
+- SOCIAL optimality of all-P for public: For any possible allocations X,Y of the two sides, write s=(X+Y)/2,h=(X-Y)/2. Holding a,b fixed, social W is a quadratic with s² coefficient +2*(2r-d0)*t [positive since d0<r<2r], and h² coefficient -2*(d0+2r)*t. Hence global planner-optimal allocation is either all-P or all-G; private b_dev closer to 1/2 than a, so all-P strictly maximizes W. G's q is a best response because all-P obtains globally maximum W.
 - PRIVATE global price BR: Given G fees q on both sides, any unilateral private fee vector inducing private shares (X,Y)∈[0,1]^2 has total revenue bounded by
   Q(X,Y)=[q+2d0(1-m0)-r]*(X+Y)-2d0*(X²+Y²)+4r*X*Y.
   Let s=(X+Y)/2,h=(X-Y)/2:
