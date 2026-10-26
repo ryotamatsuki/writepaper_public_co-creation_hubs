@@ -31,6 +31,8 @@ It is **not** a revision of the canonical public two-sided-platform model. The e
 - STAGE_10_TRACTABLE_MODEL_OPTIONS.md: literature-grounded simplification options, bilinear-matching closed-form two-sided demand/price/entry/welfare candidate, and binary partner-scope extension (design proposal, not an SPNE certification).
 - STAGE_11_BILINEAR_GLOBAL_SPNE.md: global price Nash proof inclusive of monopoly and duopoly corners, exact private-entry thresholds, and a three-regime public construction rule under explicit sufficient restrictions.
 - STAGE_12_ENDOGENOUS_LOCATION_REOPEN.md: analytical proof that Stage 11's fixed profile is NOT a location-game equilibrium; general interior two-sided location/fee equations; symmetric-side cubic candidate; global location SPNE unresolved.
+- STAGE_13_BACKWARD_INDUCTION_LOCATION_AUDIT.md: independently audited backward-induction interior cubic, private profit, welfare and conditional entry thresholds; rigorous demonstration of widely differing off-path Nash fee continuations, hence **NO globally certified location SPNE yet**.
+- code/stage13_endogenous_location_price_multiplicity.py: pure-Python exact inequality-based price Nash counterexample and stationary-root numerical reproduction.
 - code/stage12_location_reopen.py: exact rational profitable relocation counterexample and analytic-cubic consistency diagnostic.
 - code/stage11_bilinear_spne_audit.py: exact-rational regression and 25,921 alternative two-sided fee combinations (grid supplements full analytic proof).
 
