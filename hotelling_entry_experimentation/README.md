@@ -28,6 +28,8 @@ It is **not** a revision of the canonical public two-sided-platform model. The e
 - PRIOR_ART_AND_GATES.md: closest literatures and required kill tests.
 - code/innovation_hubs_stage3.py: runnable fixed-location Stage 3 calculation supplied in the conversation (Python standard library).
 
+- STAGE_10_TRACTABLE_MODEL_OPTIONS.md: literature-grounded simplification options, bilinear-matching closed-form two-sided demand/price/entry/welfare candidate, and binary partner-scope extension (design proposal, not an SPNE certification).
+
 ## Current verdict
 **RESTRICTED CONSTRUCTIVE SPNE: CONDITIONAL PASS; PUBLIC-HUB POLICY CONTRIBUTION: HOLD.** Stage 6 constructs at least one SPNE in a tightly specified quadratic-Hotelling/public-entry model under a chosen lowest-public-price continuation, with high baseline user value and spillovers in a restricted range. Stage 5 price-equilibrium multiplicity remains true, and another continuation can give different private entry incentives. The existence result is not uniqueness, does not prove selection robustness, and is not independently novel. Stage 1 old numerics still lack provenance; physical facility versus subsidy/procurement/digital alternative remains unresolved.
 
