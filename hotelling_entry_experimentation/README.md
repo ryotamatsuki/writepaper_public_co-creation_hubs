@@ -29,13 +29,17 @@ It is **not** a revision of the canonical public two-sided-platform model. The e
 - code/innovation_hubs_stage3.py: runnable fixed-location Stage 3 calculation supplied in the conversation (Python standard library).
 
 - STAGE_10_TRACTABLE_MODEL_OPTIONS.md: literature-grounded simplification options, bilinear-matching closed-form two-sided demand/price/entry/welfare candidate, and binary partner-scope extension (design proposal, not an SPNE certification).
+- STAGE_11_BILINEAR_GLOBAL_SPNE.md: global price Nash proof inclusive of monopoly and duopoly corners, exact private-entry thresholds, and a three-regime public construction rule under explicit sufficient restrictions.
+- code/stage11_bilinear_spne_audit.py: exact-rational regression and 25,921 alternative two-sided fee combinations (grid supplements full analytic proof).
 
 ## Current verdict
-**RESTRICTED CONSTRUCTIVE SPNE: CONDITIONAL PASS; PUBLIC-HUB POLICY CONTRIBUTION: HOLD.** Stage 6 constructs at least one SPNE in a tightly specified quadratic-Hotelling/public-entry model under a chosen lowest-public-price continuation, with high baseline user value and spillovers in a restricted range. Stage 5 price-equilibrium multiplicity remains true, and another continuation can give different private entry incentives. The existence result is not uniqueness, does not prove selection robustness, and is not independently novel. Stage 1 old numerics still lack provenance; physical facility versus subsidy/procurement/digital alternative remains unresolved.
+**STAGE 11 FIXED-LOCATION / ONE-LINK BILINEAR TWO-SIDED MODEL: CONDITIONAL SPNE CERTIFIED BY ANALYTIC GLOBAL BEST RESPONSES. ORIGINAL FULL MODEL: STILL OPEN.** Theorem under A1-A4 yields a pure-strategy SPNE of the restricted game with endogenous bilateral match volumes, two joining prices per provider, private entry and public build. It rules out **all** one-provider partial-coverage fee deviations and **all** two-provider corner fee deviations. It does NOT allow firms to relocate when both are active; does not endogenize contact number above one; assumes full registration of each market side when at least one hub exists; has no subsidy/digital counterpart. This is a tractable foundation, not a certified novel economic contribution. Stage 6 is a DIFFERENT single-sided model and should never be mixed algebraically with Stage 11.
 
 ## Reproduce
 Run from repository root:
 
-    python hotelling_entry_experimentation/code/innovation_hubs_stage3.py
+    python hotelling_entry_experimentation/code/stage11_bilinear_spne_audit.py
+
+For earlier checkpoints, run their correspondingly numbered scripts.
 
 No pull request is opened for merging into main. Commit future work only to this research branch unless the owner explicitly approves a change in direction.
