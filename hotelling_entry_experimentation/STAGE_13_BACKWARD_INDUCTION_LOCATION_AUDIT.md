@@ -89,4 +89,4 @@ UNSOLVED: complete Nash PRICE equilibrium correspondence for all arbitrary locat
 Status: **STAGE 13 = CONDITIONAL LOCAL CANDIDATE + RIGOROUS OFF-PATH OBSTRUCTION; NOT SPNE CERTIFIED.**
 Next stage: select or microfound public fee rule, or characterize the whole price equilibrium correspondence and construct/prove at least one full location SPNE. Do not change g/private entry/matching or silently freeze a local solution.
 
-Reproduction: code/stage13_endogenous_location_audit.py
+Reproduction in GitHub: code/stage13_endogenous_location_price_multiplicity.py (standard-library cubic solver, welfare, and both global-fee Nash counterexamples).
