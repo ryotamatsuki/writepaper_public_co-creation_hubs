@@ -15,9 +15,11 @@ It is **not** a revision of the canonical public two-sided-platform model. The e
 - STAGE_4_ENDOGENOUS_LOCATION.md: conditional endogenous-location solution, welfare and entry expressions, revised calibration, and global-equilibrium caveats.
 - STAGE_5_PRICE_SUBGAME_AUDIT.md: formally established off-path price-equilibrium multiplicity, a profitable high-price deviation under one continuation, and limitations of prior SPNE/entry claims.
 - STAGE_6_CONSTRUCTIVE_SPNE.md: global location best-reply proof and an SPNE construction under an explicitly selected low-price continuation, with v >= 4t and a restricted spillover domain.
+- STAGE_7_BACKWARD_INDUCTION_AUDIT.md: market-structure-by-market-structure backward induction, profits, prices, welfare, entry thresholds, realized location corrections, exact rational verification.
 - code/stage4_interior_location.py: executable Stage 4 conditional entry-policy diagnostics.
 - code/stage5_price_subgame_audit.py: executable Stage 5 price-subgame counterexample and low-price selection checks.
 - code/stage6_constructive_spne.py: executable Stage 6 continuation and policy diagnostics.
+- code/stage7_backward_induction_audit.py: exact rational regression checks of the complete restricted government/entry/location/price accounting, plus independent location-deviation grid tests.
 - STAGE_1_TO_3.md: chronology, formulas, numerical claims and validation status.
 - MODEL_AUDIT.md: exact maintained assumptions and limitations.
 - PRIOR_ART_AND_GATES.md: closest literatures and required kill tests.
