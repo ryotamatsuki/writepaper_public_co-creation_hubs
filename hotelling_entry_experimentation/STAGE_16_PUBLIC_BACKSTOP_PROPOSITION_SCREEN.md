@@ -66,6 +66,18 @@ Public-only welfare B0-FG=-1/200<0, and private-only entry is unprofitable since
 => Neither G-only nor P-only is privately/economically viable in its subgame, while the municipality BUILDING G and inducing P to enter is socially desirable. This is strict (holds in an open neighborhood).
 Reproduction of rational witness performed independently in container at /mnt/data/stage16_outside_option_audit.py.
 
+## Critical closest-neighbor discovery: IDLE public fallback is ALREADY KNOWN
+Martinez-Giralt & Pita Barros (2005), "Bargaining and idle public sector capacity in health care", Economics Bulletin 9(5):1–8, **explicitly rationalize IDLE publicly owned capacity via the value of the outside option during negotiations with a privately efficient provider**.
+https://ideas.repec.org/a/ebl/ecbull/eb-05i10002.html
+Therefore "idle public facility has bargaining value without on-path use" is **NOT NEW, and must NOT be presented as a novel standalone economic mechanism**.
+The candidate possible additional contribution is only the JOINT result:
+- Noncontractible pre-match experimentation effort endogenously responds to public outside option;
+- private intermediary derives endogenous partner-side commission profit that is inverted-U in fallback quality;
+- public infrastructure **induces** private intermediary entry in an intermediate matched-market-thickness band, with neither public-only nor private-only viable but joint configuration viable;
+- an implementability boundary separates real public provision from contractible private standby provision.
+These elements must ALL survive direct comparison with prior art and a less contrived fee/entry model. Strong ABSORPTION RISK persists. Also Wilson (2025) already models municipal infrastructure, private investment crowd out/in and public entry, so simple private-entry crowd-in is NOT NEW in general.
+The exact paper-specific contribution is NOT yet established.
+
 ## Critical no-go and absorption tests
 1. **NOT NEW BY ASSERTION**: outside options and relation-specific investment are classic Grossman-Hart-Moore/hold-up logic; Goldlücke & Schmitz (2014 JET) directly study investments that affect outside options; Hwang & Li (2017 JET) study transparency and bargaining outside options; Bernhardt/Hwang/Krasa (2025 working paper) study joint and outside-option investments; Wilson (2025 AEJ Micro) shows municipal public competition and private investment incentives.
 2. **Prove that public BUILDING, not public financing, is needed**: If a contracting authority can purchase the exact same fallback availability/quality from an existing private laboratory at resource cost <= FG, with enforceable open access and observed match quality, then own-construction is never uniquely desirable. This is an immediate implementation-equivalence / no-go theorem. Need formal unverifiability/commitment friction or a second-mover credible-neutrality advantage to justify ownership. Shleifer (1998 JEP) is especially relevant.
