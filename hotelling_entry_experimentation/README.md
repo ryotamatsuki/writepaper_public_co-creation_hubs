@@ -36,13 +36,16 @@ It is **not** a revision of the canonical public two-sided-platform model. The e
 - code/stage12_location_reopen.py: exact rational profitable relocation counterexample and analytic-cubic consistency diagnostic.
 - code/stage11_bilinear_spne_audit.py: exact-rational regression and 25,921 alternative two-sided fee combinations (grid supplements full analytic proof).
 
+- STAGE_14_PRICE_SUBGAME_REGIME_AUDIT.md: exact 9-case FULL-COVERAGE membership correspondence, interval-based finite-v opt-out fixed-point map, all-private price-NE continuum and rational PURE-PRICE NONEXISTENCE witness in a full-coverage off-path location (not a finite-v SPNE nonexistence theorem).
+- code/stage14_price_subgame_regimes.py: exact rational branch enumeration, global fee-BR inequalities, full-coverage nonexistence certificate, and finite-v interval demand-map diagnostics.
+
 ## Current verdict
-**STAGE 11 FIXED-LOCATION / ONE-LINK BILINEAR TWO-SIDED MODEL: CONDITIONAL SPNE CERTIFIED BY ANALYTIC GLOBAL BEST RESPONSES. ORIGINAL FULL MODEL: STILL OPEN.** Theorem under A1-A4 yields a pure-strategy SPNE of the restricted game with endogenous bilateral match volumes, two joining prices per provider, private entry and public build. It rules out **all** one-provider partial-coverage fee deviations and **all** two-provider corner fee deviations. It does NOT allow firms to relocate when both are active; does not endogenize contact number above one; assumes full registration of each market side when at least one hub exists; has no subsidy/digital counterpart. This is a tractable foundation, not a certified novel economic contribution. **Stage 12 demonstrates that the fixed Stage 11 position pair is NOT a Nash location equilibrium once firms may choose locations. The genuine endogenous-location SPNE remains OPEN and takes priority over a two-partner expansion.** Stage 6 is a DIFFERENT single-sided model and should never be mixed algebraically with Stage 11.
+**STAGE 14 PRICE-SUBGAME AUDIT: GLOBAL PURE-STRATEGY SPNE STILL UNRESOLVED FOR THE ORIGINAL FINITE-v ENDOGENOUS-LOCATION GAME.** The exact FULL-COVERAGE subscriber Nash correspondence has 9 regimes; for d<r it may support multiple subscription equilibria at identical prices. An explicit continuum of all-private fee Nash continuations is proved. For a=0.495,b=0.525 and r=1/45 we prove that a FULL-COVERAGE no-outside-option specialization has **NO PURE FEE NASH**; thus that specialized location game cannot have a pure SPNE. The original game lets users opt out; its complete fee equilibrium correspondence including nonparticipation, and a mixed or pure full SPNE, remain **UNPROVED**. Do not inherit Stage 11 or Stage 13 thresholds as solved endogenous-location results. Mixed-strategy continuations or a separately declared fee-commitment variant are possible next theoretical approaches. Claim neither publication novelty nor final policy thresholds.
 
 ## Reproduce
 Run from repository root:
 
-    python hotelling_entry_experimentation/code/stage11_bilinear_spne_audit.py
+    python hotelling_entry_experimentation/code/stage14_price_subgame_regimes.py
 
 For earlier checkpoints, run their correspondingly numbered scripts.
 
