@@ -46,13 +46,16 @@ It is **not** a revision of the canonical public two-sided-platform model. The e
 
 - STAGE_17_PRIVATE_INCUMBENTS_PUBLIC_UNDERSUPPLY_AUDIT.md: with existing private hubs, distinguishes number-of-hubs vs missing cross-hub matching FUNCTION, simple underprovision window, private procurement no-go, and closest 2026 OECD and platform competition priors.
 
+- STAGE_19_SIMULTANEOUS_ENTRY_PREMATCH_INVESTMENT_ZONED_SPNE.md: fully constructed **ZONED** simultaneous public/private entry SPNE, global 2-sided fee Nash, analytic pre-match investment, endogenous locations with exact Bernstein global-BR and contraction certificates, payoffs in all 4 entry structures, over/under/efficient entry examples.
+- code/stage19_zoned_spne_bernstein.py: symbolic exact rational Bernstein verification, numerical location root and stage-1 entry/second-best welfare examples.
+
 ## Current verdict
-**STAGE 16: PROPOSED ECONOMIC MECHANISM IDENTIFIED; CLOSED-FORM CONDITIONAL THEOREM AND STRICT NUMERICAL WITNESS; NOVELTY NOT CERTIFIED; ENDOGENOUS-LOCATION SPNE NOT SOLVED.** An unused public experimental backstop strengthens the innovator's ex-post bargaining outside option and relationship-specific investment. With partner-side fee extraction by the private hub, its entry profit may RISE for moderate fallback quality when innovator bargaining power is low. The resulting FOUR-REGIME public-establishment rule includes a crowd-in region where neither provider alone is viable, but public plus private is. **Crucial direct prior art**: Martinez-Giralt & Pita Barros (2005) already explain unused public capacity's bargaining value. Outside options/hold-up and public crowds-in private investment are also known; only the joint threshold/contractibility result is a hypothetical contribution. A further impossibility/implementation test is required to justify direct public construction over subsidized contracted standby. Stage 15 no-pure-SPNE lemma is retained as auxiliary, not the paper's research question.
+**STAGE 19: COMPLETE CONSTRUCTIVE SPNE IN A NEW, EXPLICITLY ZONED AND NORMALIZED SIMULTANEOUS-ENTRY GAME.** Public and private entry are simultaneous; neither preexisting hub is assumed; each selects its location endogenously within its own restricted area [0,.4] or [.6,1]; both choose endogenous two-sided fees; matching and innovator effort BEFORE realized matching are endogenous; all entry structures and payoffs are solved. A globally valid two-sided price continuation exists at ALL zoned locations; unique zoned location Nash is certified with exact rational Bernstein inequalities and best-response contraction; off-path consumer enrollment is selected using a compact fixed-point correspondence. **This is NOT the unrestricted spatial model, NOT a general comparative-static M/R theorem, and NOT a novelty-certified publication result.** Stage 15 unrestricted-location pure-SPNE impossibility pertains to a different mandatory-full-coverage game. Both under-entry and over-entry emerge by varying fixed costs in Stage19, but those are classical mechanisms until shown otherwise.
 
 ## Reproduce
 Run from repository root:
 
-    python hotelling_entry_experimentation/code/stage14_price_subgame_regimes.py
+    python hotelling_entry_experimentation/code/stage19_zoned_spne_bernstein.py
 
 For earlier checkpoints, run their correspondingly numbered scripts.
 
