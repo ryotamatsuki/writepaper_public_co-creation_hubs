@@ -161,6 +161,54 @@ def rational_nonexistence_witness():
     print("ANALYTIC OBSTRUCTION: no PURE price equilibrium in full-coverage specialization.")
 
 
+
+
+def finite_v_subscriber_map(a,b,r,gI,gR,pI,pR,
+                            nGI,nPI,nGR,nPR,t=1.0,v=4.0):
+    """ONE evaluation of the true finite-v opt-out membership fixed-point
+    map. nGI, nPI, nGR, nPR are current masses of the four groups.
+    Counts are continuous and piecewise radical for a!=b.
+    No selection among multiple fixed points is implemented.
+    """
+    from math import sqrt
+    a,b,r,t,v=map(float,(a,b,r,t,v))
+    assert a!=b and t>0
+    def overlap(lo,hi,left,right):
+        return max(0.,min(hi,right,1.)-max(lo,left,0.))
+    out=[]
+    for g,p,otherG,otherP in ((float(gI),float(pI),float(nGR),float(nPR)),
+                               (float(gR),float(pR),float(nGI),float(nPI))):
+        H_G=v-g+t*r*otherG
+        H_P=v-p+t*r*otherP
+        RG=sqrt(max(H_G,0.)/t)
+        RP=sqrt(max(H_P,0.)/t)
+        theta=(a+b)/2+(p-g-t*r*(otherP-otherG))/(2*t*(b-a))
+        if b>a:
+            massG=overlap(a-RG,a+RG,-float('inf'),theta) if H_G>=0 else 0.
+            massP=overlap(b-RP,b+RP,theta,float('inf')) if H_P>=0 else 0.
+        else:
+            massP=overlap(b-RP,b+RP,-float('inf'),theta) if H_P>=0 else 0.
+            massG=overlap(a-RG,a+RG,theta,float('inf')) if H_G>=0 else 0.
+        out.append((massG,massP))
+    return (out[0][0],out[0][1],out[1][0],out[1][1])
+
+
+def finite_v_map_diagnostics():
+    # For low fees, no one opts out; the map reduces to the nine-case formulas.
+    from math import isclose
+    a,b,r=.495,.525,1/45
+    gI=gR=0.0
+    pI=pR=(2*(b-a)*(1-(a+b)/2)-r)/2
+    x=float(F(323,1400))
+    vals=finite_v_subscriber_map(a,b,r,gI,gR,pI,pR,
+                                  1-x,x,1-x,x)
+    assert all(isclose(value,expected,abs_tol=1e-11)
+               for value,expected in zip(vals,(1-x,x,1-x,x)))
+    # With all four tariffs unaffordable, participants choose opt-out.
+    vals=finite_v_subscriber_map(a,b,r,10,10,10,10,0,0,0,0)
+    assert vals==(0.,0.,0.,0.)
+    print("PASS finite-v opt-out interval map diagnostics:",vals)
+
 if __name__=="__main__":
     r=F(1,45)
     a=F(1,4)
@@ -185,5 +233,6 @@ if __name__=="__main__":
     print("intermediate allP-price Nash:",
           assert_allP_Nash(a,b,r,qmin))
     rational_nonexistence_witness()
+    finite_v_map_diagnostics()
     print("PASS: nine-case enumeration, allP global Nash envelopes,")
     print("and exact-rational conditional pure-price nonexistence inequalities.")
