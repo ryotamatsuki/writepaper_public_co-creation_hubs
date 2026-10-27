@@ -30,6 +30,32 @@ For d>r, k<1 yields a unique full-coverage subscription Nash equilibrium via con
 
 For finite v and arbitrary possibly unaffordable fees, these nine FULL-COVERAGE branches are not exhaustive: add a no-participation set to each population, determined exactly as the measurable argmax of {0,U_G,U_P}. An exact finite-v full-game price correspondence remains unresolved.
 
+
+## 1A. Exact demand correspondence for ORIGINAL finite-v outside-option game
+The 9 branches above apply ONLY when the total mass of EACH side is allocated to an active hub. For the original outside utility 0, one can still construct an exact interval-measure fixed-point map, now with nonparticipant masses.
+
+For each side s∈{I,R} and other side -s, let n^s_G,n^s_P∈[0,1] be the masses selecting hubs G,P, and let location l_G=a,l_P=b.
+Let
+ H^s_j = v_s-p^s_j+mu*w*n^{-s}_j.
+The types of side s with nonnegative utility from platform j are precisely the interval
+ E^s_j = [l_j - sqrt(max(H^s_j,0)/t), l_j + sqrt(max(H^s_j,0)/t)] intersect [0,1],
+and EMPTY if H^s_j<0 (at equality, a zero-measure singleton is immaterial).
+For b>a, the P-vs-G indifference type is
+ theta_s=(a+b)/2+[p^s_P-p^s_G-mu*w*(n^{-s}_P-n^{-s}_G)]/[2t(b-a)].
+Then the EXACT best-response participation masses are:
+ n^s_P = length(E^s_P intersect [theta_s,1]),
+ n^s_G = length(E^s_G intersect [0,theta_s]).
+For b<a reverse the two half-lines, with the signed (b-a) in theta_s.
+Let T_{a,b,p}: [0,1]^4 -> [0,1]^4 be the map defined by these four formulas and each matching group’s expectation. Then the FULL finite-v participation-equilibrium correspondence is
+ D(a,b,p) = Fix(T_{a,b,p}).
+Every coordinate of T is a piecewise combination of max/min and square roots. At b≠a it is continuous in participation masses, so Brouwer supplies at least one participation fixed point for each fee vector (though possibly several). At b=a, hub indifference occurs for positive masses and its tie-allocation rule must be defined separately.
+
+**This does not solve the fee Nash game.** An extensive-game continuation must also choose a selection sigma_{a,b}(p)∈D(a,b,p) following EVERY fee vector p. Given such selection, fee Nash requires
+ W(sigma(g,p)) >= W(sigma(g',p)) for all g'≥0
+ Pi_P(g,p;sigma(g,p)) >= Pi_P(g,p';sigma(g,p')) for all p'≥0,
+with public and private fee vectors both two-dimensional.
+Without sigma, the induced fee game is payoff-set-valued; the price vector alone is not a complete subgame equilibrium specification. A candidate selection must be checked for both fee best responses.
+
 ## 2. A whole family of pure two-sided fee Nash equilibria (both sides tip to P)
 Write c above for fraction of types toward P's end, and Δ=t[r-2d*(1-c)]. This is the maximum P-vs-G posted fee premium compatible with all-P in each side; for P on the right Δ=t[r-d(a+b)].
 
