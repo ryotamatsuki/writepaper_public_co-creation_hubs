@@ -1,0 +1,41 @@
+# Stage 31 — Reality and economic foundations of commercialization returns accruing to actual hub participants
+Date: 2026-10-27. STATUS: evidence check / structural audit, **not** yet a solved Stage31 equilibrium or journal novelty claim.
+
+## Conclusion
+It is institutionally and economically defensible—and generally MORE realistic than Stage30—to endogenize each participating entrepreneur/producer's expected net appropriable benefit from commercialization in hub participation. Distinguish (1) new product sold by incumbent participant; (2) commercializing partner is compensated under development/service contract or IP license; (3) partner companies hold equity in RJV/JV and divide dividends/profits; (4) success without meaningful participant profit, or even negative net return, is possible. Facilities generally do not own commercialized IP just because they introduce counterparties; contractual parties and legal rights matter.
+
+## PRIMARY public cases (do NOT invent revenue splits)
+- QUINTBRIDGE Cow Soap/Kobe? and Ledesone: cow-soap manufacturer and startup Ledesone connected via a QB workshop and cooperated on accessibility feedback/early development of "SUSUGU" portable hair-washing device, launched by Cow Soap in 2025. This SUPPORTS commercialization by MEMBER manufacturer, not a specific profit sharing or proof Ledesone receives royalties: https://www.quintbridge.jp/about/library/detail/202508291503.html ; https://ledesone.com/20250403_cow-soap/
+- QUINTBRIDGE 2024 NTT SmartConnect/OneAI selected programme -> PoC -> 2025-12-15 live-commerce existing service "foove+" launches commercial AI-banner feature powered by OneDesign supplied by OneAI. At least one member firm commercializes co-created enhancement; third-party OneAI's fee/profit is NOT made public: https://www.nttsmc.com/news/2024/20241111.html ; https://www.nttsmc.com/info/2025/20251215.html .
+- SHIBUYA QWS Innovation Association official terms Art 12 says IP from association related activities DOES NOT vest in the association: https://sqi.shibuya-qws.com/terms/ . NOT proof that all IP automatically belongs to a particular member or member group.
+- QUINTBRIDGE 2026 Spark-Edge programme says PoC costs up to ¥5m and optional investment max ¥10m; future JV/new services/M&A contemplated, so startup/JV ownership returns are plausible INSTITUTIONS, though not proof JVs already established: https://www.quintbridge.jp/program/detail/202605111500.html .
+
+## Direct contractual evidence: rights are not one-size-fits-all
+- JFTC/METI Startup Business Collaboration and Startup Investment Guidelines, revised Feb 19 2026, state joint R&D contract governs commercialization-period rights, proper IP return for contributed startup, and exploitative one-sided IP appropriation can be abuse of superior bargaining position:
+https://www.jftc.go.jp/dk/guideline/unyoukijun/startup.html
+- JPO OI model agreements v2.2 April 2025 for NDA, PoC, R&D, license, consortia, equity; royalties, upfront fee, field/time limited licenses, shares conditional:
+https://www.jpo.go.jp/support/general/open-innovation-portal/index.html
+- SME Agency technical/IP transactions guidelines 2026 public: co-development contribution and remuneration determine IP rights, not entitlement of venue; shared rights may be negotiated; www.chusho.meti.go.jp/keiei/torihiki/chizai_guideline.html.
+
+## Academic precedent and anti-absorption
+- Greenlee & Cassiman (1999) "Product Market Objectives and the Formation of Research Joint Ventures", Managerial and Decision Economics 20(3):115–130, endogenous RJV coalition formation as function of anticipated ex-post product profits. https://www.jstor.org/stable/3108143
+- Goyal & Joshi (2003), "Networks of collaboration in oligopoly", Games and Economic Behavior 43:57–85, pairwise links chosen based on their firm-profit effect under market competition. https://www.sciencedirect.com/science/article/pii/S0899825602005626
+- Adams & Link (2018), "The structure and performance of U.S. research joint ventures: inferences and implications from the Advanced Technology Program", Economics of Innovation and New Technology 27(5–6):551–575. Finds partner companies often COMMERCIALIZE SEPARATELY to avoid splitting new-product revenues, and venture commercialization faces patent/competitive issues: https://www.nber.org/papers/w23734 ; https://www.tandfonline.com/doi/full/10.1080/10438599.2017.1376169
+Thus user profit-appropriation and endogenous participation per se are NOT research novelty; 4 local G/P entrants and two-city participant-partner equilibrium plus new-product Cournot, type/siting welfare wedge would require proof and prior-art check.
+
+## Critical Stage30 inconsistency
+Stage30 has hub "project users" distinct from product incumbents and research JV owners; venture probability η=η0+ρλm_A m_B increases from those project users without sharing the commercialization prize or necessarily receiving match wages. That can be realistic for independent information volunteers compensated in v_i, but is not a general description of participating commercial firms. If firms both join and get commercialization stakes, their join decision reflects private commercial return, and the previously solved tariffs f_M=(u+Δ)/2, f_D=Δ/2 and no-fee coverage m_G=1 GENERALLY DO NOT carry over. Endogenous private fees, project match probability, participation and product competition must be jointly re-solved. Hence Stage30 BG vs BB numerical NE is NOT robustly established to the realistic integrated-user payoff model.
+
+## Minimal theoretical extension with independent local four-hub entrants and existing no-hub competitors
+- Producer/venture developers i (maybe some existing incumbents) have no-hub baseline operating profits π_i0>0 and conventional collaborations; do NOT double count them in hub utility.
+- If type θ firm chooses venue h∈{0,G,P}, its incremental ex ante utility must be:
+ U_ih(θ)=base local amenities u_ih(θ)−f_ih−t_ih−k_ih + E[π_i^commercial(h,m_A,m_B,e,contract)−π_i^commercial(0,...)].
+ If incumbent also competes, π_i^commercial includes its OWN sales and cannibalization Δπ_inc; if founder, its JV share or license royalties; total returns must net real R&D cost and participation/technology transfer cost. For no-hub baseline compare conventional RJV gains.
+- One tractable scalar approximative case:
+ U_iP(θ)−U_iG(θ)=θΔ_i−f_i + [r_i^P(m_A,m_B)−r_i^G(m_A,m_B)]
+ (base amenities common).
+ r_i^P,r_i^G are anticipated *per firm* expected commercialization payoffs; do not use the entire representative JV gross Π_E as each infinitesimal user's benefit or multiply an undivided profit pool over N agents. Options: each pair creates own new-product opportunity with independently replicable payoff, or distribute finite JV profit via fixed member equity shares summing to 1.
+- Matching/venture values can depend on partner technology quality, not only population mass. Conditional on profile/fee solve membership fixed point; and conditional on matched project solve R&D effort and ex-post differentiated Cournot; then private fee optimization; then all 16 local autonomous entry four-player NE and constrained planner. Ex-ante IP licenses and sharing contract alpha_ij should be explicit, or a fixed exogenous alpha treated as contract regime for a first extension.
+- Market demand changes when products succeed. Stage30's representative venture profitability Π_E included independently but project participants were kept outside commercialization. Need endogeneity to test fee revenue and both local G/P coexist; changing returns could increase or decrease private revenues, and may produce complementarities or multiple enrollment equilibria.
+- Most important: differentiate equity JV, unilateral commercial producer, licensed/outsourced support, crowd-in and crowd-out; free public fee does not necessarily force monopoly P out if value differentials/appropriable commercialization large.
+- Keep research hypotheses not theorems: (H) regional asymmetry and endogenized participation remuneration changes public/private ownership; (H) public site 'free' can raise participation but undercut premium broker and suppress partner commercial returns; (H) contractual capture and cross-region profits create sign-changes and multiple pure NE. Test prior-art absorbability of any proposition.
