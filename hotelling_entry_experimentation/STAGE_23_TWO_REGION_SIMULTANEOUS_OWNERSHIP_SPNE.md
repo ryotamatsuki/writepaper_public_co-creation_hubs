@@ -86,3 +86,12 @@ For owner-neutral connectivity α=1 with publicly more expensive costs, the plan
 - All parameters normalized illustrative; journal originality unproved. Existing model absorption risk: Kawasaki (2026), Zhu et al (2021), Jullien-Pavan-Rysman (2021).
 
 Local reproducible outputs available: \`stage23_two_region_ownership.py\` (Fraction EXACT 16-profile checks) and \`stage23_two_region_equilibria.csv\` (420 parameter-pair exhaustive NE/planner profiles).
+
+## 7. Additional rural-thickness thresholds (holding rho=.6)
+Using exactly the same cost vector and alpha=.5, the one-site-per-region pairwise differences yield two explicit positive-root scales:
+ - PP vs PG: r*(1+r) = (.037-.012) / [κ*(2*.6*.5*.5+.6²*.5²*(1-.5²))],
+   giving r_1=0.59846832137355.
+ - PG vs GG: r*(1+r) = (.110-.018) / [κ*(2*.6*(1-.5)+.6²*(1-.5²))],
+   giving r_2=0.81797912180628.
+Both thresholds were checked against the **global 16-profile planner** at multiple neighboring and interior points. In this calibration at rho=.6, r=0.2,.4,.5 planner=PP; r=.6,.7,.8 planner=PG; r=.85,.9,1 planner=GG. Thus the MODEL DOES NOT imply \"public is more necessary the thinner the rural market\"; when the population is too thin cross-region gains cannot finance the higher government fixed cost. Potential NO-HUB or single-hub optimality must be rechecked if other fixed costs change.
+At r=.7,rho=.6, replacing alpha=.5 by alpha=1 while retaining public costs above private makes planner PP, W_PP=.36184622. This is a core OWNER-NEUTRAL IMPLEMENTATION equivalence check: the public ownership advantage is exclusively supplied by the presumed difference in interoperable access.
