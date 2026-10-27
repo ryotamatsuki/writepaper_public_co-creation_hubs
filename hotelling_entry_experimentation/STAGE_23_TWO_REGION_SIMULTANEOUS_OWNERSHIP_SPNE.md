@@ -95,3 +95,17 @@ Using exactly the same cost vector and alpha=.5, the one-site-per-region pairwis
    giving r_2=0.81797912180628.
 Both thresholds were checked against the **global 16-profile planner** at multiple neighboring and interior points. In this calibration at rho=.6, r=0.2,.4,.5 planner=PP; r=.6,.7,.8 planner=PG; r=.85,.9,1 planner=GG. Thus the MODEL DOES NOT imply \"public is more necessary the thinner the rural market\"; when the population is too thin cross-region gains cannot finance the higher government fixed cost. Potential NO-HUB or single-hub optimality must be rechecked if other fixed costs change.
 At r=.7,rho=.6, replacing alpha=.5 by alpha=1 while retaining public costs above private makes planner PP, W_PP=.36184622. This is a core OWNER-NEUTRAL IMPLEMENTATION equivalence check: the public ownership advantage is exclusively supplied by the presumed difference in interoperable access.
+
+
+## 8. Exact FOUR-stage rural-scale phase at fixed connectivity rho=.6
+With ALL costs / alpha above held fixed and rho=3/5, global constrained-planner ownership shifts through FOUR stages as the rural size r increases. The 16 W functions are degree-at-most-three polynomials in r. We enumerated **all pairwise polynomial roots inside (0,1)** and checked each of the resulting 42 open intervals, not only a coarse sampled grid. The global upper envelope:
+ - urban-private-only P- when 0≤r<0.0979367299974837,
+ - PP for 0.0979367299974837<r<0.59846832137355,
+ - PG for 0.59846832137355<r<0.81797912180628,
+ - GG for 0.81797912180628<r≤1.
+Adjacent profiles tie at the roots.
+The EXACT signed polynomial differences are:
+ W_PP−W_P-=(1600 r³+516 r²+2691 r−270)/22500.
+ W_PG−W_PP=(392 r²+392 r−375)/15000.
+ W_GG−W_PG=(232 r²+232 r−345)/3750.
+The result is calibration-specific and critically dependent on reduced-form α<1; at α=1 with public fixed costs higher, the public stages disappear. It also refutes the unsupported belief that the thinner the rural region, the more socially valuable an additional public physical hub necessarily is.
