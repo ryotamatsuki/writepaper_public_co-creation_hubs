@@ -5,7 +5,7 @@
   "files": [
     {
       "file": "jict_revised_manuscript.pdf",
-      "sha256": "491612f3ba2e02eebbb6af19abe60b4bab7fbe3c1c771425b587ae417b2d7966",
+      "sha256": "f423c109672329abcd739379a9d94983cca04a3cbf9c549f27aa5b1444c6828e",
       "pages": 27,
       "visually_reviewed_pages": [
         1,
@@ -48,17 +48,17 @@
         2110,
         1583,
         1966,
-        2159,
-        2346,
-        2116,
-        2257,
-        2513,
-        2614,
-        2623,
-        2717,
-        2523,
-        2534,
-        1798,
+        2218,
+        2466,
+        2280,
+        2259,
+        2509,
+        2613,
+        2630,
+        2720,
+        2615,
+        2536,
+        1890,
         2102,
         2025,
         505,
@@ -69,7 +69,7 @@
     },
     {
       "file": "jict_online_supplement.pdf",
-      "sha256": "c514d44d4b27a099b8801e9edfbe704e05242f8c6237e5c1b718d9d0735bc4c3",
+      "sha256": "d33991c98c5f17ca72a33842e5c86248928a8566c7af4d2b00db3091f19285f4",
       "pages": 6,
       "visually_reviewed_pages": [
         1,
@@ -85,7 +85,7 @@
         3356,
         3439,
         2862,
-        1566
+        2293
       ],
       "embedded_fonts_checked": true
     }
@@ -104,5 +104,53 @@
     "Supplement equation-number collision",
     "Bibliography URL spacing and split entry"
   ],
-  "limits": "Visual and compilation QA does not certify scholarly novelty, all-lambda SPNE or author-specific declarations."
+  "limits": "Visual and compilation QA does not certify scholarly novelty, all-lambda SPNE or author-specific declarations.",
+  "last_revision_pixel_comparison": {
+    "main": {
+      "pixel_identical_to_reviewed_pages": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        24,
+        25,
+        26,
+        27
+      ],
+      "changed_pages": [
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23
+      ]
+    },
+    "supp": {
+      "pixel_identical_to_reviewed_pages": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "changed_pages": [
+        6
+      ]
+    }
+  },
+  "last_revision_reinspection": "All changed pages re-inspected; remaining pages pixel-identical to previously inspected pages."
 }
