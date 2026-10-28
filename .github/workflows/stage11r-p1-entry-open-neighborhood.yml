@@ -32,3 +32,22 @@ jobs:
             hotelling_entry_experimentation/production/reviews/stage11r_pp_global_certificate.json
             hotelling_entry_experimentation/production/reviews/stage11r_p1_open_region_certificate.json
           retention-days: 30
+
+  manuscript-latex:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Compile current manuscript and references
+        uses: xu-cheng/latex-action@v4
+        with:
+          root_file: manuscript/main.tex
+          working_directory: hotelling_entry_experimentation/production
+          compiler: latexmk
+          args: -pdf -bibtex -file-line-error -halt-on-error -interaction=nonstopmode
+          texlive_version: 2026
+      - uses: actions/upload-artifact@v4
+        with:
+          name: stage11r-p1-annotated-working-manuscript
+          path: hotelling_entry_experimentation/production/main.pdf
+          if-no-files-found: error
+          retention-days: 14
