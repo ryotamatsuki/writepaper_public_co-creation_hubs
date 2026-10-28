@@ -75,7 +75,7 @@ In all three rows the cutoff box radius is \`1/1,000,000,000\` about the followi
 | 0.5 | ability sorting | 0.381077381587935 | 0.360088394043391 | 0.620114272513 | 0.640818991665 | 0.009589462 |
 | 0.5 | pooled mean-success | 0.380493572505174 | 0.359632374104520 | 0.619505267789 | 0.640366427138 | 0.002369802 |
 
-All reported fee approximations above lie inside *strict rational inclusion enclosures* stored in the generated JSON. All 24 exact face-sign checks across lower/upper faces and region/scenario were run; there are **12** actual faces: 4 per scenario. Do not misread the loop count as 24 faces.
+All reported fee approximations above lie inside *strict rational inclusion enclosures* stored in the generated JSON. All **12 exact face-sign checks** (four per scenario) were run and returned the required strict signs.
 
 ## 4. First-stage full revalidation and smallest slack
 
