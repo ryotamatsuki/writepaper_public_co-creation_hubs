@@ -26,6 +26,9 @@ jobs:
       - name: Recompute two-dimensional parameter phases
         working-directory: hotelling_entry_experimentation/production
         run: python verification/referee_sensitivity.py
+      - name: Adverse Beta(2,2) independent fee/moment/entry solver
+        working-directory: hotelling_entry_experimentation/production
+        run: python verification/beta22_adverse.py
       - uses: actions/upload-artifact@v4
         with:
           name: referee-2d-numerical-data
