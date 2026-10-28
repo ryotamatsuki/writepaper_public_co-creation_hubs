@@ -1,0 +1,35 @@
+\section{Proof details and boundary checks}\label{app:proofs}
+
+\subsection{Research investment and Cournot continuation}
+Taking the successful-new-good Cournot quantities as fixed after successful commercialisation, a matched founder pair solves
+$\max_{e\geq0}(p_0+\zeta e+\lambda\theta_A\theta_B)\Pi-ke^2/2$.
+The first-order condition $\zeta\Pi-ke=0$ yields $e^*=\zeta\Pi/k$, with strict second derivative $-k<0$. Substitution gives $R_0+\lambda\Pi\theta_A\theta_B$ as defined in the main text. This calculation assumes the admissible interior success-probability domain, not a corner where $p=1$. Incumbent Cournot quantities follow by solving the simultaneous linear first-order conditions \eqref{eq:cournot-foc}; all output and positive-definiteness conditions must hold.
+
+\subsection{Global private-only posted fee, including kink}
+Holding $(m_j,q_j)$ fixed, private-only total fee receipts divided by $N_i$ equal $f$ for $0\leq f\leq U_i$, $f(U_i+T_i-f)/T_i$ for $U_i\leq f\leq U_i+T_i$, and zero for $f\geq U_i+T_i$. The first piece is increasing; the second is strictly concave with unconstrained maximum $(U_i+T_i)/2$. This point belongs to the sorting interval exactly when $U_i\leq T_i$. Otherwise the global maximiser is the full-participation corner $f_i^*=U_i$. The function is continuous at the kink. A positive basic benefit $U_i>0$ rules out zero-revenue opt-out as the optimum.
+
+For co-provision, only the premium difference matters: for $f\in[0,\Delta_i]$,
+$\mathcal R_i(f)/N_i=f(1-f/\Delta_i)$ is strictly concave with maximum $f=\Delta_i/2$. It yields premium share $1/2$ and direct real benefit $\mathbb E[u_i+\Delta_i\theta_i\mathbf1\{\theta_i\geq1/2\}]=u_i+3\Delta_i/8$. Public basic participation remains full regardless of premium demand.
+
+\subsection{Separate participation mass and skill moment}
+Uniform ability gives $m_i=\int_{\ell_i}^1d\theta=1-\ell_i$,
+$q_i=\int_{\ell_i}^1\theta\,d\theta=(1-\ell_i^2)/2$. A random draw of the same mass has expected first moment $m_i/2$; subtracting yields $\ell_i(1-\ell_i)/2$. This is a same-mass sorting comparison, not a statement that equilibrium quality-weighted matches always increase when private fees rise.
+
+\subsection{The conditional public-addition wedge}
+With the other region fully participating, moving region $i$ from $P$ to $B$ changes its direct real benefit by $N_i[u_i+3\Delta_i/8-(u_i(1-\ell_i)+\Delta_i(1-\ell_i^2)/2)]$, which is $H_i$ in \eqref{eq:H}. The matching count and ability products change by $C\ell_i$ and $C\ell_i^2/4$. Multiplying these by $S_i^0$ and $\lambda K_i$ gives the local threshold. Repeating for region $j$ gives the foreign increment \eqref{eq:wedge}. No planner choice over tariffs, research effort or private contracts is implied.
+
+\subsection{Binary-entry verification protocol}
+For any local status $s_i$, $G_i$'s unilateral deviation toggles $0\leftrightarrow G$ or $P\leftrightarrow B$; $P_i$'s unilateral deviation toggles $0\leftrightarrow P$ or $G\leftrightarrow B$. Each profile passes the first-stage pure Nash check if and only if all four relevant payoff improvements are nonpositive \emph{for the selected admissible downstream continuations}. When any continuation is set-valued, the selection rule must be stated. A finite numerical grid of private fees does not prove unrestricted global fee equilibrium.
+
+\section{Reproducibility and certification boundaries}\label{app:repro}
+The public source repository is
+\url{https://github.com/ryotamatsuki/writepaper_public_co-creation_hubs}.
+The frozen theory is identified by \texttt{STAGE33-2026-10-28-THEORY-FREEZE-v1};
+its recorded baseline is reproduced with the Python-standard-library script
+\texttt{production/verification/stage33\_reproduce.py} in the
+\texttt{hotelling\_entry\_experimentation} research tree.
+The executable protocol runs the sixteen entry configurations for each of three reported technology scenarios, checks all four first-stage unilateral binary flips, and computes a restricted sixteen-profile planner optimum under its specified numerical fee continuation. It also tests the baseline public-addition threshold and the heterogeneous-versus-pooled equal-mean comparison. Source and precision tolerances are explicit in the script.
+
+The separately maintained Lean~4 certificate checks eighteen theorem statements covering selected proof-critical inequalities and identities under their specified hypotheses. The full Cournot--research--participation--entry subgame-perfect equilibrium, unrestricted private-private pricing and general uniqueness are \emph{not} fully encoded in Lean. Numerical calibration verification, algebraic proof, and formal theorem verification are therefore three different evidentiary categories.
+
+The alternative $\operatorname{Beta}(2,2)$ types and differentiated Bertrand product competition are recorded adverse portability checks and cannot be described as passing robustness tests. All untested instrument expansions are outside this frozen analysis.
