@@ -203,6 +203,92 @@ theorem four_player_candidate_NE_iff
       right; right; right
       exact lt_of_not_ge hn
 
+/-!
+## Exact baseline signs and generic cubic positivity
+
+The four rational coefficients in the baseline polynomial are reproduced
+from the independent exact-rational certificate for Stage 33, not inferred
+from a floating-point fit. Their equality to the Cournot primitives remains
+an external model-to-formal mapping obligation.
+-/
+
+/-- A cubic with nonpositive nonconstant coefficients is bounded below by
+    its right endpoint on [0,1/2]. -/
+theorem cubic_positive_on_half
+    (a b c d x : ℝ)
+    (hb : b ≤ 0) (hc : c ≤ 0) (hd : d ≤ 0)
+    (hx0 : 0 ≤ x) (hxhalf : x ≤ 1 / 2)
+    (hend : 0 < a + b / 2 + c / 4 + d / 8) :
+    0 < a + b * x + c * x ^ 2 + d * x ^ 3 := by
+  have hmul : 0 ≤ x * ((1 / 2 : ℝ) - x) := by
+    apply mul_nonneg hx0
+    linarith
+  have hx2 : x ^ 2 ≤ (1 / 4 : ℝ) := by
+    nlinarith
+  have hmul3 : 0 ≤ ((1 / 2 : ℝ) - x) * x ^ 2 :=
+    mul_nonneg (by linarith) (sq_nonneg x)
+  have hx3 : x ^ 3 ≤ (1 / 8 : ℝ) := by
+    nlinarith
+  have ht1 : 0 ≤ (-b) * ((1 / 2 : ℝ) - x) :=
+    mul_nonneg (by linarith) (by linarith)
+  have ht2 : 0 ≤ (-c) * ((1 / 4 : ℝ) - x ^ 2) :=
+    mul_nonneg (by linarith) (by linarith)
+  have ht3 : 0 ≤ (-d) * ((1 / 8 : ℝ) - x ^ 3) :=
+    mul_nonneg (by linarith) (by linarith)
+  nlinarith
+
+private def phi0 : ℝ :=
+  (32130325019369137859047782279846303171 : ℝ) /
+    37580045496717218385443007621663090050000
+private def phi1 : ℝ :=
+  -(14680641062595861206772677498535978408147 : ℝ) /
+    56254175142768501348385643741290188271594805000
+private def phi2 : ℝ :=
+  -(71888865120540 : ℝ) / 3354226442647201520281
+private def phi3 : ℝ :=
+  -(1190839050721745100 : ℝ) / 50209955650443225756531054241
+
+/-- Baseline threshold-derivative numerator is strictly positive on
+    the entire admissible interval, not merely at numerical grid points. -/
+theorem baseline_phi_positive
+    (x : ℝ) (hx0 : 0 ≤ x) (hxhalf : x ≤ 1 / 2) :
+    0 < phi0 + phi1 * x + phi2 * x ^ 2 + phi3 * x ^ 3 := by
+  have hb : phi1 ≤ 0 := by norm_num [phi1]
+  have hc : phi2 ≤ 0 := by norm_num [phi2]
+  have hd : phi3 ≤ 0 := by norm_num [phi3]
+  have he : 0 < phi0 + phi1 / 2 + phi2 / 4 + phi3 / 8 := by
+    norm_num [phi0, phi1, phi2, phi3]
+  exact cubic_positive_on_half phi0 phi1 phi2 phi3 x hb hc hd hx0 hxhalf he
+
+private def psi0 : ℝ :=
+  -(300974512752574059934763671339 : ℝ) /
+    502099556504432257565310542410000
+private def psi1 : ℝ :=
+  (16027770188656471009752745938305172573 : ℝ) /
+    9395011374179304596360751905415772512500
+private def psi2 : ℝ :=
+  (6454038279760096992839469 : ℝ) /
+    2510497782522161287826552712050
+private def psi3 : ℝ :=
+  -(47925910080360 : ℝ) / 3354226442647201520281
+
+theorem baseline_entry_negative_at_zero :
+    psi0 < 0 := by
+  norm_num [psi0]
+
+theorem baseline_entry_positive_at_half :
+    0 < psi0 + psi1 / 2 + psi2 / 4 + psi3 / 8 := by
+  norm_num [psi0, psi1, psi2, psi3]
+
+
 end
 
 end Stage33Formal
+
+#print axioms Stage33Formal.skill_factorization
+#print axioms Stage33Formal.cutoff_increases
+#print axioms Stage33Formal.planner_local_wedge
+#print axioms Stage33Formal.public_entry_polynomial_identity
+#print axioms Stage33Formal.public_entry_iff_polynomial
+#print axioms Stage33Formal.baseline_phi_positive
+#print axioms Stage33Formal.baseline_entry_positive_at_half
