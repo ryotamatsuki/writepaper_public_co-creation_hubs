@@ -1,0 +1,52 @@
+name: Stage33 post-referee manuscript and sensitivity
+on:
+  pull_request:
+    branches:
+      - stage11/stage33-independent-referee-audit-20261028
+    paths:
+      - 'hotelling_entry_experimentation/production/**'
+      - '.github/workflows/stage33-referee-revision.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  numerical-and-phase:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Frozen Stage9 reproduction
+        working-directory: hotelling_entry_experimentation/production
+        run: make check && make data
+      - name: Independent Stage11 48-case audit
+        working-directory: hotelling_entry_experimentation/production
+        run: python reviews/stage11_independent_entry_audit.py output/stage33_profiles.csv
+      - name: Recompute two-dimensional parameter phases
+        working-directory: hotelling_entry_experimentation/production
+        run: python verification/referee_sensitivity.py
+      - uses: actions/upload-artifact@v4
+        with:
+          name: referee-2d-numerical-data
+          path: |
+            hotelling_entry_experimentation/production/output/referee_2d_entry_sensitivity.csv
+            hotelling_entry_experimentation/production/output/referee_lambda_fixed_cost.svg
+  manuscript-and-bibliography:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: LaTeX prerequisites
+        run: |
+          sudo apt-get update -qq
+          sudo DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends latexmk texlive-latex-recommended texlive-fonts-recommended texlive-latex-extra lmodern
+      - name: Compile and check citations
+        working-directory: hotelling_entry_experimentation/production
+        run: |
+          make paper
+          test -s build/main.pdf
+          ! grep -E 'Citation .* undefined|Reference .* undefined' build/main.log
+      - uses: actions/upload-artifact@v4
+        with:
+          name: referee-revised-manuscript-pdf
+          path: hotelling_entry_experimentation/production/build/main.pdf
