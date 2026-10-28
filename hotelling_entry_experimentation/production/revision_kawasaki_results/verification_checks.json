@@ -1,0 +1,113 @@
+{
+  "frozen_audit": {
+    "base": "a463d3340d8e6c2307136a6d64db484a5fefc5fa",
+    "targets": {
+      "main": {
+        "baseline_display_instances": 48,
+        "current_display_instances": 48,
+        "missing_or_modified_displays": [],
+        "added_display_instances": [],
+        "missing_labels": [],
+        "added_labels": [],
+        "numbered_block_preserved": {
+          "Lemma 1 (regional incidence).": true,
+          "Lemma 2 (conditional fee selection).": true,
+          "Corollary 1 (the fixed-mass benchmark).": true,
+          "Lemma 3 (conditional public addition).": true,
+          "Proposition 1 (the screening--incidence inversion).": true
+        }
+      },
+      "supplement": {
+        "baseline_display_instances": 26,
+        "current_display_instances": 26,
+        "missing_or_modified_displays": [],
+        "added_display_instances": [],
+        "missing_labels": [],
+        "added_labels": [],
+        "numbered_block_preserved": {}
+      }
+    },
+    "protected_changed": [],
+    "protected_files_compared": 24,
+    "appendix_byte_identical": true
+  },
+  "existing_script_runs": [
+    {
+      "script": "reviews/stage11r_pp_global_certificate.py",
+      "returncode": 0
+    },
+    {
+      "script": "reviews/stage11r_p1_open_region_certificate.py",
+      "returncode": 0
+    },
+    {
+      "script": "reviews/stage11r_p1b_empirical_implications_check.py",
+      "returncode": 0
+    },
+    {
+      "script": "reviews/stage11r_p1c_reduction_check.py",
+      "returncode": 0
+    },
+    {
+      "script": "verification/stage33_reproduce.py",
+      "returncode": 0
+    },
+    {
+      "script": "government_game_exploration/incidence_screening_sign_certificate.py",
+      "returncode": 0
+    },
+    {
+      "script": "government_game_exploration/incidence_screening_valuation_check.py",
+      "returncode": 0
+    },
+    {
+      "script": "revision_p1d/diagnostic_check.py",
+      "returncode": 0
+    },
+    {
+      "script": "verification/beta22_adverse.py",
+      "returncode": 0
+    },
+    {
+      "script": "verification/referee_sensitivity.py",
+      "returncode": 0
+    }
+  ],
+  "baseline_vs_revised_regenerated_outputs": {
+    "reviews/stage11r_pp_global_certificate.json": {
+      "byte_equal": true,
+      "sha256": "75820f51d689a903e142373818a53833da3f070f44ee344b30f43140ce085056"
+    },
+    "reviews/stage11r_p1_open_region_certificate.json": {
+      "byte_equal": true,
+      "sha256": "ffbf679b59d14dab93e90a12875ff19fe79210ee35add2cfbfcc9aae6b72eb1d"
+    },
+    "government_game_exploration/incidence_screening_sign_results.json": {
+      "byte_equal": true,
+      "sha256": "1775bc1f1c60a868f5252821a346b13054657706582f02821d526baaeaa4f450"
+    },
+    "government_game_exploration/incidence_screening_valuation_check.json": {
+      "byte_equal": true,
+      "sha256": "40207ae19c514eb6e14ab45140fdb88fc7d8688f05a63e935d72a6790e8eca77"
+    },
+    "revision_p1d/diagnostic_results.json": {
+      "byte_equal": true,
+      "sha256": "eb534ccb9bba6ebc1e341a1789cd1010b7958c54f0789ecd12646a6ae34967d8"
+    },
+    "output/beta22_adverse.json": {
+      "byte_equal": true,
+      "sha256": "c7bff20bcfaa3276bfde1429273ce90a9282ff2dd1d60195f7e783504bf5a66d"
+    },
+    "output/referee_2d_entry_sensitivity.csv": {
+      "byte_equal": true,
+      "sha256": "0173a0a2b74e90f1601fa3d99ab72d4011e79d8d5391cf7a425a1d906f9a436f"
+    },
+    "output/referee_lambda_fixed_cost.svg": {
+      "byte_equal": true,
+      "sha256": "22bcf2176ced3819b90d87b7d91261566084229ea88fc10b7692474c64287ede"
+    }
+  },
+  "lean_rebuild": "NOT RUN: Lean and lake unavailable; frozen formal sources are byte-identical",
+  "scope": "Reproduction and editorial invariance audit, not new model certification or priority proof",
+  "formal_statement_check_scope": "Five numbered statement/assumption blocks, excluding trailing editorial Two distinctions matter commentary; its only change is open -> closed rectangle"
+}

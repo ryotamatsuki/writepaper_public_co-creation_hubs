@@ -1,0 +1,15 @@
+{
+  "main": {
+    "pages": 35,
+    "undefined_multiply_defined_overfull": [],
+    "underfull": [],
+    "pdf": "revision_kawasaki_results/reconstructed_manuscript.pdf"
+  },
+  "supplement": {
+    "pages": 8,
+    "undefined_multiply_defined_overfull": [],
+    "underfull": [],
+    "pdf": "revision_kawasaki_results/online_supplement.pdf"
+  },
+  "abstract_words": 185
+}
