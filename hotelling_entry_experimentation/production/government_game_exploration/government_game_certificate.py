@@ -109,20 +109,21 @@ def main():
             }
             # The restricted social planner's sixteen-profile comparison is
             # also strict throughout the entire analytic cost rectangle.
-            def welfare_interval(st):
-                r=b.profile(st,p,box)
-                v=r["welfare"][0]+r["welfare"][1]
-                for i,k in enumerate(("A","B")):
-                    if st[i] in ("G","B"):
-                        lo,hi=COST_BOX[k]
-                        v=v + p["fg"][i] - b.I(lo,hi)
-                return v
+            # Build each welfare DIFFERENCE before interval evaluation so
+            # shared public-cost terms cancel exactly (dependency-aware).
             planner=("P","B")
-            best=welfare_interval(planner)
+            planner_old=b.profile(planner,p,box)
             gaps={}
             for st in product(b.STATES,repeat=2):
                 if st==planner:continue
-                gap=best-welfare_interval(st)
+                old=b.profile(st,p,box)
+                gap=(planner_old["welfare"][0]+planner_old["welfare"][1]
+                    -old["welfare"][0]-old["welfare"][1])
+                for i,k in enumerate(("A","B")):
+                    govt_diff=int(planner[i] in ("G","B"))-int(st[i] in ("G","B"))
+                    if govt_diff:
+                        lo,hi=COST_BOX[k]
+                        gap=gap+govt_diff*(p["fg"][i]-b.I(lo,hi))
                 assert gap.lo>0,("restricted planner not P/B",st,gap.approx())
                 gaps["".join(st)]=iv(gap)
             results[label]["restricted_planner"]={
