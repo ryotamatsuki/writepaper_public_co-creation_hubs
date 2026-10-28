@@ -38,6 +38,29 @@ For the heterogeneous and homogeneous cases at $\lambda=0.5$ to have opposite lo
 \end{equation}
 Its width is $0.000488440869$, only about $1.21\%$ of the baseline $F_{G_B}$. The latter is $0.000031670102$ below the upper endpoint, approximately $0.078\%$ of the cost. Increasing $F_{G_B}$ by $0.0001$ reverses the heterogeneous model's \emph{local} preference for joint provision at $\lambda=0.5$. This is a material vulnerability of the selected illustration, not a solver error or an argument for relocating the baseline to a more convenient point.
 
+\paragraph{A stricter, exactly certified three-scenario cost region.}
+Equation~\eqref{eq:fragility} applies only to the comparison between heterogeneous and pooled technology at $\lambda=0.5$. The paper's \emph{three} reported pure equilibria additionally require non-entry by region $B$'s government at $\lambda=0$ in the heterogeneous model. Its binding public-entry threshold is $0.0404250710071206$, which lies above the pooled model's $0.0400432292331624$ threshold. Across all three examples, the relevant strict interval is therefore
+\begin{equation}
+ \underline F_B^{(3)}<F_{G_B}<\overline F_B^{(3)},\qquad
+ \underline F_B^{(3)}\simeq0.040425071007120596,\quad
+ \overline F_B^{(3)}\simeq0.04053167010244885.
+ \label{eq:threeway-open-cost}
+\end{equation}
+Here $\underline F_B^{(3)}$ and $\overline F_B^{(3)}$ are the \emph{exact rational} public-entry indifference values derived from the stated $(B,P)$--$(B,B)$ welfare comparisons. Their displayed decimals are approximations, not exact rational endpoints.
+Its width is approximately $0.0001065990953$, or $0.2632\%$ of the frozen $F_{G_B}=0.0405$. The lower endpoint is the $G_B$ entry indifference in the $\lambda=0$ skill case, and the upper endpoint is its $G_B$ exit indifference in the $\lambda=0.5$ skill case. The pooled $\lambda=0.5$ public-entry threshold does not bind this three-way comparison.
+
+Crucially, \eqref{eq:threeway-open-cost} is not merely a pair of necessary local inequalities: an exact rational interval certificate partitions the full threshold-defined interval into eight adjacent closed subintervals, verifies every non-binding incentive sign and excludes all fifteen alternative pure first-stage configurations in each of the three technology cases. The only possible equalities at the \emph{outer} endpoints are the identified region-$B$ government flips; by the exact affine fixed-cost expressions these comparisons become strict throughout the \emph{open} interval. The restricted planner strictly selects $(B,B)$ throughout as well, holding all other primitives and the global baseline P/P tariff continuations fixed.
+
+The result is not an isolated point in a larger parameter space, either. A separate exact interval calculation verifies all three configurations and the restricted planner \emph{simultaneously} on the explicit open three-dimensional rectangle
+\begin{equation}
+ \begin{split}
+ 0.089999&<F_{G_A}<0.090001,\\
+ 0.040499&<F_{G_B}<0.040501,\\
+ 0.199999&<\omega_B<0.200001,\quad\omega_A=1-\omega_B.
+ \end{split}\label{eq:threeway-3d-box}
+\end{equation}
+For every point in this rectangle, the P/P continuation has a unique global nonnegative-fee pure Nash equilibrium under the stated analytic sufficient conditions, and the four-player and restricted-planner comparisons preserve their strict signs. These are \emph{small explicit} perturbations; the statement neither implies broad robustness to skill distributions or product-market conduct nor alters the adverse $\operatorname{Beta}(2,2)$ and Bertrand evidence. The proof checker and exact sign registers are recorded in the Stage~11R-P1 reproducibility package.
+
 The full baseline first-stage pure equilibrium changes at approximately $\lambda^\star=0.3511840318401$, where region~$B$'s binary public-entry best response ties. At the tie, a uniqueness claim is inappropriate. The comparison also has a separate national dimension: despite the difference in $B$'s own decision, the foreign regional gain from additional cross-region matches is positive in all three displayed cases. Thus local non-entry does not imply that total welfare favours non-entry.
 
 \paragraph{Expanded reproducibility.}
