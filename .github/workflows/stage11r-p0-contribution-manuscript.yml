@@ -39,6 +39,6 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: stage11r-p0-contribution-working-manuscript
-          path: hotelling_entry_experimentation/production/manuscript/main.pdf
+          path: hotelling_entry_experimentation/production/main.pdf
           if-no-files-found: error
           retention-days: 14
