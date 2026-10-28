@@ -23,6 +23,8 @@ Observables: cohort-specific free/basic access counts, paid-upgrade customers, p
 
 ### III. Geographic incidence of innovation (conditional accounting object, no universal sign prediction)
 
+There is a prior-stage microeconomic check on the same channel: the success technology has partial cross-derivative d²p/(d theta_A d theta_B)=lambda>=0 at fixed research effort and interior probability. An exact cross-difference-in-differences in ex-ante skills is lambda*(theta_A^H-theta_A^L)*(theta_B^H-theta_B^L). Under positive lambda, higher technical skills are complements in conditional project success. Recovering this from observational data requires failed as well as successful matches, ex-ante skills, effort, project composition and exogenous or conditionally ignorable matching; a regression interaction is not an automatically causal parameter. The checker now also verifies this difference using exact frozen probabilities.
+
 For j fully covered, the nonlocal increment from i's public addition is exactly
 Delta W_j = C(S_j^0 ell_i + lambda K_j ell_i^2/4)
           = F_i^national - F_i^local,
