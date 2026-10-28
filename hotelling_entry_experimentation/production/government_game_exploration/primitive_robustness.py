@@ -95,4 +95,6 @@ def main():
  Path(__file__).with_name('primitive_robustness_results.json').write_text(json.dumps(data,indent=2)+'\n')
  print('PASS weak-gamma primitive thresholds; 9 original-model P/P global price and asymmetric government BR signatures')
  print('lambda roots:',[z['approx'] for z in roots])
+ for row in rows:
+  print('ROBUST',row['lam'],row['omega_B'],'A',row['A'],'B',row['B'],'area_lower',row['cost_area_lower'])
 if __name__=='__main__': main()
