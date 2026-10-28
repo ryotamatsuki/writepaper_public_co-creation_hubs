@@ -1,0 +1,31 @@
+name: Stage11R P1h priority closure certificates
+on:
+  push:
+    branches:
+      - exploration/stage11r-p1h-priority-closure-20261028
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Original frozen global PP fee and all 16 entry profiles
+        run: python hotelling_entry_experimentation/production/reviews/stage11r_pp_global_certificate.py
+      - name: Independently certify finite matching cross-border fee and entry SPNE
+        run: python hotelling_entry_experimentation/production/government_game_exploration/finite_matching_spne.py
+      - name: Existing weak gamma asymptotic and full model coverage regression
+        run: |
+          python hotelling_entry_experimentation/production/government_game_exploration/additional_identities.py
+          python hotelling_entry_experimentation/production/government_game_exploration/cross_region_feedback_numeric.py
+          python hotelling_entry_experimentation/production/government_game_exploration/coverage_check.py
+          python hotelling_entry_experimentation/production/government_game_exploration/entry_cost_phase_diagram.py
+          python hotelling_entry_experimentation/production/government_game_exploration/finite_matching_p0_scan.py
+      - uses: actions/upload-artifact@v4
+        with:
+          name: finite-matching-spne-audit
+          path: hotelling_entry_experimentation/production/government_game_exploration/finite_matching_spne_certificate.json
