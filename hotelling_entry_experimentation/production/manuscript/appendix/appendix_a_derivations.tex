@@ -11,6 +11,83 @@ Holding $(m_j,q_j)$ fixed, private-only total fee receipts divided by $N_i$ equa
 For co-provision, only the premium difference matters: for $f\in[0,\Delta_i]$,
 $\mathcal R_i(f)/N_i=f(1-f/\Delta_i)$ is strictly concave with maximum $f=\Delta_i/2$. It yields premium share $1/2$ and direct real benefit $\mathbb E[u_i+\Delta_i\theta_i\mathbf1\{\theta_i\geq1/2\}]=u_i+3\Delta_i/8$. Public basic participation remains full regardless of premium demand.
 
+\subsection{Global private/private fee continuation at the three baseline calibrations}\label{app:pp-global}
+
+Unlike the single-private-provider case, a fee change under $(P,P)$ changes the other jurisdiction's participation cutoff. The following argument establishes that \emph{the three numerical examples used in Table~\ref{tab:entry}} have an admissible, unique global pure Nash equilibrium in nonnegative posted fees. The required coefficient inequalities are verified by exact rational arithmetic for each example; they are not assumed for arbitrary parameters.
+
+Write $x_i=\ell_i$ for the local cutoff, $a_i=a_i^m$, $b_i=b_i^m$, and use the frozen baseline $\Delta_i=1$ with $u_i=u_i(P)>0$. Define
+\[
+ D_i(y)=1+\tfrac{b_i}{2}(1-y^2),\qquad
+ h_i=a_i+b_i,\qquad z=h_Ah_B.
+\]
+The simultaneous founder participation mapping at any nonnegative fee pair is
+\begin{equation}
+ x_i=\left[\frac{f_i-u_i-a_i(1-x_j)}{D_i(x_j)}\right]_0^1 .
+ \label{eq:pp-clipped-cert}
+\end{equation}
+On an interior branch the derivative of the right-hand side with respect to $x_j$ is $(a_i+b_i x_i x_j)/D_i(x_j)$ and is bounded above by $h_i$; the clipped branches have derivative zero. Each of the three frozen parameter sets satisfies $\max_i h_i<1$. Consequently the coupled map is a contraction on $[0,1]^2$, so the founder-cutoff fixed point exists and is unique \emph{for every nonnegative fee pair}, including out-of-equilibrium fees.
+
+Fix $f_j$ and use $x=x_i$ as the local decision variable. The opponent cutoff conditional on this cutoff is uniquely
+\[
+ y(x)=\left[\frac{f_j-u_j-a_j(1-x)}{D_j(x)}\right]_0^1 .
+\]
+Inverting the local participation equation gives an implementable posted fee
+\[
+ f_i(x;f_j)=u_i+a_i(1-y(x))+D_i(y(x))x .
+\]
+Where the opposing cutoff is interior, $y'(x)=(a_j+b_jxy)/D_j(x)$; at flat clipped branches the derivative is zero. Both one-sided derivatives at any kink satisfy
+\begin{equation}
+ 1-z\ \leq\ f_i'(x)\ \leq\ 1+b_i/2 .\label{eq:pp-monotone-inverse}
+\end{equation}
+The inverse fee is strictly increasing since $z<1$. Fees inducing full participation are weakly dominated by the maximal fee retaining it; fees inducing zero participants yield no revenue and cannot be optimal. Thus all global fee best replies are obtained by maximising $N_i f_i(x;f_j)(1-x)$ over $0\leq x\leq1$. Its derivative signs at the outer cutoff ranges and the bounds
+$u_i+x\leq f_i(x;f_j)\leq u_i+a_i+(1+b_i/2)x$
+give the \emph{global} best-response cutoff bounds
+\begin{equation}
+ L_i=\frac{1-z-u_i-a_i}{2+b_i/2-z},\qquad
+ U_i=\frac{1+b_i/2-u_i}{2+b_i/2},\qquad
+ 0<L_i<U_i<1 .
+ \label{eq:pp-cutoff-box}
+\end{equation}
+Every global fee best reply lies in
+\[
+ K_i=[\,u_i+L_i,\ u_i+a_i+(1+b_i/2)U_i\,].
+\]
+Exact rational checks for all three calibrations give
+$u_i+a_i<\inf K_i\leq\sup K_i<u_i+1$.
+Hence for every opponent fee in $K_j$, its cutoff $y(x)$ is strictly interior throughout the \emph{entire} own-cutoff deviation interval $x\in[0,1]$; neither full-coverage nor exit kinks are being suppressed in the global best-response test.
+
+On that interval, $y''(x)=b_j[y+2xy']/D_j(x)\geq0$. Writing $c_i(x,y)=a_i+b_i xy$, we have
+\[
+ f_i'(x)=D_i(y)-c_i(x,y)y'(x)>0,\qquad
+ f_i''(x)=-b_i(2y+xy')y'-c_i(x,y)y''\leq0.
+\]
+Consequently
+\[
+ \frac{d^2}{dx^2}\{N_if_i(x;f_j)(1-x)\}
+ =N_i\{(1-x)f_i''(x)-2f_i'(x)\}<0,
+\]
+so the global best reply is unique for every opponent fee in $K_j$. Differentiating the best-response first-order condition and using the preceding inequalities yields a Lipschitz bound for the fee best-response map:
+\begin{equation}
+ B_i:=h_i+\frac{(1+b_i/2)\{b_i+b_ih_j+b_jh_i+h_i\}}{2(1-z)}
+ \quad\text{with}\quad B_i<0.01
+ \label{eq:pp-br-contraction}
+\end{equation}
+in each of the three exact baseline calibrations. The map sends $K_A\times K_B$ continuously into itself and is a contraction; Banach's theorem implies a unique pure price equilibrium on that rectangle. Because \eqref{eq:pp-cutoff-box} captures \emph{every} global best reply against any nonnegative rival fee, no additional pure-fee equilibrium exists outside the rectangle.
+
+For an independently checkable exact-rational enclosure, define
+\[
+ C_i(x_A,x_B)=a_i+b_ix_Ax_B,\qquad
+ f_i=u_i+a_i(1-x_j)+D_i(x_j)x_i,
+\]
+and the two interior stationary equations
+\[
+ \Phi_i(x_A,x_B)
+ =(1-x_i)\left(D_i(x_j)-\frac{C_iC_j}{D_j(x_i)}\right)-f_i=0.
+\]
+For each calibration, the source \texttt{stage11r\_pp\_global\_certificate.py} evaluates all four rational interval faces of a cutoff rectangle of radius $10^{-9}$ around the recorded decimal-rational candidate; the lower and upper own-coordinate faces have strict positive and negative signs, respectively. This locates an exact equilibrium root by the Poincar\'e--Miranda theorem. The global argument above establishes that it is the unique P/P pure price Nash in the whole nonnegative fee strategy space.
+
+Finally the script reconstructs \emph{all} sixteen first-stage entry configurations, all four independent government/provider flips at each profile, and all fifteen alternatives to the restricted planner's selected profile, using interval enclosures for the P/P fees and exact rational arithmetic elsewhere. All selected baseline NE inequalities, all non-NE profitable deviation witnesses, and all planner welfare gaps have strict signs. In the $\lambda=0.5$ skill case the smallest selected entry slack is greater than $0.0000316701024488$ at the printed precision. The reproducible source and full proof-scope statement are stored in \texttt{production/reviews/STAGE11R\_P0\_PP\_GLOBAL\_CERTIFICATE\_2026-10-28.md}. None of the results supplies a general theorem for other skill distributions, parameters or competition forms, and none is encoded as a full-game Lean proof.
+
 \subsection{Separate participation mass and skill moment}
 Uniform ability gives $m_i=\int_{\ell_i}^1d\theta=1-\ell_i$,
 $q_i=\int_{\ell_i}^1\theta\,d\theta=(1-\ell_i^2)/2$. A random draw of the same mass has expected first moment $m_i/2$; subtracting yields $\ell_i(1-\ell_i)/2$. This is a same-mass sorting comparison, not a statement that equilibrium quality-weighted matches always increase when private fees rise.
