@@ -1,0 +1,28 @@
+name: Frozen model exhaustive equilibrium audit
+on:
+  push:
+    branches:
+      - exploration/stage11r-p1g-exhaustive-equilibrium-audit-20261028
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Reproduce prior global fee and entry games
+        run: |
+          python hotelling_entry_experimentation/production/reviews/stage11r_pp_global_certificate.py
+          python hotelling_entry_experimentation/production/government_game_exploration/government_game_certificate.py
+      - name: Check nine primitive robustness cases and uniform parameter box
+        run: |
+          python hotelling_entry_experimentation/production/government_game_exploration/primitive_robustness.py
+          python hotelling_entry_experimentation/production/government_game_exploration/uniform_box.py
+      - name: Additional candidate identities and complete-coverage ledger
+        run: |
+          python hotelling_entry_experimentation/production/government_game_exploration/additional_identities.py
+          python hotelling_entry_experimentation/production/government_game_exploration/coverage_check.py
