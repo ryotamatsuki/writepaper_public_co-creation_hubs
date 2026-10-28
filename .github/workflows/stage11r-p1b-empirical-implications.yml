@@ -23,6 +23,8 @@ jobs:
         run: python stage11r_p1_open_region_certificate.py
       - name: Validate empirical conditional identities only
         run: python stage11r_p1b_empirical_implications_check.py
+      - name: Verify Stage11R P1c exact-rational single-index reduction
+        run: python stage11r_p1c_reduction_check.py
       - uses: actions/upload-artifact@v4
         with:
           name: stage11r-p1b-model-to-observables-certificates
@@ -30,6 +32,7 @@ jobs:
             hotelling_entry_experimentation/production/reviews/stage11r_pp_global_certificate.json
             hotelling_entry_experimentation/production/reviews/stage11r_p1_open_region_certificate.json
             hotelling_entry_experimentation/production/reviews/stage11r_p1b_empirical_implications_checks.json
+            hotelling_entry_experimentation/production/reviews/stage11r_p1c_reduction_checks.json
           retention-days: 30
   manuscript:
     runs-on: ubuntu-latest
