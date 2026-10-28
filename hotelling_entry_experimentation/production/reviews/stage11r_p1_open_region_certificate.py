@@ -62,7 +62,7 @@ def certify_all(p,box,expected,tag):
 def pp_box_and_sufficient_conditions(p,center,radius):
     # Every inequality below is exact rational inclusion arithmetic.
     a,b,u=p['a'],p['b'],p['u']
-    hh=[a[i]+b[i] for i in (0,1)]
+    hh=[I.wrap(a[i]+b[i]) for i in (0,1)]
     z=hh[0]*hh[1]
     assert max(h.hi for h in hh)<1 and z.hi<1
     bounds=[]
