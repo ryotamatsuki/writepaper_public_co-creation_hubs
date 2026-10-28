@@ -35,19 +35,29 @@ def test(p0,gamma):
  U_B=U[1]+a[1];T_B=1+b[1]/2
  cutoff_B=(T_B-U_B)/(2*T_B)
  observed=(cutoff_B-x[1])/gamma
+ # Independently recover the equilibrium j fee from coupled FOC cutoffs.
+ D_B_PP=1+b[1]*(1-x[0]**2)/2
+ fee_PP=U[1]+a[1]*(1-x[0])+D_B_PP*x[1]
+ fee_BP=(U_B+T_B)/2
+ observed_fee=(fee_BP-fee_PP)/gamma
  ell_A=(1-U[0])/2
  predicted=N[0]*OMEGA[1]*ell_A/4*(lam*PIF*U[1]*ell_A-2*r0)
- return observed,predicted
+ predicted_fee=N[0]*OMEGA[1]/2*(r0*ell_A+lam*PIF*ell_A**2/2)
+ return observed,predicted,observed_fee,predicted_fee
 
 def main():
  for p0,expected in [(F(1,20),-1),(F(1,1000),1)]:
-  errors=[]
+  errors=[];price_errors=[]
   for gamma in (1e-3,1e-4,1e-5):
-   obs,pred=test(p0,gamma)
+   obs,pred,actual_fee,pred_fee=test(p0,gamma)
    assert obs*expected>0 and pred*expected>0
    errors.append(abs(obs-pred))
+   assert actual_fee>0 and pred_fee>0
+   price_errors.append(abs(actual_fee-pred_fee))
    print(f"p0={p0} gamma={gamma} actual_coefficient={obs:.14g} predicted={pred:.14g} abs_error={errors[-1]:.4g}")
   assert errors[2]<errors[1]<errors[0]
   assert errors[-1]<1e-8
- print("PASS independent 2x2 endogenous P/P posted-fee response agrees with derived weak-matching cross-region participation effect")
+  assert price_errors[2]<price_errors[1]<price_errors[0]
+  assert price_errors[-1]<1e-8
+ print("PASS independent coupled P/P repricing confirms neighboring price rise and sign-ambiguous participation under weak matching")
 if __name__=="__main__":main()
