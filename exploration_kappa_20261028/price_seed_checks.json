@@ -1,0 +1,56 @@
+[
+  {
+    "lambda": 0,
+    "pooled": false,
+    "kappa": 0,
+    "three_price_seed_spread": 0.0
+  },
+  {
+    "lambda": 0,
+    "pooled": false,
+    "kappa": 0.5,
+    "three_price_seed_spread": 0.0
+  },
+  {
+    "lambda": 0,
+    "pooled": false,
+    "kappa": 1,
+    "three_price_seed_spread": 0.0
+  },
+  {
+    "lambda": 0.5,
+    "pooled": false,
+    "kappa": 0,
+    "three_price_seed_spread": 0.0
+  },
+  {
+    "lambda": 0.5,
+    "pooled": false,
+    "kappa": 0.5,
+    "three_price_seed_spread": 1.1102230246251565e-16
+  },
+  {
+    "lambda": 0.5,
+    "pooled": false,
+    "kappa": 1,
+    "three_price_seed_spread": 0.0
+  },
+  {
+    "lambda": 0.5,
+    "pooled": true,
+    "kappa": 0,
+    "three_price_seed_spread": 0.0
+  },
+  {
+    "lambda": 0.5,
+    "pooled": true,
+    "kappa": 0.5,
+    "three_price_seed_spread": 0.0
+  },
+  {
+    "lambda": 0.5,
+    "pooled": true,
+    "kappa": 1,
+    "three_price_seed_spread": 0.0
+  }
+]

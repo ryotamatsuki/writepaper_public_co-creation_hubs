@@ -1,0 +1,29 @@
+{
+  "base_commit": "d2520c9afbf9b2b742a5f04fbba6159eb489db61",
+  "all_base_tracked_files_checked": 730,
+  "aggregate_path_and_sha256_digest": "0e52378726fe98fa98bedd7e391964f8225f285aa7a4c6269ee922bcc5b1063f",
+  "named_frozen_asset_sha256": {
+    "formal/README.md": "3599c527e99abcf8cd8491f9c3e297ededa12c40e8e36cabcd5e676890e6826b",
+    "formal/Stage33Formal.lean": "abbe081e4e6c96f49271a7ab41e722b583bfdf59ffdb477e5b50d2c72704d32e",
+    "formal/lakefile.toml": "5e1e45d4ddebde2a0ac12514c3dc4debfc20aa94a69c7cb22e29c19537b25e7b",
+    "formal/lean-toolchain": "8e3538e0ab5f81a3ee04927d8838c8c674e0e112838b4b3ce87ec218143276af",
+    "hotelling_entry_experimentation/STAGE8_CANONICAL_THEORY_FREEZE_V1.md": "75afbd4112d118cf07c8c5893ae495c51724b369172aca39ca959dd0539e4fbe",
+    "hotelling_entry_experimentation/STAGE8_THEORY_FREEZE_MANIFEST.md": "b6c66a59a4f1785cede4f931d3b4161b3182eaaa620ca3ebe58e3f2bc8621f47",
+    "hotelling_entry_experimentation/production/manuscript/appendix/appendix_a_derivations.tex": "2e9b020fef264fdf28ab53999066ea7c0328f1a9e45e867665c966915a7f7f91",
+    "hotelling_entry_experimentation/production/manuscript/main.tex": "5ca56ca9399bf7291097794d47980a049a0754f9cc2eea6d3af5dd304a654dec",
+    "hotelling_entry_experimentation/production/manuscript/references.bib": "0f7fbb89372c542ad59a44d358ff3a63415154d4a6a7f31dc12b02523b7fe681",
+    "hotelling_entry_experimentation/production/manuscript/sections/01_introduction.tex": "0382945d9d93018bdab59009a6fef59f9aa59479bcfc5d2c2c5f30742bb51901",
+    "hotelling_entry_experimentation/production/manuscript/sections/01_introduction_seed.tex": "f76bdfb7bba041abfd71d89ca30625f3b2a4566f8457a2ea82c3b9f3f236b828",
+    "hotelling_entry_experimentation/production/manuscript/sections/02_model.tex": "a123e5251366f5869376805007730784e0ce19fde1c0c390fb77876b901dbb19",
+    "hotelling_entry_experimentation/production/manuscript/sections/02_model_summary.tex": "08e6f8038293f4b3805e912408f6b67b7493ca46c1e99ccbfea39d2469627988",
+    "hotelling_entry_experimentation/production/manuscript/sections/03_continuation.tex": "2eaa1e820870a9a4ad942a33a3e2de56889662f7c261e07ec4a620a2a78a9a5a",
+    "hotelling_entry_experimentation/production/manuscript/sections/03_results_map.tex": "adf2690a7d83961b3315ba072198d28de10e9fc253c5d97e35c33ec942954669",
+    "hotelling_entry_experimentation/production/manuscript/sections/04_propositions.tex": "f207a4d8ec9c6d122869d89b2b02f5312bf4995c5dea9261eb6759dcac3f5e95",
+    "hotelling_entry_experimentation/production/manuscript/sections/05_numerical.tex": "40249e5e23d5290751b980478819701bed747ff7fb67b29190feeba2eb6aa96e",
+    "hotelling_entry_experimentation/production/manuscript/sections/06_empirical_implications.tex": "3f4797fc60808fbca2004b1fc73592f52f0228b074e7414bd78c59da70294ad9",
+    "hotelling_entry_experimentation/production/manuscript/sections/06_related_literature.tex": "4eef45988c468adf294499a626f34547a054279b969b6a6515a5bacf1ea7a7c3",
+    "hotelling_entry_experimentation/production/manuscript/sections/07_institutions.tex": "fa6c0648ce0120f0179a50fa9b1415d2f31991252fa69029189ec34380bacb05",
+    "hotelling_entry_experimentation/production/reviews/stage11r_pp_global_certificate.py": "a9bf9d0fde5fde874ef349449b2f3ad97b7113c0b93c0da3fc63dc705d69f973"
+  },
+  "scope": "Byte integrity only; not a new Lean compilation or mathematical certificate"
+}

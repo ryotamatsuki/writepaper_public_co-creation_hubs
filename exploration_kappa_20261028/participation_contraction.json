@@ -1,0 +1,51 @@
+{
+  "scope": "all fees, all kappa in [0,1], participation fixed point only; no uniqueness of prices asserted",
+  "proof": "Each m,q is separately 1/Delta-Lipschitz in U and h under diagonal and independent components, preserved by mixture and clipping. Therefore joint sup-norm map has Lipschitz <= max_i(a_i+b_i)/Delta_i < 1. Banach gives a unique participation fixed point for every posted fee pair.",
+  "scenarios": [
+    {
+      "lambda": "0",
+      "pooled": false,
+      "Delta_A": "1",
+      "Delta_B": "1",
+      "regional_lipschitz_bounds_exact": [
+        "106045641411/224075781043921",
+        "318136924233/896303124175684"
+      ],
+      "regional_lipschitz_bounds_float": [
+        0.00047325793495823647,
+        0.00035494345121867736
+      ],
+      "joint_contraction_upper_bound": 0.00047325793495823647
+    },
+    {
+      "lambda": "1/2",
+      "pooled": false,
+      "Delta_A": "1",
+      "Delta_B": "1",
+      "regional_lipschitz_bounds_exact": [
+        "1097902249271/224075781043921",
+        "3293706747813/896303124175684"
+      ],
+      "regional_lipschitz_bounds_float": [
+        0.00489969172106021,
+        0.0036747687907951574
+      ],
+      "joint_contraction_upper_bound": 0.00489969172106021
+    },
+    {
+      "lambda": "1/2",
+      "pooled": true,
+      "Delta_A": "1",
+      "Delta_B": "1",
+      "regional_lipschitz_bounds_exact": [
+        "354009793376/224075781043921",
+        "265507345032/224075781043921"
+      ],
+      "regional_lipschitz_bounds_float": [
+        0.0015798663814837297,
+        0.0011848997861127974
+      ],
+      "joint_contraction_upper_bound": 0.0015798663814837297
+    }
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "scope": "Coefficient identities and exact copula sign counterexample; no full-game proof",
+  "assertions": 201,
+  "copula_counterexample": {
+    "c": "1/4",
+    "kappa": "13/25",
+    "beta": "624/625",
+    "d_times_mass_h_mixture": "-1/100",
+    "d_times_mass_h_alternative": "4679/62500",
+    "same_uniform_margins_and_corr": true,
+    "same_independent_and_aligned_endpoints": true,
+    "extra_free_parameters": 0
+  },
+  "formal_lean_status": "New results are NOT Lean formalized; original source untouched"
+}
