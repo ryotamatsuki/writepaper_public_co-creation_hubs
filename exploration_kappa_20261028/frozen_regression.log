@@ -1,0 +1,53 @@
+## hotelling_entry_experimentation/production/reviews/stage11r_p1_open_region_certificate.py
+exit=0
+P/P threshold skill_zero [0.040425071007120596, 0.040425071007120596]
+PASS cost-only all sixteen skill_zero
+PASS omega/cost open-rectangle skill_zero
+P/P threshold skill_half [0.04053167010244885, 0.04053167010244885]
+PASS cost-only all sixteen skill_half
+PASS omega/cost open-rectangle skill_half
+P/P threshold pooled_half [0.040043229233162364, 0.040043229233162364]
+PASS cost-only all sixteen pooled_half
+PASS omega/cost open-rectangle pooled_half
+PASS full exact open band by eight rational interval pieces skill_zero
+PASS full exact open band by eight rational interval pieces skill_half
+PASS full exact open band by eight rational interval pieces pooled_half
+PASS ALL: three-way cost band; all 16 x 4 entry deviations; restricted planner; 3D noncost neighborhood
+
+
+## hotelling_entry_experimentation/production/reviews/stage11r_p1b_empirical_implications_check.py
+exit=0
+PASS skill_lambda_zero conditional fee screening, co-provision, pair skill success and regional welfare accounting
+PASS skill_lambda_half conditional fee screening, co-provision, pair skill success and regional welfare accounting
+PASS pooled_lambda_half conditional fee screening, co-provision, pair skill success and regional welfare accounting
+PASS all 3 model-to-observable mappings across all 3 frozen baseline environments
+
+
+## hotelling_entry_experimentation/production/reviews/stage11r_p1c_reduction_check.py
+exit=0
+{
+  "stage": "11R-P1c",
+  "frozen_specification": "uniform_0_1_upper_tail",
+  "verdict": "PASS: single-index reduction and fixed-mass comparator identities",
+  "rational_cases": 7,
+  "paired_cases": 49,
+  "assertions": 121,
+  "scope_limit": "Finite rational regression; symbolic identity follows algebraically from ell=1-m, not from enumeration.",
+  "novelty": "No theorem-level priority or non-absorption conclusion"
+}
+
+
+## hotelling_entry_experimentation/production/reviews/stage11r_pp_global_certificate.py
+exit=0
+PASS 0 pooled False P/P global uniqueness + exact rational root enclosure; all 16 profiles, 64 flips, planner
+PASS 1/2 pooled False P/P global uniqueness + exact rational root enclosure; all 16 profiles, 64 flips, planner
+PASS 1/2 pooled True P/P global uniqueness + exact rational root enclosure; all 16 profiles, 64 flips, planner
+
+
+## hotelling_entry_experimentation/production/verification/stage33_reproduce.py
+exit=0
+{"NE": [["B", "P"]], "lambda": 0.0, "planner": [["B", "B"]], "restricted_planner_value": 2.405035053457, "scenario": "skill"}
+{"NE": [["B", "B"]], "lambda": 0.5, "planner": [["B", "B"]], "restricted_planner_value": 2.407438368575, "scenario": "skill"}
+{"NE": [["B", "P"]], "lambda": 0.5, "planner": [["B", "B"]], "restricted_planner_value": 2.407438368575, "scenario": "pooled"}
+local-public-entry cutoff lambda = 0.3511840318406
+PASS: baseline regression, all 16 profiles/scenario, fee, welfare and cutoff
