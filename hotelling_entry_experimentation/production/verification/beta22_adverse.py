@@ -133,8 +133,11 @@ if __name__=="__main__":
     assert abs(mass(.5)-.5)<1e-15
     assert abs(skill(0)-.5)<1e-15
     out=[solve(0.),solve(.5)]
-    print(json.dumps({"distribution":"Beta(2,2)","results":out,
-        "scope":"Selected candidate numerical P/P continuations only, not a new frozen theorem"},indent=2))
+    artifact={"distribution":"Beta(2,2)","results":out,
+        "scope":"Selected candidate numerical P/P continuations only, not a new frozen theorem"}
+    (ROOT/"output").mkdir(exist_ok=True)
+    (ROOT/"output/beta22_adverse.json").write_text(json.dumps(artifact,indent=2),encoding="utf-8")
+    print(json.dumps(artifact,indent=2))
     if out[0]["NE"]==[("B","P")] and out[1]["NE"]==[("B","B")]:
         raise AssertionError("Beta alternative accidentally reproduces target ownership switch")
     print("PASS: adverse Beta(2,2) ownership portability test at frozen costs")
