@@ -1,0 +1,31 @@
+\section{Model and equilibrium framework (frozen-scope summary)}
+There are two regions, $i\in\{A,B\}$, with four independent first-stage decision makers: a local welfare-maximising government $G_i$ and a profit-maximising private intermediary $P_i$ in each region. Each decides simultaneously whether to provide services. Each region thus has one of four configurations, $s_i\in\{0,G,P,B\}$, and there are sixteen first-stage profiles. Private intermediaries that enter subsequently choose nonnegative posted fees; firms participate or opt out; cross-region ventures undertake R\&D; and successful ventures compete with incumbents in differentiated-product Cournot markets. No-hub incumbent markets remain active.
+
+For each region, founders have independently uniform ability $\theta_i\in[0,1]$, which also determines the willingness to pay for private premium services. Let $m_i=\Pr(\mathrm{join})$ and $q_i=\mathbb{E}[\theta_i\mathbf 1\{\mathrm{join}\}]$. Under free public provision or co-provision, $m_i=1$ and $q_i=1/2$. With only a private provider, on the admissible positive-interior branch the participation cutoff $\ell_i$ satisfies
+\begin{equation}
+ m_i=1-\ell_i,\quad q_i=\frac{1-\ell_i^2}{2},\quad
+ \ell_i=\left[\frac{f_i-u_i-a_i^m m_j}{\Delta_i+b_i^m q_j}\right]_0^1,
+ \qquad j\ne i.
+ \label{eq:sorting}
+\end{equation}
+Here $u_i=v_i+\rho w_i\mathbf1\{s_j\ne0\}$, $a_i^m=\rho\mu N_j\omega_i R_0$,
+and $b_i^m=\rho\mu N_j\omega_i\lambda\Pi$. The price $f_i$ is endogenous. When both regions have private-only provision, participation and fees are coupled; a particular numerical continuation is not a general uniqueness theorem.
+
+The per-match success probability and optimised investment are
+\begin{equation}
+ p(e,\theta_A,\theta_B)=p_0+\zeta e+\lambda\theta_A\theta_B,\qquad
+ e^*=\frac{\zeta\Pi}{k},\qquad
+ R_0=p_0\Pi+\frac{\zeta^2\Pi^2}{2k}.
+\end{equation}
+All probabilities and product-market quantities are restricted to their admissible domains. The real regional welfare account, net of relevant fixed costs but not double-counting private fee transfers, is
+\begin{equation}
+ W_i(s)=W_i^0+Z_i(s)-F_{G_i}\mathbf1\{G_i\text{ enters}\}
+ -F_{P_i}\mathbf1\{P_i\text{ enters}\}
+ +C m_A(s)m_B(s)S_i^0+C q_A(s)q_B(s)S_i^1,
+ \label{eq:welfare}
+\end{equation}
+where $C=\rho\mu N_A N_B$, $S_i^0=p_bM_i+\omega_i R_0$,
+$S_i^1=\lambda(M_i+\omega_i\Pi)$, and $p_b=p_0+\zeta^2\Pi/k$.
+The restricted national planner compares $\max_s\{W_A(s)+W_B(s)\}$ over the sixteen provision profiles with downstream behaviour left decentralised. It does not choose participation, prices, subsidies or R\&D contracts directly.
+
+\paragraph{Proof boundary.} The full admissible-set definitions, participation corner cases, Cournot formulae, and equilibrium-selection restrictions are controlled by frozen document STAGE33-2026-10-28-THEORY-FREEZE-v1; the current section is an expository summary, not a new specification.
