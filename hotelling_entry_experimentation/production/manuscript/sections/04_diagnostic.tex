@@ -1,0 +1,55 @@
+\section{When does selection change the value of public access?}\label{sec:diagnostic}
+
+An equal full-participation mean of innovation success does not determine the value of public access, because the private-only counterfactual is itself selected and repriced.
+This section makes that statement operational within the existing model.
+It is an algebraic diagnostic from Proposition~3, not a claim to a new general theory of selection or local public goods.
+
+Fix the opposite region in $G$ or $B$, so its participants are $(m_j,q_j)=(1,1/2)$, and write $d=\Delta_i$, $U=u_i+a_i^m$, and $h=b_i^m/2$.
+Let $H$ denote the heterogeneous success premium $\lambda\theta_i\theta_j$ and $L$ the homogeneous premium $\lambda/4$.
+Their respective globally optimal private-only cutoffs, including full-coverage corners, are
+\begin{equation}
+ \ell_H=\max\left\{0,\frac{d+h-U}{2(d+h)}\right\},\qquad
+ \ell_L=\max\left\{0,\frac{d-U-h/2}{2d}\right\}.
+ \label{eq:diagnostic-cuts}
+\end{equation}
+The pooled technology raises the participation intercept by $h/2$; retaining $U$ or the heterogeneous cutoff in that comparison would be incorrect.
+For $h>0$, $\ell_H\geq\ell_L$, strictly unless both are zero.
+When both are interior,
+\begin{equation}
+ \ell_H-\ell_L=\frac{h(d+h+2U)}{4d(d+h)}>0.
+ \label{eq:diagnostic-cutgap}
+\end{equation}
+Thus heterogeneous success selects fewer founders and a lower total ability moment than its equal-mean pooled alternative, despite a higher mean ability among those selected.
+
+Let $T_H$ and $T_L$ be the local public-entry cost thresholds under the two technologies, with fees reoptimised in each configuration.
+Define $\delta=\ell_H-\ell_L$.
+Direct substitution in Proposition~3 gives the exact comparison
+\begin{equation}
+ \begin{split}
+ T_H-T_L={}&\delta\left[N_i\left(u_i+\frac d2(\ell_H+\ell_L)\right)
+                         +CS_i^0\right]\\
+ &+\frac{C\lambda K_i}{4}(\ell_H^2-\ell_L).
+ \end{split}\label{eq:diagnostic-gap}
+\end{equation}
+It holds at the full-participation corners as well.
+The first line captures the changed private exclusion margin and the associated direct-service and baseline matching returns.
+The second compares the technological return from restoring excluded collaborations: its exposure is $\ell_H^2/4$ under selected success, versus $\ell_L/4$ under pooled success.
+An interior heterogeneous--pooled public-entry reversal is possible precisely when $T_H\ne T_L$ and the common cost lies strictly between them; this is a conditional government comparison, not sufficient for the full four-player equilibrium.
+The sign criterion is the sign of the right-hand side of \eqref{eq:diagnostic-gap}, without assuming positive local commercialisation returns.
+
+For example, when $\ell_L>\ell_H^2$ and the first line is nonnegative, $K_i<0$ makes both components favour $T_H>T_L$.
+If $K_i>0$, the second component instead offsets the first and reverses that ranking when its magnitude is larger.
+Hence stronger positive selection does not have an unconditional policy sign.
+Proofs of the cutoff ordering and threshold identity appear in the diagnostic proof in the Online Supplement.
+
+The same accounting explains changes in complementarity without switching technology.
+On an interior heterogeneous branch set $h=\eta_i\lambda$, with $\eta_i=\rho\mu N_j\omega_i\Pi/2$, and let a prime denote the derivative with respect to $\lambda$.
+Then $\ell_H'=U\eta_i/[2(d+h)^2]$ and
+\begin{equation}
+ T_H'=\big[N_i(u_i+d\ell_H)+CS_i^0\big]\ell_H'
+       +\frac{CK_i}{4}\big(\ell_H^2+2\lambda\ell_H\ell_H'\big).
+ \label{eq:diagnostic-derivative}
+\end{equation}
+When $K_i<0$, complementarity raises the value of free access only if the first term outweighs the negative second term.
+The policy mechanism can therefore be restoration of valuable service access after private repricing, even when the incremental successful ventures reduce local consumer--incumbent--founder surplus.
+The numerical example below quantifies this distinction rather than interpreting public entry as evidence of a positive local innovation spillover.

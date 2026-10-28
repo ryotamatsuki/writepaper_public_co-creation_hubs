@@ -3,29 +3,40 @@
 \usepackage{amsmath,amssymb,amsthm}
 \usepackage{booktabs}
 \usepackage{array}
+\usepackage{setspace}
+\usepackage[tablesonly,nolists]{endfloat}
 \usepackage[round]{natbib}
 \usepackage[T1]{fontenc}
 \usepackage{lmodern}
 \usepackage{url}
+\newcommand{\doi}[1]{\url{https://doi.org/#1}}
 \usepackage[hidelinks]{hyperref}
-\title{Public and Private Innovation Intermediation:\\ Firm Sorting, Regional Market Effects, and Endogenous Provision}
-\author{Author information omitted in this working draft}
+\hypersetup{pdftitle={Access and Selection in Public and Private Innovation Intermediation},pdfauthor={},pdfsubject={Anonymous review manuscript}}
+\title{Access and Selection in Public and Private\\ Innovation Intermediation}
+\author{}
 \date{}
 \begin{document}
 \maketitle
 \begin{abstract}
-Can publicly financed basic innovation services change whether private specialist intermediaries enter when cross-region collaborations generate competing new products? We develop a two-region sequential game with two independent public and two private entry decisions. Private fees screen founders by technical ability, so participation mass and the unnormalised skill moment respond differently; matched ventures then generate geographically differentiated consumer, incumbent and founder payoffs. The model connects these familiar mechanisms to local entry incentives and a restricted two-region welfare comparison. In an exactly checked baseline, greater skill complementarity changes the decentralised configuration from public--private coexistence in one region and private-only provision in the other to coexistence in both. An equal-mean homogeneous innovation technology does not generate the latter configuration, although the restricted planner selects it in each comparison. The switch is highly parameter-sensitive: maintaining all three reported equilibria requires a public-cost band only about 0.263 percent of the baseline fixed cost, and an alternative skill distribution does not reproduce it. The result is a bounded equilibrium illustration, not a general rule favouring public ownership or physical innovation hubs.
+When does skill-based participant selection change a local government's incentive to finance free basic innovation services alongside a private specialist? We study a two-region game with four independent public and private entry decisions, fee-based founder selection, cross-region research matching and differentiated-product competition. A conditional comparison, with fees reoptimised under each technology, separates the effect of private exclusion from the regional commercialisation returns of collaborations restored by public access. It gives a model-specific sign criterion: stronger positive selection can raise or lower the value of free access. In the original numerical example, local market returns to successful ventures are negative; restoration of direct service value explains public entry. The certified configuration differs between skill-dependent and equal-full-participation-mean innovation technologies, but preserving all three benchmark outcomes requires a public-cost band only about 0.263 percent of the baseline cost, and an alternative ability distribution removes the switch. We explain that scale through a small fee-induced cutoff change and offsetting market losses. The analysis concerns access and selection, not a direct technical effect of specialist advice or the necessity of physical hubs. Empirical implications distinguish take-up, participant ability, supplier survival and regional market incidence.
 \end{abstract}
+\noindent\textbf{Keywords:} Innovation intermediation; Public access; Participant selection; Mixed provision; Regional welfare.
+
+\noindent\textbf{JEL classification:} D43; H77; L31; O32.
+\doublespacing
+
 \input{manuscript/sections/01_introduction}
 \input{manuscript/sections/02_model}
 \input{manuscript/sections/03_continuation}
 \input{manuscript/sections/04_propositions}
+\input{manuscript/sections/04_diagnostic}
 \input{manuscript/sections/05_numerical}
 \input{manuscript/sections/06_empirical_implications}
 \input{manuscript/sections/06_related_literature}
 \input{manuscript/sections/07_institutions}
-\appendix
-\input{manuscript/appendix/appendix_a_derivations}
+\input{manuscript/sections/08_declarations}
+\begingroup\raggedright\interlinepenalty=10000
 \bibliographystyle{plainnat}
 \bibliography{manuscript/references}
+\endgroup
 \end{document}

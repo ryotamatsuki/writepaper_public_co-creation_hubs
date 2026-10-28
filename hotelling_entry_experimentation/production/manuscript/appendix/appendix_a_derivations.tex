@@ -25,7 +25,8 @@ The simultaneous founder participation mapping at any nonnegative fee pair is
  x_i=\left[\frac{f_i-u_i-a_i(1-x_j)}{D_i(x_j)}\right]_0^1 .
  \label{eq:pp-clipped-cert}
 \end{equation}
-On an interior branch the derivative of the right-hand side with respect to $x_j$ is $(a_i+b_i x_i x_j)/D_i(x_j)$ and is bounded above by $h_i$; the clipped branches have derivative zero. Each of the three frozen parameter sets satisfies $\max_i h_i<1$. Consequently the coupled map is a contraction on $[0,1]^2$, so the founder-cutoff fixed point exists and is unique \emph{for every nonnegative fee pair}, including out-of-equilibrium fees.
+On an interior branch, the derivative with respect to $x_j$ is $(a_i+b_i x_i x_j)/D_i(x_j)\leq h_i$.
+On clipped branches it is zero. Each of the three frozen parameter sets satisfies $\max_i h_i<1$. Consequently the coupled map is a contraction on $[0,1]^2$, so the founder-cutoff fixed point exists and is unique \emph{for every nonnegative fee pair}, including out-of-equilibrium fees.
 
 Fix $f_j$ and use $x=x_i$ as the local decision variable. The opponent cutoff conditional on this cutoff is uniquely
 \[
@@ -120,7 +121,7 @@ $N_i(U_i+T_i)^2/(4T_i)$; under free-basic co-provision, receipts equal $N_i\Delt
  =\frac{N_i}{4}\left(\frac{(U_i+T_i)^2}{T_i}-\Delta_i\right)
  >0
 \end{equation}
-since $(U_i+T_i)^2/T_i>T_i\geq\Delta_i$. In the full-coverage branch, receipts are $N_iU_i$ with $U_i\geq T_i\geq\Delta_i$, which also strictly exceeds $N_i\Delta_i/4$. The fixed private cost cancels. The result compares a \emph{given active private provider} under the two arrangements, and says nothing about whether local public entry is welfare-improving. It also does not imply a private supplier exits: in the co-provision continuation the private entrant earns $N_i\Delta_i/4-F_{P_i}$, which may be strictly positive. This is an additional *expositional implication* of the already frozen fee formulas and is not advertised as a new general theorem.
+since $(U_i+T_i)^2/T_i>T_i\geq\Delta_i$. In the full-coverage branch, receipts are $N_iU_i$ with $U_i\geq T_i\geq\Delta_i$, which also strictly exceeds $N_i\Delta_i/4$. The fixed private cost cancels. The result compares a \emph{given active private provider} under the two arrangements, and says nothing about whether local public entry is welfare-improving. It also does not imply a private supplier exits: in the co-provision continuation the private entrant earns $N_i\Delta_i/4-F_{P_i}$, which may be strictly positive. This is an additional \emph{expositional implication} of the already frozen fee formulas and is not advertised as a new general theorem.
 
 \subsection{Fixed participation: how technical selection changes project returns}
 For the uniform distribution and a common participant cutoff $\ell_i$, the mass is
@@ -132,7 +133,7 @@ $m_i=1-\ell_i$ and skill moment $q_i=(1-\ell_i^2)/2$. Suppose region $j$ is full
 \end{equation}
 Therefore the sign is not necessarily beneficial for either region; it equals $\mathrm{sign}(K_i)$ for $\lambda>0$ and $0<\ell_i<1$. The comparison should not be silently imported into the reoptimised $P$-only continuation, where the two distributions imply different optimum fees and cutoffs.
 
-\subsection{Why a two-index externality representation is possible}
+\subsection{Reduced participation-externality representation}
 For every fixed valid selected continuation, put
 $\mathcal A_i=C(p_bM_i+\omega_iR_0)$ and $\mathcal B_i=C\lambda(M_i+\omega_i\Pi)$, so
 \begin{equation}
@@ -143,8 +144,8 @@ $\mathcal A_i=C(p_bM_i+\omega_iR_0)$ and $\mathcal B_i=C\lambda(M_i+\omega_i\Pi)
 This recentering makes the relation to ordinary multi-region public-good externality games explicit, rather than asserting a new welfare-wedge theorem. The endogenous map from strategic fees and entry into $(m_i,q_i)$ is the model-specific object. It does not by itself disprove potential nesting in a more general predecessor's theorem.
 
 \section{Reproducibility and certification boundaries}\label{app:repro}
-The public source repository is
-\href{https://github.com/ryotamatsuki/writepaper_public_co-creation_hubs}{public source repository}.
+The source and exact verification scripts are supplied in the accompanying replication materials.
+Identifying repository links are omitted from the anonymous review version.
 The frozen theory is identified by \texttt{STAGE33-2026-10-28-THEORY-FREEZE-v1};
 its recorded baseline is reproduced with the Python-standard-library script \texttt{stage33\_reproduce.py}
 (in the \texttt{production/verification} directory of the
@@ -153,4 +154,34 @@ The original implementation runs sixteen entry configurations for each of three 
 
 The separately maintained Lean~4 certificate checks eighteen theorem statements covering selected proof-critical inequalities and identities under their specified hypotheses. It does \emph{not} encode the entire Cournot--research--participation--entry game or the analytic global P/P fee lemma just supplied. The latter has an independent mathematical argument and exact rational baseline verification; its broader portability is not claimed. Algebraic proof, computer-assisted interval verification and Lean theorem verification are distinct evidentiary categories.
 
-The alternative $\operatorname{Beta}(2,2)$ types and differentiated Bertrand product competition are recorded adverse portability checks and cannot be described as passing robustness tests. All untested instrument expansions are outside this frozen analysis.
+The $\operatorname{Beta}(2,2)$ and differentiated-Bertrand alternatives are negative portability records.
+They are not successful robustness tests.
+Untested policy instruments remain outside the analysis.
+
+\clearpage
+\section{The repriced diagnostic comparison}\label{app:diagnostic-proof}
+Under complete opposite-region participation, heterogeneous founder willingness to pay has intercept $U$ and slope $d+h$.
+Pooled success adds $h/2$ to the intercept and leaves slope $d$.
+Applying the global interior/full-coverage pricing formula gives \eqref{eq:diagnostic-cuts}.
+If both cutoffs are positive, subtracting gives \eqref{eq:diagnostic-cutgap}.
+If only one is zero, it must be $\ell_L$: $U\geq d+h$ would also imply $U+h/2\geq d$.
+Thus $\ell_H\geq\ell_L$ everywhere, strictly for $h>0$ unless both are zero.
+
+For the heterogeneous technology Proposition~3 gives
+\[
+ T_H=N_i[u_i\ell_H-d/8+d\ell_H^2/2]+CS_i^0\ell_H
+       +C\lambda K_i\ell_H^2/4.
+\]
+For pooled success the matching increment is constant per pair, so the corresponding expression is
+\[
+ T_L=N_i[u_i\ell_L-d/8+d\ell_L^2/2]+CS_i^0\ell_L
+       +C\lambda K_i\ell_L/4.
+\]
+Subtract, factor $\ell_H^2-\ell_L^2=(\ell_H-\ell_L)(\ell_H+\ell_L)$, and obtain \eqref{eq:diagnostic-gap}.
+The formula remains valid when a cutoff is zero: adding a public alternative may then forgo some direct premium value, reflected in the same $-N_id/8$ term.
+No division by a possibly signed local market coefficient is used.
+
+On an interior branch, $h=\eta_i\lambda$ and $\ell_H=1/2-U/[2(d+h)]$, with $U$ constant in $\lambda$.
+Differentiating gives $\ell_H'=U\eta_i/[2(d+h)^2]$ and then \eqref{eq:diagnostic-derivative}.
+These are identities conditional on the opposite region's full participation, not unrestricted four-entry equilibrium comparative statics.
+The additional exact checker reconstructs the three original thresholds independently of numerical fee searches, verifies the decomposition, and reports the direct-service and market-incidence differences without changing any primitive.

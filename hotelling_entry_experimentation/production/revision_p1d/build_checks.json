@@ -1,0 +1,33 @@
+{
+  "scope": "Anonymous review PDFs; external review and author declarations still pending",
+  "abstract_words": 189,
+  "files": [
+    {
+      "target": "jict_revised_manuscript.pdf",
+      "pages": 27,
+      "unresolved_or_overfull": [],
+      "underfull_boxes": []
+    },
+    {
+      "target": "jict_online_supplement.pdf",
+      "pages": 6,
+      "unresolved_or_overfull": [],
+      "underfull_boxes": []
+    }
+  ],
+  "anonymous_source_and_pdf_scan": "PASS",
+  "flat_anonymous_package_files": [
+    "README.md",
+    "diagnostic_check.py",
+    "jict_online_supplement.pdf",
+    "jict_revised_manuscript.pdf",
+    "main.tex",
+    "references.bib",
+    "stage11r_p1_open_region_certificate.py",
+    "stage11r_p1b_empirical_implications_check.py",
+    "stage11r_p1c_reduction_check.py",
+    "stage11r_pp_global_certificate.py",
+    "stage33_reproduce.py",
+    "supplement.tex"
+  ]
+}

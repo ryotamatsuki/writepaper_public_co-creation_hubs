@@ -1,103 +1,89 @@
-\section{Selection, complementarity and private pricing}\label{sec:propositions}
+\section{Conditional mechanisms}\label{sec:propositions}
 
-Our analytical propositions describe \emph{conditional} equilibrium channels. They are not claims about arbitrary off-path price configurations or all equilibria of the full four-entrant game.
+The following results explain the subsequent public-access diagnostic.
+Their general screening and welfare principles are established in prior research; they are not independent claims to theoretical priority.
+Each comparison holds the stated continuation objects fixed.
 
-\paragraph{Proposition 1 (local versus aggregate value of complementarity).}
-Suppose both founder populations participate, both differentiated-product Cournot markets remain at the fixed interior quantities in \eqref{eq:cournot}, and founder types are independent uniform random variables. Then
+\paragraph{Proposition 1 (regional incidence).}
+With full founder participation, fixed interior Cournot quantities and independent uniform abilities,
 \begin{equation}
  \frac{\partial W_i}{\partial\lambda}=\frac{C}{4}K_i,\qquad
  \frac{\partial(W_A+W_B)}{\partial\lambda}
  =\frac{C}{4}(M_A+M_B+\Pi).
  \label{eq:P1}
 \end{equation}
-Consequently, the national marginal welfare effect and either jurisdiction's marginal welfare effect need not have the same sign.
+Local and aggregate signs can differ because incumbent displacement and assigned venture earnings differ across regions.
+The derivatives follow from $q_Aq_B=1/4$ and $K_A+K_B=M_A+M_B+\Pi$.
+No participant or price response is included in this full-coverage calculation.
 
-\emph{Reason.} With full participation $m_i=1$ and $q_i=1/2$, and neither the direct-service values, the fixed Cournot market, nor $e^*$ respond to $\lambda$ in the maintained conditional calculation. The only varying term in \eqref{eq:Wi} is $Cq_Aq_B\lambda K_i$, giving \eqref{eq:P1}. By $\omega_A+\omega_B=1$, $K_A+K_B=M_A+M_B+\Pi$.
-The signs differ when a local incumbent-loss term $M_i$ outweighs local venture-profit attribution $\omega_i\Pi$ while net nationwide gains remain positive. A successful innovation can therefore benefit the two regions unevenly even before government entry is endogenised.
-
-\paragraph{Proposition 2 (private fee, participation and composition).}
-Fix the other region's $(m_j,q_j)$ with $q_j>0$. Maintain $0<U_i<T_i$ in \eqref{eq:monopolyfee}, $\omega_i>0$, $\Pi>0$ and $z_i=\theta_i$. Then as $\lambda$ increases:
+\paragraph{Proposition 2 (conditional fee selection).}
+Fix the other region's $(m_j,q_j)$ with $q_j>0$, maintain $0<U_i<T_i$, $\omega_i>0$, $\Pi>0$ and $z_i=\theta_i$.
+Increasing $\lambda$ then implies
 \begin{equation}
- \frac{\partial f_i^*}{\partial\lambda}>0,\qquad
- \frac{\partial\ell_i^*}{\partial\lambda}>0,\qquad
- \frac{\partial m_i}{\partial\lambda}<0,\qquad
- \frac{\partial q_i}{\partial\lambda}<0,\qquad
- \frac{\partial\mathbb E[\theta_i\mid\mathrm{join}]}{\partial\lambda}>0.
+ \frac{\partial f_i^*}{\partial\lambda}>0,\quad
+ \frac{\partial\ell_i^*}{\partial\lambda}>0,\quad
+ \frac{\partial m_i}{\partial\lambda}<0,\quad
+ \frac{\partial q_i}{\partial\lambda}<0,\quad
+ \frac{\partial(q_i/m_i)}{\partial\lambda}>0.
  \label{eq:P2}
 \end{equation}
-This result is conditional on fixed opposite-region participation and interior pricing.
+Indeed $T_i'=\rho\mu N_j\omega_i\Pi q_j>0$, while $U_i$ is constant, and the monopoly formula gives
+$\ell_i^*=1/2-U_i/(2T_i)$ and $\ell_i'=U_iT_i'/(2T_i^2)>0$.
+Participant mean ability $(1+\ell_i)/2$ rises even as the total represented ability falls.
+This is not a P/P price-equilibrium comparative static.
 
-\emph{Reason.} By \eqref{eq:matchingcoeff},
-$T_i=\Delta_i+\rho\mu N_j\omega_i\lambda\Pi q_j$
-has strictly positive derivative while $U_i$ is constant. Equation \eqref{eq:monopolyfee} gives
+\paragraph{Corollary 1 (the fixed-mass benchmark).}
+At participation mass $m_i=1-\ell_i$, selected ability exceeds random admission of the same mass by
 \begin{equation}
- f_i^*=(U_i+T_i)/2,\quad
- \ell_i^*=\tfrac12-\tfrac{U_i}{2T_i},\quad
- \frac{\partial\ell_i^*}{\partial\lambda}
- =\frac{U_i}{2T_i^2}\frac{\partial T_i}{\partial\lambda}>0.
-\end{equation}
-Then $m_i=1-\ell_i$, $q_i=(1-\ell_i^2)/2$, and the conditional mean type is $(1+\ell_i)/2$. Notice the distinction: \emph{mean talent rises while the aggregate mass and unnormalised talent moment fall}. Replacing $q_i$ by the conditional mean in \eqref{eq:Wi} would yield an incorrect welfare calculation.
-
-\paragraph{Corollary 1 (selection compared with random admission).}
-For a fixed participation mass $m_i=1-\ell_i$, the upper-tail selected skill moment satisfies
-\begin{equation}
- q_i^{\mathrm{selected}}-\frac{m_i}{2}
- =\frac{\ell_i(1-\ell_i)}{2}\geq0.
+ q_i-\frac{m_i}{2}=\frac{\ell_i(1-\ell_i)}2\geq0.
  \label{eq:C1}
 \end{equation}
-This compares \emph{the same mass} under different selection rules, not two reoptimised pricing equilibria. Across both regions, positive assortative selection changes $q_Aq_B$ separately from $m_Am_B$.
-
-\paragraph{Exact single-index reduction (not a separate novelty proposition).}
-Under the frozen $U[0,1]$ type distribution, any private-only participation set is an upper tail with $m_i=1-\ell_i$. Eliminating the cutoff gives
+At a fixed cutoff and with the other region fully covered, the selected-minus-pooled technological welfare increment is
 \begin{equation}
- q_i=\phi(m_i),\qquad \phi(m):=m-\frac{m^2}{2},\quad 0\le m\le1,
- \qquad q_Aq_B=\phi(m_A)\phi(m_B).
- \label{eq:single-index-reduction}
-\end{equation}
-The identity also holds in states $0$, $G$ and $B$, where $(m_i,q_i)$ equals $(0,0)$ or $(1,1/2)$. Thus the joint success term may be expressed using \emph{participation mass alone} and a nonlinear payoff mapping. The two aggregates have different economic interpretations but are not independent endogenous state variables in this specification. This reducibility limits any claim of a new two-dimensional participation architecture, particularly in comparison with earlier quality-weighted platform participation models. It does not alter the equilibrium equations, stage-1 enumeration or the fixed-mass selected-versus-pooled comparison.
-
-\paragraph{Economic interpretation.}
-Greater technological complementarity makes high-ability founders more valuable to a private specialist and can raise the private fee. This screening reduces the number of collaborating founders but increases average capability among the remaining participants. A free basic service changes the \emph{extensive} margin (more founders) and the \emph{composition} margin (who participates). A participation-only representation is possible in this frozen uniform-tail model, but a linear match-volume-only specification would omit the nonlinear selection term $\phi(m_A)\phi(m_B)$.
-
-\paragraph{A same-mass comparison with homogeneous innovation.}
-Corollary~1 can also be expressed directly in welfare units, but this is an \emph{accounting comparison}, not an additional claim to priority. Hold the participating mass $m_i=1-\ell_i$ fixed, set $m_j=1$, $q_j=1/2$, and compare the heterogeneous success premium $\lambda\theta_A\theta_B$ with its uniform full-population mean $\lambda/4$:
-\begin{equation}
- \left.\bigl(W_i^{\mathrm{skill}}-W_i^{\mathrm{pooled}}\bigr)
- \right|_{\mathrm{same\ mass,\ same\ fee}}
- =\frac{C\lambda K_i}{4}\,
- \ell_i(1-\ell_i).
+ \left.(W_i^{\mathrm{skill}}-W_i^{\mathrm{pooled}})\right|_{\mathrm{same\ cutoff}}
+ =\frac{C\lambda K_i}{4}\ell_i(1-\ell_i).
  \label{eq:fixedmass-composition}
 \end{equation}
-Indeed the two terms are $C\lambda K_i q_i/2$ and $C\lambda K_i m_i/4$, respectively, and $2q_i-m_i=\ell_i(1-\ell_i)$. Its sign is that of $K_i$ for $\lambda>0$ and an interior cutoff. \emph{After equilibrium fees are reoptimised}, however, $\ell_i$ differs between technologies, so this equation by itself does not rank the two equilibria or prove a switch in public provision. That distinction is especially important for Table~\ref{tab:entry}.
+It has the sign of $K_i$; it does not compare reoptimised pricing equilibria.
 
-\section{Public provision and interregional welfare}\label{sec:welfare}
+\paragraph{Exact participation reduction.}
+Eliminating the uniform upper-tail cutoff yields
+\begin{equation}
+ q_i=\phi(m_i),\quad \phi(m)=m-m^2/2,\quad
+ q_Aq_B=\phi(m_A)\phi(m_B).
+ \label{eq:single-index-reduction}
+\end{equation}
+The identity also holds in $0,G,B$ states.
+Match volume and ability-weighted exposure have different economic meanings, but are not independent endogenous state dimensions here.
+A nonlinear participation-externality representation is possible.
 
-\paragraph{Proposition 3 (conditional co-provision threshold and cross-border wedge).}
-Fix a region $j$ with full participation $(m_j,q_j)=(1,1/2)$ and suppose region $i$ has a private-only provider with interior cutoff $\ell_i\in(0,1)$. Compare the fixed configurations $(s_i,s_j)=(P,s_j)$ and $(B,s_j)$, preserving the specified downstream continuations. Define the gain in real direct service value before the government fixed cost by
+\section{Local and national public-access thresholds}\label{sec:welfare}
+
+\paragraph{Proposition 3 (conditional public addition).}
+Fix the other region at $(m_j,q_j)=(1,1/2)$ and let region $i$ have a private-only continuation with $\ell_i\in(0,1)$.
+Define the direct-service gain before government cost by
 \begin{equation}
  H_i=N_i\left(u_i\ell_i-\frac{\Delta_i}{8}
-              +\frac{\Delta_i\ell_i^2}{2}\right).
+                         +\frac{\Delta_i\ell_i^2}{2}\right).
  \label{eq:H}
 \end{equation}
-The local government weakly prefers adding a free basic public service precisely when $F_{G_i}\leq F_i^{\mathrm{local}}$, where
+Adding free basic access while retaining the private specialist is locally preferred exactly when $F_{G_i}\leq F_i^{\mathrm{local}}$, where
 \begin{equation}
- F_i^{\mathrm{local}}=
- H_i+C\left(S_i^0\ell_i+
-             \frac{\lambda K_i\ell_i^2}{4}\right).
+ F_i^{\mathrm{local}}=H_i+C\left(S_i^0\ell_i+
+                          \frac{\lambda K_i\ell_i^2}{4}\right).
  \label{eq:localcutoff}
 \end{equation}
-The restricted national welfare comparison instead uses
-\begin{align}
+The national comparison uses
+\begin{equation}
  F_i^{\mathrm{national}}-F_i^{\mathrm{local}}
- &=C\ell_i\left(S_j^0+
-               \frac{\lambda K_j\ell_i}{4}\right).
+ =C\ell_i\left(S_j^0+\frac{\lambda K_j\ell_i}{4}\right).
  \label{eq:wedge}
-\end{align}
-Thus the national-minus-local public-entry threshold can be positive, zero, or negative, depending on the foreign market incidence of the extra venture activity.
+\end{equation}
+This foreign increment may be positive, zero or negative.
 
-\emph{Reason.} Adding $G_i$ changes region $i$'s participation from $(1-\ell_i,(1-\ell_i^2)/2)$ to $(1,1/2)$. With $m_j=1$ and $q_j=1/2$, the additional match count is $C\ell_i$ and the additional skill exposure is $C\ell_i^2/4$. The change in direct service value is $H_i$. The local welfare difference is \eqref{eq:localcutoff} minus $F_{G_i}$. Foreign welfare has no local service/fixed-cost change and increases by $C(S_j^0\ell_i+\lambda K_j\ell_i^2/4)$; adding this gives \eqref{eq:wedge}.
-
-Importantly, \eqref{eq:wedge} does \emph{not} compare unconstrained socially optimal taxes, fees, investment or service technologies. Nor does a preferred conditional public addition ensure that all four independent stage-1 players jointly choose the corresponding configuration. The global restricted planner and stage-1 pure Nash conditions must still be evaluated across all sixteen profiles.
-
-\paragraph{Economic interpretation.}
-A municipality pays its own public fixed cost and internalises its own founders', consumers' and incumbent producers' outcomes. The neighbouring jurisdiction may gain from more cross-region collaborations, or may lose when new products compete with established producers. Underprovision is therefore \emph{possible but not automatic}; the opposite wedge is also possible. The institutional concern is the difference between \emph{where a service is financed} and \emph{where the resulting venture gains or losses accrue}.
+To verify the result, public access raises local mass by $\ell_i$ and local ability moment by $\ell_i^2/2$; with the opposite moment $1/2$, skill exposure rises by $C\ell_i^2/4$.
+The direct-service change is $H_i$ and private real costs cancel.
+Adding the neighbouring welfare increment gives the national threshold.
+The same accounting extends to full-coverage corners using the realised cutoff.
+It does not establish a full four-entry equilibrium or an optimum over fees, research allocations, subsidies or buildings.
+The Online Supplement provides the continuation and accounting proofs.

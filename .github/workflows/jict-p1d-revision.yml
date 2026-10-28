@@ -1,0 +1,35 @@
+name: JICT frozen-model economic diagnostic and review PDFs
+on:
+  push:
+    branches:
+      - revision/stage11r-p1d-economic-diagnostic-20261028
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  verify-and-build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: LaTeX and PDF inspection dependencies
+        run: sudo apt-get update && sudo apt-get install -y latexmk texlive-latex-base texlive-latex-recommended texlive-latex-extra texlive-fonts-recommended lmodern poppler-utils
+      - name: Anonymous flat sources, cross references and PDFs
+        run: python hotelling_entry_experimentation/production/revision_p1d/build_review.py
+      - name: Original five checks, diagnostic, isolated replication and freeze integrity
+        run: python hotelling_entry_experimentation/production/revision_p1d/validate_revision.py
+      - uses: actions/upload-artifact@v4
+        with:
+          name: jict-p1d-review-draft-not-submission-approval
+          path: |
+            hotelling_entry_experimentation/production/revision_p1d/output/pdf/*.pdf
+            hotelling_entry_experimentation/production/revision_p1d/submission_files/
+            hotelling_entry_experimentation/production/revision_p1d/build_checks.json
+            hotelling_entry_experimentation/production/revision_p1d/diagnostic_results.json
+            hotelling_entry_experimentation/production/revision_p1d/validation.json
+            hotelling_entry_experimentation/production/revision_p1d/validation.txt
+          retention-days: 30
