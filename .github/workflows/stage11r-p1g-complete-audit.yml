@@ -25,4 +25,5 @@ jobs:
       - name: Additional candidate identities and complete-coverage ledger
         run: |
           python hotelling_entry_experimentation/production/government_game_exploration/additional_identities.py
+          python hotelling_entry_experimentation/production/government_game_exploration/cross_region_feedback_numeric.py
           python hotelling_entry_experimentation/production/government_game_exploration/coverage_check.py
