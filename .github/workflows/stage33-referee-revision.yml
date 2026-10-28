@@ -35,6 +35,7 @@ jobs:
           path: |
             hotelling_entry_experimentation/production/output/referee_2d_entry_sensitivity.csv
             hotelling_entry_experimentation/production/output/referee_lambda_fixed_cost.svg
+            hotelling_entry_experimentation/production/output/beta22_adverse.json
   manuscript-and-bibliography:
     runs-on: ubuntu-latest
     steps:
