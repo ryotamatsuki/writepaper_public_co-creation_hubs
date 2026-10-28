@@ -144,7 +144,7 @@ theorem public_entry_polynomial_identity
     entryPolynomial N Delta FG h g lambda U T := by
   unfold publicValue entryPolynomial
   field_simp
-  <;> ring
+  ring
 
 /-- Positivity of the cubic numerator is equivalent to beneficial local entry. -/
 theorem public_entry_iff_polynomial
@@ -154,14 +154,14 @@ theorem public_entry_iff_polynomial
   have hp : 0 < 8 * T ^ 2 := by positivity
   have heq := public_entry_polynomial_identity N Delta FG h g lambda U T (ne_of_gt hT)
   constructor
-  · intro h
+  · intro hEntry
     have hnonneg :
         0 ≤ 8 * T ^ 2 *
           (publicValue N Delta h g lambda ((T - U) / (2 * T)) - FG) :=
-      mul_nonneg (le_of_lt hp) (sub_nonneg.mpr h)
+      mul_nonneg (le_of_lt hp) (sub_nonneg.mpr hEntry)
     rw [heq] at hnonneg
     exact hnonneg
-  · intro h
+  · intro hPsi
     by_contra hfail
     have hneg : publicValue N Delta h g lambda ((T - U) / (2 * T)) - FG < 0 := by
       have hlt : publicValue N Delta h g lambda ((T - U) / (2 * T)) < FG :=
