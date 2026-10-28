@@ -1,0 +1,54 @@
+name: Stage11R P1b empirical-implication identity and manuscript QA
+on:
+  push:
+    branches:
+      - revision/stage11r-p1b-observable-predictions-20261028
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  frozen-theory-and-p1b:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: hotelling_entry_experimentation/production/reviews
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Reproduce P0a price game and all stage-1 profiles
+        run: python stage11r_pp_global_certificate.py
+      - name: Reproduce P1 rational entry open region
+        run: python stage11r_p1_open_region_certificate.py
+      - name: Validate empirical conditional identities only
+        run: python stage11r_p1b_empirical_implications_check.py
+      - name: Verify Stage11R P1c exact-rational single-index reduction
+        run: python stage11r_p1c_reduction_check.py
+      - uses: actions/upload-artifact@v4
+        with:
+          name: stage11r-p1b-model-to-observables-certificates
+          path: |
+            hotelling_entry_experimentation/production/reviews/stage11r_pp_global_certificate.json
+            hotelling_entry_experimentation/production/reviews/stage11r_p1_open_region_certificate.json
+            hotelling_entry_experimentation/production/reviews/stage11r_p1b_empirical_implications_checks.json
+            hotelling_entry_experimentation/production/reviews/stage11r_p1c_reduction_checks.json
+          retention-days: 30
+  manuscript:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Build integrated paper and bibliography
+        uses: xu-cheng/latex-action@v4
+        with:
+          root_file: manuscript/main.tex
+          working_directory: hotelling_entry_experimentation/production
+          compiler: latexmk
+          args: -pdf -bibtex -file-line-error -halt-on-error -interaction=nonstopmode
+          texlive_version: 2026
+      - uses: actions/upload-artifact@v4
+        with:
+          name: stage11r-p1b-jict-working-paper
+          path: hotelling_entry_experimentation/production/main.pdf
+          if-no-files-found: error
+          retention-days: 30
