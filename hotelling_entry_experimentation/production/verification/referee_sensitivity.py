@@ -107,7 +107,7 @@ def draw_phase_svg(rows,filename):
         arr.append(f'<text x="{left+(ix+.5)*dx:.1f}" y="{h-bottom+16}" font-size="11" text-anchor="middle">{xs[ix]:.5f}</text>')
     for v in ys:
         arr.append(f'<text x="{left-9}" y="{top+(len(ys)-yidx[v]-.5)*dy+4:.1f}" font-size="11" text-anchor="end">{v:.2f}</text>')
-    arr.append(f'<text x="{w-160}" y="{h-34}" font-size="11">Dark: BP; light: BB; others labelled</text>')
+    arr.append(f'<text x="{left+300}" y="{h-34}" font-size="11">Dark: BP; light: BB; others labelled</text>')
     arr.append("</svg>")
     filename.write_text("\n".join(arr),encoding="utf-8")
 
