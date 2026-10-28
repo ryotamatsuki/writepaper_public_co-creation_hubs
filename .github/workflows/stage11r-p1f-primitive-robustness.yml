@@ -1,0 +1,24 @@
+name: Frozen primitive robustness
+on:
+  push:
+    branches:
+      - exploration/stage11r-p1f-primitive-robustness-20261028
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Verify original fee and government game certificates
+        run: |
+          python hotelling_entry_experimentation/production/reviews/stage11r_pp_global_certificate.py
+          python hotelling_entry_experimentation/production/government_game_exploration/government_game_certificate.py
+      - name: Verify primitive sufficient signs and sensitivity points
+        run: |
+          python hotelling_entry_experimentation/production/government_game_exploration/primitive_robustness.py
+          python hotelling_entry_experimentation/production/government_game_exploration/uniform_box.py
