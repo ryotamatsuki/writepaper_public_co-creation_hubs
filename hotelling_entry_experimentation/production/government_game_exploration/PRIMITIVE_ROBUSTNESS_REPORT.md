@@ -83,6 +83,26 @@ For baseline `lambda=.5,omega_B=.2`, the *full theoretical* no-pure cost rectang
 
 The originally published baseline public costs `F_GA=.09,F_GB=.0405` **do not** lie in the mixed-equilibrium cost rectangle. The original pure-equilibrium result remains unchanged.
 
+## 3b. **Uniform continuous parameter-rectangle certificate** (stronger than nine separate points)
+
+An additional standard-library rational interval proof, [`uniform_box.py`](uniform_box.py), encloses **all** original-model primitives simultaneously in
+
+```
+0.4999 <= lambda <= 0.5001
+0.1999 <= omega_B <= 0.2001,    omega_A=1-omega_B.
+```
+
+The program checks, for this entire 2-dimensional closed rectangle: (i) exact sufficient inequalities for global PP fee best-reply containment and Banach contraction (<1), including all nonnegative posted-fee deviations; (ii) signed all-four Poincare–Miranda price-root faces on a *common* rational cutoff box; (iii) global optimality of the remaining private price branches; (iv) strict government strategic cross-signs after joint repricing. The actual outward rational enclosures have approximate endpoints
+
+```
+D_A in [0.00009106788, 0.00013842398] > 0,
+D_B in [-0.00006020123, -0.00004171075] < 0.
+```
+
+It follows that **for every parameter point in that continuous rectangle there exists a nonempty region of government fixed costs with no pure first-stage entry equilibrium**, with a unique fully mixed government entry equilibrium (both private firms enter by strict dominance). This is a **uniform-parameter theorem**, not a grid inference, although the cost rectangle need not be identical for every point in the primitive box.
+
+The algorithm also tested larger radii `0.001`, `0.002`, `0.01`: crude interval subtraction yielded government cross-effect enclosures that straddled zero, so those larger boxes were **not certified**. These failures do not imply a real sign reversal; they are an interval dependency/precision limitation. No wider box is claimed. The original government costs still fall outside this mixed-entry window.
+
 ## 4. Scholarly novelty gate
 See [closest-predecessor audit](LITERATURE_AND_NONABSORPTION.md). The critical point is that the induced asymmetric strategic interactions are endogenous to *reoptimised private prices and locally allocated downstream new-venture surplus*, but the **game-theoretic structure** is covered by established GSH and local-public-good theory. The weak-coupling `M_i^crit` formula is a model-specific sufficient condition, not evidence that broader strategic-incidence laws were unknown. No reference-full-text theorem-level non-nesting is certified; Hua et al. (2016) remains inaccessible in full.
 
