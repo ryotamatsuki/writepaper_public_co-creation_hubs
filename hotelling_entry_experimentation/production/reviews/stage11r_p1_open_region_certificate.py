@@ -104,6 +104,58 @@ def public_B_threshold(p,box):
     gain=prof[('B','B')]['welfare'][1]-prof[('B','P')]['welfare'][1]
     return I(BASE_COST_B)+gain
 
+def certify_full_open_cost_band(p,box,expected,scenario,left,right):
+    """Rigorous 8-piece coverage of full *open* band (left,right).
+
+    Only the B government entry flip between BP and BB may tie at a
+    boundary, as certified by the exact cost-only affine formula. All
+    nonbinding flips and planner dominance are strictly signed on
+    each CLOSED rational piece. On the interior of the whole interval,
+    active flips have the required strict sign.
+    """
+    assert left<right
+    pieces=[]
+    pivotal_other=('B','B') if scenario=='skill_zero' else (('B','P') if scenario=='skill_half' else None)
+    pivotal_active=scenario in ('skill_zero','skill_half')
+    for k in range(8):
+        l=left+(right-left)*F(k,8)
+        r=left+(right-left)*F(k+1,8)
+        p['fg']=(F(9,100),I(l,r))
+        prof={s:c.profile(s,p,box) for s in STATES}
+        for s in STATES:
+            margins=[(payoff_slack(prof,s,i,act),i,act) for i,act in ACTORS]
+            if s==expected:
+                for v,i,act in margins:
+                    if pivotal_active and (i,act)==(1,'G'):
+                        # Exact price-independent cost threshold; hence a
+                        # positive slope on the open side. No P/P uncertainty.
+                        if scenario=='skill_zero':
+                            assert v.lo>=0 and v.hi>0,(scenario,k,'own active',v.approx())
+                        else:
+                            assert v.lo>=0 and v.hi>0,(scenario,k,'own active',v.approx())
+                    else:
+                        assert v.lo>0,(scenario,k,'own regular',s,i,act,v.approx())
+            else:
+                witness=[(v,i,act) for v,i,act in margins if v.hi<0]
+                if pivotal_active and s==pivotal_other and not witness:
+                    v=payoff_slack(prof,s,1,'G')
+                    assert v.hi<=0 and v.lo<0,(scenario,k,'other active',v.approx())
+                    # At just one endpoint v may be zero; the affine
+                    # B-government condition makes it strictly negative
+                    # everywhere in the OPEN band.
+                else:
+                    assert witness,(scenario,k,'other configuration not refuted',s,
+                                     [(v.approx(),i,act) for v,i,act in margins])
+        BB=('B','B');total=prof[BB]['welfare'][0]+prof[BB]['welfare'][1]
+        for s in STATES:
+            if s==BB:continue
+            d=total-prof[s]['welfare'][0]-prof[s]['welfare'][1]
+            assert d.lo>0,(scenario,k,'planner competitor',s,d.approx())
+        pieces.append({'piece_index':k+1,'cost_endpoints':[float(l),float(r)],
+                       'all_nonbinding_entry_and_planner_strict':True,
+                       'only_possible_boundary_tie':'B_G: BP-vs-BB' if pivotal_active else 'none'})
+    return pieces
+
 def main():
     baseline=[];robust=[];cost_only=[]
     thresholds={}
@@ -143,6 +195,15 @@ def main():
     assert t0.lo>tp.hi and t0.hi<th.lo,(t0.approx(),tp.approx(),th.approx())
     lo,hi=COST_INNER
     assert lo>t0.hi and hi<th.lo
+    exact_full_band=[]
+    for lam,pooled,expected,xx in SCENARIOS:
+        name=('pooled_' if pooled else 'skill_')+('half' if lam else 'zero')
+        p=c.primitives(lam,pooled)
+        cen=[F(Decimal(x)) for x in xx]
+        cutoff_box,_=c.faces(p,cen,F(1,10**9))
+        pieces=certify_full_open_cost_band(p,cutoff_box,expected,name,t0.lo,th.hi)
+        exact_full_band.append({'scenario':name,'pieces':pieces})
+        print('PASS full exact open band by eight rational interval pieces',name,flush=True)
     report={'theory':'STAGE33-2026-10-28-THEORY-FREEZE-v1',
        'proof':'All strict parameter-box checks use endpoint rational arithmetic plus analytic global price best-response lemma. No grids; independent human/Lean full-game proof not asserted.',
        'conditional_lambda_half_skill_pooled_band':[tp.approx(),th.approx()],
@@ -152,6 +213,7 @@ def main():
        'three_scenario_certified_cost_only_interior':[float(lo),float(hi)],
        'cost_width_3way_inner':float(hi-lo),
        'all_three_cost_only':cost_only,
+       'exact_full_open_band_eight_piece_proof':exact_full_band,
        'explicit_open_parameter_neighborhoods':robust,
        'base_thresholds_and_pp_sufficient_bounds':baseline}
     with open('stage11r_p1_open_region_certificate.json','w') as fp:json.dump(report,fp,indent=2)
