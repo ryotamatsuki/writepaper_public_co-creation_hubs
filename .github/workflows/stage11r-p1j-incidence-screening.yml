@@ -1,0 +1,27 @@
+name: P1j incidence screening sign-theorem
+on:
+  push:
+    branches:
+      - exploration/stage11r-p1j-incidence-screening-paradox-20261028
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Exact parameter-wide incidence screening sign theorem
+        run: python hotelling_entry_experimentation/production/government_game_exploration/incidence_screening_sign_certificate.py
+      - name: Revalidate baseline economic pricing and entry certificates
+        run: |
+          python hotelling_entry_experimentation/production/reviews/stage11r_pp_global_certificate.py
+          python hotelling_entry_experimentation/production/government_game_exploration/finite_matching_spne.py
+          python hotelling_entry_experimentation/production/government_game_exploration/coverage_check.py
+      - uses: actions/upload-artifact@v4
+        with:
+          name: p1j-uniform-incidence-rectangle
+          path: hotelling_entry_experimentation/production/government_game_exploration/incidence_screening_sign_results.json
