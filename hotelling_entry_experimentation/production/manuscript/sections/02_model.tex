@@ -1,0 +1,129 @@
+\section{The model}\label{sec:model}
+
+\subsection{Institutions, firms, and timing}
+There are two jurisdictions $i\in\{A,B\}$. Each contains a local government $G_i$, a private innovation intermediary $P_i$, and a population $N_i>0$ of prospective venture founders. These four institutional decision makers are distinct from incumbent product-market producers. The government maximises its own jurisdiction's welfare; the private intermediary maximises fee revenue net of its real entry cost.
+
+In stage~1 each $G_i$ and $P_i$ simultaneously chooses whether to provide its service. Write $s_i\in\{0,G,P,B\}$ for neither, government only, private only, or both, respectively. There are sixteen profiles $s=(s_A,s_B)$. The government supplies basic innovation intermediation at zero user price, financed by a real fixed cost $F_{G_i}$. An active private provider offers a premium service and pays real fixed cost $F_{P_i}$. Public and private services may coexist within a jurisdiction.
+
+In stage~2, active private providers simultaneously post fees $f_i\geq0$. In stage~3 founders observe available services and choose participation and, where relevant, the premium offering, or an outside option normalized to zero. In stage~4 randomly formed cross-jurisdiction founder pairs invest in a joint research venture. In stage~5 a successful venture competes with operating incumbent producers in each jurisdiction's differentiated-product Cournot market. Founder skills and product demand parameters are common knowledge as distributions, but each founder privately observes her own type before selecting a service.
+
+The stage-1 game concerns availability of \emph{intermediation services}; $G_i$ is not an assertion of publicly owned buildings. Zero-hub incumbent output remains positive. A pair's successful venture serves its own separate product niche, preventing multiple matched projects from repeatedly appropriating the profits of one new product. The maintained tractable specification is deliberately not an unrestricted many-venture Cournot game.
+
+\subsection{Successful venture's downstream product market}
+In market $i$, let $n_i\geq1$ identical incumbent producers supply the old product, with aggregate quantity $Q_i=n_i x_i$, and let one successful venture supply a differentiated new good in quantity $y_i$. The representative consumer's gross quasi-linear surplus is
+\begin{equation}
+ U_i(Q_i,y_i)=a_iQ_i+a_i^v y_i-
+ \frac{b_iQ_i^2+2\chi_iQ_iy_i+d_iy_i^2}{2},
+ \quad b_i,d_i>0,\quad b_id_i>\chi_i^2.
+ \label{eq:utility}
+\end{equation}
+Taking linear marginal costs into the net intercepts $A_i$ for an incumbent and $D_i$ for the venture, simultaneous Cournot first-order conditions are
+\begin{equation}
+ A_i-b_i(n_i+1)x_i-\chi_i y_i=0,\qquad
+ D_i-d_i(2y_i)-\chi_i n_i x_i=0.
+ \label{eq:cournot-foc}
+\end{equation}
+Consequently, on the maintained strictly positive interior branch,
+\begin{equation}
+ \mathcal D_i=2b_id_i(n_i+1)-n_i\chi_i^2,\quad
+ x_i=\frac{2d_iA_i-\chi_iD_i}{\mathcal D_i},\quad
+ y_i=\frac{b_i(n_i+1)D_i-n_i\chi_iA_i}{\mathcal D_i}.
+ \label{eq:cournot}
+\end{equation}
+The entrant's combined successful-product operating profit in both markets is $\Pi=\sum_i d_i y_i^2>0$. With no venture, incumbents produce $x_i^0=A_i/[b_i(n_i+1)]>0$. The consumer-surplus function evaluated at Cournot quantities is $(b_i Q_i^2+2\chi_iQ_iy_i+d_iy_i^2)/2$ and incumbents' operating profits total $n_i b_i x_i^2$.
+
+Define the downstream external effect on consumers and incumbents in region $i$ as
+\begin{align}
+ M_i={}&
+ \left[\frac{b_i(n_ix_i)^2+2\chi_i n_ix_iy_i+d_i y_i^2}{2}
+ +n_i b_i x_i^2\right]\notag\\
+ &-\left[\frac{b_i(n_ix_i^0)^2}{2}+n_i b_i(x_i^0)^2\right].
+ \label{eq:Mi}
+\end{align}
+$M_i$ \emph{excludes} the entrant's $\Pi$ and is not assumed positive: consumer gains may coexist with incumbent business stealing. $\omega_A,\omega_B\geq0$, $\omega_A+\omega_B=1$, divide the venture's private return between the two founders. Market parameters and costs are restricted so that \eqref{eq:cournot}, baseline quantities, and the probabilities below are economically feasible; no claims are made outside that domain.
+
+\subsection{Complementary skills and research investment}
+Each region's prospective founders have independently distributed $\theta_i\sim U[0,1]$. In region $A$, $\theta_A$ can represent research and design capability; in region $B$, $\theta_B$ may represent manufacturing or commercial implementation. This is a type interpretation, not a claim that whole geographic economies specialise in those sectors.
+
+For a matched pair using research effort $e\geq0$, project success is
+\begin{equation}
+ p(e,\theta_A,\theta_B)=p_0+\zeta e+\lambda\theta_A\theta_B,\qquad
+ c(e)=ke^2/2,\quad k>0,\ \lambda\geq0.
+ \label{eq:success}
+\end{equation}
+The entire relevant domain satisfies $0\leq p\leq1$. Joint investment maximises $p(e,\theta_A,\theta_B)\Pi-ke^2/2$ and yields
+\begin{equation}
+ e^*=\frac{\zeta\Pi}{k},\quad
+ p_b=p_0+\frac{\zeta^2\Pi}{k},\quad
+ R_0=p_0\Pi+\frac{\zeta^2\Pi^2}{2k}.
+ \label{eq:effort}
+\end{equation}
+The net expected venture return, including research cost, equals
+$R_0+\lambda\Pi\theta_A\theta_B$. As \eqref{eq:success} is separable, the optimal \emph{effort} does not vary with types; the skill channel operates through \emph{success probabilities}, not through an unmodelled type-dependent effort choice.
+
+\subsection{Founder selection and matching}
+The direct basic service value for a founder in region $i$ is
+\begin{equation}
+ u_i(s_j)=v_i+\rho w_i\mathbf1\{s_j\neq0\}>0,\qquad j\ne i.
+\end{equation}
+A private specialist additionally provides $\Delta_i\theta_i$ with $\Delta_i>0$, and charges fee $f_i$. The baseline assumes the premium-service valuation type is perfectly positively associated with technical ability: $z_i=\theta_i$. This maintained assumption is not an empirical claim or a general theory of arbitrary skill--taste correlation.
+
+Define a participation mass and its \emph{unnormalised} first skill moment,
+\begin{equation}
+ m_i=\mathbb E[\mathbf1\{\mathrm{participates}\}],\qquad
+ q_i=\mathbb E[\theta_i\mathbf1\{\mathrm{participates}\}].
+ \label{eq:m-q}
+\end{equation}
+With pair-matching intensity $\rho\mu>0$, write $C=\rho\mu N_AN_B$ and
+\begin{equation}
+ a_i^m=\rho\mu N_j\omega_i R_0,\qquad
+ b_i^m=\rho\mu N_j\omega_i\lambda\Pi.
+ \label{eq:matchingcoeff}
+\end{equation}
+These coefficients are \emph{not} the Cournot demand slopes. A private-only founder receives
+\begin{equation}
+ u_i+a_i^m m_j+(\Delta_i+b_i^m q_j)\theta_i-f_i
+ \label{eq:founderpayoff}
+\end{equation}
+and participates precisely when this expression is nonnegative. A free basic public service is available to all founders; under co-provision the premium upgrade is chosen iff $\Delta_i\theta_i\geq f_i$.
+
+With no local provider, $(m_i,q_i)=(0,0)$. With $G$ or $B$, $(m_i,q_i)=(1,1/2)$. With $P$ only, define
+\begin{equation}
+ \ell_i=\left[\frac{f_i-u_i-a_i^m m_j}
+                       {\Delta_i+b_i^m q_j}\right]_0^1,\qquad
+ m_i=1-\ell_i,\qquad q_i=\frac{1-\ell_i^2}{2},
+ \label{eq:participation}
+\end{equation}
+where $[\cdot]_0^1$ truncates to $[0,1]$. Expected aggregate match volume is
+$L_0=Cm_Am_B$, while the success-weighted complementarity exposure is $L_1=Cq_Aq_B$. They are \emph{distinct endogenous aggregates}; even equal $m_A m_B$ need not imply equal $q_Aq_B$.
+
+\subsection{Regional welfare and feasible public choice}\label{sec:accounts}
+Let $W_i^0$ be consumer plus incumbent producer surplus in the no-venture Cournot market. For a successful venture, define
+\begin{equation}
+ K_i=M_i+\omega_i\Pi,\quad
+ S_i^0=p_b M_i+\omega_iR_0,\quad
+ S_i^1=\lambda K_i.
+ \label{eq:KSi}
+\end{equation}
+The gross real service benefit is $Z_i=0$ with no provision; $Z_i=N_iu_i$ with $G$; $Z_i=N_i(u_i m_i+\Delta_iq_i)$ with $P$; and $Z_i=N_i(u_i+3\Delta_i/8)$ with $B$ (using the $f_i=\Delta_i/2$ premium continuation below).
+
+Local public objectives and active private provider profits are
+\begin{align}
+ W_i(s)&=W_i^0+Z_i(s)
+       -F_{G_i}\mathbf1\{G_i\in s_i\}
+       -F_{P_i}\mathbf1\{P_i\in s_i\}
+       +Cm_A(s)m_B(s)S_i^0+Cq_A(s)q_B(s)S_i^1,
+       \label{eq:Wi}\\
+ \pi_i^P(s)&=N_if_i(s)D_i(s)-F_{P_i}\mathbf1\{P_i\in s_i\},
+ \quad D_i=\begin{cases}m_i,&s_i=P,\\1/2,&s_i=B.\end{cases}
+ \label{eq:privateprofit}
+\end{align}
+Absent private providers have payoff zero. The real cost of a local private service provider is included in local welfare. Founders' fees are intraregional transfers to local private intermediaries and must \emph{not} be subtracted again from \eqref{eq:Wi}.
+
+Each government chooses only whether to supply its free basic intermediation. For comparison we report the \emph{restricted-instrument} two-jurisdiction benchmark
+\begin{equation}
+ s^{RP}\in\underset{s\in\{0,G,P,B\}^2}{\arg\max}
+       \{W_A(s)+W_B(s)\},
+ \label{eq:planner}
+\end{equation}
+holding downstream fee, participation, research and Cournot continuations decentralised. This is not a first best, nor an optimisation over subsidies, digital-only systems or construction contracts.
