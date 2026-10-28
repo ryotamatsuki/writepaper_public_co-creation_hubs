@@ -29,6 +29,8 @@ def main():
         shutil.copy2(PRODUCTION/'reviews'/name,SOURCE/name)
     shutil.copy2(PRODUCTION/'verification/stage33_reproduce.py',SOURCE/'stage33_reproduce.py')
     shutil.copy2(HERE/'diagnostic_check.py',SOURCE/'diagnostic_check.py')
+    for name in ('incidence_screening_sign_certificate.py','incidence_screening_valuation_check.py'):
+        shutil.copy2(PRODUCTION/'government_game_exploration'/name,SOURCE/name)
     result={'scope':'Anonymous review PDFs; external review and author declarations still pending',
             'abstract_words':len((SOURCE/'main.tex').read_text().split('\\begin{abstract}')[1].split('\\end{abstract}')[0].split()),
             'files':[]}
