@@ -113,10 +113,12 @@ def pp_price_equilibrium(strength, pooled):
             proposed.append(own)
         err = max(abs(proposed[i]-prices[i]) for i in range(2))
         prices = [(prices[i]+proposed[i])/2 for i in range(2)]
-        if err < 1e-12:
+        # Floating-point gold-search argmax prices have an O(1e-8) plateau.
+        # Certify price deviations by profits (below), not by 1e-12 prices.
+        if err < 1e-7:
             break
     else:
-        raise AssertionError("P/P price best replies did not converge")
+        raise AssertionError("P/P price best replies did not converge to numeric tolerance")
     # Additional numeric global-deviation GRID diagnostic on [0,3].
     for i in range(2):
         at_eq = revenue(i,prices[i],prices[1-i])
