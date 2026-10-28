@@ -53,6 +53,15 @@ ell_j(BP)-ell_j(PP)
    + O(gamma^2).
 ```
 
+Additionally, the **neighboring private seller's equilibrium posted fee** necessarily increases to first order:
+```
+f_j(BP)-f_j(PP)
+ = gamma*N_i*omega_j/2
+    * [R0*ell_i^0 + lambda*Pi*(ell_i^0)^2/2] + O(gamma^2)
+ > 0, for sufficiently small positive gamma.
+```
+Thus *the fee rises for every positive underlying R0/omega_j, while the participation response changes sign.* In P/P the feedback induced by the seller's price change through region i's participation is O(gamma^2), not ignored at order gamma. The independent coupled-fee solver checks **both** derivatives numerically.
+
 The **primitive sufficient condition** for other-region participation decline for all sufficiently small gamma>0 is
 ```
 lambda*Pi*u_j*ell_i^0 > 2*R0*d_j,	 omega_j>0.
