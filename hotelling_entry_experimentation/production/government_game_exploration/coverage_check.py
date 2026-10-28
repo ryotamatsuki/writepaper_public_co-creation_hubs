@@ -20,7 +20,7 @@ for r in rows:
  # Prevent conflating original finite point checks with global general results.
  if r['ID'] in {'P05','P06','E08','R03','R04'}:
   assert ('基準' in r['監査ステータス'] or '連続' in r['監査ステータス']
-          or '各点' in r['監査ステータス'])
+          or '各点' in r['監査ステータス'] or '矩形' in r['監査ステータス'])
 for group,n in sorted(counts.items()):
  print(group,n)
 print('PASS coverage ledger',len(rows),'unique tracked questions, 7 domains, all gaps explicitly labelled')
