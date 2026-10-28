@@ -59,7 +59,7 @@ def enclose(rad):
 
 def main():
  passed=[];failed=[]
- for rad in [F(1,10**8),F(1,10**7),F(1,10**6),F(1,10**5),F(1,10**4)]:
+ for rad in [F(1,10**8),F(1,10**7),F(1,10**6),F(1,10**5),F(1,10**4),F(1,10**3),F(1,500),F(1,100)]:
   try:
    result=enclose(rad);passed.append(result)
   except AssertionError as e:
