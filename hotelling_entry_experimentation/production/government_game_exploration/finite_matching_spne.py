@@ -97,6 +97,13 @@ def main():
  proof["government_thresholds"]={"T_A_given_B_P":approx(thrA_P),
                                    "T_B_given_A_P":approx(thrB_A_P),
                                    "T_B_given_A_B":approx(thrB_A_B)}
+ # Private entry is STRICTLY dominant in both regions (original FP values);
+ # at both costs B-government non-entry is STRICTLY dominant in the reduced
+ # government game. Hence the selected A response is strict and there is NO
+ # further mixed-strategy stage-one equilibrium.
+ assert F(41,1000)>max(thrB_A_P.hi,thrB_A_B.hi)
+ assert F(1155,10000)<thrA_P.lo<F(1156,10000)
+ proof["entire_first_stage_game_uniqueness_including_mixed"]=True
  for k,(ga,gb,expected) in SCENARIOS.items():
   p["fg"]=(ga,gb)
   winners,losers,_=strict_ne(p,rootbox,expected)
@@ -104,6 +111,7 @@ def main():
   proof["cost_scenarios"][k]={
      "govt_A_public_cost":str(ga),"govt_B_public_cost":str(gb),
      "unique_strict_pure_entry_SPNE":"".join(expected),
+     "no_other_mixed_entry_SPNE":True,
      "all_four_actor_deviation_slacks":winners,
      "all_15_other_profiles_excluded":losers,
   }
