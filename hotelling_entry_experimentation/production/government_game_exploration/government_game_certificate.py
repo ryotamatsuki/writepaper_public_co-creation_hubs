@@ -94,7 +94,7 @@ def main():
             }
         else:
             assert strictly_pos(t["A_B"]-t["A_P"])
-        results[label].update({
+        results.setdefault(label,{}).update({
           "thresholds":{k:iv(x) for k,x in t.items()},
           "A_cross_effect":iv(t["A_B"]-t["A_P"]),
           "B_cross_effect":iv(t["B_B"]-t["B_P"]),
