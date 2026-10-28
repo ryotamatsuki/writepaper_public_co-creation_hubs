@@ -1,0 +1,217 @@
+\documentclass[11pt]{article}
+\usepackage[a4paper,margin=25mm]{geometry}
+\usepackage{amsmath,amssymb,amsthm,booktabs,array}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage[round]{natbib}
+\usepackage{url}
+\usepackage{xr-hyper}
+\usepackage[hidelinks]{hyperref}
+\hypersetup{pdftitle={Online Supplement: Access and Selection in Public and Private Innovation Intermediation},pdfauthor={}}
+\externaldocument{main}
+\renewcommand{\thesection}{S.\arabic{section}}
+\renewcommand{\thepage}{S\arabic{page}}
+\renewcommand{\theequation}{S.\arabic{equation}}
+\title{Online Supplement: Access and Selection in Public and Private Innovation Intermediation}
+\author{}
+\date{}
+\begin{document}
+\maketitle
+\noindent Equation and table references without an S-prefix refer to the main manuscript.
+The proofs retain the original primitives and benchmark certification scope.
+\section{Proof details and boundary checks}\label{app:proofs}
+
+\subsection{Research investment and Cournot continuation}
+Taking the successful-new-good Cournot quantities as fixed after successful commercialisation, a matched founder pair solves
+$\max_{e\geq0}(p_0+\zeta e+\lambda\theta_A\theta_B)\Pi-ke^2/2$.
+The first-order condition $\zeta\Pi-ke=0$ yields $e^*=\zeta\Pi/k$, with strict second derivative $-k<0$. Substitution gives $R_0+\lambda\Pi\theta_A\theta_B$ as defined in the main text. This calculation assumes the admissible interior success-probability domain, not a corner where $p=1$. Incumbent Cournot quantities follow by solving the simultaneous linear first-order conditions \eqref{eq:cournot-foc}; all output and positive-definiteness conditions must hold.
+
+\subsection{Global private-only posted fee, including kink}
+Holding $(m_j,q_j)$ fixed, private-only total fee receipts divided by $N_i$ equal $f$ for $0\leq f\leq U_i$, $f(U_i+T_i-f)/T_i$ for $U_i\leq f\leq U_i+T_i$, and zero for $f\geq U_i+T_i$. The first piece is increasing; the second is strictly concave with unconstrained maximum $(U_i+T_i)/2$. This point belongs to the sorting interval exactly when $U_i\leq T_i$. Otherwise the global maximiser is the full-participation corner $f_i^*=U_i$. The function is continuous at the kink. A positive basic benefit $U_i>0$ rules out zero-revenue opt-out as the optimum.
+
+For co-provision, only the premium difference matters: for $f\in[0,\Delta_i]$,
+$\mathcal R_i(f)/N_i=f(1-f/\Delta_i)$ is strictly concave with maximum $f=\Delta_i/2$. It yields premium share $1/2$ and direct real benefit $\mathbb E[u_i+\Delta_i\theta_i\mathbf1\{\theta_i\geq1/2\}]=u_i+3\Delta_i/8$. Public basic participation remains full regardless of premium demand.
+
+\subsection{Global private/private fee continuation at the three baseline calibrations}\label{app:pp-global}
+
+Unlike the single-private-provider case, a fee change under $(P,P)$ changes the other jurisdiction's participation cutoff. The following argument establishes that \emph{the three numerical examples used in Table~\ref{tab:entry}} have an admissible, unique global pure Nash equilibrium in nonnegative posted fees. The required coefficient inequalities are verified by exact rational arithmetic for each example; they are not assumed for arbitrary parameters.
+
+Write $x_i=\ell_i$ for the local cutoff, $a_i=a_i^m$, $b_i=b_i^m$, and use the frozen baseline $\Delta_i=1$ with $u_i=u_i(P)>0$. Define
+\[
+ D_i(y)=1+\tfrac{b_i}{2}(1-y^2),\qquad
+ h_i=a_i+b_i,\qquad z=h_Ah_B.
+\]
+The simultaneous founder participation mapping at any nonnegative fee pair is
+\begin{equation}
+ x_i=\left[\frac{f_i-u_i-a_i(1-x_j)}{D_i(x_j)}\right]_0^1 .
+ \label{eq:pp-clipped-cert}
+\end{equation}
+On an interior branch, the derivative with respect to $x_j$ is $(a_i+b_i x_i x_j)/D_i(x_j)\leq h_i$.
+On clipped branches it is zero. Each of the three frozen parameter sets satisfies $\max_i h_i<1$. Consequently the coupled map is a contraction on $[0,1]^2$, so the founder-cutoff fixed point exists and is unique \emph{for every nonnegative fee pair}, including out-of-equilibrium fees.
+
+Fix $f_j$ and use $x=x_i$ as the local decision variable. The opponent cutoff conditional on this cutoff is uniquely
+\[
+ y(x)=\left[\frac{f_j-u_j-a_j(1-x)}{D_j(x)}\right]_0^1 .
+\]
+Inverting the local participation equation gives an implementable posted fee
+\[
+ f_i(x;f_j)=u_i+a_i(1-y(x))+D_i(y(x))x .
+\]
+Where the opposing cutoff is interior, $y'(x)=(a_j+b_jxy)/D_j(x)$; at flat clipped branches the derivative is zero. Both one-sided derivatives at any kink satisfy
+\begin{equation}
+ 1-z\ \leq\ f_i'(x)\ \leq\ 1+b_i/2 .\label{eq:pp-monotone-inverse}
+\end{equation}
+The inverse fee is strictly increasing since $z<1$. Fees inducing full participation are weakly dominated by the maximal fee retaining it; fees inducing zero participants yield no revenue and cannot be optimal. Thus all global fee best replies are obtained by maximising $N_i f_i(x;f_j)(1-x)$ over $0\leq x\leq1$. Its derivative signs at the outer cutoff ranges and the bounds
+$u_i+x\leq f_i(x;f_j)\leq u_i+a_i+(1+b_i/2)x$
+give the \emph{global} best-response cutoff bounds
+\begin{equation}
+ L_i=\frac{1-z-u_i-a_i}{2+b_i/2-z},\qquad
+ U_i=\frac{1+b_i/2-u_i}{2+b_i/2},\qquad
+ 0<L_i<U_i<1 .
+ \label{eq:pp-cutoff-box}
+\end{equation}
+Every global fee best reply lies in
+\[
+ K_i=[\,u_i+L_i,\ u_i+a_i+(1+b_i/2)U_i\,].
+\]
+Exact rational checks for all three calibrations give
+$u_i+a_i<\inf K_i\leq\sup K_i<u_i+1$.
+Hence for every opponent fee in $K_j$, its cutoff $y(x)$ is strictly interior throughout the \emph{entire} own-cutoff deviation interval $x\in[0,1]$; neither full-coverage nor exit kinks are being suppressed in the global best-response test.
+
+On that interval, $y''(x)=b_j[y+2xy']/D_j(x)\geq0$. Writing $c_i(x,y)=a_i+b_i xy$, we have
+\[
+ f_i'(x)=D_i(y)-c_i(x,y)y'(x)>0,\qquad
+ f_i''(x)=-b_i(2y+xy')y'-c_i(x,y)y''\leq0.
+\]
+Consequently
+\[
+ \frac{d^2}{dx^2}\{N_if_i(x;f_j)(1-x)\}
+ =N_i\{(1-x)f_i''(x)-2f_i'(x)\}<0,
+\]
+so the global best reply is unique for every opponent fee in $K_j$. Differentiating the best-response first-order condition and using the preceding inequalities yields a Lipschitz bound for the fee best-response map:
+\begin{equation}
+ B_i:=h_i+\frac{(1+b_i/2)\{b_i+b_ih_j+b_jh_i+h_i\}}{2(1-z)}
+ \quad\text{with}\quad B_i<0.01
+ \label{eq:pp-br-contraction}
+\end{equation}
+in each of the three exact baseline calibrations. The map sends $K_A\times K_B$ continuously into itself and is a contraction; Banach's theorem implies a unique pure price equilibrium on that rectangle. Because \eqref{eq:pp-cutoff-box} captures \emph{every} global best reply against any nonnegative rival fee, no additional pure-fee equilibrium exists outside the rectangle.
+
+For an independently checkable exact-rational enclosure, define
+\[
+ C_i(x_A,x_B)=a_i+b_ix_Ax_B,\qquad
+ f_i=u_i+a_i(1-x_j)+D_i(x_j)x_i,
+\]
+and the two interior stationary equations
+\[
+ \Phi_i(x_A,x_B)
+ =(1-x_i)\left(D_i(x_j)-\frac{C_iC_j}{D_j(x_i)}\right)-f_i=0.
+\]
+For each calibration, the source \texttt{stage11r\_pp\_global\_certificate.py} evaluates all four rational interval faces of a cutoff rectangle of radius $10^{-9}$ around the recorded decimal-rational candidate; the lower and upper own-coordinate faces have strict positive and negative signs, respectively. This locates an exact equilibrium root by the Poincar\'e--Miranda theorem. The global argument above establishes that it is the unique P/P pure price Nash in the whole nonnegative fee strategy space.
+
+Finally the script reconstructs \emph{all} sixteen first-stage entry configurations, all four independent government/provider flips at each profile, and all fifteen alternatives to the restricted planner's selected profile, using interval enclosures for the P/P fees and exact rational arithmetic elsewhere. All selected baseline NE inequalities, all non-NE profitable deviation witnesses, and all planner welfare gaps have strict signs. In the $\lambda=0.5$ skill case the smallest selected entry slack is greater than $0.0000316701024488$ at the printed precision. The reproducible source and its complete statement of proof scope are archived in the Stage 11R-P0 verification report. None of the results supplies a general theorem for other skill distributions, parameters or competition forms, and none is encoded as a full-game Lean proof.
+
+\subsection{Separate participation mass and skill moment}
+Uniform ability gives $m_i=\int_{\ell_i}^1d\theta=1-\ell_i$,
+$q_i=\int_{\ell_i}^1\theta\,d\theta=(1-\ell_i^2)/2$. A random draw of the same mass has expected first moment $m_i/2$; subtracting yields $\ell_i(1-\ell_i)/2$. This is a same-mass sorting comparison, not a statement that equilibrium quality-weighted matches always increase when private fees rise.
+
+\subsection{The conditional public-addition wedge}
+With the other region fully participating, moving region $i$ from $P$ to $B$ changes its direct real benefit by $N_i[u_i+3\Delta_i/8-(u_i(1-\ell_i)+\Delta_i(1-\ell_i^2)/2)]$, which is $H_i$ in \eqref{eq:H}. The matching count and ability products change by $C\ell_i$ and $C\ell_i^2/4$. Multiplying these by $S_i^0$ and $\lambda K_i$ gives the local threshold. Repeating for region $j$ gives the foreign increment \eqref{eq:wedge}. No planner choice over tariffs, research effort or private contracts is implied.
+
+\subsection{Binary-entry verification protocol}
+For any local status $s_i$, $G_i$'s unilateral deviation toggles $0\leftrightarrow G$ or $P\leftrightarrow B$; $P_i$'s unilateral deviation toggles $0\leftrightarrow P$ or $G\leftrightarrow B$. Each profile passes the first-stage pure Nash check if and only if all four relevant payoff improvements are nonpositive \emph{for the selected admissible downstream continuations}. When any continuation is set-valued, the selection rule must be stated. A finite numerical grid of private fees does not prove unrestricted global fee equilibrium.
+
+\subsection{The binding public-cost thresholds and exact open-region check}
+For the frozen $(s_A,s_B)=(B,P)$ and $(B,B)$ profiles, changing only region $B$'s public fixed cost does not affect any fee or founder participation continuation. Conditional on the same technology scenario $s$, define the public-entry threshold by the exact reduced-welfare difference computed at zero $F_{G_B}$:
+\begin{equation}
+ T_s=W_B((B,B);F_{G_B}=0,s)-W_B((B,P);F_{G_B}=0,s).
+ \label{eq:exact-public-threshold}
+\end{equation}
+The local public-addition margin at any $F_{G_B}$ is exactly $T_s-F_{G_B}$. In the maintained full-coverage opposite region, Proposition~3 equivalently gives
+$T_s=H_B+C(S_B^0\ell_B+S_B^1\ell_B^2/4)$,
+where the fee-selected $\ell_B$ is the appropriate private-only continuation for that technology scenario. The homogeneous comparison uses its own recentered matching coefficients; it is not obtained by reusing the heterogeneous cutoff.
+
+In exact arithmetic the ordering is $T_{\mathrm{pooled},\,\lambda=0.5}<T_{\mathrm{skill},\,\lambda=0}<T_{\mathrm{skill},\,\lambda=0.5}$. The simultaneous three-case pure Nash pattern thus requires $T_{\mathrm{skill},0}<F_{G_B}<T_{\mathrm{skill},0.5}$. It is \emph{sufficient} for the three particular calibrations because the independent rational checker enumerates all sixteen provision states, four government/private binary flips in each state, and fifteen planner competitors, verifying strict signs on eight adjoining subintervals of the full threshold-defined closed cost band. Only the two known $G_B$ comparisons tie at the exterior endpoints. Their exact affine $T_s-F_{G_B}$ expressions make the remaining inequalities strict in the open interval, with no appeal to finite-grid sampling.
+
+The same verifier recomputes the global P/P sufficient conditions and all sixteen states using rational inclusion arithmetic when $F_{G_A}$, $F_{G_B}$ and $\omega_B$ vary jointly within the explicit rectangle in \eqref{eq:threeway-3d-box}, subject to $\omega_A=1-\omega_B$. The exact four-face fee-root checks include the entire parameter box and all provider-entry conditions remain strictly signed. This shows that the example persists on a small multidimensional open set, while no distribution-wide or different-conduct robustness theorem is implied.
+
+\subsection{Private fee receipts and why co-provision need not benefit private owners}
+Let $U_i>0$ and $T_i=\Delta_i+b_i^m q_j\geq\Delta_i$, holding the other-region participant moments fixed. In the interior monopoly service regime, private-only receipts equal
+$N_i(U_i+T_i)^2/(4T_i)$; under free-basic co-provision, receipts equal $N_i\Delta_i/4$. Their difference is
+\begin{equation}
+ \mathcal R_i^P-\mathcal R_i^B
+ =\frac{N_i}{4}\left(\frac{(U_i+T_i)^2}{T_i}-\Delta_i\right)
+ >0
+\end{equation}
+since $(U_i+T_i)^2/T_i>T_i\geq\Delta_i$. In the full-coverage branch, receipts are $N_iU_i$ with $U_i\geq T_i\geq\Delta_i$, which also strictly exceeds $N_i\Delta_i/4$. The fixed private cost cancels. The result compares a \emph{given active private provider} under the two arrangements, and says nothing about whether local public entry is welfare-improving. It also does not imply a private supplier exits: in the co-provision continuation the private entrant earns $N_i\Delta_i/4-F_{P_i}$, which may be strictly positive. This is an additional \emph{expositional implication} of the already frozen fee formulas and is not advertised as a new general theorem.
+
+\subsection{Fixed participation: how technical selection changes project returns}
+For the uniform distribution and a common participant cutoff $\ell_i$, the mass is
+$m_i=1-\ell_i$ and skill moment $q_i=(1-\ell_i^2)/2$. Suppose region $j$ is fully covered, so $(m_j,q_j)=(1,1/2)$, and compare the heterogeneous and mean-homogenised innovation premiums at the \emph{same} participation decision. The full-coverage normalisation of the homogeneous increment implies its matching effect is $C\lambda K_i m_i/4$. The heterogeneous effect is $C\lambda K_iq_i/2$. Their difference is
+\begin{equation}
+ \frac{C\lambda K_i}{4}(2q_i-m_i)
+ =\frac{C\lambda K_i}{4}\left[(1-\ell_i^2)-(1-\ell_i)\right]
+ =\frac{C\lambda K_i}{4}\ell_i(1-\ell_i).
+\end{equation}
+Therefore the sign is not necessarily beneficial for either region; it equals $\mathrm{sign}(K_i)$ for $\lambda>0$ and $0<\ell_i<1$. The comparison should not be silently imported into the reoptimised $P$-only continuation, where the two distributions imply different optimum fees and cutoffs.
+
+\subsection{Reduced participation-externality representation}
+For every fixed valid selected continuation, put
+$\mathcal A_i=C(p_bM_i+\omega_iR_0)$ and $\mathcal B_i=C\lambda(M_i+\omega_i\Pi)$, so
+\begin{equation}
+ W_i(s)=W_i^0+Z_i(s)-F_{G_i}g_i-F_{P_i}p_i
+       +\mathcal A_i m_A(s)m_B(s)
+       +\mathcal B_iq_A(s)q_B(s).
+\end{equation}
+This recentering makes the relation to ordinary multi-region public-good externality games explicit, rather than asserting a new welfare-wedge theorem. The endogenous map from strategic fees and entry into $(m_i,q_i)$ is the model-specific object. It does not by itself disprove potential nesting in a more general predecessor's theorem.
+
+\section{Reproducibility and certification boundaries}\label{app:repro}
+The source and exact verification scripts are supplied in the accompanying replication materials.
+Identifying repository links are omitted from the anonymous review version.
+The frozen theory is identified by \texttt{STAGE33-2026-10-28-THEORY-FREEZE-v1};
+its recorded baseline is reproduced with the Python-standard-library script \texttt{stage33\_reproduce.py}
+(in the \texttt{production/verification} directory of the
+\texttt{hotelling\_entry\_experimentation} research tree).
+The original implementation runs sixteen entry configurations for each of three reported technology scenarios, checks all four first-stage unilateral binary flips, and computes the restricted planner under its numerical P/P fee continuation. A separate standard-library verifier in the Stage 11R-P0 review package now independently reconstructs the baseline parameter values, checks the price-box and contraction inequalities using exact fractions, provides rational root enclosures and evaluates all sixty-four first-stage flips in each scenario. The former fee-grid check is no longer the sole evidence for the three reported P/P continuations. The analytic conditions are parameter-specific and the associated machine checks are not a proof-assistant formalisation.
+
+The separately maintained Lean~4 certificate checks eighteen theorem statements covering selected proof-critical inequalities and identities under their specified hypotheses. It does \emph{not} encode the entire Cournot--research--participation--entry game or the analytic global P/P fee lemma just supplied. The latter has an independent mathematical argument and exact rational baseline verification; its broader portability is not claimed. Algebraic proof, computer-assisted interval verification and Lean theorem verification are distinct evidentiary categories.
+
+The $\operatorname{Beta}(2,2)$ and differentiated-Bertrand alternatives are negative portability records.
+They are not successful robustness tests.
+Untested policy instruments remain outside the analysis.
+
+\clearpage
+\section{The repriced diagnostic comparison}\label{app:diagnostic-proof}
+Under complete opposite-region participation, heterogeneous founder willingness to pay has intercept $U$ and slope $d+h$.
+Pooled success adds $h/2$ to the intercept and leaves slope $d$.
+Applying the global interior/full-coverage pricing formula gives \eqref{eq:diagnostic-cuts}.
+If both cutoffs are positive, subtracting gives \eqref{eq:diagnostic-cutgap}.
+If only one is zero, it must be $\ell_L$: $U\geq d+h$ would also imply $U+h/2\geq d$.
+Thus $\ell_H\geq\ell_L$ everywhere, strictly for $h>0$ unless both are zero.
+
+For the heterogeneous technology Proposition~3 gives
+\[
+ T_H=N_i[u_i\ell_H-d/8+d\ell_H^2/2]+CS_i^0\ell_H
+       +C\lambda K_i\ell_H^2/4.
+\]
+For pooled success the matching increment is constant per pair, so the corresponding expression is
+\[
+ T_L=N_i[u_i\ell_L-d/8+d\ell_L^2/2]+CS_i^0\ell_L
+       +C\lambda K_i\ell_L/4.
+\]
+Subtract, factor $\ell_H^2-\ell_L^2=(\ell_H-\ell_L)(\ell_H+\ell_L)$, and obtain \eqref{eq:diagnostic-gap}.
+The formula remains valid when a cutoff is zero: adding a public alternative may then forgo some direct premium value, reflected in the same $-N_id/8$ term.
+No division by a possibly signed local market coefficient is used.
+
+On an interior branch, $h=\eta_i\lambda$ and $\ell_H=1/2-U/[2(d+h)]$, with $U$ constant in $\lambda$.
+Differentiating gives $\ell_H'=U\eta_i/[2(d+h)^2]$ and then \eqref{eq:diagnostic-derivative}.
+These are identities conditional on the opposite region's full participation, not unrestricted four-entry equilibrium comparative statics.
+The additional exact checker reconstructs the three original thresholds independently of numerical fee searches, verifies the decomposition, and reports the direct-service and market-incidence differences without changing any primitive.
+
+For the analytical negative-sign case, $\omega_i=0$ implies $a_i^m=b_i^m=0$, so $U=u_i$, $h=0$, $\ell_H=\ell_L=\ell$ and $K_i=M_i$.
+Substitution in \eqref{eq:diagnostic-gap} gives $C\lambda M_i\ell(\ell-1)/4<0$.
+The cutoffs and threshold difference are continuous in $\omega_i$ on this strict interior price domain; negativity therefore persists for an interval of positive profit shares.
+If also $0<u_i<2d/3$, the common direct-service threshold term is $N_i u_i(2-3u_i/d)/8>0$.
+Since the local matching terms are positive for $M_i>0$, both public thresholds are then positive: the opposite preference can concern a positive public cost.
+This is a conditional parameter region within the maintained model, not a new numerical calibration or a full first-stage equilibrium theorem.
+
+\end{document}

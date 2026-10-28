@@ -1,0 +1,646 @@
+\documentclass[11pt]{article}
+\usepackage[a4paper,margin=25mm]{geometry}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage{booktabs}
+\usepackage{array}
+\usepackage{setspace}
+\usepackage[tablesonly,nolists]{endfloat}
+\usepackage[round]{natbib}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage{url}
+\newcommand{\doi}[1]{\url{https://doi.org/#1}}
+\usepackage[hidelinks]{hyperref}
+\hypersetup{pdftitle={Access and Selection in Public and Private Innovation Intermediation},pdfauthor={},pdfsubject={Anonymous review manuscript}}
+\title{Access and Selection in Public and Private\\ Innovation Intermediation}
+\author{}
+\date{}
+\begin{document}
+\maketitle
+\begin{abstract}
+When does skill-based participant selection change a local government's incentive to finance free basic innovation services alongside a private specialist? We study a two-region game with four independent public and private entry decisions, fee-based founder selection, cross-region research matching and differentiated-product competition. A conditional comparison, with fees reoptimised under each technology, separates the effect of private exclusion from the regional commercialisation returns of collaborations restored by public access. It gives a model-specific sign criterion: stronger positive selection can raise or lower the value of free access. In the original numerical example, local market returns to successful ventures are negative; restoration of direct service value explains public entry. The certified configuration differs between skill-dependent and equal-full-participation-mean innovation technologies, but preserving all three benchmark outcomes requires a public-cost band only about 0.263 percent of the baseline cost, and an alternative ability distribution removes the switch. We explain that scale through a small fee-induced cutoff change and offsetting market losses. The analysis concerns access and selection, not a direct technical effect of specialist advice or the necessity of physical hubs. Empirical implications distinguish take-up, participant ability, supplier survival and regional market incidence.
+\end{abstract}
+\noindent\textbf{Keywords:} Innovation intermediation; Public access; Participant selection; Mixed provision; Regional welfare.
+
+\noindent\textbf{JEL classification:} D43; H77; L31; O32.
+\doublespacing
+
+\section{Introduction}\label{sec:intro}
+
+When should a local government finance free access to innovation intermediation alongside a fee-charging specialist?
+More participating firms need not mean more valuable collaborations, and successful new products can displace local incumbents while benefiting consumers and founders elsewhere.
+Public access must therefore be evaluated against an endogenous private-service counterfactual, not simply against the absence of a building or the number of registered clients.
+
+We study two jurisdictions, each with an independently entering government service and private specialist.
+Following four binary entry decisions, specialists set fees, heterogeneous founders participate, cross-region pairs conduct research, and successful ventures compete in differentiated Cournot markets.
+The specialist supplies a direct service benefit; premium purchase does not itself improve research productivity.
+The model concerns access and participation selection, not the technical effectiveness of specialist advice or the optimal location of physical facilities.
+Research effort determines a common success baseline and net venture return but does not vary with founder ability or skill complementarity.
+
+The paper's main contribution is a model-specific diagnostic for the public-access decision, supported by a verified equilibrium illustration.
+With the partner jurisdiction fully participating, we compare a skill-complementary success technology with a homogeneous technology having the same full-participation mean.
+Reoptimising fees under each technology, we separate the change in the private exclusion margin from the regional commercialisation return of the collaborations restored by public access (Section~\ref{sec:diagnostic}).
+The resulting sign condition explains why technically stronger selection can either raise or lower the value of free access.
+In particular, public entry may become more attractive because private repricing restricts valuable direct services, even when additional successful ventures reduce the financing jurisdiction's net market surplus.
+An observed public/private configuration is therefore not evidence that public provision improves research productivity or that local innovation spillovers are positive.
+
+The numerical illustration establishes possibility and quantifies its limited scale.
+Raising complementarity from zero to $0.5$ changes the baseline equilibrium from $(B,P)$ to $(B,B)$, whereas the equal-mean homogeneous technology at $0.5$ retains $(B,P)$.
+Here $B$ denotes free basic plus paid premium provision, and $P$ private-only provision; the restricted two-region planner chooses $(B,B)$ in each case.
+All three scenario outcomes are retained only over a public-cost interval about $0.2632\%$ of the baseline cost.
+We show why: the fee-induced cutoff changes very little, and a direct-service gain is partly offset by locally adverse commercialisation.
+The switch fails under the recorded $\operatorname{Beta}(2,2)$ skill alternative.
+A small certified open set establishes mathematical persistence, not economic prevalence.
+
+Neither participant selection nor a free public tier is new.
+\citet{Hagiu2004b} analyse quality-weighted participation, and \citet{VeigaWeylWhite2017} explicitly distinguish user numbers from user characteristics and their sorting feedback.
+\citet{HuaChenZhang2016} study free and paid public-service tiers; \citet{LongWong2009} combine two governments and private service competition; \citet{PeitzSato2026} analyse platform prices, participation and entry.
+Under our uniform upper-tail rule, $q_i=m_i-m_i^2/2$: the ability moment is not an independent state variable.
+Our diagnostic applies these established principles to local basic-access decisions with region-specific venture incidence; no theorem-level non-absorption claim is made.
+Section~\ref{sec:literature} states the remaining priority uncertainty.
+
+Publicly supported Catapult centres and European Digital Innovation Hubs motivate the coexistence question, while observational client and matched-project studies suggest what participation records can reveal \citep{UKCommittee2026,UKGovernment2026,EuropeanCommissionEDIH,CarpentierDAddaNepelski2026,EldeboHjelm2025}.
+They do not validate our structural assumptions or identify welfare effects.
+The paper consequently supplies conditional predictions and a decision decomposition, not an estimated programme benefit or a recommendation to construct a hub.
+Proofs and certification boundaries are in the Online Supplement.
+
+\section{The model}\label{sec:model}
+
+\subsection{Institutions, firms, and timing}
+There are two jurisdictions $i\in\{A,B\}$. Each contains a local government $G_i$, a private innovation intermediary $P_i$, and a population $N_i>0$ of prospective venture founders. These four institutional decision makers are distinct from incumbent product-market producers. The government maximises its own jurisdiction's welfare; the private intermediary maximises fee revenue net of its real entry cost.
+
+In stage~1 each $G_i$ and $P_i$ simultaneously chooses whether to provide its service. Write $s_i\in\{0,G,P,B\}$ for neither, government only, private only, or both, respectively. There are sixteen profiles $s=(s_A,s_B)$. The government supplies basic innovation intermediation at zero user price, financed by a real fixed cost $F_{G_i}$. An active private provider offers a premium service and pays real fixed cost $F_{P_i}$. Public and private services may coexist within a jurisdiction.
+
+In stage~2, active private providers simultaneously post fees $f_i\geq0$. In stage~3 founders observe available services and choose participation and, where relevant, the premium offering, or an outside option normalized to zero. In stage~4 randomly formed cross-jurisdiction founder pairs invest in a joint research venture. In stage~5 a successful venture competes with operating incumbent producers in each jurisdiction's differentiated-product Cournot market. Founder skills and product demand parameters are common knowledge as distributions, but each founder privately observes her own type before selecting a service.
+
+The stage-1 game concerns availability of \emph{intermediation services}; $G_i$ is not an assertion of publicly owned buildings. Zero-hub incumbent output remains positive. A pair's successful venture serves its own separate product niche, preventing multiple matched projects from repeatedly appropriating the profits of one new product. The maintained tractable specification is deliberately not an unrestricted many-venture Cournot game.
+
+\subsection{Successful venture's downstream product market}
+In market $i$, let $n_i\geq1$ identical incumbent producers supply the old product, with aggregate quantity $Q_i=n_i x_i$, and let one successful venture supply a differentiated new good in quantity $y_i$. The representative consumer's gross quasi-linear surplus is
+\begin{equation}
+ U_i(Q_i,y_i)=a_iQ_i+a_i^v y_i-
+ \frac{b_iQ_i^2+2\chi_iQ_iy_i+d_iy_i^2}{2},
+ \quad b_i,d_i>0,\quad b_id_i>\chi_i^2.
+ \label{eq:utility}
+\end{equation}
+Taking linear marginal costs into the net intercepts $A_i$ for an incumbent and $D_i$ for the venture, simultaneous Cournot first-order conditions are
+\begin{equation}
+ A_i-b_i(n_i+1)x_i-\chi_i y_i=0,\qquad
+ D_i-d_i(2y_i)-\chi_i n_i x_i=0.
+ \label{eq:cournot-foc}
+\end{equation}
+Consequently, on the maintained strictly positive interior branch,
+\begin{equation}
+ \mathcal D_i=2b_id_i(n_i+1)-n_i\chi_i^2,\quad
+ x_i=\frac{2d_iA_i-\chi_iD_i}{\mathcal D_i},\quad
+ y_i=\frac{b_i(n_i+1)D_i-n_i\chi_iA_i}{\mathcal D_i}.
+ \label{eq:cournot}
+\end{equation}
+The entrant's combined successful-product operating profit in both markets is $\Pi=\sum_i d_i y_i^2>0$. With no venture, incumbents produce $x_i^0=A_i/[b_i(n_i+1)]>0$. The consumer-surplus function evaluated at Cournot quantities is $(b_i Q_i^2+2\chi_iQ_iy_i+d_iy_i^2)/2$ and incumbents' operating profits total $n_i b_i x_i^2$.
+
+Define the downstream external effect on consumers and incumbents in region $i$ as
+\begin{align}
+ M_i={}&
+ \left[\frac{b_i(n_ix_i)^2+2\chi_i n_ix_iy_i+d_i y_i^2}{2}
+ +n_i b_i x_i^2\right]\notag\\
+ &-\left[\frac{b_i(n_ix_i^0)^2}{2}+n_i b_i(x_i^0)^2\right].
+ \label{eq:Mi}
+\end{align}
+$M_i$ \emph{excludes} the entrant's $\Pi$ and is not assumed positive: consumer gains may coexist with incumbent business stealing. $\omega_A,\omega_B\geq0$, $\omega_A+\omega_B=1$, divide the venture's private return between the two founders. Market parameters and costs are restricted so that \eqref{eq:cournot}, baseline quantities, and the probabilities below are economically feasible; no claims are made outside that domain.
+
+\subsection{Complementary skills and research investment}
+Each region's prospective founders have independently distributed $\theta_i\sim U[0,1]$. In region $A$, $\theta_A$ can represent research and design capability; in region $B$, $\theta_B$ may represent manufacturing or commercial implementation. This is a type interpretation, not a claim that whole geographic economies specialise in those sectors. The perfect alignment of premium-service valuation $z_i$ and technical skill $\theta_i$ is analytically convenient but an identifying limitation, not a description of a measured population; public-service users may have lower average technical ability than private-service users without being unproductive. The two regions need not correspond to the spatial boundary of a physical facility.
+
+For a matched pair using research effort $e\geq0$, project success is
+\begin{equation}
+ p(e,\theta_A,\theta_B)=p_0+\zeta e+\lambda\theta_A\theta_B,\qquad
+ c(e)=ke^2/2,\quad k>0,\ \lambda\geq0.
+ \label{eq:success}
+\end{equation}
+The entire relevant domain satisfies $0\leq p\leq1$. Joint investment maximises $p(e,\theta_A,\theta_B)\Pi-ke^2/2$ and yields
+\begin{equation}
+ e^*=\frac{\zeta\Pi}{k},\quad
+ p_b=p_0+\frac{\zeta^2\Pi}{k},\quad
+ R_0=p_0\Pi+\frac{\zeta^2\Pi^2}{2k}.
+ \label{eq:effort}
+\end{equation}
+Optimising effort fixes a common success baseline $p_b$ and net-return intercept $R_0$, separating gross successful-project effects from real research costs.
+It creates no independent effort-selection mechanism: the provision contrast works through participant selection and the skill-dependent success term.
+The net expected venture return, including research cost, equals
+$R_0+\lambda\Pi\theta_A\theta_B$. As \eqref{eq:success} is separable, the optimal \emph{effort} does not vary with types; the skill channel operates through \emph{success probabilities}, not through an unmodelled type-dependent effort choice.
+
+\subsection{Founder selection and matching}
+The direct basic service value for a founder in region $i$ is
+\begin{equation}
+ u_i(s_j)=v_i+\rho w_i\mathbf1\{s_j\neq0\}>0,\qquad j\ne i.
+\end{equation}
+A private specialist additionally provides $\Delta_i\theta_i$ with $\Delta_i>0$, and charges fee $f_i$.
+This is a direct service-use value, not an improvement in research productivity.
+Conditional on participating, basic-only users and premium purchasers use the same matching and success technology; premium purchase changes neither $p$, research cost nor product demand.
+Specialist technical advice that directly improves a project is outside this specification. The baseline assumes the premium-service valuation type is perfectly positively associated with technical ability: $z_i=\theta_i$. This maintained assumption is not an empirical claim or a general theory of arbitrary skill--taste correlation.
+
+Define a participation mass and its \emph{unnormalised} first skill moment,
+\begin{equation}
+ m_i=\mathbb E[\mathbf1\{\mathrm{participates}\}],\qquad
+ q_i=\mathbb E[\theta_i\mathbf1\{\mathrm{participates}\}].
+ \label{eq:m-q}
+\end{equation}
+With pair-matching intensity $\rho\mu>0$, write $C=\rho\mu N_AN_B$ and
+\begin{equation}
+ a_i^m=\rho\mu N_j\omega_i R_0,\qquad
+ b_i^m=\rho\mu N_j\omega_i\lambda\Pi.
+ \label{eq:matchingcoeff}
+\end{equation}
+These coefficients are \emph{not} the Cournot demand slopes. A private-only founder receives
+\begin{equation}
+ u_i+a_i^m m_j+(\Delta_i+b_i^m q_j)\theta_i-f_i
+ \label{eq:founderpayoff}
+\end{equation}
+and participates precisely when this expression is nonnegative. A free basic public service is available to all founders; under co-provision the premium upgrade is chosen iff $\Delta_i\theta_i\geq f_i$.
+
+With no local provider, $(m_i,q_i)=(0,0)$. With $G$ or $B$, $(m_i,q_i)=(1,1/2)$. With $P$ only, define
+\begin{equation}
+ \ell_i=\left[\frac{f_i-u_i-a_i^m m_j}
+                       {\Delta_i+b_i^m q_j}\right]_0^1,\qquad
+ m_i=1-\ell_i,\qquad q_i=\frac{1-\ell_i^2}{2},
+ \label{eq:participation}
+\end{equation}
+where $[\cdot]_0^1$ truncates to $[0,1]$. Expected aggregate match volume is
+$L_0=Cm_Am_B$, while the success-weighted complementarity exposure is $L_1=Cq_Aq_B$. They are \emph{distinct endogenous aggregates}; even equal $m_A m_B$ need not imply equal $q_Aq_B$.
+
+\subsection{Regional welfare and feasible public choice}\label{sec:accounts}
+Let $W_i^0$ be consumer plus incumbent producer surplus in the no-venture Cournot market. For a successful venture, define
+\begin{equation}
+ K_i=M_i+\omega_i\Pi,\quad
+ S_i^0=p_b M_i+\omega_iR_0,\quad
+ S_i^1=\lambda K_i.
+ \label{eq:KSi}
+\end{equation}
+The gross real service benefit is $Z_i=0$ with no provision; $Z_i=N_iu_i$ with $G$; $Z_i=N_i(u_i m_i+\Delta_iq_i)$ with $P$; and $Z_i=N_i(u_i+3\Delta_i/8)$ with $B$ (using the $f_i=\Delta_i/2$ premium continuation below).
+
+Local public objectives and active private provider profits are
+\begin{align}
+ W_i(s)&=W_i^0+Z_i(s)
+       -F_{G_i}\mathbf1\{G_i\in s_i\}
+       -F_{P_i}\mathbf1\{P_i\in s_i\}
+       +Cm_A(s)m_B(s)S_i^0+Cq_A(s)q_B(s)S_i^1,
+       \label{eq:Wi}\\
+ \pi_i^P(s)&=N_if_i(s)D_i(s)-F_{P_i}\mathbf1\{P_i\in s_i\},
+ \quad D_i=\begin{cases}m_i,&s_i=P,\\1/2,&s_i=B.\end{cases}
+ \label{eq:privateprofit}
+\end{align}
+Absent private providers have payoff zero. The real cost of a local private service provider is included in local welfare. Founders' fees are intraregional transfers to local private intermediaries and must \emph{not} be subtracted again from \eqref{eq:Wi}.
+
+Each government chooses only whether to supply its free basic intermediation. For comparison we report the \emph{restricted-instrument} two-jurisdiction benchmark
+\begin{equation}
+ s^{RP}\in\underset{s\in\{0,G,P,B\}^2}{\arg\max}
+       \{W_A(s)+W_B(s)\},
+ \label{eq:planner}
+\end{equation}
+holding downstream fee, participation, research and Cournot continuations decentralised. This is not a first best, nor an optimisation over subsidies, digital-only systems or construction contracts.
+
+\section{Backward induction and decentralised provision}\label{sec:equilibrium}
+We first characterise downstream continuations, then test the four independent stage-1 entry incentives. This order matters: the sixteen first-stage profiles do not constitute sixteen exogenous payoffs.
+
+\subsection{Private fee and participation choices}
+Fix participation in the other region and define $U_i=u_i+a_i^m m_j>0$, $T_i=\Delta_i+b_i^m q_j>0$. For $s_i=P$, fees and selection satisfy
+\begin{equation}
+ \ell_i=[(f_i-U_i)/T_i]_0^1,\qquad
+ \mathcal R_i(f_i)=N_i f_i(1-\ell_i).
+\end{equation}
+The global fee optimum on the nonnegative half-line, including the full-participation kink, is
+\begin{equation}
+ (f_i^*,\ell_i^*)=
+ \begin{cases}
+ ((U_i+T_i)/2,\ (T_i-U_i)/(2T_i)),&0<U_i<T_i,\\[2mm]
+ (U_i,\ 0),&U_i\geq T_i.
+ \end{cases}\label{eq:monopolyfee}
+\end{equation}
+In particular, one must not extend the interior optimum through the kink. If $s_i=B$, free participation is universal and the premium upgrade demand is $N_i(1-f_i/\Delta_i)$ for $f_i\in[0,\Delta_i]$. Hence
+\begin{equation}
+ f_i^B=\Delta_i/2,\quad D_i^B=1/2,\quad
+ \mathcal R_i^B=N_i\Delta_i/4.
+ \label{eq:coexist}
+\end{equation}
+
+When $(s_A,s_B)=(P,P)$, neither region's participation moments may be held constant while optimising its private fee. A candidate price pair must jointly solve
+\begin{equation}
+ \ell_i=\left[\frac{f_i-u_i-a_i^m(1-\ell_j)}
+ {\Delta_i+b_i^m(1-\ell_j^2)/2}\right]_0^1,\quad i=A,B,
+ \label{eq:pp-fixedpoint}
+\end{equation}
+alongside each provider's global nonnegative-fee best response to $f_j$, allowing both boundary and interior fee branches. On the interior branch the stationary equations may be written in terms of the coupled participation system; stationarity alone is \emph{not} a globally valid fee-equilibrium certificate. The Online Supplement proves a baseline-specific global pure-price equilibrium result using analytical best-response bounds and an exact rational interval certificate, for the three reported numerical environments only. Off-path cases outside those environments remain subject to separate validation.
+
+\paragraph{A useful distinction: coexistence is not a private-revenue complementarity.}
+In the conditional comparison between a private-only service and a private premium offered alongside free basic access, hold the other jurisdiction's participation moments fixed. With $U_i>0$ and $T_i=\Delta_i+b_i^m q_j\geq\Delta_i$, the gross receipts of the local private provider are
+\begin{equation}
+ \mathcal R_i^P=
+ \begin{cases}
+  N_i(U_i+T_i)^2/(4T_i),& U_i<T_i,\\
+  N_iU_i,&U_i\geq T_i,
+ \end{cases}
+ \qquad
+ \mathcal R_i^B=N_i\Delta_i/4.
+ \label{eq:revenue-crowding}
+\end{equation}
+Both branches imply $\mathcal R_i^P>\mathcal R_i^B$. In the first branch, $(U_i+T_i)^2/T_i>T_i\geq\Delta_i$; in the second, $U_i\geq T_i\geq\Delta_i$. Thus adding free public basic service \emph{strictly displaces private fee receipts} under these conditional primitives. Nonetheless the premium supplier can remain active if $F_{P_i}<N_i\Delta_i/4$. The coexistence studied here is therefore a mixed provision configuration, \emph{not} a theorem that the government's entry raises the private provider's earnings. With the original region-$B$ parameters, gross premium revenue in $B$ is $0.25$ and net private profit is $0.01>0$. This transparent distinction prevents a policy interpretation that confuses co-location/coexistence with profit complementarity.
+
+\subsection{First-stage equilibrium and planner evaluation}
+For each of the sixteen entry configurations, let $\mathcal E(s)$ denote the set of admissible downstream equilibria. Where a continuation is selected, assign the four stage-1 payoffs from \eqref{eq:Wi} and \eqref{eq:privateprofit}. A candidate pure first-stage Nash equilibrium (NE) must make every binary entry flip weakly unprofitable:
+\begin{align}
+ W_i(s)&\ge W_i(s_i^{G\text{-flip}},s_j)
+       &&\text{for each }G_i,\label{eq:govBR}\\
+ \pi_i^P(s)&\ge \pi_i^P(s_i^{P\text{-flip}},s_j)
+       &&\text{for each }P_i.\label{eq:privBR}
+\end{align}
+The four states in one region are $0\leftrightarrow G$ and $P\leftrightarrow B$ for a government flip, and $0\leftrightarrow P$ and $G\leftrightarrow B$ for a private flip. Thus there are four independent binary incentive inequalities at each state; a government's entry comparison does \emph{not} subsume the private provider's response. Equilibrium ties may generate multiplicity. The restricted planner in \eqref{eq:planner} compares all sixteen total-welfare values \emph{under the same allowed continuation rule}. Without an admissible off-path equilibrium one cannot declare a global first-stage SPNE.
+
+The selected baseline cases use an analytic price-best-response argument and exact rational enclosure of the coupled $(P,P)$ equilibrium. The Online Supplement documents the global deviation bounds, the continuation fee boxes, and the strict first-stage incentive signs for each baseline. This is neither a general uniqueness theorem for all primitives nor a complete Lean formalisation of the entire sequential game.
+
+\section{Conditional mechanisms}\label{sec:propositions}
+
+The following results explain the subsequent public-access diagnostic.
+Their general screening and welfare principles are established in prior research; they are not independent claims to theoretical priority.
+Each comparison holds the stated continuation objects fixed.
+
+\paragraph{Proposition 1 (regional incidence).}
+With full founder participation, fixed interior Cournot quantities and independent uniform abilities,
+\begin{equation}
+ \frac{\partial W_i}{\partial\lambda}=\frac{C}{4}K_i,\qquad
+ \frac{\partial(W_A+W_B)}{\partial\lambda}
+ =\frac{C}{4}(M_A+M_B+\Pi).
+ \label{eq:P1}
+\end{equation}
+Local and aggregate signs can differ because incumbent displacement and assigned venture earnings differ across regions.
+The derivatives follow from $q_Aq_B=1/4$ and $K_A+K_B=M_A+M_B+\Pi$.
+No participant or price response is included in this full-coverage calculation.
+
+\paragraph{Proposition 2 (conditional fee selection).}
+Fix the other region's $(m_j,q_j)$ with $q_j>0$, maintain $0<U_i<T_i$, $\omega_i>0$, $\Pi>0$ and $z_i=\theta_i$.
+Increasing $\lambda$ then implies
+\begin{equation}
+ \frac{\partial f_i^*}{\partial\lambda}>0,\quad
+ \frac{\partial\ell_i^*}{\partial\lambda}>0,\quad
+ \frac{\partial m_i}{\partial\lambda}<0,\quad
+ \frac{\partial q_i}{\partial\lambda}<0,\quad
+ \frac{\partial(q_i/m_i)}{\partial\lambda}>0.
+ \label{eq:P2}
+\end{equation}
+Indeed $T_i'=\rho\mu N_j\omega_i\Pi q_j>0$, while $U_i$ is constant, and the monopoly formula gives
+$\ell_i^*=1/2-U_i/(2T_i)$ and $\ell_i'=U_iT_i'/(2T_i^2)>0$.
+Participant mean ability $(1+\ell_i)/2$ rises even as the total represented ability falls.
+This is not a P/P price-equilibrium comparative static.
+
+\paragraph{Corollary 1 (the fixed-mass benchmark).}
+At participation mass $m_i=1-\ell_i$, selected ability exceeds random admission of the same mass by
+\begin{equation}
+ q_i-\frac{m_i}{2}=\frac{\ell_i(1-\ell_i)}2\geq0.
+ \label{eq:C1}
+\end{equation}
+At a fixed cutoff and with the other region fully covered, the selected-minus-pooled technological welfare increment is
+\begin{equation}
+ \left.(W_i^{\mathrm{skill}}-W_i^{\mathrm{pooled}})\right|_{\mathrm{same\ cutoff}}
+ =\frac{C\lambda K_i}{4}\ell_i(1-\ell_i).
+ \label{eq:fixedmass-composition}
+\end{equation}
+It has the sign of $K_i$; it does not compare reoptimised pricing equilibria.
+
+\paragraph{Exact participation reduction.}
+Eliminating the uniform upper-tail cutoff yields
+\begin{equation}
+ q_i=\phi(m_i),\quad \phi(m)=m-m^2/2,\quad
+ q_Aq_B=\phi(m_A)\phi(m_B).
+ \label{eq:single-index-reduction}
+\end{equation}
+The identity also holds in $0,G,B$ states.
+Match volume and ability-weighted exposure have different economic meanings, but are not independent endogenous state dimensions here.
+A nonlinear participation-externality representation is possible.
+
+\section{Local and national public-access thresholds}\label{sec:welfare}
+
+\paragraph{Proposition 3 (conditional public addition).}
+Fix the other region at $(m_j,q_j)=(1,1/2)$ and let region $i$ have a private-only continuation with $\ell_i\in(0,1)$.
+Define the direct-service gain before government cost by
+\begin{equation}
+ H_i=N_i\left(u_i\ell_i-\frac{\Delta_i}{8}
+                         +\frac{\Delta_i\ell_i^2}{2}\right).
+ \label{eq:H}
+\end{equation}
+Adding free basic access while retaining the private specialist is locally preferred exactly when $F_{G_i}\leq F_i^{\mathrm{local}}$, where
+\begin{equation}
+ F_i^{\mathrm{local}}=H_i+C\left(S_i^0\ell_i+
+                          \frac{\lambda K_i\ell_i^2}{4}\right).
+ \label{eq:localcutoff}
+\end{equation}
+The national comparison uses
+\begin{equation}
+ F_i^{\mathrm{national}}-F_i^{\mathrm{local}}
+ =C\ell_i\left(S_j^0+\frac{\lambda K_j\ell_i}{4}\right).
+ \label{eq:wedge}
+\end{equation}
+This foreign increment may be positive, zero or negative.
+
+To verify the result, public access raises local mass by $\ell_i$ and local ability moment by $\ell_i^2/2$; with the opposite moment $1/2$, skill exposure rises by $C\ell_i^2/4$.
+The direct-service change is $H_i$ and private real costs cancel.
+Adding the neighbouring welfare increment gives the national threshold.
+The same accounting extends to full-coverage corners using the realised cutoff.
+It does not establish a full four-entry equilibrium or an optimum over fees, research allocations, subsidies or buildings.
+The Online Supplement provides the continuation and accounting proofs.
+
+\section{When does selection change the value of public access?}\label{sec:diagnostic}
+
+An equal full-participation mean of innovation success does not determine the value of public access, because the private-only counterfactual is itself selected and repriced.
+This section makes that statement operational within the existing model.
+It is an algebraic diagnostic from Proposition~3, not a claim to a new general theory of selection or local public goods.
+
+Fix the opposite region in $G$ or $B$, so its participants are $(m_j,q_j)=(1,1/2)$, and write $d=\Delta_i$, $U=u_i+a_i^m$, and $h=b_i^m/2$.
+Let $H$ denote the heterogeneous success premium $\lambda\theta_i\theta_j$ and $L$ the homogeneous premium $\lambda/4$.
+Their respective globally optimal private-only cutoffs, including full-coverage corners, are
+\begin{equation}
+ \ell_H=\max\left\{0,\frac{d+h-U}{2(d+h)}\right\},\qquad
+ \ell_L=\max\left\{0,\frac{d-U-h/2}{2d}\right\}.
+ \label{eq:diagnostic-cuts}
+\end{equation}
+The pooled technology raises the participation intercept by $h/2$; retaining $U$ or the heterogeneous cutoff in that comparison would be incorrect.
+For $h>0$, $\ell_H\geq\ell_L$, strictly unless both are zero.
+When both are interior,
+\begin{equation}
+ \ell_H-\ell_L=\frac{h(d+h+2U)}{4d(d+h)}>0.
+ \label{eq:diagnostic-cutgap}
+\end{equation}
+Thus heterogeneous success selects fewer founders and a lower total ability moment than its equal-mean pooled alternative, despite a higher mean ability among those selected.
+
+Let $T_H$ and $T_L$ be the local public-entry cost thresholds under the two technologies, with fees reoptimised in each configuration.
+Define $\delta=\ell_H-\ell_L$.
+Direct substitution in Proposition~3 gives the exact comparison
+\begin{equation}
+ \begin{split}
+ T_H-T_L={}&\delta\left[N_i\left(u_i+\frac d2(\ell_H+\ell_L)\right)
+                         +CS_i^0\right]\\
+ &+\frac{C\lambda K_i}{4}(\ell_H^2-\ell_L).
+ \end{split}\label{eq:diagnostic-gap}
+\end{equation}
+It holds at the full-participation corners as well.
+The first line captures the changed private exclusion margin and the associated direct-service and baseline matching returns.
+The second compares the technological return from restoring excluded collaborations: its exposure is $\ell_H^2/4$ under selected success, versus $\ell_L/4$ under pooled success.
+An interior heterogeneous--pooled public-entry reversal is possible precisely when $T_H\ne T_L$ and the common cost lies strictly between them; this is a conditional government comparison, not sufficient for the full four-player equilibrium.
+The sign criterion is the sign of the right-hand side of \eqref{eq:diagnostic-gap}, without assuming positive local commercialisation returns.
+
+For example, when $\ell_L>\ell_H^2$ and the first line is nonnegative, $K_i<0$ makes both components favour $T_H>T_L$.
+If $K_i>0$, the second component instead offsets the first and reverses that ranking when its magnitude is larger.
+Hence stronger positive selection does not have an unconditional policy sign.
+A negative-sign region can be identified analytically.
+If $\omega_i=0$, $M_i>0$ and $0<u_i<d$, then $U=u_i$, $h=0$, and both technologies induce the same $\ell\in(0,1/2)$.
+Nevertheless $T_H-T_L=C\lambda M_i\ell(\ell-1)/4<0$ for $\lambda>0$.
+The inequality persists for sufficiently small positive $\omega_i$ by continuity, so it is not confined to a zero-profit-share boundary.
+Here positive local market benefits make restoration of the relatively low-ability excluded collaborations less valuable under selected than pooled success, without a fee difference to offset it.
+Proofs of the cutoff ordering and threshold identity appear in the diagnostic proof in the Online Supplement.
+
+The same accounting explains changes in complementarity without switching technology.
+On an interior heterogeneous branch set $h=\eta_i\lambda$, with $\eta_i=\rho\mu N_j\omega_i\Pi/2$, and let a prime denote the derivative with respect to $\lambda$.
+Then $\ell_H'=U\eta_i/[2(d+h)^2]$ and
+\begin{equation}
+ T_H'=\big[N_i(u_i+d\ell_H)+CS_i^0\big]\ell_H'
+       +\frac{CK_i}{4}\big(\ell_H^2+2\lambda\ell_H\ell_H'\big).
+ \label{eq:diagnostic-derivative}
+\end{equation}
+When $K_i<0$, complementarity raises the value of free access only if the first term outweighs the negative second term.
+The policy mechanism can therefore be restoration of valuable service access after private repricing, even when the incremental successful ventures reduce local consumer--incumbent--founder surplus.
+The numerical example below quantifies this distinction rather than interpreting public entry as evidence of a positive local innovation spillover.
+
+\section{A verified illustration and its economic scale}\label{sec:numerical}
+
+We retain the original numerical primitives rather than selecting a wider reversal after the fact.
+All magnitudes are model units, not an empirical calibration of a particular programme.
+The baseline has $(n_A,n_B)=(5,2)$, $(N_A,N_B)=(3,1)$, $\Delta_A=\Delta_B=1$, $\rho=0.4$, $\mu=0.25$, $(\omega_A,\omega_B)=(0.8,0.2)$, $(F_{G_A},F_{G_B})=(0.09,0.0405)$, $(F_{P_A},F_{P_B})=(0.65,0.24)$, $p_0=0.05$, $\zeta=0.005$, $k=0.0004$, $\chi_i=0.9$, $(v_A,v_B)=(0.15,0.10)$ and $(w_A,w_B)=(0.22,0.45)$; the Cournot net intercepts and own-good slopes equal one.
+The pooled comparison replaces $\lambda\theta_A\theta_B$ by $\lambda/4$ throughout individual returns and welfare, preserving the mean under complete participation only.
+
+Table~\ref{tab:entry} reports the three original outcomes.
+For each displayed setting, the P/P continuation is a unique global pure-price equilibrium by an analytic best-response argument with rational interval verification.
+All sixteen entry profiles and four unilateral flips per profile are checked.
+These certificates cover the three settings and the explicitly stated small perturbation region, not arbitrary parameters or a continuum of complementarity values.
+
+\begin{table}[htbp]\centering
+\caption{Original provider configurations and public-addition thresholds}\label{tab:entry}
+\begin{tabular}{@{}lccr@{}}\toprule
+Technology and $\lambda$ & Pure NE & Planner & Local threshold\\\midrule
+Skills, $0$ & $(B,P)$ & $(B,B)$ & $0.0404250710$\\
+Skills, $0.5$ & $(B,B)$ & $(B,B)$ & $0.0405316701$\\
+Pooled, $0.5$ & $(B,P)$ & $(B,B)$ & $0.0400432292$\\\bottomrule
+\end{tabular}
+\par\smallskip\footnotesize $B$: free basic plus paid premium; $P$: private only. The last column is region $B$'s public-entry cost threshold conditional on region $A$ remaining in $B$. The common baseline cost is $0.0405$. Planner means the restricted sixteen-configuration welfare benchmark.
+\end{table}
+
+\paragraph{What drives the three-way switch?}
+In region $B$, $M_B\simeq-0.0307750$ and $\omega_B\Pi\simeq0.0221322$, so $K_B\simeq-0.00864284<0$ and $S_B^0\simeq-0.000568455<0$.
+Additional successful ventures have a negative net local market contribution, including the founders' assigned return.
+Table~\ref{tab:diagnostic} decomposes its public-entry threshold into direct service, baseline matching and skill-related success incidence.
+Free access is locally attractive in the skill-$0.5$ case because its direct-service value exceeds the two negative venture terms and the public cost.
+The result is not driven by a positive local innovation externality.
+
+\begin{table}[htbp]\centering\small
+\caption{Region-$B$ public-entry threshold components, with region $A$ fully participating}\label{tab:diagnostic}
+\begin{tabular}{@{}lrrr@{}}\toprule
+ & Skills, $0$ & Skills, $0.5$ & Pooled, $0.5$\\\midrule
+Direct service & $0.0404864338$ & $0.0406350895$ & $0.0402210076$\\
+Baseline matching & $-0.0000613628$ & $-0.0000614025$ & $-0.0000612921$\\
+Technology increment & $0$ & $-0.0000420170$ & $-0.0001164863$\\\midrule
+Total threshold & $0.0404250710$ & $0.0405316701$ & $0.0400432292$\\\bottomrule
+\end{tabular}
+\par\smallskip\footnotesize Entries are gross gains from adding basic access, before the public fixed cost. Baseline matching uses the same $S_B^0=p_bM_B+\omega_BR_0$ across columns. The pooled technology increment is $C\lambda K_B\ell_L/4$, not the selected $C\lambda K_B\ell_H^2/4$. Display rounding need not sum exactly.
+\end{table}
+
+Increasing complementarity from zero to $0.5$ changes the private cutoff by only $0.0002322968$.
+The resulting $0.0001486557$ increase in the direct-service term is offset by a $0.0000420170$ skill-success loss and a $0.0000000396$ baseline matching loss.
+Their net is $0.0001065991$, exactly the width of the three-scenario public-cost band.
+The relevant strength in the fee problem is $h=b_B^m/2\simeq0.00165991$, small relative to $\Delta_B=1$; hence complementarity barely shifts private exclusion in this calibration.
+Small threshold displacement, followed by an indicator decision near indifference, explains both the configuration change and its limited economic magnitude.
+
+At $\lambda=0.5$, the heterogeneous--pooled threshold gap is larger, $0.0004884409$.
+Equation~\eqref{eq:diagnostic-gap} attributes it to $0.0004139716$ from changed access and baseline matching plus $0.0000744693$ from technological incidence.
+Because $K_B<0$, the lower technical exposure of the additional selected collaborations makes public access less locally costly than in the pooled comparison.
+This is a regional-incidence effect with repriced participation, not an assertion that lower-ability founders are intrinsically more innovative.
+
+\paragraph{Cost scale and verification domain.}
+Opposite heterogeneous and pooled decisions at $\lambda=0.5$ require
+\begin{equation}
+ 0.040043229233<F_{G_B}<0.040531670102.
+ \label{eq:fragility}
+\end{equation}
+Retaining all three equilibria additionally requires
+\begin{equation}
+ \begin{split}
+ \underline F_B^{(3)}<F_{G_B}<\overline F_B^{(3)},\qquad\\
+ \underline F_B^{(3)}\simeq0.040425071007120596,\quad
+ \overline F_B^{(3)}\simeq0.04053167010244885.
+ \end{split}\label{eq:threeway-open-cost}
+\end{equation}
+The endpoints are exact rational indifference values; displayed decimals are approximations.
+The latter interval is only $0.2632\%$ of the baseline cost, with an upper slack of $0.0782\%$.
+An all-sixteen-profile rational certificate establishes the three equilibria and the restricted planner throughout this open cost interval, with only the identified government ties at the outer endpoints.
+It also verifies a small joint rectangle,
+\begin{equation}
+ \begin{split}
+ 0.089999&<F_{G_A}<0.090001,\\
+ 0.040499&<F_{G_B}<0.040501,\\
+ 0.199999&<\omega_B<0.200001,\quad\omega_A=1-\omega_B,
+ \end{split}\label{eq:threeway-3d-box}
+\end{equation}
+including its global P/P continuations.
+These are persistence certificates, not evidence of broad policy relevance.
+
+The conditional government margin has a numerically estimated switch near $\lambda^\star\simeq0.351184$.
+Numerical continuation suggests the corresponding first-stage configuration change; the three benchmark P/P certificates do not certify every off-path price game over the intervening $\lambda$ interval.
+No continuous-interval full-SPNE or uniqueness claim at the tie is made.
+The neighbouring region's public-addition gains are positive in the three displayed settings (approximately $0.000414$, $0.000768$ and $0.001394$), explaining why local non-entry can coexist with the restricted planner's preference for $(B,B)$.
+
+\section{Negative portability and interpretation limits}\label{sec:robustness}
+The existing 396-cell sensitivity panel does not establish broad robustness.
+At $\Delta_B=0.8$ or $0.9$, or $N_B=0.8$, its selected numerical continuations yield multiple pure equilibria $(B,G)$ and $(B,P)$ and a planner preference for $(B,P)$.
+At product substitutability $\chi=0.95$, the $\lambda=0.5$ baseline returns to $(B,P)$.
+These are alternative numerical regimes, not proofs of price equilibria for every perturbed primitive.
+
+Under the separately checked $\operatorname{Beta}(2,2)$ ability distribution, the numerical equilibrium and restricted planner allocation are $(P,P)$ at both $\lambda=0$ and $0.5$.
+The corresponding conditional region-$B$ public-addition margins are about $-0.0305626$ and $-0.0304756$.
+The original configuration switch therefore disappears at the unchanged costs.
+The recorded differentiated-Bertrand adverse test is also negative, but its full alternative model has not been independently reconstructed in this revision; no freshly replicated Bertrand result is claimed.
+Replication files distinguish these negative tests from the exact baseline certificates.
+
+The maintained equality $z_i=\theta_i$ equates willingness to pay for specialist services with relevant technical ability.
+Selection on willingness to pay need not identify technological selection in data.
+The specialist has no direct effect on the success technology, and endogenous effort adds no ability-dependent investment channel.
+Physical location, building capital, service quality choice, subsidies, taxation, procurement and remote alternatives are outside the policy menu.
+These restrictions limit interpretation even where the baseline equilibrium is mathematically certified.
+
+\section{Empirical implications and policy interpretation}\label{sec:empirical}
+
+Although the paper is theoretical, its mechanism can be confronted with data on fees, applicants, matched ventures and downstream markets. The distinction between \emph{conditional model predictions} and \emph{causal estimates} is essential. The following three implications follow from existing equations; they are neither additional general equilibrium theorems nor claimed findings from newly collected data. In particular, posted prices, access to basic services and the availability of successful partners are jointly endogenous outside the stated conditional comparisons.
+
+\paragraph{Implication 1: private fees select participant composition as well as participation volume.}
+Hold the other region's moments $(m_j,q_j)$, the service's nonprice characteristics and the local coefficients $U_i>0$ and $T_i>0$ fixed. For a private-only service on its interior cutoff branch, $\ell_i=(f_i-U_i)/T_i$, $m_i=1-\ell_i$ and $q_i=(1-\ell_i^2)/2$. Consequently,
+\begin{equation}
+ \frac{\partial m_i}{\partial f_i}=-\frac1{T_i},\qquad
+ \frac{\partial q_i}{\partial f_i}=-\frac{\ell_i}{T_i},\qquad
+ \frac{\partial(q_i/m_i)}{\partial f_i}=\frac1{2T_i}>0,
+ \quad 0<\ell_i<1.
+ \label{eq:empirical-screen}
+\end{equation}
+Thus an exogenous fee increase reduces founder participation and the \emph{total} represented skill moment, while raising participants' \emph{average} technical ability. The last effect does not establish an increase in the number of successful projects. A possible empirical test would link the full universe of eligible firms to fee offers, take-up decisions, \emph{pre-service} assessments of technical ability, and subsequent collaborations. After normalising a defensible ex-ante ability measure, one could separately estimate take-up $m_i$, participant mean skill $q_i/m_i$, and the skill moment $q_i$, rather than using registration or match counts as sufficient proxies for innovation quality.
+
+Fee endogeneity is the principal threat: specialists may raise prices because expected demand or client skill improved; targeted discounts may also depend on unobserved ability. A credible design needs plausibly exogenous fee variation (for example, an independently determined tariff change) and a known eligible denominator, not merely a positive correlation between fees and average participant quality. If willingness to pay is poorly aligned with the technical skill relevant to the venture, the model's $z_i=\theta_i$ assumption fails and the positive composition prediction is not warranted. The evidence from European Digital Innovation Hubs that supported client firms can be relatively capable \citep{CarpentierDAddaNepelski2026} reinforces the importance of measuring \emph{who participates}; it does not identify this model's fee-selection mechanism.
+
+\paragraph{Implication 2: public basic access may reduce private fee receipts without eliminating a specialist.}
+With an active private provider, a free basic public option and the uniform $z_i=\theta_i$ benchmark, the premium is selected by $\theta_i\geq f_i/\Delta_i$. Its optimal price and take-up share are $f_i^B=\Delta_i/2$ and $D_i^B=1/2$, and gross fee receipts equal $N_i\Delta_i/4$ (equation~\eqref{eq:coexist}). Relative to the private-only fee optimum, with the \emph{other jurisdiction's participation held fixed}, equation~\eqref{eq:revenue-crowding} implies $\mathcal R_i^P>\mathcal R_i^B$. The private provider nevertheless remains viable under co-provision when $F_{P_i}<N_i\Delta_i/4$. These are predictions of a particular service differentiation and cost structure, not a universal claim that public programmes displace private firms.
+
+An evaluation should track separately the universe served by free basic services, paid premium upgrades, actual paid fees (net of vouchers), provider receipts and fixed operating costs, and exits or continued operation. A decline in premium revenue does not imply exit. Comparing different jurisdictions before and after public opening without accounting for changes in specialist quality, local demand, rival services, subsidies and fee policies would not isolate the conditional displacement effect. The prediction of a one-half premium upgrade rate is especially restrictive: it is tied to uniform willingness to pay, linear incremental premium value, one provider and the maintained absence of capacity/quality choice, so it is a useful \emph{benchmark falsification} rather than a likely population constant.
+
+\paragraph{Implication 3: local and cross-region returns to additional intermediation need not align.}
+The project-level complementarity mechanism has a directly falsifiable component: at a given research effort $e$ and within the maintained interior success-probability domain, equation~\eqref{eq:success} implies
+\begin{equation}
+ \frac{\partial^2 p(e,\theta_A,\theta_B)}
+ {\partial\theta_A\,\partial\theta_B}=\lambda\geq0.
+ \label{eq:empirical-skill-complementarity}
+\end{equation}
+When $\lambda>0$, an increase in one partner's ex-ante technical capability raises the success-probability increment associated with the other partner's capability. This is a \emph{test of the maintained success technology}, not a novel theoretical theorem. It would require ex-ante skill measures for \emph{both} partners, recorded unsuccessful as well as successful collaborations, effort and project-characteristic controls, and a credible strategy for endogenous pairing and project selection. A positive observed interaction coefficient alone is not proof of causal complementarity.
+
+
+Hold the neighbouring region $j$ at full founder participation, and compare region $i$'s private-only service with public/private coexistence under their respective equilibrium fee continuations. Proposition~3 implies that the neighbouring jurisdiction's additional surplus---which the local government financing region $i$ does not internalise---is
+\begin{equation}
+ \Delta W_j=
+ C\left(S_j^0\ell_i+\frac{\lambda K_j}{4}\ell_i^2\right)
+ =F_i^{\mathrm{national}}-F_i^{\mathrm{local}},
+ \label{eq:empirical-spillover}
+\end{equation}
+where $K_j=M_j+\omega_j\Pi$. The sign of this \emph{foreign} benefit is not fixed: the consumer and founder returns from a new venture may be offset by business stealing from incumbent producers. The empirically discriminating question is therefore whether increases in cross-region matches or partner quality are accompanied by gains or losses \emph{where the new product competes}, not merely where its participating founders are registered.
+
+A feasible data architecture would link eligible firms and their ex-ante skills, pair formation across jurisdictions, project success and product launch, product-market prices and quantities, incumbent performance, founder profit shares, programme budgets and tax-financed real costs. One must also estimate consumer surplus and the counterfactual outcomes of both markets \emph{without the venture}; aggregate collaboration statistics or participant turnover alone do not identify $M_j$ or either regional welfare threshold. Matched-pair projects and their sequential contracting milestones are observable in some intermediary datasets \citep{EldeboHjelm2025}, but their existence does not supply the necessary product-market counterfactual. Cross-border demand shocks, endogenous partner choice, market-entry selection and regional trade flows complicate identification.
+
+\paragraph{A disciplined policy use.}
+These implications motivate a diagnostic sequence, not an unestimated cost--benefit claim. First determine \emph{which} firms are reached and which technical skills they bring. Second distinguish basic-service access, private upgrade spending and supplier survival. Third identify where the commercialised products create consumer benefits, founder income and incumbent losses. Only after observing or credibly estimating these components could a government attempt the local-versus-aggregate welfare calculation. The narrow baseline ownership switch reported in Section~\ref{sec:numerical} can discipline a calibrated scenario analysis, but is \emph{not} a sign prediction for an average treatment effect of public hub openings. The model does not compare physical facilities with remote services, vouchers or procurement contracts, and none of these implications establishes that a new public building should be constructed.
+
+\section{Related literature and the contribution boundary}\label{sec:literature}
+
+\citet{Hagiu2004,Hagiu2004b} analyse proprietary versus open platforms, vertically heterogeneous developers and quality--variety welfare trade-offs.
+\citet{VeigaWeylWhite2017} make user characteristics, their aggregate contribution and sorting feedback explicit; their Proposition~1 and online proof already go beyond participant counts.
+Consequently neither quality-weighted participation nor a distinction between average quality and customer mass is a new principle here.
+Our perfect alignment of specialist valuation and ability is also more restrictive than their multidimensional heterogeneity.
+The exact identity $q_i=\phi(m_i)=m_i-m_i^2/2$ in every service state rules out an originality claim based on independent endogenous mass and skill states.
+A flexible nonlinear participation-externality model can encode $\phi(m_A)\phi(m_B)$.
+
+\citet{HuaChenZhang2016} study competition between a free public and a paid private service in a capacity- and delay-sensitive system, with fiscal coordination.
+Coexistence itself is therefore not new.
+The accessible publisher abstract establishes this overlap; the full article and proof appendix could not be inspected, so we do not assert that its exact equilibrium conditions exclude our comparison.
+\citet{LaineMa2017} and \citet{Kim2024} likewise precede public/private quality or platform competition.
+\citet{LongWong2009} combine two authorities and private service pricing, while \citet{PeitzSato2026} analyse asymmetric platform prices, participation and entry.
+Four decision makers and endogenous fees are not independent contributions.
+
+\citet{BerliantFujita2008,BerliantFujita2011} study knowledge heterogeneity, while \citet{DAspremontJacquemin1988,GoyalJoshi2003} connect research collaboration and strategic competition.
+\citet{Lee2026} weigh local knowledge spillovers against wider oligopoly rivalry to derive a sign-sensitive research tax/subsidy rule.
+Regional commercialisation incidence and the possibility of adverse incumbent effects are thus established mechanisms.
+Our government instead makes a binary basic-access decision against a fee-selected founder population, and the separable effort stage fixes the baseline venture return rather than generating a new investment response.
+\citet{HacknerHerzing2026} examine private and social incentives for cost-reducing technology provision and adoption; their technology-choice object differs from access to founder matching.
+
+The national-minus-local threshold in Proposition~3 is the neighbouring welfare increment, consistent with established local-public-investment and entry externalities \citep{CremerMarchandPestieau1997,MankiwWhinston1986}.
+We claim neither a general underprovision theorem nor a superior subsidy or ownership instrument.
+The additional object is the \emph{conditional, repriced comparison} in \eqref{eq:diagnostic-gap}, which identifies when selection raises rather than lowers the local value of free access, and its connection to the four-entry illustration.
+It can diagnose an access-driven configuration change even when successful ventures are locally harmful.
+This is a model-specific economic application of familiar principles, not a theorem proven to lie outside all prior frameworks.
+
+\begin{table}[htbp]\centering\small
+\caption{Prior mechanisms and the narrower question retained here}\label{tab:prior}
+\begin{tabular}{@{}>{\raggedright\arraybackslash}p{0.28\linewidth}>{\raggedright\arraybackslash}p{0.64\linewidth}@{}}\toprule
+Closest research & Overlap and remaining object\\\midrule
+Hagiu (2004b); Veiga et al. (2017) &
+Quality-weighted selection is established. We apply it to repriced local basic-access thresholds, without claiming independent skill states.\\\addlinespace[4pt]
+Hua et al. (2016); Long and Wong (2009) &
+Free/paid tiers and two-authority service competition are established. The exact four-entry comparison is not shown to be nested or non-nested; Hua's full proof remains unverified.\\\addlinespace[4pt]
+Peitz and Sato (2026) &
+Price, participation and entry feedback are established. Our baseline-specific certificate supplies credibility, not economic novelty.\\\addlinespace[4pt]
+Lee (2026); Cremer et al. (1997) &
+Market rivalry and interjurisdictional policy wedges are established. Here fee-selected collaborations determine the local and foreign terms of a binary access choice.\\\bottomrule
+\end{tabular}
+\end{table}
+
+Table~\ref{tab:prior} separates these overlaps from the remaining applied question.
+The precise three-scenario configuration has not been matched to a theorem in the texts inspected, but that is not proof of priority.
+Its narrow cost band and failed distributional portability further constrain the contribution.
+The empirical implications in Section~\ref{sec:empirical} and the institutional examples are proposed tests and motivation; they are not new data validating this equilibrium mechanism.
+
+\section{Institutional interpretation and policy boundaries}\label{sec:institutions}
+The British Catapult debate exposes a live tension between public innovation support and private market activity. In March 2026, a House of Commons committee raised concerns that Catapult centres could compete with local organisations for projects and funding, especially where regional R\&D activity was weak \citep{UKCommittee2026}. The British government's June 2026 response defended mixed public grants, competitively secured research funding and commercial revenues as sustaining market responsiveness and limiting displacement \citep{UKGovernment2026}. Neither position is a causal demonstration of crowding out or crowding in. Catapult centres are hybrid organisations and cannot literally be equated with our independent free government entrant $G$ and profit-maximising private entrant $P$.
+
+The European Digital Innovation Hubs network supplies another motivation. It provides regional access to technical experimentation, expertise and ecosystem connections while enabling cross-region specialist services \citep{EuropeanCommissionEDIH}. Its operational pricing guidance allows free or discounted assistance alongside market-price-based list values \citep{EDIHFAQ2026}. Hence zero-priced access and privately priced services may be relevant to the same institutional design; this does not mean every EDIH is state-operated or always free.
+
+A concrete example of capability complementarity is the US Manufacturing Extension Partnership's reported support for a Montana company developing a fibre-optic cable clamp. The publicly supported extension network helped the inventors identify contract-manufacturing capabilities for commercialisation \citep{NISTFiberReaper2024}. This illustrates invention-implementation matching but does not estimate an equilibrium treatment effect.
+Actual extension advice may directly improve technology, whereas our premium service changes direct service value and participation only; that function must not be inferred from the model.
+
+The model's public alternative is a \emph{taxpayer-financed basic service}, not necessarily a physical building. The government finances the real fixed service cost and evaluates regional founder, incumbent and consumer outcomes. Since taxation, building technologies, procurement, subsidies and digital-only matching alternatives are not strategic choices, the study offers diagnostic questions---which skills join, where are new venture profits earned, who loses from incumbent displacement, and how do local incentives diverge from aggregate effects?---rather than a universal construction or ownership recommendation.
+
+\section{Discussion and conclusion}\label{sec:conclusion}
+The paper provides a conditional decision diagnostic for publicly financed basic innovation access against an endogenous private-service counterfactual.
+After fees are reoptimised, the access and regional technological-incidence components in \eqref{eq:diagnostic-gap} can reinforce or offset one another.
+Their economic meaning matters more than the fact that a binary configuration changes.
+In the original numerical example, local market returns to successful ventures are negative: restored direct-service access, partly offset by commercialisation losses, explains public entry.
+
+The three-scenario configuration is globally certified at its reported baselines but occupies a narrow cost band and fails the recorded alternative ability distribution.
+Those facts support a bounded applied-theory illustration rather than a general public-provision recommendation.
+The diagnostic comparison is an application of established selection and regional-externality principles; a complete theorem-level exclusion of the closest predecessors is not established.
+
+For evaluation, eligible firms' ex-ante capabilities, fee offers and take-up must be linked to collaborations, product-market outcomes, founder returns and incumbent losses.
+Neither participant counts nor the presence of a public/private provider identifies positive innovation spillovers.
+The model does not establish that specialist advice improves research productivity, that endogenous effort drives the configuration, or that a physical hub dominates remote or contractual alternatives.
+
+\section*{Statements and Declarations}
+\paragraph{Data and code availability.}
+The accompanying replication materials contain the frozen primitives, all sixteen payoff configurations for each benchmark, rational verification scripts, the diagnostic decomposition and adverse-test records.
+No new empirical dataset is analysed.
+Computer-assisted interval checks, analytic proofs and the limited Lean checks have distinct coverage, documented in the Online Supplement; the entire game is not Lean-formalised.
+\paragraph{Use of generative tools.}
+Generative AI tools assisted the literature search, mathematical derivations, code, manuscript revision and review checks.
+Computational checks do not replace author responsibility or external peer review.
+
+\begingroup\raggedright\interlinepenalty=10000
+\bibliographystyle{plainnat}
+\bibliography{references}
+\endgroup
+\end{document}

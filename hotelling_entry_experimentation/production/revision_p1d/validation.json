@@ -1,0 +1,23 @@
+{
+  "base_commit": "d2520c9afbf9b2b742a5f04fbba6159eb489db61",
+  "unchanged_scientific_sources_sha256": {
+    "formal/Stage33Formal.lean": "abbe081e4e6c96f49271a7ab41e722b583bfdf59ffdb477e5b50d2c72704d32e",
+    "hotelling_entry_experimentation/STAGE8_CANONICAL_THEORY_FREEZE_V1.md": "75afbd4112d118cf07c8c5893ae495c51724b369172aca39ca959dd0539e4fbe",
+    "hotelling_entry_experimentation/STAGE8_THEORY_FREEZE_MANIFEST.md": "b6c66a59a4f1785cede4f931d3b4161b3182eaaa620ca3ebe58e3f2bc8621f47",
+    "hotelling_entry_experimentation/production/verification/stage33_reproduce.py": "a2fac92bdb9d16ceeb007c74c672ff4131d9abfbf220419a51d3a91782e3b527",
+    "hotelling_entry_experimentation/production/reviews/stage11r_pp_global_certificate.py": "a9bf9d0fde5fde874ef349449b2f3ad97b7113c0b93c0da3fc63dc705d69f973",
+    "hotelling_entry_experimentation/production/reviews/stage11r_p1_open_region_certificate.py": "a68cd2ed429b94f9e07799d4a1489f079f647f11fa8177d533beeb7b9dbdd32c",
+    "hotelling_entry_experimentation/production/reviews/stage11r_p1b_empirical_implications_check.py": "bb05ff542f7070ffa84ec08b7696b951329d7844579e9b377deb92758770c1da",
+    "hotelling_entry_experimentation/production/reviews/stage11r_p1c_reduction_check.py": "133464409cf24ac401eb0829ef4e5dfd9b293184bd73ea07bb6a29c5b9f9a2cc"
+  },
+  "original_checks_passed": [
+    "stage11r_pp_global_certificate.py",
+    "stage11r_p1_open_region_certificate.py",
+    "stage11r_p1b_empirical_implications_check.py",
+    "stage11r_p1c_reduction_check.py",
+    "stage33_reproduce.py"
+  ],
+  "exact_diagnostic_passed": true,
+  "isolated_flat_diagnostic_passed": true,
+  "new_lean_or_full_lambda_certificate": false
+}
