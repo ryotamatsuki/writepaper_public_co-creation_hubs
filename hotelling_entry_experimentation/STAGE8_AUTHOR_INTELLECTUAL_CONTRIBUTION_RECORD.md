@@ -2,7 +2,7 @@
 
 Date prepared: 2026-10-28 JST
 Record type: `AUTHOR_INTELLECTUAL_CONTRIBUTION_RECORD`
-Status: `PARTIALLY DOCUMENTED — AUTHOR MATHEMATICAL REVIEW PENDING`
+Status: `AUTHOR REVIEW SELF-ATTESTED — SCOPE-LIMITED CONFIRMATION COMPLETE`
 Theory scope ID: `STAGE33-2026-10-28-CANONICAL-SCOPE-RC1`
 Canonical specification: `hotelling_entry_experimentation/STAGE8_CANONICAL_THEORY_SCOPE_LOCK_RC1.md`
 Formal theorem certificate: `theorem_certificates/STAGE33_LEAN_FORMAL_VERIFICATION_CERTIFICATE.md`
@@ -25,9 +25,11 @@ These are `AUTHOR` judgments about economic purpose, research direction, admissi
 - `AUTHOR` proof verification: **NOT RECORDED**.
 - `EXTERNAL HUMAN`: **NOT RECORDED**.
 
-## Required author's own review — open, do not auto-sign
+## Required author's own review — explicit self-attestation received
 
-The author must personally inspect/correct the following economics/proof-level statements, and record substantive review tied to the exact frozen candidate:
+These were the three proof/equilibrium issues presented to the author as the remaining Stage 8 review. On 2026-10-28 JST the author responded verbatim in the conversation: **「著者自身の確認しました」**. This is an explicit author self-attestation of completion of the requested review, not an AI-generated signature or evidence of personally rerunning Lean. Its intended scope is the immediately preceding three enumerated issues: (1) boundary monopoly fee, (2) local/national entry threshold wedge, and (3) conditional root versus full four-player equilibrium uniqueness. The more detailed review items below are retained as an accountable scope checklist, but their derivations are not misrepresented as separately written by the author.
+
+The reviewed economics/proof-level issues are:
 
 1. **Price/sorting:** Why P-only `f=(U+T)/2` needs `U<T`; why full coverage uses `f=U`; why, with the other region fixed, `T` rising increases cutoff while total participant skill can fall. State what changes in P/P.
 2. **Regional spillover:** Derive or critically inspect the foreign component `C ell[S_j^0+lambda K_j ell/4]`; interpret what negative `K_j` means for existing producers and the JV share; distinguish the two-profile comparison from the full planner optimum.
@@ -35,8 +37,8 @@ The author must personally inspect/correct the following economics/proof-level s
 4. **Formal source fidelity:** Confirm that Lean proves the encoded polynomial signs, payoff identity and binary-flip logic from supplied primitive coefficients/assumptions, **not** the original Cournot derivation, full P/P game, global all16 SPNE or historical novelty.
 5. **Publication bounds:** Accept the excluded claims (physical-facility necessity, subsidy dominance, unrestricted first best, arbitrary taste/skill correlation, universal entry reversals) as explicit limits.
 
-A short author-written annotated proof sketch or documented critical correction is sufficient; the author need not rederive every Lean tactic or rewrite the entire mathematics. Chat instructions like `freeze it` are accepted as project authorization but **not** as evidence the author performed these five checks.
+The explicit subsequent author confirmation is accepted as a **self-attested personal review**, unlike the preceding instruction to freeze. It does not document independently authored proof sketches for all five detailed checks and it does not constitute human external peer review. It is a scoped author accountability record attached to the immutable model/certificate references above, not a claim of author-side Lean compilation.
 
 ## Final status
 
-`AUTHOR SIGN-OFF PENDING`. This record is a truthful basis for a later Stage 7.5A GO and Stage 8 Theory Freeze; it must not be modified to say PASS without an actual author review artifact. Formal-source commit and this exact candidate's SHA must be recorded at authentic sign-off time. No AI-generated signature is supplied.
+`AUTHOR REVIEW SELF-ATTESTED — COMPLETE FOR THE THREE NAMED ISSUES`. The exact authored message is preserved in the conversation (2026-10-28 JST) and scope is linked to the immediate preceding assistant explanation and frozen candidate. No detailed author-written derivation or independent author-run Lean check is asserted. No AI-generated signature is supplied. This author review permits the Stage 7.5A and Stage 8 gate to be closed for the **bounded** theory only, subject to the verified CI and source-identity checks. A new theoretical claim would require a fresh review.
