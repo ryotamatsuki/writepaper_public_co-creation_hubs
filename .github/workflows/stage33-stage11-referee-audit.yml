@@ -1,0 +1,30 @@
+name: Stage33 Stage11 independent referee entry audit
+on:
+  pull_request:
+    branches:
+      - stage10/stage33-paper-core-literature-20261028
+    paths:
+      - 'hotelling_entry_experimentation/production/reviews/**'
+      - 'hotelling_entry_experimentation/production/verification/**'
+      - '.github/workflows/stage33-stage11-referee-audit.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  independent-entry-and-cost-audit:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Generate full frozen baseline independent of reviewer
+        working-directory: hotelling_entry_experimentation/production
+        run: |
+          make check
+          make data
+      - name: Recompute all four unilateral flips and cost robustness
+        working-directory: hotelling_entry_experimentation/production
+        run: |
+          python reviews/stage11_independent_entry_audit.py output/stage33_profiles.csv | tee /tmp/stage11-audit.json
+          grep -F 'PASS: 48-row independent entry/planner and cost fragility audit' /tmp/stage11-audit.json
