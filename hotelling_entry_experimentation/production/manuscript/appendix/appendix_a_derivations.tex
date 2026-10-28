@@ -105,7 +105,7 @@ For the frozen $(s_A,s_B)=(B,P)$ and $(B,B)$ profiles, changing only region $B$'
  T_s=W_B((B,B);F_{G_B}=0,s)-W_B((B,P);F_{G_B}=0,s).
  \label{eq:exact-public-threshold}
 \end{equation}
-The local public-addition margin at any $F_{G_B}$ is exactly $T_s-F_{G_B}$. In the maintained full-coverage opposite region, Proposition~3 equivalently gives
+The local public-addition margin at any $F_{G_B}$ is exactly $T_s-F_{G_B}$. In the maintained full-coverage opposite region, Lemma~3 equivalently gives
 $T_s=H_B+C(S_B^0\ell_B+S_B^1\ell_B^2/4)$,
 where the fee-selected $\ell_B$ is the appropriate private-only continuation for that technology scenario. The homogeneous comparison uses its own recentered matching coefficients; it is not obtained by reusing the heterogeneous cutoff.
 
@@ -167,7 +167,7 @@ If both cutoffs are positive, subtracting gives \eqref{eq:diagnostic-cutgap}.
 If only one is zero, it must be $\ell_L$: $U\geq d+h$ would also imply $U+h/2\geq d$.
 Thus $\ell_H\geq\ell_L$ everywhere, strictly for $h>0$ unless both are zero.
 
-For the heterogeneous technology Proposition~3 gives
+For the heterogeneous technology Lemma~3 gives
 \[
  T_H=N_i[u_i\ell_H-d/8+d\ell_H^2/2]+CS_i^0\ell_H
        +C\lambda K_i\ell_H^2/4.
@@ -192,3 +192,86 @@ The cutoffs and threshold difference are continuous in $\omega_i$ on this strict
 If also $0<u_i<2d/3$, the common direct-service threshold term is $N_i u_i(2-3u_i/d)/8>0$.
 Since the local matching terms are positive for $M_i>0$, both public thresholds are then positive: the opposite preference can concern a positive public cost.
 This is a conditional parameter region within the maintained model, not a new numerical calibration or a full first-stage equilibrium theorem.
+
+
+\clearpage
+\section{Proof and reproducibility of the central screening--incidence proposition}\label{app:screening-incidence}
+
+\subsection{Uniform weak-matching sign and positive public-access ceiling}
+Fix region $j$ at full participation throughout, $(m_j,q_j)=(1,1/2)$, and suppose the locally private-only optimum is interior. Maintain the original net venture return $R_0=p_0\Pi+\zeta^2\Pi^2/(2k)$ and gross successful-project probability intercept $p_b=p_0+\zeta^2\Pi/k$. Define $d=\Delta_i$, $\gamma=\rho\mu$, $U=u_i+\gamma N_j\omega_iR_0$, $\eta_i=\gamma N_j\omega_i\Pi/2$, and $D=d+\eta_i\lambda$. As in \eqref{eq:screen-primitive}, the optimal private cutoff is $\ell=(D-U)/(2D)$ and
+\[
+ \ell'=\frac{U\eta_i}{2D^2}.
+\]
+Differentiation of the exact welfare ceiling \eqref{eq:screen-threshold} gives \eqref{eq:diagnostic-derivative}. No envelope theorem is incorrectly applied to \emph{social} welfare at the privately optimal posted fee; the fee's endogenous participation effect remains explicit through $\ell'$.
+
+Holding $\rho$ fixed and reducing $\gamma$ by reducing $\mu$, the basic value $u_i=v_i+\rho w_i$ is constant. Over any fixed compact feasible $\lambda$ interval with strict interior continuation and success-probability restrictions,
+\[
+ \begin{aligned}
+ U&=u_i+O(\gamma),&
+ D&=d+O(\gamma),\\
+ \ell&=\frac{d-u_i}{2d}+O(\gamma),&
+ \ell'&=\frac{\gamma N_j\omega_i\Pi u_i}{4d^2}
+       +O(\gamma^2).
+ \end{aligned}
+\]
+Substituting in \eqref{eq:diagnostic-derivative} and collecting first-order terms yields
+\[
+ \begin{split}
+ T_i'(\lambda)
+  &=\frac{\gamma N_iN_j}{16d^2}
+     \left\{
+       4\omega_i\Pi u_i
+          \left[u_i+\frac{d-u_i}{2}\right]
+       +(M_i+\omega_i\Pi)(d-u_i)^2
+     \right\}+O(\gamma^2)\\
+  &=\frac{\gamma N_iN_j}{16d^2}
+       \left[M_i(d-u_i)^2+
+         \omega_i\Pi(d^2+3u_i^2)\right]
+         +O(\gamma^2).
+ \end{split}
+\]
+The remainder is uniform on the specified compact $\lambda$ set because all expressions are rational smooth functions of $(\gamma,\lambda)$ there and their denominators are bounded away from zero. Strict positivity of its leading coefficient therefore implies strict positivity of $T_i'$ for all sufficiently small positive $\gamma$, uniformly on that set.
+
+With $M_i<0$, the leading coefficient is positive exactly if
+\[
+ \omega_i>\frac{-M_i(d-u_i)^2}{\Pi(d^2+3u_i^2)}
+       =\omega_i^{\mathrm{crit}}.
+\]
+At the same time $K_i=M_i+\omega_i\Pi<0$ iff $\omega_i<-M_i/\Pi$. The feasible intersection in \eqref{eq:screen-inversion-band} is nonempty under the stated condition. Because $p_b\Pi-R_0=\zeta^2\Pi^2/(2k)\geq0$,
+\[
+ S_i^0=p_bM_i+\omega_iR_0
+     =p_bK_i-\frac{\omega_i\zeta^2\Pi^2}{2k}<0
+\]
+for $p_b>0$, $\omega_i\geq0$, and $K_i<0$.
+Thus the local venture-related increment from $P$ to $B$,
+$C[S_i^0\ell+\lambda K_i\ell^2/4]$, is strictly negative for $\gamma>0$, $\ell>0$, and feasible $\lambda\geq0$.
+
+For the economic significance of a positive fixed-cost ceiling, as $\gamma\downarrow0$,
+\[
+ T_i(\lambda)\longrightarrow
+ N_i\left[u_i\ell_0-\frac d8+\frac{d\ell_0^2}{2}\right]
+ =\frac{N_iu_i(2d-3u_i)}{8d},\qquad
+ \ell_0=\frac{d-u_i}{2d}.
+\]
+Hence $0<u_i<2d/3$ guarantees $T_i(\lambda)>0$ uniformly for sufficiently small positive $\gamma$, despite the negative venture component. This is a positive conditional social willingness to pay for \emph{basic services}, not the sign of a new venture's commercialisation payoff.
+
+Let $r_i=u_i/d\in(0,1)$. The critical appropriation share is
+$\omega_i^{\mathrm{crit}}=(-M_i/\Pi)(1-r_i)^2/(1+3r_i^2)$, and
+\[
+ \frac{d}{dr_i}\left(\frac{(1-r_i)^2}{1+3r_i^2}\right)
+   =-\frac{2(1-r_i)(1+3r_i)}{(1+3r_i^2)^2}<0.
+\]
+If $\omega_i=0$ and $M_i<0$, then $U=u_i$, $\eta_i=0$ and $\ell'=0$ exactly, so \eqref{eq:diagnostic-derivative} yields
+$T_i'=CM_i\ell^2/4<0$ even at positive finite $\gamma$, provided the interior branch holds. These special cases show that the sign inversion requires the interaction of positive basic-service value with the privately appropriable skill-complementarity channel, not merely the fact that $\lambda$ raises technical success.
+
+\subsection{Finite-matching continuous-parameter certificate}
+The weak-matching theorem above is analytical, and its sign condition is first-order in $\gamma$. We separately verify a nondegenerate interval at the original finite $\gamma=0.1$, original Cournot parameters and other frozen primitives, with A-region founder participation fixed at full coverage.
+
+The script \texttt{incidence\_screening\_sign\_certificate.py} reconstructs $(M_B,\Pi,p_b,R_0)$ from the original differentiated Cournot primitives as exact \texttt{Fraction} rational values. For all $\omega_B\in[0.13,0.27]$ (with $\omega_A=1-\omega_B$) and $\lambda\in[0,0.5]$, it uses an exact rational inclusion extension of the polynomial expression for $T_B'$. It partitions the closed $\omega_B\times\lambda$ rectangle into 100 closed subrectangles whose union covers \emph{every} parameter point. At each subrectangle it verifies strict bounds on the analytical derivative numerator, interior private cutoff, $K_B$ and $S_B^0$. This is interval proof, not a simulated sample of 100 parameter values.
+
+An independently written additional checker, \texttt{incidence\_screening\_valuation\_check.py}, uses the same exact Cournot primitives to establish over the entire rectangle
+\[
+ H_B>0,\quad T_B>0,\quad
+ C\left(S_B^0\ell_B+\frac{\lambda K_B\ell_B^2}{4}\right)<0.
+\]
+Both sources are re-executed alongside the existing full-game baseline price/entry certificate by the PR-specific GitHub Actions regression workflow. The interval certificate does not establish full four-player equilibrium uniqueness across the parameter rectangle or extend to the Beta$(2,2)$ ability distribution. The original manuscript's three exactly verified four-player equilibria are separate, narrower statements.

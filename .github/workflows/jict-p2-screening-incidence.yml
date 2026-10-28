@@ -1,0 +1,44 @@
+name: JICT P2 central screening-incidence proposition and anonymous PDFs
+on:
+  push:
+    branches:
+      - revision/stage11r-p2-incidence-screening-main-20261028
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  verify-and-build:
+    runs-on: ubuntu-latest
+    timeout-minutes: 40
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install LaTeX and PDF review tools
+        run: sudo apt-get update && sudo apt-get install -y latexmk texlive-latex-base texlive-latex-recommended texlive-latex-extra texlive-fonts-recommended lmodern poppler-utils
+      - name: Analytical threshold derivative, continuum signs, and original Cournot baseline
+        run: |
+          python hotelling_entry_experimentation/production/government_game_exploration/incidence_screening_sign_certificate.py
+          python hotelling_entry_experimentation/production/government_game_exploration/incidence_screening_valuation_check.py
+          python hotelling_entry_experimentation/production/reviews/stage11r_pp_global_certificate.py
+      - name: Build flat anonymous revised main paper and Online Supplement
+        run: python hotelling_entry_experimentation/production/revision_p1d/build_review.py
+      - name: Original frozen scientific checks and isolated exact diagnostics
+        run: python hotelling_entry_experimentation/production/revision_p1d/validate_revision.py
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: jict-p2-screening-incidence-anonymous-review-package
+          path: |
+            hotelling_entry_experimentation/production/revision_p1d/output/pdf/*.pdf
+            hotelling_entry_experimentation/production/revision_p1d/output/jict_anonymous_review_package.zip
+            hotelling_entry_experimentation/production/revision_p1d/submission_files/
+            hotelling_entry_experimentation/production/revision_p1d/build_checks.json
+            hotelling_entry_experimentation/production/revision_p1d/validation.json
+            hotelling_entry_experimentation/production/revision_p1d/*_build.log
+            hotelling_entry_experimentation/production/government_game_exploration/incidence_screening_sign_results.json
+            hotelling_entry_experimentation/production/government_game_exploration/incidence_screening_valuation_check.json
+          retention-days: 30
