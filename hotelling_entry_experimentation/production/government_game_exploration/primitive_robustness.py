@@ -45,6 +45,25 @@ def fresh_root(p):
  assert max(abs(float(z)) for z in b.stationary(x,p))<1e-12
  return [F(Decimal(f'{v:.15f}')) for v in x]
 
+def global_br_bounds(p):
+ """Same analytically proved BR sufficient inequalities as b.bounds,
+ relaxing its baseline-specific <0.01 reporting cutoff to the true
+ Banach contraction requirement <1. All checks remain exact rational.
+ """
+ u,a,bb=p['u'],p['a'],p['b'];h=[a[i]+bb[i] for i in (0,1)]
+ z=h[0]*h[1];assert z<1
+ out=[]
+ for i in (0,1):
+  j=1-i
+  lo=(1-z-u[i]-a[i])/(2+bb[i]/2-z)
+  hi=(1+bb[i]/2-u[i])/(2+bb[i]/2)
+  pli=u[i]+lo;phi=u[i]+a[i]+(1+bb[i]/2)*hi
+  L=h[i]+(1+bb[i]/2)*(bb[i]+bb[i]*h[j]+bb[j]*h[i]+h[i])/(2*(1-z))
+  assert 0<lo<hi<1 and u[i]+a[i]<pli<phi<u[i]+1
+  assert 0<L<1
+  out.append(dict(br_contraction_bound=float(L)))
+ return out
+
 def main():
  q0=weak(F(0),F(1,5));qh=weak(F(1,2),F(1,5))
  assert F(q0[0]['coefficient'])<0<F(qh[0]['coefficient'])
@@ -59,7 +78,7 @@ def main():
  for lam,wb in product((F(2,5),F(1,2),F(3,5)),(F(9,50),F(1,5),F(11,50))):
   p=primitive(lam,wb);assert p['pb']+lam<1
   assert all(p['fp'][i]<p['n'][i]/4 for i in (0,1))
-  sufficient=b.bounds(p)
+  sufficient=global_br_bounds(p)
   box,_=b.faces(p,fresh_root(p))
   pp=b.profile(('P','P'),p,box);bp=b.profile(('B','P'),p,box)
   pb=b.profile(('P','B'),p,box);bb=b.profile(('B','B'),p,box)
