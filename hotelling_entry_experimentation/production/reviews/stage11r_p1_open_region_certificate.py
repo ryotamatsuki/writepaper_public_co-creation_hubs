@@ -68,7 +68,7 @@ def pp_box_and_sufficient_conditions(p,center,radius):
     bounds=[]
     for i in (0,1):
         lo=(1-z-u[i]-a[i])/(2+b[i]/2-z)
-        hi=(1+b[i]/2-u[i])/(2+b[i]/2)
+        hi=I.wrap((1+b[i]/2-u[i])/(2+b[i]/2))
         assert lo.lo>0 and hi.hi<1 and lo.hi<hi.lo
         fee_lo=u[i]+lo
         fee_hi=u[i]+a[i]+(1+b[i]/2)*hi
