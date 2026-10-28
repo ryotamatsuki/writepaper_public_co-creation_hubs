@@ -1,0 +1,11 @@
+name = "stage33-co-creation-formal"
+version = "0.1.0"
+defaultTargets = ["Stage33Formal"]
+
+[[require]]
+name = "mathlib"
+scope = "leanprover-community"
+rev = "520045ab14e26149ee970e2e617ca04b09bde5d6"
+
+[[lean_lib]]
+name = "Stage33Formal"
