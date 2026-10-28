@@ -79,16 +79,29 @@ def main():
         assert strictly_neg(t["B_B"]-t["B_P"])
         if label=="skill_zero":
             assert strictly_neg(t["A_B"]-t["A_P"])
+            # Both governments are strategic substitutes in this scenario:
+            # on this open, exactly rational cost box there are TWO strict
+            # asymmetric pure equilibria (BP and PB) and one mixed equilibrium.
+            aa=(F(1147741,10000000),F(1147745,10000000))
+            bb=(F(4043,100000),F(4048,100000))
+            assert t["A_B"].hi<aa[0]<aa[1]<t["A_P"].lo
+            assert t["B_B"].hi<bb[0]<bb[1]<t["B_P"].lo
+            results[label]=results.get(label,{})
+            results[label]["two_pure_equilibria_cost_rectangle"]={
+                "A":[str(v) for v in aa],"B":[str(v) for v in bb],
+                "strict_pure_equilibria":["BP","PB"],
+                "additional_mixed_equilibrium":True,
+            }
         else:
             assert strictly_pos(t["A_B"]-t["A_P"])
-        results[label]={
+        results[label].update({
           "thresholds":{k:iv(x) for k,x in t.items()},
           "A_cross_effect":iv(t["A_B"]-t["A_P"]),
           "B_cross_effect":iv(t["B_B"]-t["B_P"]),
           "P_P_root_boxes":[[str(z) for z in v] for v in box],
           "private_entry_costs":[str(v) for v in p["fp"]],
           "private_entry_dominance_bounds":[str(v/4) for v in p["n"]],
-        }
+        })
         if label=="skill_half":
             # A best response to B: entry only when B enters.
             # B best response to A: entry only when A does not enter.
