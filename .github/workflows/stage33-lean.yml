@@ -1,0 +1,42 @@
+name: stage33-lean-formal
+on:
+  push:
+    branches: [formal/stage33-lean-verification]
+    paths:
+      - 'formal/**'
+      - '.github/workflows/stage33-lean.yml'
+  pull_request:
+    branches: [research/hotelling-entry-experimentation]
+    paths:
+      - 'formal/**'
+      - '.github/workflows/stage33-lean.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  verify-formal:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install elan
+        run: |
+          curl https://raw.githubusercontent.com/leanprover/elan/master/elan-init.sh -sSf | sh -s -- -y --default-toolchain none
+          echo "$HOME/.elan/bin" >> "$GITHUB_PATH"
+      - name: Build pinned Lean and Mathlib
+        working-directory: formal
+        run: |
+          lake update
+          lake exe cache get
+          lean --version
+          echo "MATHLIB_SHA=$(git -C .lake/packages/mathlib rev-parse HEAD)"
+          lake build --wfail
+      - name: Disallow holes and project axioms
+        run: |
+          if grep -nE '(^|[^[:alpha:]])(sorry|admit)([^[:alpha:]]|$)|^[[:space:]]*axiom[[:space:]]' formal/Stage33Formal.lean; then
+            echo 'Proof holes or project axioms found'
+            exit 1
+          fi
+          echo 'LEAN_ESCAPE_HATCH_AUDIT=PASS'
