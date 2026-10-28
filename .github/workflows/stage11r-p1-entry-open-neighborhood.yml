@@ -1,0 +1,34 @@
+name: Stage11R P1 cost thresholds and exact open parameter neighborhood
+on:
+  push:
+    branches: [audit/stage11r-p1-entry-open-neighborhood-20261028]
+    paths:
+      - "hotelling_entry_experimentation/production/reviews/stage11r_p1_open_region_certificate.py"
+      - "hotelling_entry_experimentation/production/reviews/stage11r_pp_global_certificate.py"
+      - ".github/workflows/stage11r-p1-entry-open-neighborhood.yml"
+      - "hotelling_entry_experimentation/production/reviews/STAGE11R_P1_OPEN_REGION_REPORT_2026-10-28.md"
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  exact-open-region:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: hotelling_entry_experimentation/production/reviews
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Verify global baseline private price Nash
+        run: python stage11r_pp_global_certificate.py
+      - name: Verify cost-only interval, binding actors and 3D noncost neighborhood
+        run: python stage11r_p1_open_region_certificate.py
+      - uses: actions/upload-artifact@v4
+        with:
+          name: stage11r-p1-exact-rational-entry-certificates
+          path: |
+            hotelling_entry_experimentation/production/reviews/stage11r_pp_global_certificate.json
+            hotelling_entry_experimentation/production/reviews/stage11r_p1_open_region_certificate.json
+          retention-days: 30
