@@ -1,0 +1,83 @@
+\section{Selection, complementarity and private pricing}\label{sec:propositions}
+
+Our analytical propositions describe \emph{conditional} equilibrium channels. They are not claims about arbitrary off-path price configurations or all equilibria of the full four-entrant game.
+
+\paragraph{Proposition 1 (local versus aggregate value of complementarity).}
+Suppose both founder populations participate, both differentiated-product Cournot markets remain at the fixed interior quantities in \eqref{eq:cournot}, and founder types are independent uniform random variables. Then
+\begin{equation}
+ \frac{\partial W_i}{\partial\lambda}=\frac{C}{4}K_i,\qquad
+ \frac{\partial(W_A+W_B)}{\partial\lambda}
+ =\frac{C}{4}(M_A+M_B+\Pi).
+ \label{eq:P1}
+\end{equation}
+Consequently, the national marginal welfare effect and either jurisdiction's marginal welfare effect need not have the same sign.
+
+\emph{Reason.} With full participation $m_i=1$ and $q_i=1/2$, and neither the direct-service values, the fixed Cournot market, nor $e^*$ respond to $\lambda$ in the maintained conditional calculation. The only varying term in \eqref{eq:Wi} is $Cq_Aq_B\lambda K_i$, giving \eqref{eq:P1}. By $\omega_A+\omega_B=1$, $K_A+K_B=M_A+M_B+\Pi$.
+The signs differ when a local incumbent-loss term $M_i$ outweighs local venture-profit attribution $\omega_i\Pi$ while net nationwide gains remain positive. A successful innovation can therefore benefit the two regions unevenly even before government entry is endogenised.
+
+\paragraph{Proposition 2 (private fee, participation and composition).}
+Fix the other region's $(m_j,q_j)$ with $q_j>0$. Maintain $0<U_i<T_i$ in \eqref{eq:monopolyfee}, $\omega_i>0$, $\Pi>0$ and $z_i=\theta_i$. Then as $\lambda$ increases:
+\begin{equation}
+ \frac{\partial f_i^*}{\partial\lambda}>0,\qquad
+ \frac{\partial\ell_i^*}{\partial\lambda}>0,\qquad
+ \frac{\partial m_i}{\partial\lambda}<0,\qquad
+ \frac{\partial q_i}{\partial\lambda}<0,\qquad
+ \frac{\partial\mathbb E[\theta_i\mid\mathrm{join}]}{\partial\lambda}>0.
+ \label{eq:P2}
+\end{equation}
+This result is conditional on fixed opposite-region participation and interior pricing.
+
+\emph{Reason.} By \eqref{eq:matchingcoeff},
+$T_i=\Delta_i+\rho\mu N_j\omega_i\lambda\Pi q_j$
+has strictly positive derivative while $U_i$ is constant. Equation \eqref{eq:monopolyfee} gives
+\begin{equation}
+ f_i^*=(U_i+T_i)/2,\quad
+ \ell_i^*=\tfrac12-\tfrac{U_i}{2T_i},\quad
+ \frac{\partial\ell_i^*}{\partial\lambda}
+ =\frac{U_i}{2T_i^2}\frac{\partial T_i}{\partial\lambda}>0.
+\end{equation}
+Then $m_i=1-\ell_i$, $q_i=(1-\ell_i^2)/2$, and the conditional mean type is $(1+\ell_i)/2$. Notice the distinction: \emph{mean talent rises while the aggregate mass and unnormalised talent moment fall}. Replacing $q_i$ by the conditional mean in \eqref{eq:Wi} would yield an incorrect welfare calculation.
+
+\paragraph{Corollary 1 (selection compared with random admission).}
+For a fixed participation mass $m_i=1-\ell_i$, the upper-tail selected skill moment satisfies
+\begin{equation}
+ q_i^{\mathrm{selected}}-\frac{m_i}{2}
+ =\frac{\ell_i(1-\ell_i)}{2}\geq0.
+ \label{eq:C1}
+\end{equation}
+This compares \emph{the same mass} under different selection rules, not two reoptimised pricing equilibria. Across both regions, positive assortative selection changes $q_Aq_B$ separately from $m_Am_B$.
+
+\paragraph{Economic interpretation.}
+Greater technological complementarity makes high-ability founders more valuable to a private specialist and can raise the private fee. This screening reduces the number of collaborating founders but increases average capability among the remaining participants. A free basic service changes the \emph{extensive} margin (more founders) and the \emph{composition} margin (who participates). A one-dimensional aggregate matching-rate parameter cannot represent both margins without additional restrictions.
+
+\section{Public provision and interregional welfare}\label{sec:welfare}
+
+\paragraph{Proposition 3 (conditional co-provision threshold and cross-border wedge).}
+Fix a region $j$ with full participation $(m_j,q_j)=(1,1/2)$ and suppose region $i$ has a private-only provider with interior cutoff $\ell_i\in(0,1)$. Compare the fixed configurations $(s_i,s_j)=(P,s_j)$ and $(B,s_j)$, preserving the specified downstream continuations. Define the gain in real direct service value before the government fixed cost by
+\begin{equation}
+ H_i=N_i\left(u_i\ell_i-\frac{\Delta_i}{8}
+              +\frac{\Delta_i\ell_i^2}{2}\right).
+ \label{eq:H}
+\end{equation}
+The local government weakly prefers adding a free basic public service precisely when $F_{G_i}\leq F_i^{\mathrm{local}}$, where
+\begin{equation}
+ F_i^{\mathrm{local}}=
+ H_i+C\left(S_i^0\ell_i+
+             \frac{\lambda K_i\ell_i^2}{4}\right).
+ \label{eq:localcutoff}
+\end{equation}
+The restricted national welfare comparison instead uses
+\begin{align}
+ F_i^{\mathrm{national}}-F_i^{\mathrm{local}}
+ &=C\ell_i\left(S_j^0+
+               \frac{\lambda K_j\ell_i}{4}\right).
+ \label{eq:wedge}
+\end{align}
+Thus the national-minus-local public-entry threshold can be positive, zero, or negative, depending on the foreign market incidence of the extra venture activity.
+
+\emph{Reason.} Adding $G_i$ changes region $i$'s participation from $(1-\ell_i,(1-\ell_i^2)/2)$ to $(1,1/2)$. With $m_j=1$ and $q_j=1/2$, the additional match count is $C\ell_i$ and the additional skill exposure is $C\ell_i^2/4$. The change in direct service value is $H_i$. The local welfare difference is \eqref{eq:localcutoff} minus $F_{G_i}$. Foreign welfare has no local service/fixed-cost change and increases by $C(S_j^0\ell_i+\lambda K_j\ell_i^2/4)$; adding this gives \eqref{eq:wedge}.
+
+Importantly, \eqref{eq:wedge} does \emph{not} compare unconstrained socially optimal taxes, fees, investment or service technologies. Nor does a preferred conditional public addition ensure that all four independent stage-1 players jointly choose the corresponding configuration. The global restricted planner and stage-1 pure Nash conditions must still be evaluated across all sixteen profiles.
+
+\paragraph{Economic interpretation.}
+A municipality pays its own public fixed cost and internalises its own founders', consumers' and incumbent producers' outcomes. The neighbouring jurisdiction may gain from more cross-region collaborations, or may lose when new products compete with established producers. Underprovision is therefore \emph{possible but not automatic}; the opposite wedge is also possible. The institutional concern is the difference between \emph{where a service is financed} and \emph{where the resulting venture gains or losses accrue}.
