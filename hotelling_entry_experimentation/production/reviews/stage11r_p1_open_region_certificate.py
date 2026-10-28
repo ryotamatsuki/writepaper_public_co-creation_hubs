@@ -72,7 +72,7 @@ def pp_box_and_sufficient_conditions(p,center,radius):
         assert lo.lo>0 and hi.hi<1 and lo.hi<hi.lo
         fee_lo=u[i]+lo
         fee_hi=u[i]+a[i]+(1+b[i]/2)*hi
-        assert (u[i]+a[i]).hi<fee_lo.lo and fee_hi.hi<(u[i]+1).lo
+        assert I.wrap(u[i]+a[i]).hi<fee_lo.lo and fee_hi.hi<I.wrap(u[i]+1).lo
         h=(b[i]+b[i]*hh[1-i]+b[1-i]*hh[i]+hh[i])
         B=hh[i]+(1+b[i]/2)*h/(2*(1-z))
         assert B.hi<F(1,100),(i,B.approx())
