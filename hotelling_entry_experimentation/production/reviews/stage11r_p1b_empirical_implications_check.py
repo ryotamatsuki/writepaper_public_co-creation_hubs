@@ -18,8 +18,10 @@ SCENARIOS=((F(0),False,"skill_lambda_zero"),
 DATA=[]
 
 def verify_screening(p):
-    """Fixed rival moments and fixed private-only U,T on interior tariff arm."""
-    U=F(2,5);T=F(5,4);N=F(3)
+    """Frozen region-B private-only U,T, with full rival coverage; tariff deviations."""
+    # Use the actual frozen region-B primitives against a fully covered region A.
+    U=p['u'][1]+p['a'][1]
+    T=F(1)+p['b'][1]/2
     assert 0<U<T
     l1,l2=F(1,5),F(3,5)
     outcome=[]
@@ -35,7 +37,7 @@ def verify_screening(p):
     assert outcome[1]['q']<outcome[0]['q']
     assert outcome[1]['mean']>outcome[0]['mean']
     assert -1/T<0 and -l1/T<0 and 1/(2*T)>0
-    return {"comparison":"fixed U,T and rival moments; two admissible fee/cutoff points",
+    return {"comparison":"actual frozen region-B U,T with m_A=1 and q_A=1/2; two admissible tariff deviations",
             "analytical_derivatives":{"dm_df":str(-1/T),"dq_df_at_l1":str(-l1/T),
                                      "dmean_df":str(1/(2*T))},
             "points":outcome}
