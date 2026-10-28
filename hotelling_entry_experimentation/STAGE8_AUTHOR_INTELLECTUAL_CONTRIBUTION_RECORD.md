@@ -22,7 +22,7 @@ These are `AUTHOR` judgments about economic purpose, research direction, admissi
 - `AI`: Stage 33 modelling support; Stage4 repair; numerical game analysis; Stage6 re-kill; Stage7 welfare accounting; Stage7.5A scope report; drafting formal source and frozen candidate.
 - `COMPUTATION`: independent Python Cournot/payoff and price-deviation tests; 7x16 baseline audit, 13x16 welfare cases; exact rational coefficient regeneration on 2026-10-28.
 - `FORMAL`: Lean 4 v4.32.1 and Mathlib at SHA `520045ab14e26149ee970e2e617ca04b09bde5d6`; CI success on exact formal source; 18 theorem statements accepted under encoded hypotheses, with proof-critical-core scope.
-- `AUTHOR` proof verification: **NOT RECORDED**.
+- `AUTHOR` scope/proof-logic review: **SELF-ATTESTED COMPLETE for the three specifically named review points** (2026-10-28 JST). No independently authored mathematical derivation or author-run Lean verification is documented.
 - `EXTERNAL HUMAN`: **NOT RECORDED**.
 
 ## Required author's own review — explicit self-attestation received
