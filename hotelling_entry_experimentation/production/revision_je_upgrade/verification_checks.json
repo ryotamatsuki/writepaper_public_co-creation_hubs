@@ -1,0 +1,165 @@
+{
+  "baseline_commit": "3d2eaf2",
+  "scope_regression": {
+    "baseline": "3d2eaf2",
+    "sympy_version": "1.14.0",
+    "symbolic_regression": {
+      "S0_identity_residual": "0",
+      "zero_baseline_S0": "0",
+      "positive_baseline_K_negative_implies_S0_negative": true,
+      "p0_positive_branch": true,
+      "zeta_positive_branch": true
+    },
+    "active_targets": {
+      "main": {
+        "display_instances": 48,
+        "display_multiset_equal": true,
+        "label_multiset_equal": true,
+        "tabular_multiset_equal": true
+      },
+      "supplement": {
+        "display_instances": 26,
+        "display_multiset_equal": true,
+        "label_multiset_equal": true,
+        "tabular_multiset_equal": true
+      }
+    },
+    "protected_changed": [],
+    "proposition_statement_change": "EXACTLY authorised p_b>0 hypothesis insertion; all other statement text unchanged",
+    "protected_scientific_files_compared": 28,
+    "archived_PR73_files_compared": 18,
+    "lean": "NOT EXECUTED BY THIS CHECK; existing Stage33Formal does not encode Proposition 1; source byte-identical"
+  },
+  "existing_baseline_script_runs": [
+    {
+      "script": "reviews/stage11r_pp_global_certificate.py",
+      "returncode": 0
+    },
+    {
+      "script": "reviews/stage11r_p1_open_region_certificate.py",
+      "returncode": 0
+    },
+    {
+      "script": "reviews/stage11r_p1b_empirical_implications_check.py",
+      "returncode": 0
+    },
+    {
+      "script": "reviews/stage11r_p1c_reduction_check.py",
+      "returncode": 0
+    },
+    {
+      "script": "verification/stage33_reproduce.py",
+      "returncode": 0
+    },
+    {
+      "script": "government_game_exploration/incidence_screening_sign_certificate.py",
+      "returncode": 0
+    },
+    {
+      "script": "government_game_exploration/incidence_screening_valuation_check.py",
+      "returncode": 0
+    },
+    {
+      "script": "revision_p1d/diagnostic_check.py",
+      "returncode": 0
+    },
+    {
+      "script": "verification/beta22_adverse.py",
+      "returncode": 0
+    },
+    {
+      "script": "verification/referee_sensitivity.py",
+      "returncode": 0
+    }
+  ],
+  "existing_revised_script_runs": [
+    {
+      "script": "reviews/stage11r_pp_global_certificate.py",
+      "returncode": 0
+    },
+    {
+      "script": "reviews/stage11r_p1_open_region_certificate.py",
+      "returncode": 0
+    },
+    {
+      "script": "reviews/stage11r_p1b_empirical_implications_check.py",
+      "returncode": 0
+    },
+    {
+      "script": "reviews/stage11r_p1c_reduction_check.py",
+      "returncode": 0
+    },
+    {
+      "script": "verification/stage33_reproduce.py",
+      "returncode": 0
+    },
+    {
+      "script": "government_game_exploration/incidence_screening_sign_certificate.py",
+      "returncode": 0
+    },
+    {
+      "script": "government_game_exploration/incidence_screening_valuation_check.py",
+      "returncode": 0
+    },
+    {
+      "script": "revision_p1d/diagnostic_check.py",
+      "returncode": 0
+    },
+    {
+      "script": "verification/beta22_adverse.py",
+      "returncode": 0
+    },
+    {
+      "script": "verification/referee_sensitivity.py",
+      "returncode": 0
+    }
+  ],
+  "regenerated_output_comparison": {
+    "reviews/stage11r_pp_global_certificate.json": {
+      "byte_equal": true,
+      "sha256": "75820f51d689a903e142373818a53833da3f070f44ee344b30f43140ce085056"
+    },
+    "reviews/stage11r_p1_open_region_certificate.json": {
+      "byte_equal": true,
+      "sha256": "ffbf679b59d14dab93e90a12875ff19fe79210ee35add2cfbfcc9aae6b72eb1d"
+    },
+    "government_game_exploration/incidence_screening_sign_results.json": {
+      "byte_equal": true,
+      "sha256": "1775bc1f1c60a868f5252821a346b13054657706582f02821d526baaeaa4f450"
+    },
+    "government_game_exploration/incidence_screening_valuation_check.json": {
+      "byte_equal": true,
+      "sha256": "40207ae19c514eb6e14ab45140fdb88fc7d8688f05a63e935d72a6790e8eca77"
+    },
+    "revision_p1d/diagnostic_results.json": {
+      "byte_equal": true,
+      "sha256": "eb534ccb9bba6ebc1e341a1789cd1010b7958c54f0789ecd12646a6ae34967d8"
+    },
+    "output/beta22_adverse.json": {
+      "byte_equal": true,
+      "sha256": "c7bff20bcfaa3276bfde1429273ce90a9282ff2dd1d60195f7e783504bf5a66d"
+    },
+    "output/referee_2d_entry_sensitivity.csv": {
+      "byte_equal": true,
+      "sha256": "0173a0a2b74e90f1601fa3d99ab72d4011e79d8d5391cf7a425a1d906f9a436f"
+    },
+    "output/referee_lambda_fixed_cost.svg": {
+      "byte_equal": true,
+      "sha256": "22bcf2176ced3819b90d87b7d91261566084229ea88fc10b7692474c64287ede"
+    }
+  },
+  "lean_rebuild": "NOT RUN: toolchain unavailable",
+  "scientific_scope": "Authorised narrowing of Proposition 1 to positive baseline success. All displayed formulas and numerical results unchanged.",
+  "pdf_qa": {
+    "main_pages": 37,
+    "supplement_pages": 8,
+    "abstract_words": 197,
+    "all_45_pages_contact_sheet_review": true,
+    "changed_proposition_and_supplement_page_review": true,
+    "warnings": []
+  },
+  "pdf_sha256": {
+    "je_revised_manuscript.pdf": "0ef84ef90fcd4752127615f294839186ef11214d2e40cf76724ca444dd19723f",
+    "online_supplement.pdf": "1062ca226a8c4f147f99c6c8ab11c093db75751ee3bfe948ac61c2817979894f"
+  }
+}
