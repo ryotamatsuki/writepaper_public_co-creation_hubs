@@ -35,7 +35,7 @@ jobs:
       - name: Install LaTeX compiler and bibliography tools
         run: |
           sudo apt-get update -qq
-          sudo DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends latexmk texlive-latex-recommended texlive-fonts-recommended texlive-latex-extra
+          sudo DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends latexmk texlive-latex-recommended texlive-fonts-recommended texlive-latex-extra lmodern
       - name: Compile provisional modular manuscript with bibliography
         working-directory: hotelling_entry_experimentation/production
         run: make paper
