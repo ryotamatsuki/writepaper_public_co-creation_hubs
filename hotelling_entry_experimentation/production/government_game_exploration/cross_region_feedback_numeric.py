@@ -1,0 +1,63 @@
+#!/usr/bin/env python3
+"""Independent no-dependency Newton continuation: P/P fees fully repriced.
+Numerical diagnostics only; exact local comparative-static coefficient is
+checked separately by additional_identities.py and its derivation report.
+"""
+from fractions import Fraction as F
+import math
+PI=F(1656500,14969161)
+N=(3.,1.);OMEGA=(.8,.2);U=(.238,.28)
+def test(p0,gamma):
+ r0=float(F(p0)*PI+PI*PI/F(32)); PIF=float(PI); lam=.5
+ a=[gamma*N[1-i]*OMEGA[i]*r0 for i in (0,1)]
+ b=[gamma*N[1-i]*OMEGA[i]*lam*PIF for i in (0,1)]
+ def foc(l):
+  d=[1+b[i]*(1-l[1-i]**2)/2 for i in (0,1)]
+  c=[a[i]+b[i]*l[0]*l[1] for i in (0,1)]
+  fee=[U[i]+a[i]*(1-l[1-i])+d[i]*l[i] for i in (0,1)]
+  return [(1-l[i])*(d[i]-c[0]*c[1]/d[1-i])-fee[i] for i in (0,1)]
+ x=[.381,.360]
+ for _ in range(12):
+  q=foc(x)
+  if max(abs(z) for z in q)<1e-13:break
+  eps=1e-6
+  s=foc([x[0]+eps,x[1]]); t=foc([x[0],x[1]+eps])
+  a00=(s[0]-q[0])/eps;a10=(s[1]-q[1])/eps
+  a01=(t[0]-q[0])/eps;a11=(t[1]-q[1])/eps
+  det=a00*a11-a01*a10
+  assert abs(det)>1e-5
+  x[0]-=(q[0]*a11-q[1]*a01)/det
+  x[1]-=(a00*q[1]-a10*q[0])/det
+  assert 0<x[0]<1 and 0<x[1]<1
+ assert max(abs(z) for z in foc(x))<1e-12
+ # After A switches P->B, its m_A=1, q_A=1/2.
+ # Private B's global conditional monopoly optimum is this cutoff.
+ U_B=U[1]+a[1];T_B=1+b[1]/2
+ cutoff_B=(T_B-U_B)/(2*T_B)
+ observed=(cutoff_B-x[1])/gamma
+ # Independently recover the equilibrium j fee from coupled FOC cutoffs.
+ D_B_PP=1+b[1]*(1-x[0]**2)/2
+ fee_PP=U[1]+a[1]*(1-x[0])+D_B_PP*x[1]
+ fee_BP=(U_B+T_B)/2
+ observed_fee=(fee_BP-fee_PP)/gamma
+ ell_A=(1-U[0])/2
+ predicted=N[0]*OMEGA[1]*ell_A/4*(lam*PIF*U[1]*ell_A-2*r0)
+ predicted_fee=N[0]*OMEGA[1]/2*(r0*ell_A+lam*PIF*ell_A**2/2)
+ return observed,predicted,observed_fee,predicted_fee
+
+def main():
+ for p0,expected in [(F(1,20),-1),(F(1,1000),1)]:
+  errors=[];price_errors=[]
+  for gamma in (1e-3,1e-4,1e-5):
+   obs,pred,actual_fee,pred_fee=test(p0,gamma)
+   assert obs*expected>0 and pred*expected>0
+   errors.append(abs(obs-pred))
+   assert actual_fee>0 and pred_fee>0
+   price_errors.append(abs(actual_fee-pred_fee))
+   print(f"p0={p0} gamma={gamma} actual_coefficient={obs:.14g} predicted={pred:.14g} abs_error={errors[-1]:.4g}")
+  assert errors[2]<errors[1]<errors[0]
+  assert errors[-1]<1e-8
+  assert price_errors[2]<price_errors[1]<price_errors[0]
+  assert price_errors[-1]<1e-8
+ print("PASS independent coupled P/P repricing confirms neighboring price rise and sign-ambiguous participation under weak matching")
+if __name__=="__main__":main()
