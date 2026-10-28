@@ -1,0 +1,21 @@
+\section{Results map and scope (Stage 10 proof exposition pending)}
+The freeze records four principal claims with explicitly bounded quantifiers. First, at full participation and fixed interior Cournot continuation,
+\begin{equation}
+ \frac{\partial W_i}{\partial\lambda}=\frac{C}{4}(M_i+\omega_i\Pi),
+ \qquad
+ \frac{\partial(W_A+W_B)}{\partial\lambda}=\frac{C}{4}(M_A+M_B+\Pi).
+\end{equation}
+Regional and aggregate signs may differ (P1). Second, with other-region participation fixed and an interior private-only price, increased ability complementarity raises the private price and cutoff; the participation mass and total selected first skill moment fall, although mean skill among participants rises (P2). This is not a global comparative static of every entry configuration.
+
+Third, for a conditional addition of a local free provider to an existing local private one, with the other region fully covered, let $\ell_i$ be the initial private-only cutoff. The admissible local and national fixed-cost thresholds satisfy
+\begin{align}
+ F_i^{\mathrm{local}}&=H_i+C\left(S_i^0\ell_i+\lambda K_i\ell_i^2/4\right),\\
+ F_i^{\mathrm{national}}-F_i^{\mathrm{local}}
+ &=C\ell_i\left(S_j^0+\lambda K_j\ell_i/4\right),
+ \qquad K_i=M_i+\omega_i\Pi.
+\end{align}
+The wedge can have either sign (P3). This conditional comparison is distinct from finding a sixteen-profile equilibrium and a globally preferred provision profile.
+
+Finally, under one documented admissible uniform-type/Cournot baseline, numerical continuation checks identify a first-stage shift from $(B,P)$ at $\lambda=0$ to $(B,B)$ at $\lambda=0.5$, with a local indifference near $\lambda=0.3511840318401$ (P4). The specified restricted planner chooses $(B,B)$ at both endpoints. A pooled-ability comparison retains $(B,P)$ at $\lambda=0.5$. These are numerical existence illustrations within the frozen baseline, not a global uniqueness or robustness result. The corresponding negative portability checks under Beta ability and differentiated Bertrand competition also remain in force.
+
+\paragraph{Formal-verification status.} Lean 4 certifies eighteen proof-critical statements under the documented hypotheses, not the full two-region game or unrestricted equilibrium existence. Full proposition proofs and robustness exposition are Stage~10--11 tasks, not newly certified by this Stage~9 scaffold.
