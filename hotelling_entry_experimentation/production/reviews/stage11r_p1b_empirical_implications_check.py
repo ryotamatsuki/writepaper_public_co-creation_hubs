@@ -62,6 +62,24 @@ def verify_coprovision(p):
             "B_gross_revenue":float(RB),"B_net_private_profit":float(RB-p['fp'][1]),
             "conditional_revenue_difference_positive":True}
 
+def verify_skill_complementarity(p):
+    """Exact discrete difference-in-differences for frozen success technology."""
+    alo,ahi=F(1,5),F(3,5)
+    blo,bhi=F(1,5),F(4,5)
+    lam=p['lam']
+    def probability(a,b):
+        return p['pb']+lam*a*b
+    vals=[probability(a,b) for a in (alo,ahi) for b in (blo,bhi)]
+    assert all(0<=v<=1 for v in vals)
+    interaction=(probability(ahi,bhi)-probability(ahi,blo)
+                 -probability(alo,bhi)+probability(alo,blo))
+    assert interaction==lam*(ahi-alo)*(bhi-blo)
+    if lam>0:assert interaction>0
+    else:assert interaction==0
+    return {"model_pair_success_interaction":str(interaction),
+            "lambda":str(lam),
+            "interpretation":"exact frozen project success technology; NOT identified from observational paired projects"}
+
 def verify_foreign_welfare(p):
     """Identity for local B addition at fixed region A status B."""
     a=('B','P');z=('B','B')
@@ -90,8 +108,9 @@ for lam,pooled,name in SCENARIOS:
     DATA.append({"scenario":name,
                  "screening":verify_screening(p),
                  "coprovision":verify_coprovision(p),
+                 "skill_complementarity":verify_skill_complementarity(p),
                  "regional_wedge":verify_foreign_welfare(p)})
-    print("PASS",name,"conditional fee screening, co-provision revenue and regional welfare accounting")
+    print("PASS",name,"conditional fee screening, co-provision, pair skill success and regional welfare accounting")
 
 with open("stage11r_p1b_empirical_implications_checks.json","w") as file:
     json.dump({"version":"STAGE33-2026-10-28-THEORY-FREEZE-v1",
