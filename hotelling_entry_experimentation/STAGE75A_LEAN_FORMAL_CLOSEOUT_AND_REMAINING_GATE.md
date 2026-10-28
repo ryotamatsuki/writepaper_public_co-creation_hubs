@@ -2,7 +2,9 @@
 
 Date: 2026-10-28 JST
 Research: two-region public/private innovation intermediation, Stage 33.
-Status: **TECHNICAL PROOF-CRITICAL FORMAL GATE = FORMAL VERIFICATION PASS; full Stage 7.5A GO = NOT YET ISSUED (AUTHOR INTELLECTUAL-CONTRIBUTION GATE OPEN)**.
+Status: **GO — GENERALITY / QUANTIFIER / PORTABILITY CERTIFICATION PASS (BOUNDED CLAIM SCOPE); FORMAL VERIFICATION PASS (PROOF-CRITICAL CORE)**.
+
+Closeout date: 2026-10-28 JST. The author explicitly replied **「著者自身の確認しました」** to the three named proof/equilibrium review points. This response is recorded as a self-attested review, not an independent reproof or external human audit. See `STAGE8_AUTHOR_INTELLECTUAL_CONTRIBUTION_RECORD.md`. All prior parameter, function-class, equilibrium-selection and adverse portability restrictions remain unchanged.
 
 ## Prior condition and closure
 
@@ -31,10 +33,12 @@ Portability tests remain exactly the pre-specified Beta(2,2) and differentiated 
 
 Stage 4A `GO` applies **only under the documented pricing uniqueness sufficient conditions**. The independent 112-profile audit, global one-player fee-deviation attack, multiple equilibrium/indifference tests and boundary-case exception register remain necessary inputs; Lean does not replace them. A P/P regime without the sufficient conditions is `UNRESOLVED`, not automatically equilibrium-certified.
 
-## Author-accountability hard gate — outstanding
+## Author-accountability gate — scope-limited author confirmation received
 
-User messages substantively accepted the bounded economic research question and requested formalization/freeze; these are `AUTHOR` decisions on research direction only. They do **not** attest that the author personally checked the proof/cutoff/model-to-formal mapping, understood all strategic assumptions, or reviewed the final freeze identifier.
+The author has confirmed completion of the three expressly identified mathematics/equilibrium review topics in the conversation on 2026-10-28 JST. The record captures the exact user statement and limits the provenance claim to **author-reported review**; no authored proof sketch, kernel run, or human third-party verification is invented.
 
-Until the author intellectual-contribution record contains authentic proof/equilibrium-level judgments, the required literal Stage 7.5A verdict `GO — GENERALITY / QUANTIFIER / PORTABILITY CERTIFICATION PASS` **must not be issued**. Hence Stage 8 canonical technical object can be assembled and version-locked, but the workflow verdict stays `FREEZE BLOCKED`.
+With the previously certified Stage 4A *restricted-parameter* mathematics, the original Stage 7.5A negative Beta(2,2)/Bertrand portability tests, the exact Lean proof-core PASS, and this scoped author accountability confirmation, the final routing verdict for the unchanged Stage 33 bounded claim set is:
 
-No change in primitive model or new theorem is authorized by this closeout.
+**`GO — GENERALITY / QUANTIFIER / PORTABILITY CERTIFICATION PASS`.**
+
+This verdict does not upgrade P4 from a baseline existence illustration to a general theorem; does not prove the global simultaneous P/P pricing game in all domains; does not establish any all-equilibrium welfare invariance at indifference points; and does not make the Lean proof a full-game certificate. New strategic/theorem content requires returning to the earliest affected stage and renewing applicable certificates.
