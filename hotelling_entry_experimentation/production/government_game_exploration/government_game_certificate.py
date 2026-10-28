@@ -8,6 +8,7 @@ threshold intervals; claims apply only to the original skill lambda=1/2 case.
 """
 from fractions import Fraction as F
 from decimal import Decimal
+from itertools import product
 from pathlib import Path
 import json, sys
 sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "reviews"))
@@ -106,6 +107,50 @@ def main():
             results[label]["unique_mixed_government_equilibrium_midpoint"]={
               "prob_A_public":iv(prob_A),"prob_B_public":iv(prob_B)
             }
+            # The restricted social planner's sixteen-profile comparison is
+            # also strict throughout the entire analytic cost rectangle.
+            def welfare_interval(st):
+                r=b.profile(st,p,box)
+                v=r["welfare"][0]+r["welfare"][1]
+                for i,k in enumerate(("A","B")):
+                    if st[i] in ("G","B"):
+                        lo,hi=COST_BOX[k]
+                        v=v + p["fg"][i] - b.I(lo,hi)
+                return v
+            planner=("P","B")
+            best=welfare_interval(planner)
+            gaps={}
+            for st in product(b.STATES,repeat=2):
+                if st==planner:continue
+                gap=best-welfare_interval(st)
+                assert gap.lo>0,("restricted planner not P/B",st,gap.approx())
+                gaps["".join(st)]=iv(gap)
+            results[label]["restricted_planner"]={
+                "selected":"PB",
+                "strictly_beats_all_15_alternatives_in_cost_rectangle":True,
+                "minimum_welfare_gap_lower_bound":min(x["lower_approx"] for x in gaps.values()),
+            }
+            # Strict welfare inefficiency of the unique mixed equilibrium:
+            # its support contains non-planner profiles with positive probability.
+            one=b.I(1)
+            costs_mid={"A":fa,"B":fb}
+            def welfare_mid(st):
+                r=b.profile(st,p,box)
+                v=r["welfare"][0]+r["welfare"][1]
+                for i,k in enumerate(("A","B")):
+                    if st[i] in ("G","B"):
+                        v=v+p["fg"][i]-costs_mid[k]
+                return v
+            weights={
+              ("P","P"):(one-prob_A)*(one-prob_B),
+              ("P","B"):(one-prob_A)*prob_B,
+              ("B","P"):prob_A*(one-prob_B),
+              ("B","B"):prob_A*prob_B,
+            }
+            expected=sum((welfare_mid(st)*pr for st,pr in weights.items()),b.I(0))
+            loss=welfare_mid(planner)-expected
+            assert loss.lo>0
+            results[label]["midpoint_mixed_vs_planner_welfare_loss"]=iv(loss)
     results["uniform_P_P_price_contraction_skill_lambda_0_to_half"]=uniform_price_contraction()
     # Strict A cross-sign reversal at lambda=0 and lambda=1/2, plus
     # uniform continuity/uniqueness, implies >=1 zero by intermediate value
