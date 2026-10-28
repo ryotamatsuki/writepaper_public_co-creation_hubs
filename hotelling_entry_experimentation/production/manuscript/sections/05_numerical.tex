@@ -1,4 +1,4 @@
-\section{A verified illustration and its economic scale}\label{sec:numerical}
+\section{The inversion at finite matching intensity and equilibrium scale}\label{sec:numerical}
 
 We retain the original numerical primitives rather than selecting a wider reversal after the fact.
 All magnitudes are model units, not an empirical calibration of a particular programme.
@@ -20,6 +20,32 @@ Pooled, $0.5$ & $(B,P)$ & $(B,B)$ & $0.0400432292$\\\bottomrule
 \end{tabular}
 \par\smallskip\footnotesize $B$: free basic plus paid premium; $P$: private only. The last column is region $B$'s public-entry cost threshold conditional on region $A$ remaining in $B$. The common baseline cost is $0.0405$. Planner means the restricted sixteen-configuration welfare benchmark.
 \end{table}
+
+\paragraph{The central proposition at finite matching intensity.}
+The principal analytical result is not the discrete three-scenario equilibrium switch; it is the sign of the conditional public-access cost ceiling when skill complementarity increases. At the original $p_0=0.05$, $\gamma=0.1$, $u_B=0.28$ and the original differentiated-product Cournot solution, the weak-matching primitive-share boundary from Proposition~1 is
+\[
+ \omega_B^{\mathrm{crit}}\simeq0.1167164,\qquad
+ -M_B/\Pi\simeq0.2781020.
+\]
+The original $\omega_B=0.2$ is strictly between them. Unlike this weak-matching asymptotic criterion, the following finite-$\gamma$ validation is independent of taking $\gamma$ arbitrarily close to zero.
+
+The Online Supplement's exact rational interval checker proves that, for \emph{every} $(\omega_B,\lambda)$ in
+\begin{equation}
+ 0.13\leq\omega_B\leq0.27,\quad
+ 0\leq\lambda\leq0.5,\quad \omega_A=1-\omega_B,
+ \label{eq:inversion-rectangle}
+\end{equation}
+holding all other original primitive values and full founder participation in A, the B-region continuation is interior and satisfies
+\begin{equation}
+ K_B<0,\quad S_B^0<0,\quad
+ H_B>0,\quad T_B(\lambda)>0,\quad
+ \frac{\partial T_B}{\partial\lambda}>0,
+ \quad C\left(S_B^0\ell_B+\frac{\lambda K_B\ell_B^2}{4}\right)<0.
+ \label{eq:inversion-verified}
+\end{equation}
+All strict inequalities are proved over the \emph{continuous} two-dimensional rectangle using inclusion-bounded exact rational subrectangles, not from a grid of simulated equilibrium outcomes. The certified conservative lower bounds are $T_B>0.04036779$ and $\partial T_B/\partial\lambda>0.00003340$; the venture-related increment is strictly negative throughout. This establishes a genuinely nondegenerate primitive domain for the \emph{conditional} screening--incidence inversion at finite matching intensity. It does \emph{not} imply that the full four-entrant pure equilibrium changes at all these parameter values.
+
+With original $\omega_B=0.2$, the conditional cost ceiling rises from $T_B(0)\simeq0.0404250710$ to $T_B(0.5)\simeq0.0405316701$, and the derivative is strictly positive for every intermediate $\lambda$. Despite its continuously verified sign, the entire increase is only $0.0001065991$ in model cost units. A fixed cost must lie between the two ceilings for the conditional public-entry decision to change; proving the actual four-entrant stage-1 switch additionally requires the separate off-path Nash and entry-deviation certificates reported below.
 
 \paragraph{What drives the three-way switch?}
 In region $B$, $M_B\simeq-0.0307750$ and $\omega_B\Pi\simeq0.0221322$, so $K_B\simeq-0.00864284<0$ and $S_B^0\simeq-0.000568455<0$.
