@@ -89,8 +89,12 @@ def main() -> None:
         for name in ("main", "supplement"):
             log = (build / (name + ".log")).read_text(encoding="utf-8", errors="replace")
             for pattern in patterns:
-                if re.search(pattern, log, flags=re.I):
-                    errors.append(f"{name}: {pattern}")
+                matches = list(re.finditer(pattern, log, flags=re.I))
+                for match in matches[:8]:
+                    if pattern.startswith('Overfull'):
+                        errors.append(f"{name}: {pattern}: " + log[max(0,match.start()-50):match.start()+300].replace('\\n',' | '))
+                    else:
+                        errors.append(f"{name}: {pattern}")
             if re.search(r"Underfull \\[hv]box", log):
                 warnings.append(f"{name}: Underfull box present (review manually)")
         if errors:
