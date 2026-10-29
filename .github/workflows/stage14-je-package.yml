@@ -1,0 +1,45 @@
+name: Stage 14 JE fresh build and preview
+on:
+  push:
+    branches:
+      - revision/kawasaki-results-restructure-20261029
+    paths:
+      - 'hotelling_entry_experimentation/production/manuscript/**'
+      - 'hotelling_entry_experimentation/production/submission_je/**'
+      - 'hotelling_entry_experimentation/production/reviews/STAGE14_*'
+      - '.github/workflows/stage14-je-package.yml'
+  pull_request:
+    branches:
+      - review/kawasaki-style-frozen-results-inventory-20261029
+    paths:
+      - 'hotelling_entry_experimentation/production/manuscript/**'
+      - 'hotelling_entry_experimentation/production/submission_je/**'
+      - '.github/workflows/stage14-je-package.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  clean-je-build:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.pull_request.head.sha || github.sha }}
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install TeX and PDF inspection tools
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y latexmk texlive-latex-base texlive-latex-recommended texlive-latex-extra texlive-fonts-recommended lmodern poppler-utils
+      - name: Independently compile both JE PDFs and create NON-FINAL preview
+        run: python3 hotelling_entry_experimentation/production/submission_je/prepare_je_package.py
+      - name: Upload preview and SHA evidence (not submission authorisation)
+        uses: actions/upload-artifact@v4
+        with:
+          name: JE-Stage14-PREVIEW-needs-author-confirmation
+          path: |
+            hotelling_entry_experimentation/production/_stage14_preview/JE_STAGE14_PREVIEW_NEEDS_AUTHOR_CONFIRMATION.zip
+            hotelling_entry_experimentation/production/_stage14_preview/build_report.json
+          if-no-files-found: error

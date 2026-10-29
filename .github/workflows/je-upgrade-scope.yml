@@ -1,0 +1,62 @@
+name: JE upgrade scope and frozen evidence
+on:
+  push:
+    branches:
+      - revision/kawasaki-results-restructure-20261029
+    paths:
+      - 'hotelling_entry_experimentation/production/manuscript/**'
+      - 'hotelling_entry_experimentation/production/reviews/JE_UPGRADE_SCOPE_CHECK_2026-10-29.py'
+      - '.github/workflows/je-upgrade-scope.yml'
+  pull_request:
+    branches:
+      - review/kawasaki-style-frozen-results-inventory-20261029
+    paths:
+      - 'hotelling_entry_experimentation/production/manuscript/**'
+      - 'hotelling_entry_experimentation/production/reviews/JE_UPGRADE_SCOPE_CHECK_2026-10-29.py'
+      - '.github/workflows/je-upgrade-scope.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  hypothesis-and-baseline:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install symbolic regression dependency
+        run: python -m pip install sympy==1.14.0
+      - name: Check the authorised hypothesis repair and frozen evidence
+        run: python hotelling_entry_experimentation/production/reviews/JE_UPGRADE_SCOPE_CHECK_2026-10-29.py
+      - name: Rebuild existing conditional and global baseline certificates
+        run: |
+          python hotelling_entry_experimentation/production/government_game_exploration/incidence_screening_sign_certificate.py
+          python hotelling_entry_experimentation/production/government_game_exploration/incidence_screening_valuation_check.py
+          python hotelling_entry_experimentation/production/reviews/stage11r_pp_global_certificate.py
+  preserved-formal-core:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install elan
+        run: |
+          curl https://raw.githubusercontent.com/leanprover/elan/master/elan-init.sh -sSf | sh -s -- -y --default-toolchain none
+          echo "$HOME/.elan/bin" >> "$GITHUB_PATH"
+      - name: Rebuild the existing pinned formal core
+        working-directory: formal
+        run: |
+          lake update
+          lake exe cache get
+          lean --version
+          echo "MATHLIB_SHA=$(git -C .lake/packages/mathlib rev-parse HEAD)"
+          lake build --wfail
+      - name: Reject proof holes and project axioms
+        run: |
+          if grep -nE '(^|[^[:alpha:]])(sorry|admit)([^[:alpha:]]|$)|^[[:space:]]*axiom[[:space:]]' formal/Stage33Formal.lean; then
+            exit 1
+          fi
+          echo 'Existing formal core only: Proposition 1 remains outside this Lean model.'

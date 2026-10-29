@@ -1,0 +1,30 @@
+{
+  "baseline": "3d2eaf2",
+  "sympy_version": "1.14.0",
+  "symbolic_regression": {
+    "S0_identity_residual": "0",
+    "zero_baseline_S0": "0",
+    "positive_baseline_K_negative_implies_S0_negative": true,
+    "p0_positive_branch": true,
+    "zeta_positive_branch": true
+  },
+  "active_targets": {
+    "main": {
+      "display_instances": 48,
+      "display_multiset_equal": true,
+      "label_multiset_equal": true,
+      "tabular_multiset_equal": true
+    },
+    "supplement": {
+      "display_instances": 26,
+      "display_multiset_equal": true,
+      "label_multiset_equal": true,
+      "tabular_multiset_equal": true
+    }
+  },
+  "protected_changed": [],
+  "proposition_statement_change": "EXACTLY authorised p_b>0 hypothesis insertion; all other statement text unchanged",
+  "protected_scientific_files_compared": 28,
+  "archived_PR73_files_compared": 18,
+  "lean": "NOT EXECUTED BY THIS CHECK; existing Stage33Formal does not encode Proposition 1; source byte-identical"
+}

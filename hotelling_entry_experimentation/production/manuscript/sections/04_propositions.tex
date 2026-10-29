@@ -1,7 +1,7 @@
-\section{Conditional mechanisms}\label{sec:propositions}
+\section{Public provision and regional economic characteristics}\label{sec:propositions}
+The policy question is whether the real fixed cost of adding free basic access is justified by the change in regional welfare. The relevant regional characteristics are the consumer and incumbent effect, the share of venture profits retained by founders, and basic-service value relative to premium value. They enter a conditional comparison with the partner region fully participating; no general entry comparative static is assumed.
 
-The following preparatory lemmas isolate regional welfare incidence, privately priced selection, and the conditional cost threshold that enter the paper's central screening--incidence proposition in Section~\ref{sec:diagnostic}. Their general screening and welfare-accounting principles are established in prior research, not independent priority claims. Each comparison holds the stated continuation objects fixed.
-
+\subsection{Regional commercialisation incidence}
 \paragraph{Lemma 1 (regional incidence).}
 With full founder participation, fixed interior Cournot quantities and independent uniform abilities,
 \begin{equation}
@@ -14,49 +14,8 @@ Local and aggregate signs can differ because incumbent displacement and assigned
 The derivatives follow from $q_Aq_B=1/4$ and $K_A+K_B=M_A+M_B+\Pi$.
 No participant or price response is included in this full-coverage calculation.
 
-\paragraph{Lemma 2 (conditional fee selection).}
-Fix the other region's $(m_j,q_j)$ with $q_j>0$, maintain $0<U_i<T_i$, $\omega_i>0$, $\Pi>0$ and $z_i=\theta_i$.
-Increasing $\lambda$ then implies
-\begin{equation}
- \frac{\partial f_i^*}{\partial\lambda}>0,\quad
- \frac{\partial\ell_i^*}{\partial\lambda}>0,\quad
- \frac{\partial m_i}{\partial\lambda}<0,\quad
- \frac{\partial q_i}{\partial\lambda}<0,\quad
- \frac{\partial(q_i/m_i)}{\partial\lambda}>0.
- \label{eq:P2}
-\end{equation}
-Indeed $T_i'=\rho\mu N_j\omega_i\Pi q_j>0$, while $U_i$ is constant, and the monopoly formula gives
-$\ell_i^*=1/2-U_i/(2T_i)$ and $\ell_i'=U_iT_i'/(2T_i^2)>0$.
-Participant mean ability $(1+\ell_i)/2$ rises even as the total represented ability falls.
-This is not a P/P price-equilibrium comparative static.
 
-\paragraph{Corollary 1 (the fixed-mass benchmark).}
-At participation mass $m_i=1-\ell_i$, selected ability exceeds random admission of the same mass by
-\begin{equation}
- q_i-\frac{m_i}{2}=\frac{\ell_i(1-\ell_i)}2\geq0.
- \label{eq:C1}
-\end{equation}
-At a fixed cutoff and with the other region fully covered, the selected-minus-pooled technological welfare increment is
-\begin{equation}
- \left.(W_i^{\mathrm{skill}}-W_i^{\mathrm{pooled}})\right|_{\mathrm{same\ cutoff}}
- =\frac{C\lambda K_i}{4}\ell_i(1-\ell_i).
- \label{eq:fixedmass-composition}
-\end{equation}
-It has the sign of $K_i$; it does not compare reoptimised pricing equilibria.
-
-\paragraph{Exact participation reduction.}
-Eliminating the uniform upper-tail cutoff yields
-\begin{equation}
- q_i=\phi(m_i),\quad \phi(m)=m-m^2/2,\quad
- q_Aq_B=\phi(m_A)\phi(m_B).
- \label{eq:single-index-reduction}
-\end{equation}
-The identity also holds in $0,G,B$ states.
-Match volume and ability-weighted exposure have different economic meanings, but are not independent endogenous state dimensions here.
-A nonlinear participation-externality representation is possible.
-
-\section{Local and national public-access thresholds}\label{sec:welfare}
-
+\subsection{The conditional public cost ceiling}
 \paragraph{Lemma 3 (conditional public addition).}
 Fix the other region at $(m_j,q_j)=(1,1/2)$ and let region $i$ have a private-only continuation with $\ell_i\in(0,1)$.
 Define the direct-service gain before government cost by
@@ -85,3 +44,86 @@ Adding the neighbouring welfare increment gives the national threshold.
 The same accounting extends to full-coverage corners using the realised cutoff.
 It does not establish a full four-entry equilibrium or an optimum over fees, research allocations, subsidies or buildings.
 The Online Supplement provides the continuation and accounting proofs.
+
+\subsection{Regional primitives and technical complementarity}\label{sec:diagnostic}
+Consider the public-access margin from private-only provision ($P$) to free basic access coexisting with private premium provision ($B$). Fix the partner jurisdiction in $G$ or $B$, so $(m_j,q_j)=(1,1/2)$; the private intermediary in region $i$ nevertheless reoptimises its fee in the private-only continuation. This is a \emph{conditional institutional comparison}, not a global comparative static of all four stage-1 entry decisions.
+
+Write $d=\Delta_i$, $\gamma=\rho\mu$, $C=\gamma N_iN_j$, and set
+\begin{equation}
+ U=u_i+\gamma N_j\omega_iR_0,\quad
+ \eta_i=\frac{\gamma N_j\omega_i\Pi}{2},\quad
+ D=d+\eta_i\lambda,\quad
+ \ell=\frac{D-U}{2D},
+ \label{eq:screen-primitive}
+\end{equation}
+on the interior branch $0<U<D$. The private-only fee is $(U+D)/2$, whereas free basic provision restores access to all founder types, with premium pricing at $d/2$.
+Using Lemma~3, the gross local public-access value, before government fixed cost, is
+\begin{equation}
+ T_i(\lambda)=N_i\left(u_i\ell-\frac d8+\frac{d\ell^2}{2}\right)
+        +C\left(S_i^0\ell+\frac{\lambda K_i\ell^2}{4}\right),
+ \qquad K_i=M_i+\omega_i\Pi .
+ \label{eq:screen-threshold}
+\end{equation}
+Differentiating while keeping the research-market primitives, $\rho$, and $u_i$ fixed gives the exact identity
+\begin{equation}
+ \begin{split}
+ T_i'(\lambda)={}&
+ \left[N_i(u_i+d\ell)+CS_i^0\right]
+       \frac{U\eta_i}{2D^2}\\
+ &+\frac{CK_i}{4}
+       \left(\ell^2+\frac{\lambda\ell U\eta_i}{D^2}\right).
+ \end{split}
+ \label{eq:diagnostic-derivative}
+\end{equation}
+The first line describes the access restored by the rising private fee-induced exclusion cutoff, including its baseline matching component; the second is the regional return to the technically different additional research pairs. The two need not have the same sign.
+
+\paragraph{Proposition 1 (the screening--incidence inversion).}\label{prop:inversion}
+Maintain the model's uniform and perfectly aligned technical-skill/premium-value distribution, a positive interior Cournot continuation, an interior local private-only fee, partner full participation, $M_i<0$, $0<u_i<d$, $\Pi>0$, nonnegative $R_0$, and a positive baseline success intercept $p_b>0$ as defined in \eqref{eq:effort}. Fix a compact interval of technologically feasible $\lambda\geq0$. Define
+\begin{equation}
+ \omega_i^{\mathrm{crit}}
+ =\frac{-M_i}{\Pi}
+     \frac{(d-u_i)^2}{d^2+3u_i^2}.
+ \label{eq:omega-critical}
+\end{equation}
+Suppose the interval
+\begin{equation}
+ \boxed{\qquad
+ \omega_i^{\mathrm{crit}}<\omega_i<
+            \min\left\{1,\frac{-M_i}{\Pi}\right\}
+ \qquad}
+ \label{eq:screen-inversion-band}
+\end{equation}
+is nonempty. As $\gamma=\rho\mu\downarrow0$, holding $\rho$ and the basic-service value $u_i$ fixed, the conditional public-access threshold satisfies, uniformly on the specified $\lambda$ interval,
+\begin{equation}
+ \frac{\partial T_i}{\partial\lambda}
+  =\frac{\gamma N_iN_j}{16d^2}
+    \left[M_i(d-u_i)^2+
+          \omega_i\Pi(d^2+3u_i^2)\right]
+       +O(\gamma^2).
+ \label{eq:main-primitive-slope}
+\end{equation}
+Consequently, at every sufficiently small positive $\gamma$,
+\begin{equation}
+ K_i<0,\qquad S_i^0<0,\qquad
+ \frac{\partial T_i}{\partial\lambda}>0
+ \label{eq:main-inversion}
+\end{equation}
+throughout the $\lambda$ interval. If in addition $0<u_i<2d/3$, then $T_i(\lambda)>0$ uniformly at sufficiently small positive $\gamma$. Thus public provision can have a positive affordable fixed cost and become more valuable as technical complementarity rises even though its incremental research-commercialisation surplus is strictly negative in the financing region.
+
+The critical share $\omega_i^{\mathrm{crit}}$ strictly decreases in $u_i/d$ on $(0,1)$. At $\omega_i=0$ and $M_i<0$, by contrast, the private screening response to $\lambda$ disappears and $T_i'(\lambda)=CK_i\ell^2/4<0$ on the interior branch. These are implications of the existing primitives rather than new policy instruments. The proof and the uniformity conditions are in the Online Supplement. The proposition concerns the \emph{gross conditional public cost ceiling}, not an all-parameter four-player subgame-perfect equilibrium or an optimum across taxes, subsidies and physical facilities.
+
+Two distinctions matter. First, $S_i^0=p_bK_i-\omega_i\zeta^2\Pi^2/(2k)<0$ when $K_i<0$ and $p_b>0$; the adverse regional return applies to baseline as well as skill-complementarity-induced ventures. Second, \eqref{eq:screen-inversion-band} provides a nonempty feasible band only when $\omega_i^{\mathrm{crit}}<\min\{1,-M_i/\Pi\}$; positive basic-service value alone does not guarantee that its intersection with feasible profit shares is nonempty. The sign restriction is first-order in weak matching, while Section~\ref{sec:numerical} separately certifies a finite-matching closed rectangle for the original economic environment.
+
+
+\paragraph{Economic intuition: opposing effects.}
+The reversal arises because complementarity changes private participation before the government evaluates free basic access. On the interior private-only branch, greater complementarity raises the specialist's optimal fee and the exclusion cutoff. A free basic option then restores service access to a larger group of founders, although some users substitute away from the paid premium. This \emph{access-recovery effect} increases the value of the public alternative. The government must evaluate the private-only counterfactual at the fee the specialist actually chooses, rather than hold its participation cutoff fixed.
+
+The opposing \emph{commercialisation-incidence effect} is negative when $K_i=M_i+\omega_i\Pi<0$: more successful ventures reduce the financing region's combined consumer, incumbent and assigned founder return. Equation~\eqref{eq:diagnostic-derivative} separates the fee-induced recovery of service value from the regional returns associated with additional skill exposure. Under sufficiently weak positive matching, the leading coefficient in \eqref{eq:main-primitive-slope} gives the exact condition under which the former effect dominates the latter. The result does not presume that additional commercialisation is beneficial; the value of basic service access is distinct from its downstream market incidence.
+
+\paragraph{Why the founder-profit share has two roles.}
+The share $\omega_i$ governs both the private willingness to pay generated by a successful match and the portion of venture earnings retained locally. If the share is too small, complementarity generates too little fee-induced exclusion for recovered access to dominate adverse local incidence; at zero share the screening response disappears. If the share is too large, the premise of negative local commercialisation incidence fails because founders retain more of the venture return. Proposition~1 identifies an intermediate interval in which the negative-incidence premise and a positive slope of the public cost ceiling coexist. On the stated interior domain, a higher basic-service value relative to premium value lowers the critical share. This is not a general claim that increasing basic-service value necessarily raises the level of the ceiling.
+
+The distinction is between a \emph{change in a conditional cost ceiling} and a \emph{change in actual provision}. A positive $T_i'(\lambda)$ does not by itself ensure a positive affordable fixed cost without the additional level condition, nor does it establish a switch in the four-party entry equilibrium. The interval is defined by the local Cournot-derived market effect and the fee-selection primitives. No general signed comparative static for incumbent numbers, regional populations or arbitrary matching intensities follows.
+
+\paragraph{Baseline success and the strict sign.}
+The condition $p_b>0$ makes the baseline-incidence conclusion strict: the existing proof writes $S_i^0$ as $p_bK_i$ minus a nonnegative research-cost term. It holds at all reported numerical primitives. The degenerate case $p_0=\zeta=0$ is outside Proposition~1: its baseline incidence is zero, although technical-complementarity effects can remain. This restriction concerns the stated sign, rather than an additional research or service mechanism.
