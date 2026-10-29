@@ -8,6 +8,13 @@ on:
       - 'hotelling_entry_experimentation/production/submission_je/**'
       - 'hotelling_entry_experimentation/production/reviews/STAGE14_*'
       - '.github/workflows/stage14-je-package.yml'
+  pull_request:
+    branches:
+      - review/kawasaki-style-frozen-results-inventory-20261029
+    paths:
+      - 'hotelling_entry_experimentation/production/manuscript/**'
+      - 'hotelling_entry_experimentation/production/submission_je/**'
+      - '.github/workflows/stage14-je-package.yml'
   workflow_dispatch:
 permissions:
   contents: read
