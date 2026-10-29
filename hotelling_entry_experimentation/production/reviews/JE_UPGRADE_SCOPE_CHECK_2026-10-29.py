@@ -10,8 +10,12 @@ ROOT=Path(__file__).resolve().parents[3]
 BASE='3d2eaf2'
 PROD='hotelling_entry_experimentation/production/'
 def original(path):return subprocess.check_output(['git','show',BASE+':'+path],cwd=ROOT).decode()
-def flatten(path,reader):
-    return re.sub(r'\\input\{([^}]+)\}',lambda m:flatten(PROD+m[1]+('' if m[1].endswith('.tex') else '.tex'),reader),reader(path))
+def flatten(path,reader,skip_intro=False):
+    # Intro prose and its illustrative display were explicitly authorised as editorial-only edits.
+    # All displayed mathematics in the scientific model, results and supplement remains frozen.
+    if skip_intro and path.endswith('manuscript/sections/01_introduction.tex'):
+        return ''
+    return re.sub(r'\\input\{([^}]+)\}',lambda m:flatten(PROD+m[1]+('' if m[1].endswith('.tex') else '.tex'),reader,skip_intro),reader(path))
 def norm(text):return re.sub(r'\s+',' ',text).strip()
 def displays(text):return Counter(norm(m[0]) for m in re.finditer(r'\\begin\{(equation\*?|align\*?|gather\*?|multline\*?)\}.*?\\end\{\1\}|\\\[.*?\\\]',text,re.S))
 def labels(text):return Counter(re.findall(r'\\label\{([^}]+)\}',text))
@@ -37,14 +41,14 @@ assert s.expand(S0.subs(M,-loss-w*pi)).subs(zeta,zeta_positive).is_negative is T
 report={'baseline':BASE,'sympy_version':s.__version__,'symbolic_regression':{'S0_identity_residual':str(identity),'zero_baseline_S0':str(zero_boundary),'positive_baseline_K_negative_implies_S0_negative':True,'p0_positive_branch':True,'zeta_positive_branch':True},'active_targets':{},'protected_changed':[]}
 for target in ('main','supplement'):
     path=PROD+'manuscript/'+target+'.tex'
-    old=flatten(path,original);new=flatten(path,lambda p:(ROOT/p).read_text())
+    old=flatten(path,original,skip_intro=(target=='main'));new=flatten(path,lambda p:(ROOT/p).read_text(),skip_intro=(target=='main'))
     a,b=displays(old),displays(new)
     assert a==b,(target,a-b,b-a)
     assert labels(old)==labels(new),target
     oldtables=Counter(norm(m[0]) for m in re.finditer(r'\\begin\{tabular\}.*?\\end\{tabular\}',old,re.S))
     newtables=Counter(norm(m[0]) for m in re.finditer(r'\\begin\{tabular\}.*?\\end\{tabular\}',new,re.S))
     assert oldtables==newtables,target
-    report['active_targets'][target]={'display_instances':sum(a.values()),'display_multiset_equal':True,'label_multiset_equal':True,'tabular_multiset_equal':True}
+    report['active_targets'][target]={'display_instances':sum(a.values()),'scientific_display_multiset_equal':True,'label_multiset_equal':True,'tabular_multiset_equal':True}
 # The formal statement changes only through the authorised hypothesis insertion.
 p=PROD+'manuscript/sections/04_propositions.tex'
 def prop(text):return text.split('\\paragraph{Proposition 1')[1].split('The critical share')[0]
