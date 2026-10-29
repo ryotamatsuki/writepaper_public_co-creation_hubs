@@ -106,9 +106,9 @@ def main() -> None:
 
         submission = {
             "manuscript.pdf": build / "main.pdf",
-            "manuscript.tex": build / "main.tex",
+            "main.tex": build / "main.tex",
             "ESM_1.pdf": build / "supplement.pdf",
-            "ESM_1.tex": build / "supplement.tex",
+            "supplement.tex": build / "supplement.tex",
             "references.bib": build / "references.bib",
             "cover_letter_DRAFT.txt": COVER,
         }
