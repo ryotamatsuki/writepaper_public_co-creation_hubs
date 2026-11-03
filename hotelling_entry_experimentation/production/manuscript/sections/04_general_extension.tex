@@ -1,0 +1,74 @@
+% BEGIN JE20261104_EXTENSION
+\paragraph{Corollary 1 (the fee-adjustment sign contrast).}\label{cor:repricing}
+Under the strict primitive-share band in Proposition~1, fix any reference
+$\lambda_0$ in its compact feasible interval. Consider a diagnostic
+counterfactual that holds the private-only posted fee at the optimal
+$f_i^P(\lambda_0)$ while varying $\lambda$ locally; the free-basic-plus-premium
+continuation is otherwise unchanged. Let $T_i^{\mathrm{fr}}$ be its gross
+conditional public cost ceiling, and $T_i$ the equilibrium-fee ceiling.
+For all sufficiently weak positive matching intensities,
+\begin{equation}
+ \left.\frac{dT_i^{\mathrm{fr}}}{d\lambda}\right|_{\lambda_0}<0
+ <\left.\frac{dT_i}{d\lambda}\right|_{\lambda_0}.
+ \label{eq:repricing-reversal}
+\end{equation}
+Indeed, with $D=d+\eta_i\lambda$, freezing the fee locally gives
+$\ell^{\mathrm{fr}}(\lambda)=
+[f_i^P(\lambda_0)-U]/D$ and hence
+$(\ell^{\mathrm{fr}})'|_{\lambda_0}=-\eta_i\ell(\lambda_0)/D(\lambda_0)<0$.
+The first-order fee-freezing effect and the already negative
+$K_i$ together make the cost-ceiling slope negative;
+reoptimisation instead increases exclusion, yielding Proposition~1's
+positive slope. This is a mechanism-isolating \emph{off-equilibrium fee}
+comparison, not a second pricing equilibrium or a policy instrument.
+The proof is in Online Resource~1.
+
+\paragraph{Proposition 2 (regular-distribution screening--incidence boundary).}
+\label{prop:general-distribution}
+The conditional sign inversion is not confined to uniformly distributed
+skills. Replace the local skill distribution by a continuously distributed
+$F_i$ on $[0,1]$, with positive twice continuously differentiable density
+$g_i$ on the interior and nondecreasing hazard
+$h_i(t)=g_i(t)/[1-F_i(t)]$. Retain $z_i=\theta_i$ and
+all other technological, payoff and timing primitives; hold the other
+region at full participation with mean skill
+$\bar\theta_j=\mathbb E[\theta_j]>0$.
+Assume $u_i h_i(0+)<d=\Delta_i$, positive baseline $p_b$,
+$M_i<0$, $\Pi>0$, and a compact feasible $\lambda$ interval.
+Let $\ell_0\in(0,1)$ be the unique global private-only admission cutoff
+at zero matching intensity, satisfying
+$d[1-F_i(\ell_0)]=(u_i+d\ell_0)g_i(\ell_0)$. Write
+\begin{equation}
+ \begin{gathered}
+ J_F=\int_0^{\ell_0}t g_i(t)\,dt,\quad
+ B_F=2d g_i(\ell_0)+(u_i+d\ell_0)g_i'(\ell_0)>0,\\
+ A_F=\frac{u_i(u_i+d\ell_0)g_i(\ell_0)^2}{dB_F}>0,
+ \qquad
+ \omega_{i,F}^{\mathrm{crit}}
+   =\frac{-M_i}{\Pi}\frac{J_F}{J_F+A_F}.
+ \end{gathered}\label{eq:general-share-band}
+\end{equation}
+For sufficiently small positive $\gamma=\rho\mu$, uniformly on that
+$\lambda$ interval, the gross conditional public-access ceiling obeys
+\begin{equation}
+ \frac{dT_i^F}{d\lambda}
+ =\gamma N_iN_j\bar\theta_j
+   \bigl[M_i J_F+\omega_i\Pi(J_F+A_F)\bigr]
+   +O(\gamma^2).
+ \label{eq:general-slope}
+\end{equation}
+Consequently, if the feasible share band
+$\omega_{i,F}^{\mathrm{crit}}<\omega_i<\min\{1,-M_i/\Pi\}$
+is nonempty, then $K_i<0$, $S_i^0<0$, and
+$dT_i^F/d\lambda>0$ throughout the compact interval for sufficiently
+small positive $\gamma$. An \emph{additional} positive level of the
+cost ceiling requires that the zero-matching direct-service gain
+$N_i\{u_iF_i(\ell_0)+d[q_i(\tau_B)-q_i(\ell_0)]\}$ be strictly
+positive, where $q_i(t)=\int_t^1xg_i(x)\,dx$ and $\tau_B$ is the
+optimal co-provision premium cutoff. For the uniform distribution and
+$\bar\theta_j=1/2$, equation~\eqref{eq:general-slope} reduces exactly
+to Proposition~1. This is a conditional \emph{distributional extension},
+not a theorem for arbitrary skill--taste correlation, endogenous partner
+coverage or the full four-entrant game. Proof and the sufficient
+hazard-based global fee condition are given in Online Resource~1.
+% END JE20261104_EXTENSION
