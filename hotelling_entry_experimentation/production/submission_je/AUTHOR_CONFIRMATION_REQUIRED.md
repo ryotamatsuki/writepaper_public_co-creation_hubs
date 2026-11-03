@@ -1,3 +1,11 @@
+# Stage 15 author metadata reconciliation (2026-11-03 JST)
+
+**Historical metadata consistency verified:** Previous actual journal submission receipts and title-page files for Ryota Matsuki use the same name, independent-researcher affiliation in Matsuyama, corresponding Gmail address and ORCID as this manuscript. The address was used for actual journal correspondence; the ORCID appears in prior submission materials. No private postal address or telephone is included here. See `reviews/STAGE15_FINAL_REFERENCE_AND_AUTHOR_AUDIT_2026-11-03.md` for the verification record.
+
+**The four identity/contact fields need not be re-invented or treated as unsupported placeholders.** Historical independent-researcher submissions also used no-external-funding and no-competing-interests declarations. Those are precedents, not a fresh attestation concerning this specific paper. Any contribution of employer resources, financial/nonfinancial interests, institutional approval/authority, overlap/exclusivity and the accuracy of the broader substantive LLM-use statement remains the author's responsibility. Do not tick these current-article declarations merely by copying an earlier paper.
+
+---
+
 # Author confirmation gate — do not infer facts from generated files
 
 The existing source currently prints:
