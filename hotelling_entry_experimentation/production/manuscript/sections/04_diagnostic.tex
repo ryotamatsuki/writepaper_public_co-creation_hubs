@@ -58,7 +58,11 @@ $T_H-T_L=C\lambda M_i\ell(\ell-1)/4<0$ for $\lambda>0$.
 The strict sign persists for sufficiently small positive $\omega_i$ by continuity. A positive technical effect on local product-market welfare can therefore diminish the marginal value of restoring a lower-skill group. The proposition and this equal-mean diagnostic answer different questions: Proposition~1 changes $\lambda$ within the heterogeneous technology; \eqref{eq:diagnostic-gap} changes the distribution of technical gains at fixed $\lambda$. Neither yields an unrestricted policy prescription.
 \subsection{The conditional proposition at finite matching intensity}
 
-The principal analytical result is not the discrete three-scenario equilibrium switch; it is the sign of the conditional public-access cost ceiling when skill complementarity increases. At the original $p_0=0.05$, $\gamma=0.1$, $u_B=0.28$ and the original differentiated-product Cournot solution, the weak-matching primitive-share boundary from Proposition~1 is
+The principal analytical result is not the discrete three-scenario equilibrium switch; it is the sign of the conditional public-access cost ceiling when skill complementarity increases. The first-order coefficient in \eqref{eq:main-primitive-slope} can equivalently be written as
+$\gamma N_iN_j\Pi(d^2+3u_i^2)(\omega_i-\omega_i^{\mathrm{crit}})/(16d^2)$.
+For fixed primitives and a bounded change in $\lambda$, the weak-matching change in this \emph{conditional} ceiling is thus of order $\gamma$; its leading coefficient also approaches zero as the founder share approaches the critical share from above. This explains why a mathematically strict positive slope need not generate a large monetary margin or a wide interval of public fixed costs that reverses provision. The expansion alone neither bounds the finite-matching remainder numerically nor certifies a four-actor equilibrium change; the separate interval and entry-deviation checks remain necessary.
+
+At the original $p_0=0.05$, $\gamma=0.1$, $u_B=0.28$ and the original differentiated-product Cournot solution, the weak-matching primitive-share boundary from Proposition~1 is
 \[
  \omega_B^{\mathrm{crit}}\simeq0.1167164,\qquad
  -M_B/\Pi\simeq0.2781020.
@@ -155,8 +159,9 @@ At product substitutability $\chi=0.95$, the $\lambda=0.5$ baseline returns to $
 These are alternative numerical regimes, not proofs of price equilibria for every perturbed primitive.
 
 Under the separately checked $\operatorname{Beta}(2,2)$ ability distribution, the numerical equilibrium and restricted planner allocation are $(P,P)$ at both $\lambda=0$ and $0.5$.
-The corresponding conditional region-$B$ public-addition margins are about $-0.0305626$ and $-0.0304756$.
-The original configuration switch therefore disappears at the unchanged costs.
+The corresponding conditional region-$B$ public-addition margins, comparing $(B,B)$ against $(B,P)$ with region $A$ fully participating, are about $-0.0305626$ and $-0.0304756$.
+Adding back the unchanged region-$B$ public fixed cost of $0.0405$ gives gross conditional cost ceilings of about $0.0099374$ and $0.0100244$, respectively. Their two-point increase of about $0.0000870$ has the same direction as the original uniform-distribution comparison, but both ceilings remain well below the actual public fixed cost. Thus the failure of the discrete provision switch at unchanged costs should not be confused with a demonstrated reversal of this two-point \emph{conditional} cost-ceiling comparison.
+Crucially, these Beta results use selected numerical continuations: two reported values do \emph{not} prove $T_B'(\lambda)>0$ between them, verify the uniform-model primitive share band under Beta types, or certify global off-path price equilibria. The original configuration switch therefore disappears in the recorded Beta numerical exercise, without a general distributional robustness claim.
 The recorded differentiated-Bertrand adverse test is also negative, but its full alternative model has not been independently reconstructed in this revision; no freshly replicated Bertrand result is claimed.
 Replication files distinguish these negative tests from the exact baseline certificates.
 
