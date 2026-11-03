@@ -16,6 +16,16 @@ def flatten(path,reader,skip_intro=False):
     if skip_intro and path.endswith('manuscript/sections/01_introduction.tex'):
         return ''
     return re.sub(r'\\input\{([^}]+)\}',lambda m:flatten(PROD+m[1]+('' if m[1].endswith('.tex') else '.tex'),reader,skip_intro),reader(path))
+def strip_20261104_extension(text, expected):
+    """Keep the former frozen-display invariant while recognising new, audited blocks."""
+    pattern = r'(?ms)^% BEGIN JE20261104_EXTENSION\n.*?^% END JE20261104_EXTENSION\n?'
+    matches = re.findall(pattern, text)
+    assert len(matches)==expected, ('extension markers',expected,len(matches))
+    output=re.sub(pattern,'',text)
+    assert '% BEGIN JE20261104_EXTENSION' not in output
+    assert '% END JE20261104_EXTENSION' not in output
+    return output
+
 def norm(text):return re.sub(r'\s+',' ',text).strip()
 def displays(text):return Counter(norm(m[0]) for m in re.finditer(r'\\begin\{(equation\*?|align\*?|gather\*?|multline\*?)\}.*?\\end\{\1\}|\\\[.*?\\\]',text,re.S))
 def labels(text):return Counter(re.findall(r'\\label\{([^}]+)\}',text))
@@ -41,7 +51,7 @@ assert s.expand(S0.subs(M,-loss-w*pi)).subs(zeta,zeta_positive).is_negative is T
 report={'baseline':BASE,'sympy_version':s.__version__,'symbolic_regression':{'S0_identity_residual':str(identity),'zero_baseline_S0':str(zero_boundary),'positive_baseline_K_negative_implies_S0_negative':True,'p0_positive_branch':True,'zeta_positive_branch':True},'active_targets':{},'protected_changed':[]}
 for target in ('main','supplement'):
     path=PROD+'manuscript/'+target+'.tex'
-    old=flatten(path,original,skip_intro=(target=='main'));new=flatten(path,lambda p:(ROOT/p).read_text(),skip_intro=(target=='main'))
+    old=flatten(path,original,skip_intro=(target=='main'));new=strip_20261104_extension(flatten(path,lambda p:(ROOT/p).read_text(),skip_intro=(target=='main')),1)
     a,b=displays(old),displays(new)
     assert a==b,(target,a-b,b-a)
     assert labels(old)==labels(new),target
@@ -56,7 +66,7 @@ before=prop(original(p));after=prop((ROOT/p).read_text())
 oldphrase='and nonnegative $R_0$.'
 newphrase='nonnegative $R_0$, and a positive baseline success intercept $p_b>0$ as defined in \\eqref{eq:effort}.'
 assert before.replace(oldphrase,newphrase)==after
-report['proposition_statement_change']='EXACTLY authorised p_b>0 hypothesis insertion; all other statement text unchanged'
+report['proposition_statement_change']='EXACTLY authorised p_b>0 hypothesis insertion; prior statement preserved; newly marked extension audited separately'
 tracked=subprocess.check_output(['git','ls-tree','-r','--name-only',BASE],cwd=ROOT,text=True).splitlines()
 protected=[p for p in tracked if (p.startswith('formal/') or p.startswith(PROD)) and Path(p).suffix in ('.py','.lean','.csv','.json')]
 archived=[p for p in tracked if p.startswith(PROD+'revision_kawasaki_results/') or p.startswith(PROD+'reviews/KAWASAKI_')]
@@ -66,7 +76,7 @@ for p in set(protected+archived):
 assert not report['protected_changed'],report['protected_changed']
 report['protected_scientific_files_compared']=len(protected)
 report['archived_PR73_files_compared']=len(archived)
-report['lean']='NOT EXECUTED BY THIS CHECK; existing Stage33Formal does not encode Proposition 1; source byte-identical'
+report['lean']='NOT EXECUTED BY THIS CHECK; existing Stage33Formal encodes neither Proposition 1 nor the new conditional extension; source byte-identical'
 out=Path(__file__).with_suffix('.json')
 out.write_text(json.dumps(report,indent=2)+'\n')
 print(json.dumps(report,indent=2))
