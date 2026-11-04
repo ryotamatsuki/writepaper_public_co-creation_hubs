@@ -1,0 +1,265 @@
+% BEGIN JE20261104_EXTENSION
+\clearpage
+\section{Fee-adjustment counterfactual and regular-distribution extension}
+\label{app:extension}
+
+\subsection{Proof of Corollary 1: frozen versus reoptimised fees}
+Fix any $\lambda_0$ in Proposition~1's compact feasible interval and
+hold the private-only fee at
+$f_i^P(\lambda_0)=[U+D(\lambda_0)]/2$, while varying
+$\lambda$ in a neighbourhood of $\lambda_0$. Because $U$ is independent
+of $\lambda$, the counterfactual participation cutoff is
+\[
+ \ell^{\mathrm{fr}}(\lambda)
+ =\frac{f_i^P(\lambda_0)-U}{d+\eta_i\lambda},\qquad
+ \left.\frac{d\ell^{\mathrm{fr}}}{d\lambda}\right|_{\lambda_0}
+ =-\frac{\eta_i\ell(\lambda_0)}{D(\lambda_0)}<0.
+\]
+The alternative public-basic-plus-premium continuation has universal
+participation and premium fee $d/2$, independent of $\lambda$.
+The fixed-fee public-cost ceiling is obtained from
+\eqref{eq:screen-threshold} by replacing the private-only optimum
+$\ell(\lambda)$ with $\ell^{\mathrm{fr}}(\lambda)$. At $\lambda_0$,
+\begin{equation}
+ \left.\frac{dT_i^{\mathrm{fr}}}{d\lambda}\right|_{\lambda_0}
+ =-\frac{\eta_i\ell}{D}
+  \left[N_i(u_i+d\ell)+C\left(S_i^0+
+              \frac{\lambda_0K_i\ell}{2}\right)\right]
+    +\frac{CK_i\ell^2}{4},
+ \label{eq:fr-derivative-proof}
+\end{equation}
+where $\ell=\ell(\lambda_0)$ and $D=D(\lambda_0)$.
+Under Proposition~1, $K_i<0$, $\eta_i>0$, and $\ell>0$.
+The bracket equals $N_i(u_i+d\ell_0)+O(\gamma)>0$ uniformly
+on the compact interval for sufficiently small positive $\gamma$.
+Both terms of equation~\eqref{eq:fr-derivative-proof} are therefore
+strictly negative, whereas Proposition~1 proves the positive
+reoptimised derivative. This compares the \emph{same} objective under
+two private-fee adjustment rules, not two fee equilibria.
+For the original exact Cournot/rational baseline,
+$T_B(0)=0.0404250710071$, $T_B(0.5)=0.0405316701024$;
+freezing $f_B^P$ at its $\lambda=0$ optimum instead gives
+$T_B^{\mathrm{fr}}(0.5)=0.0400020105974$.
+All three numbers are reproduced from the original primitives by
+\texttt{je\_extension\_cert.py}; none is a new fitted calibration.
+
+\subsection{Proof of Proposition 2: general founder ability distribution}
+Let $m(t)=1-F_i(t)$, $q(t)=\int_t^1xg_i(x)\,dx$, and
+$J(t)=\int_0^t xg_i(x)\,dx$. The partner's full-coverage moment is
+$\bar\theta_j$. Along the private-only continuation write
+\[
+ U=u_i+\gamma N_j\omega_iR_0,
+ \qquad D=d+\gamma N_j\omega_i\Pi\bar\theta_j\lambda.
+\]
+Any strictly interior posted fee implements a cutoff $\ell$
+through $f_i=U+D\ell$. The private intermediary's gross receipts are
+$N_i(U+D\ell)m(\ell)$ and the first-order condition is
+\begin{equation}
+ Dm(\ell)=(U+D\ell)g_i(\ell).
+ \label{eq:general-fee-foc}
+\end{equation}
+The hazard assumption yields a global optimum rather than merely a
+stationary point. In fact the derivative of revenue with respect to
+$\ell$ has the sign of
+$1-[\ell+U/D]h_i(\ell)$; this expression decreases
+strictly through zero when $h_i$ is nondecreasing and positive.
+The stated inequality $u_i h_i(0+)<d$ ensures a positive interior
+cutoff at $\gamma=0$, and the hazard must become sufficiently large
+near the upper endpoint of a compact support with full mass.
+The unique strict optimum persists uniformly for sufficiently small
+$\gamma$ over the feasible compact $\lambda$ interval.
+In co-provision, all founders participate and the premium cutoff
+$\tau_B$ globally maximises $d\tau[1-F_i(\tau)]$;
+it solves $\tau_Bh_i(\tau_B)=1$ and is independent of $\lambda$.
+
+The gross regional public-addition threshold is exactly
+\begin{equation}
+ \begin{split}
+ T_i^F(\lambda)={}&N_i\bigl\{u_iF_i(\ell)
+             +d[q(\tau_B)-q(\ell)]\bigr\}\\
+ &+C\bigl\{S_i^0F_i(\ell)
+          +\lambda K_i\bar\theta_j J(\ell)\bigr\}.
+ \end{split}\label{eq:general-ceiling-exact}
+\end{equation}
+Differentiating the private optimum condition
+\eqref{eq:general-fee-foc} at fixed $U$ gives
+\begin{equation}
+ \frac{\partial\ell}{\partial D}
+ =\frac{U g_i(\ell)}{D[2Dg_i(\ell)+(U+D\ell)g_i'(\ell)]}>0,
+ \quad
+ \ell'=\gamma N_j\omega_i\Pi\bar\theta_j
+              \frac{\partial\ell}{\partial D}.
+ \label{eq:general-cutoff-response}
+\end{equation}
+The denominator is strictly positive at the unique
+hazard-based global maximum. The welfare derivative, retaining the
+endogenous cutoff response rather than applying the seller's envelope
+to government welfare, is exactly
+\begin{equation}
+ \begin{split}
+ \frac{dT_i^F}{d\lambda}={}&
+ \bigl\{N_i(u_i+d\ell)+
+   C[S_i^0+\lambda K_i\bar\theta_j\ell]\bigr\}
+     g_i(\ell)\ell'\\
+ &+CK_i\bar\theta_j J(\ell).
+ \end{split}\label{eq:general-slope-exact}
+\end{equation}
+At zero matching intensity the unique optimal cutoff is
+$\ell_0$. A Taylor expansion about $\gamma=0$ gives
+$\ell=\ell_0+O(\gamma)$ and
+\[
+ \ell'=\gamma N_j\omega_i\Pi\bar\theta_j
+   \frac{u_i g_i(\ell_0)}{d B_F}+O(\gamma^2).
+\]
+Substitute this into equation~\eqref{eq:general-slope-exact}, use
+$C=\gamma N_iN_j$, and collect order-$\gamma$ terms to obtain
+equation~\eqref{eq:general-slope}. The remainder is uniform because
+the implicit optimum has a uniformly positive second-order
+denominator on a neighbourhood of $\ell_0$ and $g_i$ is twice
+continuously differentiable there. The strict lower band on
+$\omega_i$ makes the leading coefficient positive, while the upper
+band gives $K_i<0$. As in Proposition~1, $p_b>0$ then implies
+$S_i^0=p_bK_i-\omega_i\zeta^2\Pi^2/(2k)<0$.
+The zero-matching limit of equation~\eqref{eq:general-ceiling-exact}
+is the direct-service term stated in Proposition~2;
+its strict positivity, if imposed, persists for sufficiently small
+positive $\gamma$. For $F_i(t)=t$,
+$\ell_0=(d-u_i)/(2d)$, $J_F=\ell_0^2/2$,
+$A_F=u_i(u_i+d)/(4d^2)$, and $\bar\theta_j=1/2$,
+which reduce the result identically to equation~\eqref{eq:main-primitive-slope}.
+
+\subsection{Exact-rational finite-intensity Beta$(2,2)$ sign certificate}
+This separate test checks the \emph{conditional} region-$B$ threshold
+at the original parameter values $\gamma=0.1$, $\omega_B=0.2$,
+$\lambda\in[0,1/2]$, while region $A$ remains fully participating.
+For the Beta$(2,2)$ law,
+$F(t)=3t^2-2t^3$, $g(t)=6t(1-t)$,
+$J(t)=2t^3-3t^4/2$, and
+\[
+ h'(t)=\frac{6(1+2t^2)}{(1-t)^2(1+2t)^2}>0.
+\]
+The optimal private cutoff is the unique interior root of
+$8D\ell^2+(6U-D)\ell-D=0$. The co-provision premium
+cutoff is $\tau_B=(1+\sqrt{33})/16$, independent of $\lambda$.
+With the frozen rational Cournot and research primitives, define
+$D_{\max}=d+\eta_i/2$. Exact fractions verify the first-order-condition
+signs at $\ell=3/10$ with $D=d$ and at $\ell=33/100$ with
+$D=D_{\max}$, establishing
+\[
+ \frac3{10}<\ell(\lambda)<\frac{33}{100}
+ \quad\text{for every }\lambda\in[0,1/2].
+\]
+Because $g$ increases and $g'$ decreases on this interval, equation
+\eqref{eq:general-cutoff-response} supplies the exact rational lower bound
+\[
+ \ell'\geq
+ \frac{\eta_i U g(3/10)}{
+ D_{\max}\{2D_{\max}g(33/100)
+       +[U+D_{\max}(33/100)]g'(3/10)\}}
+ =:\underline{\ell'}>0.
+\]
+Since $K_B<0$ and $S_B^0<0$, the first brace in
+\eqref{eq:general-slope-exact} is bounded from below by
+$B_{\min}=N_B(u_B+3d/10)+C S_B^0+C K_B(33/100)/4>0$.
+Finally, exact rational interval arithmetic gives
+\[
+ \frac{dT_B^{\mathrm{Beta}}}{d\lambda}
+ \geq B_{\min}g(3/10)\underline{\ell'}
+       +\frac{CK_B}{2}J(33/100)
+ >\frac1{10000}>0
+\]
+throughout $\lambda\in[0,1/2]$.
+The last inequality is a conservative certified bound, not a floating
+point extrapolation between endpoints. The independently reexecuted
+\texttt{je\_extension\_cert.py} contains the exact
+\texttt{Fraction} checks. It neither re-proves all coupled
+$(P,P)$ fee equilibria nor classifies all sixteen entry
+configurations for the Beta alternative. Thus the conditional positive
+slope is portable to this particular distribution, while the
+reported four-party ownership switch is not.
+
+\subsection{Proof of Proposition 3: identical private intermediation, opposite regional signs}
+\label{app:incidence-twins}
+This construction varies only Cournot demand intercepts, within the original
+model's permitted positive-interior domain. In the original region-$B$
+product market $n_B=2$, $b_B=d_B=1$ and $\chi_B=9/10$.
+Set $y=20/73$, and for each chosen $x>0$ let
+\[
+ A_B=3x+\chi_B y,\qquad D_B=2y+2\chi_B x.
+\]
+Substituting in the two Cournot first-order conditions immediately gives
+incumbent output $x$ and new venture output $y$; the determinant
+$6-2(9/10)^2>0$, and $A_B,D_B,x,y>0$.
+For $x_1=55/219$ this recovers the original net intercepts
+$A_B=D_B=1$; for $x_2=2/5$ the intercepts become
+$A_B=528/365$ and $D_B=2314/1825$.
+The other product market is unchanged. The successful venture's
+total operating profit, and therefore $p_b$, $R_0$, $U$, $\eta_i$,
+and every fee-selection primitive, are identical in the two worlds.
+In particular, the \emph{conditional} private-only fee and cutoff
+are $f_B^P(\lambda)=[U+d+\eta_B\lambda]/2$ and
+$\ell(\lambda)=[d+\eta_B\lambda-U]/[2(d+\eta_B\lambda)]$
+in both.
+
+The no-venture incumbent output is
+$x_B^0=x+\chi_B y/3$. Direct substitution in the regional
+consumer-plus-incumbent surplus difference yields exactly
+\[
+ M_B(x)
+ =\frac{y^2}{2}
+   \left(1-\frac{2(4)}{3^2}\chi_B^2\right)
+     -\frac{2\chi_B xy}{3}
+ =-\frac{4(219x-14)}{5329}.
+\]
+Thus
+$M_B(x_1)=-164/5329$ and
+$M_B(x_2)=-1472/26645$.
+At the unchanged original founder profit share and research parameters,
+$K_r=M_B(x_r)+\omega_B\Pi<0$ and
+$S_r=p_bM_B(x_r)+\omega_BR_0<0$ for both $r=1,2$;
+these are exact rational inequalities.
+
+For a transparent global-in-$\lambda$ sign proof, write
+$\ell_0=\ell(0)$,
+$\ell_h=\ell(1/2)$,
+$e_0=\ell'(0)$,
+$e_h=\ell'(1/2)$.
+With the original rational primitives, exact comparison establishes
+$0<\ell_0<\ell_h<1$ and $0<e_h<e_0$.
+The exact derivative of the conditional gross public-access ceiling
+is
+\[
+ \frac{dT_r}{d\lambda}
+ = e(\lambda)
+    \left[
+      N_B(u_B+d\ell(\lambda))
+      +C\left(S_r+\tfrac{\lambda K_r\ell(\lambda)}{2}\right)
+    \right]
+      +\frac{C K_r\ell(\lambda)^2}{4}.
+\]
+Its bracket is strictly positive throughout the interval for both
+worlds, by the exact rational lower bound
+$B_{\min,r}=
+ N_B(u_B+d\ell_0)+C S_r+C K_r\ell_h/4>0$.
+For the original $x_1$ world, monotonic endpoint bounds give
+\[
+ \frac{dT_1}{d\lambda}\geq
+ e_h B_{\min,1}+\frac{C K_1\ell_h^2}{4}
+ >\frac{1}{10000}.
+\]
+For the changed $x_2$ world, the negative $S_2$ and $K_2$ terms
+make the bracket no larger than $N_B(u_B+d\ell_h)$, so
+\[
+ \frac{dT_2}{d\lambda}\leq
+ e_0N_B(u_B+d\ell_h)+\frac{C K_2\ell_0^2}{4}
+ <-\frac{1}{100000}.
+\]
+All bounds hold over the entire closed $\lambda$ interval, not merely
+at three numerical nodes. An independent exact-rational script in the replication package
+reconstructs both Cournot markets and verifies every inequality
+using Python \texttt{Fraction}. These worlds share private screening but not
+consumer and incumbent outputs or government welfare, which is the
+substantive distinction; nothing is claimed about full provider-entry
+equilibrium equivalence.
+
+% END JE20261104_EXTENSION

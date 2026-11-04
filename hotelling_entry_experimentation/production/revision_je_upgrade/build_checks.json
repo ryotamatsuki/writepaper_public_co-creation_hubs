@@ -1,0 +1,15 @@
+{
+  "main": {
+    "pages": 37,
+    "undefined_multiply_defined_overfull": [],
+    "underfull": [],
+    "pdf": "revision_je_upgrade/je_revised_manuscript.pdf"
+  },
+  "supplement": {
+    "pages": 8,
+    "undefined_multiply_defined_overfull": [],
+    "underfull": [],
+    "pdf": "revision_je_upgrade/online_supplement.pdf"
+  },
+  "abstract_words": 197
+}

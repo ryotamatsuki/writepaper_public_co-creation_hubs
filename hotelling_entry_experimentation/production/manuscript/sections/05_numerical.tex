@@ -1,5 +1,22 @@
-\section{The inversion at finite matching intensity and equilibrium scale}\label{sec:numerical}
+\section{Decentralised provision and social welfare}\label{sec:welfare}
+Lemma~3 supplies separate local and national cost ceilings. The difference in equation~\eqref{eq:wedge} is the welfare increment accruing to the other region through additional matches and their skill composition. When that increment is positive, a public cost between the two ceilings makes local non-provision consistent with a national preference for adding access; a negative increment reverses the conditional ranking. Equality of the ceilings removes this particular wedge. These are comparisons of the same two configurations, not a proof that the full decentralised and restricted-planner choices coincide whenever that increment vanishes.
 
+The externality accounting is familiar. Here its economic content comes from the fee-selected cutoff, technical success and the allocation of downstream venture gains between founders, consumers and incumbent producers. A local threshold is only one incentive in the four-party entry game. We therefore apply the separate entry and continuation checks before drawing conclusions about a provision configuration. No four-party example of public overprovision is certified.
+
+\subsection{First-stage equilibrium and planner evaluation}
+
+For each of the sixteen entry configurations, let $\mathcal E(s)$ denote the set of admissible downstream equilibria. Where a continuation is selected, assign the four stage-1 payoffs from \eqref{eq:Wi} and \eqref{eq:privateprofit}. A candidate pure first-stage Nash equilibrium (NE) must make every binary entry flip weakly unprofitable:
+\begin{align}
+ W_i(s)&\ge W_i(s_i^{G\text{-flip}},s_j)
+       &&\text{for each }G_i,\label{eq:govBR}\\
+ \pi_i^P(s)&\ge \pi_i^P(s_i^{P\text{-flip}},s_j)
+       &&\text{for each }P_i.\label{eq:privBR}
+\end{align}
+The four states in one region are $0\leftrightarrow G$ and $P\leftrightarrow B$ for a government flip, and $0\leftrightarrow P$ and $G\leftrightarrow B$ for a private flip. Thus there are four independent binary incentive inequalities at each state; a government's entry comparison does \emph{not} subsume the private provider's response. Equilibrium ties may generate multiplicity. The restricted planner in \eqref{eq:planner} compares all sixteen total-welfare values \emph{under the same allowed continuation rule}. Without an admissible off-path equilibrium one cannot declare a global first-stage SPNE.
+
+The selected baseline cases use an analytic price-best-response argument and exact rational enclosure of the coupled $(P,P)$ equilibrium. The Online Supplement documents the global deviation bounds, the continuation fee boxes, and the strict first-stage incentive signs for each baseline. This is neither a general uniqueness theorem for all primitives nor a complete Lean formalisation of the entire sequential game.
+
+\subsection{Three certified provision configurations}
 We retain the original numerical primitives rather than selecting a wider reversal after the fact.
 All magnitudes are model units, not an empirical calibration of a particular programme.
 The baseline has $(n_A,n_B)=(5,2)$, $(N_A,N_B)=(3,1)$, $\Delta_A=\Delta_B=1$, $\rho=0.4$, $\mu=0.25$, $(\omega_A,\omega_B)=(0.8,0.2)$, $(F_{G_A},F_{G_B})=(0.09,0.0405)$, $(F_{P_A},F_{P_B})=(0.65,0.24)$, $p_0=0.05$, $\zeta=0.005$, $k=0.0004$, $\chi_i=0.9$, $(v_A,v_B)=(0.15,0.10)$ and $(w_A,w_B)=(0.22,0.45)$; the Cournot net intercepts and own-good slopes equal one.
@@ -20,110 +37,3 @@ Pooled, $0.5$ & $(B,P)$ & $(B,B)$ & $0.0400432292$\\\bottomrule
 \end{tabular}
 \par\smallskip\footnotesize $B$: free basic plus paid premium; $P$: private only. The last column is region $B$'s public-entry cost threshold conditional on region $A$ remaining in $B$. The common baseline cost is $0.0405$. Planner means the restricted sixteen-configuration welfare benchmark.
 \end{table}
-
-\paragraph{The central proposition at finite matching intensity.}
-The principal analytical result is not the discrete three-scenario equilibrium switch; it is the sign of the conditional public-access cost ceiling when skill complementarity increases. At the original $p_0=0.05$, $\gamma=0.1$, $u_B=0.28$ and the original differentiated-product Cournot solution, the weak-matching primitive-share boundary from Proposition~1 is
-\[
- \omega_B^{\mathrm{crit}}\simeq0.1167164,\qquad
- -M_B/\Pi\simeq0.2781020.
-\]
-The original $\omega_B=0.2$ is strictly between them. Unlike this weak-matching asymptotic criterion, the following finite-$\gamma$ validation is independent of taking $\gamma$ arbitrarily close to zero.
-
-The Online Supplement's exact rational interval checker proves that, for \emph{every} $(\omega_B,\lambda)$ in
-\begin{equation}
- 0.13\leq\omega_B\leq0.27,\quad
- 0\leq\lambda\leq0.5,\quad \omega_A=1-\omega_B,
- \label{eq:inversion-rectangle}
-\end{equation}
-holding all other original primitive values and full founder participation in A, the B-region continuation is interior and satisfies
-\begin{equation}
- K_B<0,\quad S_B^0<0,\quad
- H_B>0,\quad T_B(\lambda)>0,\quad
- \frac{\partial T_B}{\partial\lambda}>0,
- \quad C\left(S_B^0\ell_B+\frac{\lambda K_B\ell_B^2}{4}\right)<0.
- \label{eq:inversion-verified}
-\end{equation}
-All strict inequalities are proved over the \emph{continuous} two-dimensional rectangle using inclusion-bounded exact rational subrectangles, not from a grid of simulated equilibrium outcomes. The certified conservative lower bounds are $T_B>0.04036779$ and $\partial T_B/\partial\lambda>0.00003340$; the venture-related increment is strictly negative throughout. This establishes a genuinely nondegenerate primitive domain for the \emph{conditional} screening--incidence inversion at finite matching intensity. It does \emph{not} imply that the full four-entrant pure equilibrium changes at all these parameter values.
-
-With original $\omega_B=0.2$, the conditional cost ceiling rises from $T_B(0)\simeq0.0404250710$ to $T_B(0.5)\simeq0.0405316701$, and the derivative is strictly positive for every intermediate $\lambda$. Despite its continuously verified sign, the entire increase is only $0.0001065991$ in model cost units. A fixed cost must lie between the two ceilings for the conditional public-entry decision to change; proving the actual four-entrant stage-1 switch additionally requires the separate off-path Nash and entry-deviation certificates reported below.
-
-\paragraph{What drives the three-way switch?}
-In region $B$, $M_B\simeq-0.0307750$ and $\omega_B\Pi\simeq0.0221322$, so $K_B\simeq-0.00864284<0$ and $S_B^0\simeq-0.000568455<0$.
-Additional successful ventures have a negative net local market contribution, including the founders' assigned return.
-Table~\ref{tab:diagnostic} decomposes its public-entry threshold into direct service, baseline matching and skill-related success incidence.
-Free access is locally attractive in the skill-$0.5$ case because its direct-service value exceeds the two negative venture terms and the public cost.
-The result is not driven by a positive local innovation externality.
-
-\begin{table}[htbp]\centering\small
-\caption{Region-$B$ public-entry threshold components, with region $A$ fully participating}\label{tab:diagnostic}
-\begin{tabular}{@{}lrrr@{}}\toprule
- & Skills, $0$ & Skills, $0.5$ & Pooled, $0.5$\\\midrule
-Direct service & $0.0404864338$ & $0.0406350895$ & $0.0402210076$\\
-Baseline matching & $-0.0000613628$ & $-0.0000614025$ & $-0.0000612921$\\
-Technology increment & $0$ & $-0.0000420170$ & $-0.0001164863$\\\midrule
-Total threshold & $0.0404250710$ & $0.0405316701$ & $0.0400432292$\\\bottomrule
-\end{tabular}
-\par\smallskip\footnotesize Entries are gross gains from adding basic access, before the public fixed cost. Baseline matching uses the same $S_B^0=p_bM_B+\omega_BR_0$ across columns. The pooled technology increment is $C\lambda K_B\ell_L/4$, not the selected $C\lambda K_B\ell_H^2/4$. Display rounding need not sum exactly.
-\end{table}
-
-Increasing complementarity from zero to $0.5$ changes the private cutoff by only $0.0002322968$.
-The resulting $0.0001486557$ increase in the direct-service term is offset by a $0.0000420170$ skill-success loss and a $0.0000000396$ baseline matching loss.
-Their net is $0.0001065991$, exactly the width of the three-scenario public-cost band.
-The relevant strength in the fee problem is $h=b_B^m/2\simeq0.00165991$, small relative to $\Delta_B=1$; hence complementarity barely shifts private exclusion in this calibration.
-Small threshold displacement, followed by an indicator decision near indifference, explains both the configuration change and its limited economic magnitude.
-
-At $\lambda=0.5$, the heterogeneous--pooled threshold gap is larger, $0.0004884409$.
-Equation~\eqref{eq:diagnostic-gap} attributes it to $0.0004139716$ from changed access and baseline matching plus $0.0000744693$ from technological incidence.
-Because $K_B<0$, the lower technical exposure of the additional selected collaborations makes public access less locally costly than in the pooled comparison.
-This is a regional-incidence effect with repriced participation, not an assertion that lower-ability founders are intrinsically more innovative.
-
-\paragraph{Cost scale and verification domain.}
-Opposite heterogeneous and pooled decisions at $\lambda=0.5$ require
-\begin{equation}
- 0.040043229233<F_{G_B}<0.040531670102.
- \label{eq:fragility}
-\end{equation}
-Retaining all three equilibria additionally requires
-\begin{equation}
- \begin{split}
- \underline F_B^{(3)}<F_{G_B}<\overline F_B^{(3)},\qquad\\
- \underline F_B^{(3)}\simeq0.040425071007120596,\quad
- \overline F_B^{(3)}\simeq0.04053167010244885.
- \end{split}\label{eq:threeway-open-cost}
-\end{equation}
-The endpoints are exact rational indifference values; displayed decimals are approximations.
-The latter interval is only $0.2632\%$ of the baseline cost, with an upper slack of $0.0782\%$.
-An all-sixteen-profile rational certificate establishes the three equilibria and the restricted planner throughout this open cost interval, with only the identified government ties at the outer endpoints.
-It also verifies a small joint rectangle,
-\begin{equation}
- \begin{split}
- 0.089999&<F_{G_A}<0.090001,\\
- 0.040499&<F_{G_B}<0.040501,\\
- 0.199999&<\omega_B<0.200001,\quad\omega_A=1-\omega_B,
- \end{split}\label{eq:threeway-3d-box}
-\end{equation}
-including its global P/P continuations.
-These are persistence certificates, not evidence of broad policy relevance.
-
-The conditional government margin has a numerically estimated switch near $\lambda^\star\simeq0.351184$.
-Numerical continuation suggests the corresponding first-stage configuration change; the three benchmark P/P certificates do not certify every off-path price game over the intervening $\lambda$ interval.
-No continuous-interval full-SPNE or uniqueness claim at the tie is made.
-The neighbouring region's public-addition gains are positive in the three displayed settings (approximately $0.000414$, $0.000768$ and $0.001394$), explaining why local non-entry can coexist with the restricted planner's preference for $(B,B)$.
-
-\section{Negative portability and interpretation limits}\label{sec:robustness}
-The existing 396-cell sensitivity panel does not establish broad robustness.
-At $\Delta_B=0.8$ or $0.9$, or $N_B=0.8$, its selected numerical continuations yield multiple pure equilibria $(B,G)$ and $(B,P)$ and a planner preference for $(B,P)$.
-At product substitutability $\chi=0.95$, the $\lambda=0.5$ baseline returns to $(B,P)$.
-These are alternative numerical regimes, not proofs of price equilibria for every perturbed primitive.
-
-Under the separately checked $\operatorname{Beta}(2,2)$ ability distribution, the numerical equilibrium and restricted planner allocation are $(P,P)$ at both $\lambda=0$ and $0.5$.
-The corresponding conditional region-$B$ public-addition margins are about $-0.0305626$ and $-0.0304756$.
-The original configuration switch therefore disappears at the unchanged costs.
-The recorded differentiated-Bertrand adverse test is also negative, but its full alternative model has not been independently reconstructed in this revision; no freshly replicated Bertrand result is claimed.
-Replication files distinguish these negative tests from the exact baseline certificates.
-
-The maintained equality $z_i=\theta_i$ equates willingness to pay for specialist services with relevant technical ability.
-Selection on willingness to pay need not identify technological selection in data.
-The specialist has no direct effect on the success technology, and endogenous effort adds no ability-dependent investment channel.
-Physical location, building capital, service quality choice, subsidies, taxation, procurement and remote alternatives are outside the policy menu.
-These restrictions limit interpretation even where the baseline equilibrium is mathematically certified.

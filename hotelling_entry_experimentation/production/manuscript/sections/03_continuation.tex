@@ -1,5 +1,5 @@
-\section{Backward induction and decentralised provision}\label{sec:equilibrium}
-We first characterise downstream continuations, then test the four independent stage-1 entry incentives. This order matters: the sixteen first-stage profiles do not constitute sixteen exogenous payoffs.
+\section{Private intermediation and founder selection}\label{sec:equilibrium}
+Private fees determine which founders obtain basic access and which purchase specialist services. We first separate conditional monopoly pricing from the coupled private/private fee game. These familiar selection mechanisms provide the continuation allocations used in the public-provision and welfare comparisons below.
 
 \subsection{Private fee and participation choices}
 Fix participation in the other region and define $U_i=u_i+a_i^m m_j>0$, $T_i=\Delta_i+b_i^m q_j>0$. For $s_i=P$, fees and selection satisfy
@@ -44,14 +44,21 @@ In the conditional comparison between a private-only service and a private premi
 \end{equation}
 Both branches imply $\mathcal R_i^P>\mathcal R_i^B$. In the first branch, $(U_i+T_i)^2/T_i>T_i\geq\Delta_i$; in the second, $U_i\geq T_i\geq\Delta_i$. Thus adding free public basic service \emph{strictly displaces private fee receipts} under these conditional primitives. In fact, under the maintained positive basic benefit and nonnegative matching returns, $F_{P_i}<N_i\Delta_i/4$ is sufficient for the private intermediary's entry to be a strictly dominant first-stage action: co-provision yields this gross premium revenue, while private-only provision can secure strictly more. Both benchmark private fixed costs satisfy this condition. The coexistence studied here is therefore a mixed provision configuration, \emph{not} a theorem that the government's entry raises the private provider's earnings. With the original region-$B$ parameters, gross premium revenue in $B$ is $0.25$ and net private profit is $0.01>0$. This transparent distinction prevents a policy interpretation that confuses co-location/coexistence with profit complementarity.
 
-\subsection{First-stage equilibrium and planner evaluation}
-For each of the sixteen entry configurations, let $\mathcal E(s)$ denote the set of admissible downstream equilibria. Where a continuation is selected, assign the four stage-1 payoffs from \eqref{eq:Wi} and \eqref{eq:privateprofit}. A candidate pure first-stage Nash equilibrium (NE) must make every binary entry flip weakly unprofitable:
-\begin{align}
- W_i(s)&\ge W_i(s_i^{G\text{-flip}},s_j)
-       &&\text{for each }G_i,\label{eq:govBR}\\
- \pi_i^P(s)&\ge \pi_i^P(s_i^{P\text{-flip}},s_j)
-       &&\text{for each }P_i.\label{eq:privBR}
-\end{align}
-The four states in one region are $0\leftrightarrow G$ and $P\leftrightarrow B$ for a government flip, and $0\leftrightarrow P$ and $G\leftrightarrow B$ for a private flip. Thus there are four independent binary incentive inequalities at each state; a government's entry comparison does \emph{not} subsume the private provider's response. Equilibrium ties may generate multiplicity. The restricted planner in \eqref{eq:planner} compares all sixteen total-welfare values \emph{under the same allowed continuation rule}. Without an admissible off-path equilibrium one cannot declare a global first-stage SPNE.
 
-The selected baseline cases use an analytic price-best-response argument and exact rational enclosure of the coupled $(P,P)$ equilibrium. The Online Supplement documents the global deviation bounds, the continuation fee boxes, and the strict first-stage incentive signs for each baseline. This is neither a general uniqueness theorem for all primitives nor a complete Lean formalisation of the entire sequential game.
+\subsection{Technical complementarity and conditional selection}
+The original lemma identifiers are retained for the Online Supplement: the pricing result, Lemma~2, precedes the incidence result, Lemma~1, in the economic sequence.
+\paragraph{Lemma 2 (conditional fee selection).}
+Fix the other region's $(m_j,q_j)$ with $q_j>0$, maintain $0<U_i<T_i$, $\omega_i>0$, $\Pi>0$ and $z_i=\theta_i$.
+Increasing $\lambda$ then implies
+\begin{equation}
+ \frac{\partial f_i^*}{\partial\lambda}>0,\quad
+ \frac{\partial\ell_i^*}{\partial\lambda}>0,\quad
+ \frac{\partial m_i}{\partial\lambda}<0,\quad
+ \frac{\partial q_i}{\partial\lambda}<0,\quad
+ \frac{\partial(q_i/m_i)}{\partial\lambda}>0.
+ \label{eq:P2}
+\end{equation}
+Indeed $T_i'=\rho\mu N_j\omega_i\Pi q_j>0$, while $U_i$ is constant, and the monopoly formula gives
+$\ell_i^*=1/2-U_i/(2T_i)$ and $\ell_i'=U_iT_i'/(2T_i^2)>0$.
+Participant mean ability $(1+\ell_i)/2$ rises even as the total represented ability falls.
+This is not a P/P price-equilibrium comparative static.
