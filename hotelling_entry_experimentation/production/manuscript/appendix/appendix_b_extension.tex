@@ -177,4 +177,90 @@ $(P,P)$ fee equilibria nor classifies all sixteen entry
 configurations for the Beta alternative. Thus the conditional positive
 slope is portable to this particular distribution, while the
 reported four-party ownership switch is not.
+
+\subsection{Proof of Proposition 3: identical private intermediation, opposite regional signs}
+\label{app:incidence-twins}
+This construction varies only Cournot demand intercepts, within the original
+model's permitted positive-interior domain. In the original region-$B$
+product market $n_B=2$, $b_B=d_B=1$ and $\chi_B=9/10$.
+Set $y=20/73$, and for each chosen $x>0$ let
+\[
+ A_B=3x+\chi_B y,\qquad D_B=2y+2\chi_B x.
+\]
+Substituting in the two Cournot first-order conditions immediately gives
+incumbent output $x$ and new venture output $y$; the determinant
+$6-2(9/10)^2>0$, and $A_B,D_B,x,y>0$.
+For $x_1=55/219$ this recovers the original net intercepts
+$A_B=D_B=1$; for $x_2=2/5$ the intercepts become
+$A_B=528/365$ and $D_B=2314/1825$.
+The other product market is unchanged. The successful venture's
+total operating profit, and therefore $p_b$, $R_0$, $U$, $\eta_i$,
+and every fee-selection primitive, are identical in the two worlds.
+In particular, the \emph{conditional} private-only fee and cutoff
+are $f_B^P(\lambda)=[U+d+\eta_B\lambda]/2$ and
+$\ell(\lambda)=[d+\eta_B\lambda-U]/[2(d+\eta_B\lambda)]$
+in both.
+
+The no-venture incumbent output is
+$x_B^0=x+\chi_B y/3$. Direct substitution in the regional
+consumer-plus-incumbent surplus difference yields exactly
+\[
+ M_B(x)
+ =\frac{y^2}{2}
+   \left(1-\frac{2(4)}{3^2}\chi_B^2\right)
+     -\frac{2\chi_B xy}{3}
+ =-\frac{4(219x-14)}{5329}.
+\]
+Thus
+$M_B(x_1)=-164/5329$ and
+$M_B(x_2)=-1472/26645$.
+At the unchanged original founder profit share and research parameters,
+$K_r=M_B(x_r)+\omega_B\Pi<0$ and
+$S_r=p_bM_B(x_r)+\omega_BR_0<0$ for both $r=1,2$;
+these are exact rational inequalities.
+
+For a transparent global-in-$\lambda$ sign proof, write
+$\ell_0=\ell(0)$,
+$\ell_h=\ell(1/2)$,
+$e_0=\ell'(0)$,
+$e_h=\ell'(1/2)$.
+With the original rational primitives, exact comparison establishes
+$0<\ell_0<\ell_h<1$ and $0<e_h<e_0$.
+The exact derivative of the conditional gross public-access ceiling
+is
+\[
+ \frac{dT_r}{d\lambda}
+ = e(\lambda)
+    \left[
+      N_B(u_B+d\ell(\lambda))
+      +C\left(S_r+\tfrac{\lambda K_r\ell(\lambda)}{2}\right)
+    \right]
+      +\frac{C K_r\ell(\lambda)^2}{4}.
+\]
+Its bracket is strictly positive throughout the interval for both
+worlds, by the exact rational lower bound
+$B_{\min,r}=
+ N_B(u_B+d\ell_0)+C S_r+C K_r\ell_h/4>0$.
+For the original $x_1$ world, monotonic endpoint bounds give
+\[
+ \frac{dT_1}{d\lambda}\geq
+ e_h B_{\min,1}+\frac{C K_1\ell_h^2}{4}
+ >\frac{1}{10000}.
+\]
+For the changed $x_2$ world, the negative $S_2$ and $K_2$ terms
+make the bracket no larger than $N_B(u_B+d\ell_h)$, so
+\[
+ \frac{dT_2}{d\lambda}\leq
+ e_0N_B(u_B+d\ell_h)+\frac{C K_2\ell_0^2}{4}
+ <-\frac{1}{100000}.
+\]
+All bounds hold over the entire closed $\lambda$ interval, not merely
+at three numerical nodes. The independent standard-library exact
+rational checker \texttt{je\_private\_screening\_nonidentification.py}
+reconstructs both Cournot markets and checks all inequalities using
+Python \texttt{Fraction}. These worlds share private screening but not
+consumer and incumbent outputs or government welfare, which is the
+substantive distinction; nothing is claimed about full provider-entry
+equilibrium equivalence.
+
 % END JE20261104_EXTENSION
