@@ -7,6 +7,7 @@ on:
       - 'hotelling_entry_experimentation/production/manuscript/**'
       - 'hotelling_entry_experimentation/production/reviews/JE_UPGRADE_SCOPE_CHECK_2026-10-29.py'
       - 'hotelling_entry_experimentation/production/reviews/je_extension_cert.py'
+      - 'hotelling_entry_experimentation/production/reviews/je_private_screening_nonidentification.py'
       - '.github/workflows/je-upgrade-scope.yml'
   pull_request:
     branches:
@@ -15,6 +16,7 @@ on:
       - 'hotelling_entry_experimentation/production/manuscript/**'
       - 'hotelling_entry_experimentation/production/reviews/JE_UPGRADE_SCOPE_CHECK_2026-10-29.py'
       - 'hotelling_entry_experimentation/production/reviews/je_extension_cert.py'
+      - 'hotelling_entry_experimentation/production/reviews/je_private_screening_nonidentification.py'
       - '.github/workflows/je-upgrade-scope.yml'
   workflow_dispatch:
 permissions:
@@ -36,6 +38,8 @@ jobs:
         run: python hotelling_entry_experimentation/production/reviews/JE_UPGRADE_SCOPE_CHECK_2026-10-29.py
       - name: Check fixed-fee sign reversal, regular-distribution reduction and Beta certificate
         run: python hotelling_entry_experimentation/production/reviews/je_extension_cert.py
+      - name: Certify screening-invariance and opposite welfare signs in exact Cournot twins
+        run: python hotelling_entry_experimentation/production/reviews/je_private_screening_nonidentification.py
       - name: Rebuild existing conditional and global baseline certificates
         run: |
           python hotelling_entry_experimentation/production/government_game_exploration/incidence_screening_sign_certificate.py
